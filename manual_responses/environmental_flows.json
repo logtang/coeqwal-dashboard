@@ -1,0 +1,101 @@
+{
+    "Legal Standards": [
+    {
+        "name": "Endangered Species Act (ESA) Biological Opinions (BiOps)",
+        "note": "Provide one of the strongest legal bases for environmental flow requirements, implemented through enforceable species-specific ecological health and habitat requirements.",
+        "key_elements": [
+            {
+                "mechanism": "Biological Opinions (BiOps)",
+                "implementation_basis": "Species ecological health requirements",
+                "legal_strength": "High (federal law)"
+            }
+        ]
+    },
+    {
+        "name": "California Water Code (Flow Authority)",
+        "note": "Does not establish direct regulatory standards for functional flows due to the absence of state or federal flow standards. Instead, it provides legal authority to address flows indirectly through existing regulatory controls.",
+        "key_elements": [
+            {
+                "flow_dimensions": [
+                    "Volume",
+                    "Water quality",
+                    "Timing"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Regional Flow Requirements (Regulatory Instruments)",
+        "note": "Environmental and operational flow requirements are imposed regionally through a combination of federal and state regulatory instruments.",
+        "key_elements": [
+            {
+                "instrument": "FERC License",
+                "applicability": "Non-federal hydroelectric projects"
+            },
+            {
+                "instrument": "State Water Resources Control Board (SWRCB) Orders",
+                "context": "Sometimes issued in response to ESA Biological Opinions"
+            },
+            {
+                "instrument": "Clean Water Act Section 401 Water Quality Certification",
+                "authority": "Water quality-based conditions under the CWA",
+                "conditions": [
+                    "Minimum flows",
+                    "Seasonal flow regimes",
+                    "Ramping rates (increasing and decreasing flows)",
+                    "Temperature control",
+                    "Pulse flows"
+                ]
+            },
+            {
+                "instrument": "Other Regulatory Requirements",
+                "note": "Additional federal, state, or local regulations that may impose flow-related conditions."
+            }
+        ]
+    }
+],
+
+    "Tiers": {
+        "Tier 1": [
+            {
+                "policy_name": "Reservoir operations & diversions",
+                "relationship": "Normal / standard operations",
+                "note": "Functional flows are implemented as ordered; flows are managed based on total supply. Curtailments occur only in aggregate relative to total supply, not individual rights."
+            },
+            {
+                "policy_name": "Water quality measures / project certifications",
+                "relationship": "Monitored / standard practice",
+                "note": "Includes flow release triggers by water year type, biological monitoring, sediment transport, and water temperature compliance."
+            },
+            {
+                "policy_name": "Environmental flow orders & federal compliance",
+                "relationship": "Implicated / not directly triggered",
+                "note": "No direct curtailments triggered by ESA or hydropower legislation, SWRCB orders, or other regulations. Compliance is enforced via litigation with lag time."
+            }
+        ],
+        "Tier 2": [
+            {
+                "policy_name": "Functional flow orders adherence",
+                "relationship": "Partially implemented / limited",
+                "note": "Flows reduced for streams; annual variation pattern maintained minimally based on available water budgets. Compliance addressed through litigation as in Tier 1."
+            }
+        ],
+        "Tier 3": [
+            {
+                "policy_name": "Functional flow orders adherence",
+                "relationship": "Triggered / minimal flows only",
+                "note": "Flows reduced most of the year to maintain only mandated minimum flows and other minimum system requirements. Compliance addressed via litigation as in previous tiers."
+            }
+        ],
+        "Tier 4": [
+            {
+                "policy_name": "Water allocation during extreme scarcity",
+                "relationship": "Triggered / emergency level",
+                "note": "Exceptionally severe drought/scarcity; available supplies used according to priority and rights in time to meet basic health and food safety."
+            }
+        ]
+    }
+
+
+
+}

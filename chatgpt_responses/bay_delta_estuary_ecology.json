@@ -1,0 +1,174 @@
+{
+    "Legal Standards": [
+        {
+            "name": "Bay-Delta Water Quality Control Plan (WQCP)",
+            "note": "California water quality standards for the estuary. Establishes beneficial uses and water quality objectives to protect estuarine ecology, implemented through water-rights requirements affecting flows, salinity, turbidity, and habitat availability.",
+            "key_elements": []
+        },
+        {
+            "name": "SWRCB Water Right Decision 1641 (D-1641)",
+            "note": "Enforceable water-rights conditions implementing Bay-Delta objectives. Principal instrument translating objectives into operational requirements (outflow, export limits, salinity compliance points, DCC operations).",
+            "key_elements": []
+        },
+        {
+            "name": "Federal Clean Water Act water-quality standards framework",
+            "note": "Bay-Delta Plan is explicitly framed as CWA water quality standards for the estuary, providing legal backbone for salinity/flow objectives.",
+            "key_elements": []
+        },
+        {
+            "name": "Federal Endangered Species Act (ESA) — Section 7",
+            "note": "Federal agencies must ensure actions are not likely to jeopardize listed species or adversely modify critical habitat. Implemented through Biological Opinions with operational constraints affecting flows, exports, and habitat conditions.",
+            "key_elements": []
+        },
+        {
+            "name": "California Endangered Species Act (CESA)",
+            "note": "Prohibits take of state-listed species unless authorized via Incidental Take Permit with minimization/mitigation. Poor ecological conditions can increase take risk and trigger permit compliance issues.",
+            "key_elements": []
+        },
+        {
+            "name": "Central Valley Project Improvement Act (CVPIA)",
+            "note": "Legally dedicates 800,000 acre-feet annually to fish, wildlife, and habitat purposes, including Bay-Delta protection and ESA obligations.",
+            "key_elements": []
+        },
+        {
+            "name": "Delta Reform Act / Delta Plan coequal goals",
+            "note": "Major governing policy mandate: Delta actions evaluated against coequal goals including protecting, restoring, and enhancing the Delta ecosystem.",
+            "key_elements": []
+        }
+    ],
+    "Tiers": {
+        "Tier 1": [
+            {
+                "policy_name": "Bay-Delta Water Quality Control Plan (WQCP)",
+                "relationship": "Likely met / supported",
+                "note": "Fish and wildlife objectives include salinity, Delta outflow, and export limits."
+            },
+            {
+                "policy_name": "SWRCB Water Right Decision 1641 (D-1641)",
+                "relationship": "Likely met / supported",
+                "note": "Compliance is more likely achievable without exceedances when the estuary is consistently fresh and habitat is broadly available."
+            },
+            {
+                "policy_name": "Federal Endangered Species Act (ESA) — Section 7",
+                "relationship": "Likely met / supported",
+                "note": "Lower risk of jeopardy or adverse modification concerns relative to worse tiers because habitat conditions are generally more supportive."
+            },
+            {
+                "policy_name": "California Endangered Species Act (CESA)",
+                "relationship": "Likely met / supported",
+                "note": "Lower take exposure relative to worse tiers, assuming operations remain within permit conditions where applicable."
+            }
+        ],
+        "Tier 2": [
+            {
+                "policy_name": "Bay-Delta Water Quality Control Plan (WQCP)",
+                "relationship": "Likely met / generally consistent",
+                "note": "Objectives are still plausibly met because fresh conditions reduce salinity-objective exceedance pressure."
+            },
+            {
+                "policy_name": "SWRCB Water Right Decision 1641 (D-1641)",
+                "relationship": "Likely met / generally consistent",
+                "note": "Operational constraints (exports, outflow targets, gate operations) become binding in dry years to prevent slipping into Tier 3/4 conditions."
+            },
+            {
+                "policy_name": "Federal Endangered Species Act (ESA) — Section 7",
+                "relationship": "Potentially triggered / watched",
+                "note": "If some microhabitats available means frequent bottlenecks in dry sequences, operations may need to tighten to avoid jeopardy or adverse modification risk."
+            },
+            {
+                "policy_name": "California Endangered Species Act (CESA)",
+                "relationship": "Potentially triggered / watched",
+                "note": "If bottlenecks occur in dry sequences, operators may need to tighten operations to avoid take or habitat degradation."
+            }
+        ],
+        "Tier 3": [
+            {
+                "policy_name": "Bay-Delta Water Quality Control Plan (WQCP)",
+                "relationship": "Potentially violated / at-risk",
+                "note": "Moderate salinity and constrained habitat are consistent with conditions where salinity objectives and outflow/export constraints become difficult."
+            },
+            {
+                "policy_name": "SWRCB Water Right Decision 1641 (D-1641)",
+                "relationship": "Potentially violated / at-risk",
+                "note": "Implements salinity, outflow, and export requirements through project obligations."
+            },
+            {
+                "policy_name": "Federal Endangered Species Act (ESA) — Section 7",
+                "relationship": "Triggered / more likely",
+                "note": "Stronger consultation constraints and re-evaluation pressure if operations push habitat conditions toward adverse modification risk."
+            },
+            {
+                "policy_name": "California Endangered Species Act (CESA)",
+                "relationship": "Triggered / more likely",
+                "note": "ITP minimization and mitigation stress where authorized take must be minimized and fully mitigated."
+            },
+            {
+                "policy_name": "Central Valley Project Improvement Act (CVPIA)",
+                "relationship": "Other implicated programs",
+                "note": "CVPIA (b)(2) water is more likely to be called upon or prioritized to improve conditions because it is dedicated to fish and habitat and to help protect the Delta."
+            }
+        ],
+        "Tier 4": [
+            {
+                "policy_name": "Bay-Delta Water Quality Control Plan (WQCP)",
+                "relationship": "Most likely violated / noncompliant (or requiring formal exceptions)",
+                "note": "Objective exceedances become most plausible here because the Plan's core fish and wildlife protection tools include salinity, Delta outflow, river flows, and export limits."
+            },
+            {
+                "policy_name": "SWRCB Water Right Decision 1641 (D-1641)",
+                "relationship": "Most likely violated / noncompliant (or requiring formal exceptions)",
+                "note": "Formal noncompliance pathways can become necessary when objectives cannot be met."
+            },
+            {
+                "policy_name": "Federal Endangered Species Act (ESA) — Section 7",
+                "relationship": "Triggered / highest regulatory exposure",
+                "note": "Strongest risk that operational regimes could be characterized as causing or contributing to habitat degradation approaching adverse modification or jeopardy."
+            },
+            {
+                "policy_name": "California Endangered Species Act (CESA)",
+                "relationship": "Triggered / highest regulatory exposure",
+                "note": "Heightened likelihood that take risk increases and compliance with minimized and fully mitigated becomes challenging."
+            },
+            {
+                "policy_name": "Delta Reform Act / Delta Plan coequal goals",
+                "relationship": "Broader governance implications",
+                "note": "Ecosystem protection mandate becomes sharply implicated because Tier 4 reflects persistent ecosystem degradation relative to the coequal goal of protecting, restoring, and enhancing the Delta ecosystem."
+            },
+            {
+                "policy_name": "Central Valley Project Improvement Act (CVPIA)",
+                "relationship": "Broader governance implications",
+                "note": "Intensified pressure to deploy (b)(2) water and related restoration measures because the statute explicitly links the dedication to protecting the Delta and meeting ESA obligations."
+            }
+        ]
+    },
+    "Governing Agencies": [
+        {
+            "name": "SWRCB (State Water Board)",
+            "note": "Sets Bay-Delta Plan objectives; implements via water-rights decisions (notably D-1641) and compliance oversight."
+        },
+        {
+            "name": "DWR (CA Dept. of Water Resources)",
+            "note": "Operates the State Water Project; must operate to meet applicable SWRCB requirements and other legal constraints (often coordinated with USBR)."
+        },
+        {
+            "name": "USBR (Bureau of Reclamation)",
+            "note": "Operates the Central Valley Project; implements CVPIA and is a key ESA §7 action agency."
+        },
+        {
+            "name": "USFWS & NOAA Fisheries (NMFS)",
+            "note": "ESA consulting agencies issuing BiOps/terms that constrain operations to protect listed species/habitat."
+        },
+        {
+            "name": "CDFW (CA Dept. of Fish and Wildlife)",
+            "note": "Administers CESA and incidental take permits; enforces take prohibition."
+        },
+        {
+            "name": "Delta Stewardship Council",
+            "note": "Administers the Delta Plan consistency program under the coequal goals framework."
+        },
+        {
+            "name": "U.S. EPA",
+            "note": "Federal Clean Water Act oversight of water quality standards (as referenced in the Plan’s framing)."
+        }
+    ]
+}

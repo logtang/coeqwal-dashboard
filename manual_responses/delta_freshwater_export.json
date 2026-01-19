@@ -1,0 +1,171 @@
+{
+        "Legal Standards": [
+    {
+        "name": "Delta Reform Act",
+        "note": "Establishes overarching state policy and governance framework for the Sacramento–San Joaquin Delta, including coordination of water supply reliability and ecosystem protection.",
+        "key_elements": []
+    },
+    {
+        "name": "Bay-Delta Water Quality Control Plan (Bay-Delta Plan)",
+        "note": "Defines water quality objectives and beneficial uses for the Bay-Delta; serves as a foundational document in the legal hierarchy governing Delta exports.",
+        "key_elements": []
+    },
+    {
+        "name": "Porter-Cologne Water Quality Control Act",
+        "note": "California’s primary water quality law providing authority for state regulation of surface and groundwater quality, including implementation of Bay-Delta standards.",
+        "key_elements": []
+    },
+    {
+        "name": "California Water Code",
+        "note": "Statutory framework governing water rights, allocation, and administration in California, operating alongside Porter-Cologne and Delta-specific mandates.",
+        "key_elements": []
+    },
+    {
+        "name": "Federal Clean Water Act (CWA)",
+        "note": "Provides the federal legal basis for water quality standards; Bay-Delta objectives are treated as CWA water quality standards with EPA oversight.",
+        "key_elements": []
+    },
+    {
+        "name": "Endangered Species Act (ESA)",
+        "note": "Imposes additional federal constraints on Delta operations to protect listed species, influencing export and flow requirements.",
+        "key_elements": []
+    },
+    {
+        "name": "Delta Stewardship Council Agricultural Salinity Standards",
+        "note": "State mandate for agricultural beneficial uses in the Delta, developed by the Delta Stewardship Council using best available science; applies to USBR/CVP operations only.",
+        "key_elements": [
+            {
+                "parameter": "Electrical Conductivity (EC)",
+                "season": "Summer",
+                "standard": "700 µS/cm",
+                "locations": [
+                    "Brandt Bridge",
+                    "Old River near Middle River",
+                    "Airport Way",
+                    "Vernalis"
+                ]
+            },
+            {
+                "parameter": "Electrical Conductivity (EC)",
+                "season": "Winter",
+                "standard": "1000 µS/cm",
+                "locations": [
+                    "Brandt Bridge",
+                    "Old River near Middle River",
+                    "Airport Way",
+                    "Vernalis"
+                ]
+            },
+            {
+                "note": "Additional salinity standards exist for municipal and industrial (M&I) uses."
+            }
+        ]
+    }
+],
+"Tiers": {
+  "Tier 1": [
+    {
+      "policy_name": "SWRCB Water Quality Control Plan Decision D-1641",
+      "relationship": "Primary governing framework",
+      "note": "D-1641 salinity objectives are used by water managers as measurements approach legal thresholds."
+    },
+    {
+      "policy_name": "CVP/SWP discretionary reservoir releases (USBR & DWR)",
+      "relationship": "Operational response (discretionary)",
+      "note": "Reservoir releases may be used to dilute salinity, but are often driven by other mandates such as water temperature or environmental requirements."
+    },
+    {
+      "policy_name": "Water diversion curtailments (general)",
+      "relationship": "Implicated (not directly triggered by salinity)",
+      "note": "Curtailments may be used to address salinity but are legally triggered by lack of water supply (e.g., drought conditions), not salinity alone."
+    },
+    {
+      "policy_name": "Term 91 curtailments (junior water rights)",
+      "relationship": "Sometimes applied",
+      "note": "Curtailments based on special permit terms for junior rights holders, typically tied to upstream storage and water availability rather than salinity thresholds."
+    },
+    {
+      "policy_name": "Seawater intrusion barriers",
+      "relationship": "Not triggered",
+      "note": "Other policy responses such as salinity barriers are generally not activated at this tier."
+    },
+    {
+      "policy_name": "Governor-declared drought emergency + TUCP/O filings",
+      "relationship": "Implicated (conditional)",
+      "note": "If a drought emergency is declared, SWP/DWR and CVP/USBR may file Temporary Urgency Change Petitions/Orders (TUCP/O) to modify water rights, which implicates D-1641."
+    }
+  ],
+  "Tier 2": [
+    {
+      "policy_name": "Observed salinity exceedances under current climate conditions",
+      "relationship": "Rare but plausible",
+      "note": "These salinity levels occur sporadically during very dry or extremely dry years."
+    },
+    {
+      "policy_name": "Seawater intrusion",
+      "relationship": "Likely",
+      "note": "Salinity levels at this tier are consistent with likely seawater intrusion in the Delta."
+    },
+    {
+      "policy_name": "Governor-declared drought emergency",
+      "relationship": "Likely triggered",
+      "note": "Drought emergency declaration becomes likely under these conditions."
+    },
+    {
+      "policy_name": "TUCP/O salinity standards relaxation (D-1641)",
+      "relationship": "Allowed / commonly implicated",
+      "note": "Water Code and SWRCB authority allow temporary relaxation of D-1641 salinity standards via TUCP/O during drought emergencies."
+    }
+  ],
+  "Tier 3": [
+    {
+      "policy_name": "Future climate-driven salinity thresholds",
+      "relationship": "Rare / speculative",
+      "note": "Thresholds are currently rare in California water management but may occur under an unknown future climate regime."
+    },
+    {
+      "policy_name": "Extreme drought emergency declaration",
+      "relationship": "Triggered",
+      "note": "Governor-declared extreme drought emergency is expected at this tier."
+    },
+    {
+      "policy_name": "Seawater intrusion barriers",
+      "relationship": "Almost certainly implemented",
+      "note": "Structural salinity barriers would almost certainly be deployed to prevent further seawater intrusion."
+    },
+    {
+      "policy_name": "TUCP/O salinity standards relaxation (very extreme drought)",
+      "relationship": "Triggered",
+      "note": "Temporary relaxation of salinity standards would likely be approved for very extreme drought conditions."
+    }
+  ],
+  "Tier 4": [
+    {
+      "policy_name": "Extreme long-duration drought (existential water scarcity)",
+      "relationship": "Defining condition",
+      "note": "Represents an almost unknown water future requiring extreme measures for human survival, as described in emergency water planning literature."
+    },
+    {
+      "policy_name": "Multi-year water storage planning",
+      "relationship": "Strongly implicated",
+      "note": "California regions are encouraged to maintain sufficient water storage to last several water years."
+    },
+    {
+      "policy_name": "TUCP/O salinity standards relaxation (multi-year)",
+      "relationship": "Likely ongoing",
+      "note": "Salinity standards would likely be relaxed for multiple consecutive years under emergency authority."
+    },
+    {
+      "policy_name": "State and federal water project operations",
+      "relationship": "Severely constrained",
+      "note": "CVP/SWP operations would likely be limited to food-security-level agriculture and basic human needs under state emergency planning."
+    },
+    {
+      "policy_name": "Curtailments and salinity barriers",
+      "relationship": "Continued from earlier tiers",
+      "note": "Curtailments and salinity barriers initiated in earlier stages would likely remain in place."
+    }
+  ]
+}
+
+}

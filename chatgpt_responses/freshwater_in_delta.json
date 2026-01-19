@@ -1,0 +1,91 @@
+{
+    "Legal Standards": [
+        {
+            "name": "Bay-Delta Plan salinity objectives (water quality standards framework)",
+            "note": "The State Water Board’s Water Quality Control Plan for the San Francisco Bay/Sacramento–San Joaquin Delta Estuary (Bay-Delta Plan) sets beneficial uses and water quality objectives (including salinity/EC) to protect them. Your EM/JP EC tiers are an alternate way of describing how often Delta water is “fresh enough” for those beneficial uses.",
+            "key_elements": []
+        },
+        {
+            "name": "SWRCB Water Right Decision 1641 (D-1641) — Western Delta agricultural EC objectives at EM & JP",
+            "note": "D-1641 is the State Water Board’s principal water-right implementation order that makes the Bay-Delta Plan’s objectives operational by placing compliance duties on project operators. D-1641 contains numeric EC limits at Emmaton and Jersey Point (measured as mmhos/cm, i.e., ~1000 µS/cm per 1 mmhos/cm). Your thresholds (900/1600/2500 µS/cm ≈ 0.9/1.6/2.5 mmhos/cm) are in the same units-family and range as those legal objectives.",
+            "key_elements": []
+        },
+        {
+            "name": "D-1641 / Bay-Delta Plan municipal & industrial (M&I) salinity standards (Delta-adjacent)",
+            "note": "D-1641 Table 1 includes chloride objectives (mg/L) at locations tied to municipal/industrial intakes (e.g., Contra Costa Canal / Antioch area). Not “in-Delta agriculture” per se, but these are still salinity-related standards driven by Delta conditions and export/operations; they can become implicated when western Delta salinity increases.",
+            "key_elements": []
+        },
+        {
+            "name": "Porter-Cologne Water Quality Control Act framework — Water Code Division 7",
+            "note": "The Porter-Cologne Water Quality Control Act is the state authority under which the Water Boards regulate water quality (including salinity contributors like agricultural return flows) through waste discharge requirements and NPDES permits. Even if a tier doesn’t “violate D-1641,” persistent high EC at EM/JP can implicate Regional Water Board programs addressing sources of salinity. (This is an “implementation pathway” association, not a single numeric EM/JP objective.)",
+            "key_elements": []
+        }
+    ],
+    "Tiers": {
+        "Tier 1": [
+            {
+                "policy_name": "SWRCB Water Right Decision 1641 (D-1641) — Western Delta agricultural EC objectives at EM & JP",
+                "relationship": "Implications",
+                "note": "D-1641 Table 2 (Western Delta agricultural EC at EM/JP): likely 'generally consistent,' but not guaranteed. It is supportive of meeting JP's 2.20 mmhos/cm objective because '>2.5' months are rare; however, Tier 1 still allows some months between 2.2 and 2.5, which could matter for JP. It does not guarantee meeting the most protective seasonal values (e.g., 0.63 mmhos at EM or 0.74 mmhos at JP in certain windows), because Tier 1's 'fresh' cut is 0.9 mmhos, which is higher than those legal limits in those periods."
+            },
+            {
+                "policy_name": "Bay-Delta Plan salinity objectives (water quality standards framework)",
+                "relationship": "Implications",
+                "note": "Bay-Delta Plan beneficial-use protection: Tier 1 would generally indicate good suitability for in-Delta agricultural uses (the policy purpose the objectives are meant to protect)."
+            }
+        ],
+        "Tier 2": [
+            {
+                "policy_name": "SWRCB Water Right Decision 1641 (D-1641) — Western Delta agricultural EC objectives at EM & JP",
+                "relationship": "Implications",
+                "note": "D-1641 Table 2 (EM/JP agricultural EC): elevated compliance risk vs Tier 1. Because Tier 2 allows more months above 2.5 mmhos, it increases the chance of exceeding JP's 2.20 mmhos seasonal objective (and sometimes EM's depending on year-type windows). The '<1.6 mmhos' condition aligns roughly with mid-range D-1641 objective magnitudes (1.14 / 1.35 / 1.67, etc.), suggesting some periods/year types may be met while others may not, depending on when the higher months occur relative to the D-1641 compliance season. Operational trigger/implication (DWR/USBR): more frequent brackish months would more often implicate DWR/USBR operational responsibilities under D-1641 (because D-1641 assigns them responsibility 'to meet the... objectives')."
+            }
+        ],
+        "Tier 3": [
+            {
+                "policy_name": "SWRCB Water Right Decision 1641 (D-1641) — Western Delta agricultural EC objectives at EM & JP",
+                "relationship": "Implications",
+                "note": "D-1641 Table 2 (JP especially): substantial risk of noncompliance in the applicable season. A Tier 3 regime allows up to 20% of months above 2.5 mmhos (~2500 uS/cm). Since JP's listed objective tops out at 2.20 mmhos in Table 2, any time your '>2.5' months overlap the D-1641 compliance season, JP objective exceedance is very likely. EM's Table 2 includes a 2.78 mmhos value in one case, so '>2.5' does not automatically mean EM is out of compliance in all conditions; but it's still a strong warning sign, particularly if many months are >1.6 as well."
+            },
+            {
+                "policy_name": "Bay-Delta Plan salinity objectives (water quality standards framework)",
+                "relationship": "Implications",
+                "note": "Bay-Delta Plan beneficial uses: Tier 3 indicates moderate-to-frequent salinity stress on agricultural in-Delta uses - this is exactly the kind of impairment the Bay-Delta salinity objectives are designed to prevent."
+            }
+        ],
+        "Tier 4": [
+            {
+                "policy_name": "SWRCB Water Right Decision 1641 (D-1641) — Western Delta agricultural EC objectives at EM & JP",
+                "relationship": "Implications",
+                "note": "D-1641 Table 2 (Western Delta agricultural EC): high likelihood of repeated noncompliance at JP; frequent operational non-attainment conditions. If '>2500' months exceed 20%, it strongly implies repeated periods above JP's 2.20 mmhos Table 2 objective during the compliance season(s) unless those high months happen to fall entirely outside the Table 2 windows (unlikely over long records). If '<900' is rare, that also implies persistent periods above the most protective D-1641 values (e.g., 0.74 at JP, 0.63 at EM in certain windows). Governance escalation likely implicated: Tier 4 conditions are the kind that tend to implicate SWRCB compliance attention under D-1641."
+            },
+            {
+                "policy_name": "Bay-Delta Plan salinity objectives (water quality standards framework)",
+                "relationship": "Implications",
+                "note": "Bay-Delta Plan beneficial uses: Tier 4 suggests the western Delta is often unsuitable for in-Delta agricultural uses - a direct policy concern of the Bay-Delta objectives framework."
+            }
+        ]
+    },
+    "Governing Agencies": [
+        {
+            "name": "California State Water Resources Control Board (State Water Board / SWRCB)",
+            "note": "Adopts Bay-Delta Plan objectives and enforces them through water-right permits/licenses (D-1641)."
+        },
+        {
+            "name": "California Department of Water Resources (DWR)",
+            "note": "Operates SWP Banks Pumping Plant/Clifton Court Forebay and is assigned responsibility under D-1641 implementation for SWP compliance."
+        },
+        {
+            "name": "U.S. Bureau of Reclamation (USBR/Reclamation)",
+            "note": "Operates CVP Jones Pumping Plant/Tracy and is assigned responsibility under D-1641 implementation for CVP compliance."
+        },
+        {
+            "name": "U.S. Environmental Protection Agency (EPA)",
+            "note": "Federal role because Bay-Delta objectives are treated as CWA water quality standards (approval/oversight of standards)."
+        },
+        {
+            "name": "Fish agencies (CDFW, USFWS, NMFS)",
+            "note": "Often consulted for export operations; D-1641 includes consultation requirements for certain export operations."
+        }
+    ]
+}

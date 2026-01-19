@@ -1,0 +1,93 @@
+{
+    "Legal Standards": [
+    {
+        "name": "Reservoir-Specific Storage and Cold Pool Management",
+        "note": "Each reservoir operates under site-specific storage and operational specifications, which vary widely by facility and include management of the cold pool to maintain lower-temperature water for downstream uses and ecological protection.",
+        "key_elements": [
+            {
+                "component": "Cold pool",
+                "definition": "Deep reservoir water that maintains colder average temperatures due to sufficient depth",
+                "management_objective": "Temperature control for downstream releases"
+            }
+        ]
+    },
+    {
+        "name": "State Water Resources Control Board (SWRCB) Permitting Authority",
+        "note": "SWRCB issues permits through separate regulatory processes for water diversion and water storage and monitors compliance with permit conditions governing reservoir releases.",
+        "key_elements": [
+            {
+                "permit_types": [
+                    "Diversion permits",
+                    "Storage permits"
+                ]
+            },
+            {
+                "oversight": "Monitoring of reservoir release conditions"
+            }
+        ]
+    },
+    {
+        "name": "Discretionary Reservoir Release Management",
+        "note": "Reservoir releases may be managed discretionarily to satisfy multiple overlapping legal and operational objectives.",
+        "key_elements": [
+            {
+                "objectives": [
+                    "Salinity control",
+                    "Compliance with senior water rights",
+                    "U.S. Fish and Wildlife Service requirements",
+                    "Environmental Protection Agency requirements",
+                    "Clean Water Act (CWA) compliance"
+                ]
+            }
+        ]
+    }
+],
+    "Tiers": {
+        "Tier 1": [
+            {
+                "policy_name": "Water quality project certification triggers",
+                "relationship": "Monitored / standard practice",
+                "note": "Triggers include water year type, biological monitoring, sediment transport, and water temperature; normal operations proceed under standard management."
+            },
+            {
+                "policy_name": "Water storage rights management",
+                "relationship": "Normal / standard practice",
+                "note": "Stored water is not curtailed; new diversions to storage can be curtailed based on constitutional priorities and rights in time."
+            },
+            {
+                "policy_name": "Cold pool water management",
+                "relationship": "Implicated / standard practice",
+                "note": "Colder/deeper water is used strategically to maintain downstream temperature via mixing and multilevel pumping."
+            }
+        ],
+        "Tier 2": [
+            {
+                "policy_name": "Curtailments for junior water rights holders",
+                "relationship": "Triggered / limited",
+                "note": "Curtailments occur primarily among junior water rights holders to ensure allocations for senior rights holders; carryover storage generally not in danger."
+            },
+            {
+                "policy_name": "Governor-declared drought emergency",
+                "relationship": "Likely triggered",
+                "note": "Triggers modifications to standard operating procedures, permit streamlining for water transfers and groundwater recharge, careful management of existing supplies, and water rights curtailments (even potentially for senior holders)."
+            }
+        ],
+        "Tier 3": [
+            {
+                "policy_name": "Governor-declared unprecedented drought emergency",
+                "relationship": "Triggered / emergency-level",
+                "note": "Major changes to operating procedures; state long-term drought/shortage plans implicated. Encouragement of local and regional planning for multi-year periods of little to no deliveries from state and federal projects."
+            }
+        ],
+        "Tier 4": [
+            {
+                "policy_name": "Extreme reservoir and water supply management",
+                "relationship": "Triggered / crisis-level",
+                "note": "Physical constraints like deadpool dominate operations; severe curtailments and operational modifications occur to preserve basic allocations, potentially affecting all rights holders."
+            }
+        ]
+    }
+
+
+
+}

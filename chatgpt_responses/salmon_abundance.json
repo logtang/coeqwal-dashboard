@@ -1,0 +1,111 @@
+{
+    "Legal Standards": [
+        {
+            "name": "Endangered Species Act (ESA)",
+            "note": "The ESA provides for listing species and recovery obligations when populations are low (“threatened” or “endangered”). Once listed, it becomes illegal to take (harm) listed species and federal agencies must avoid actions that jeopardize them or destroy/modify their critical habitat. Agencies must develop recovery plans to increase population abundance.",
+            "key_elements": [
+                {
+                    "name": "Listing and recovery planning",
+                    "note": "Species with depressed abundance can be listed as threatened/endangered based on scientific status."
+                },
+                {
+                    "name": "Critical habitat protections",
+                    "note": "Areas needed for recovery are defined and protected."
+                },
+                {
+                    "name": "Section 7 consultation",
+                    "note": "Federal actions must consult with NOAA/FWS to avoid jeopardy to listed species."
+                }
+            ]
+        },
+        {
+            "name": "Magnus-Stevens Fishery Conservation and Management Act (MSA)",
+            "note": "MSA governs marine fisheries including salmon in federal waters and aims to prevent overfishing and rebuild overfished stocks. It requires fishery management plans (FMPs) with status determination criteria such as minimum stock levels and escapement goals to measure stock abundance.",
+            "key_elements": [
+                {
+                    "name": "National standards",
+                    "note": "Management actions must prevent overfishing and use the best scientific information."
+                },
+                {
+                    "name": "Essential Fish Habitat (EFH)",
+                    "note": "Requires identification and protection of habitats necessary for salmon to spawn, feed, and mature."
+                }
+            ]
+        },
+        {
+            "name": "Pacific Coast Salmon Fishery Management Plan (PCSFMP)",
+            "note": "Under the MSA, the Pacific Fishery Management Council develops a detailed Salmon FMP that includes control rules, escapement benchmarks, and harvest limits tied explicitly to abundance metrics. These criteria determine allowable catch and management actions based on current and forecasted stock abundance.",
+            "key_elements": []
+        },
+        {
+            "name": "California State Law: AB 263 (2025)",
+            "note": "California law AB 263 extends emergency instream flow protections for key salmon tributaries (Scott & Shasta Rivers) to support salmon survival and spawning habitat, countering drought and water diversions that reduce abundance.",
+            "key_elements": []
+        },
+        {
+            "name": "Marine Life Protection Act (MLPA)",
+            "note": "State-level habitat protection through creation and evaluation of marine protected areas (MPAs) enhances ecosystem conditions beneficial to salmon nearshore life stages and contributes to abundance goals.",
+            "key_elements": []
+        }
+    ],
+    "Tiers": {
+        "Tier 1": [
+            {
+                "policy_name": "Endangered Species Act (ESA)",
+                "relationship": "Foundational federal statute governing listing, recovery, and critical habitat when abundance is low.",
+                "note": "Tier inferred as top-level federal statute; confirm."
+            },
+            {
+                "policy_name": "Magnus-Stevens Fishery Conservation and Management Act (MSA)",
+                "relationship": "Foundational federal fishery statute setting overfishing limits and rebuilding requirements.",
+                "note": "Tier inferred as top-level federal statute; confirm."
+            }
+        ],
+        "Tier 2": [
+            {
+                "policy_name": "Pacific Coast Salmon Fishery Management Plan (PCSFMP)",
+                "relationship": "Implements MSA via salmon-specific control rules, escapement benchmarks, and harvest limits.",
+                "note": "Tier inferred as federal management plan under MSA; confirm."
+            }
+        ],
+        "Tier 3": [
+            {
+                "policy_name": "California State Law: AB 263 (2025)",
+                "relationship": "State statute extending emergency instream flow protections for key tributaries.",
+                "note": "Tier inferred as state law; confirm."
+            },
+            {
+                "policy_name": "Marine Life Protection Act (MLPA)",
+                "relationship": "State habitat protection framework via marine protected areas that support salmon life stages.",
+                "note": "Tier inferred as state habitat law; confirm."
+            }
+        ],
+        "Tier 4": []
+    },
+    "Governing Agencies": [
+        {
+            "name": "NOAA Fisheries (NMFS)",
+            "note": "Implements ESA for marine salmon, approves FMPs under MSA, designates critical habitat, conducts consultations"
+        },
+        {
+          "name": "Pacific Fishery Council",
+          "note": "Develops the Salmon FMP, sets ACLs and escapement goals under MSA."
+        },
+        {
+          "name": "U.S. Fish & Wildlife Service",
+          "note": "Shares ESA implementation for some salmon species."
+        },
+        {
+          "name": "California State Water Resources Control Board",
+          "note": "Sets water flows and instream protections (e.g., AB 263)."
+        },
+        {
+          "name": "California Dept. of Fish & Wildlife",
+          "note": "Implements state harvest regulations and participates in habitat restoration."
+        },
+        {
+          "name": "Tribes",
+          "note": "Have treaty water/fish rights and collaborate on salmon resotration (e.g., Klamath protections)."
+        }
+    ]
+}
