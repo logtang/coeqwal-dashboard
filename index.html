@@ -543,6 +543,10 @@
             font-weight: 600;
         }
 
+        .is-hidden {
+            display: none;
+        }
+
         @media (max-width: 1024px) {
             .comparison-container {
                 grid-template-columns: 1fr;
@@ -571,15 +575,7 @@
                     <div class="metric-indicator-label">Selected Metric</div>
                     <div class="metric-indicator-value" id="selectedMetric">None</div>
                 </div>
-                <div id="overviewInline" class="overview-inline">
-                    <div class="empty-state">
-                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
-                        </svg>
-                        <h2>Select a metric to view analysis</h2>
-                        <p>Choose from the options above to explore policy data</p>
-                    </div>
-                </div>
+                <div id="overviewInline" class="overview-inline"></div>
             </div>
         </div>
 
@@ -591,7 +587,14 @@
             </div>
 
             <div id="legal" class="tab-content active">
-                <div class="comparison-container">
+                <div id="legalEmptyState" class="empty-state">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                    </svg>
+                    <h2>Select a metric to view analysis</h2>
+                    <p>Choose from the options above to explore policy data</p>
+                </div>
+                <div id="legalComparison" class="comparison-container is-hidden">
                     <div class="comparison-panel">
                         <div class="comparison-panel-title">ChatGPT-Identified</div>
                         <div id="legalContentChatGPT"></div>
@@ -777,6 +780,13 @@
 
         function renderLegalStandards() {
             if (!currentDataChatGPT || !currentDataManual) return;
+
+            const legalEmptyState = document.getElementById('legalEmptyState');
+            const legalComparison = document.getElementById('legalComparison');
+            if (legalEmptyState && legalComparison) {
+                legalEmptyState.classList.add('is-hidden');
+                legalComparison.classList.remove('is-hidden');
+            }
 
             renderLegalStandardsPanel(currentDataChatGPT, 'ChatGPT');
             renderLegalStandardsPanel(currentDataManual, 'Manual');
