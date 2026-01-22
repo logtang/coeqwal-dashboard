@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ChatGPT Responses Dashboard</title>
+    <title>AI vs Manual Policy Lens</title>
     <style>
         * {
             margin: 0;
@@ -23,11 +23,119 @@
             margin: 0 auto;
         }
 
-        h1 {
+        .page-header {
+            margin-bottom: 20px;
+        }
+
+        .title-block {
+            max-width: 760px;
+        }
+
+        .page-title {
             color: #0ea5e9;
-            text-align: center;
-            margin-bottom: 30px;
-            font-size: 2.5rem;
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .page-subtitle {
+            color: #475569;
+            font-size: 1.05rem;
+            line-height: 1.5;
+        }
+
+        .metric-indicator {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 10px;
+            padding: 12px 16px;
+            min-width: 220px;
+            text-align: left;
+            box-shadow: 0 6px 18px rgba(15, 23, 42, 0.08);
+        }
+
+        .metric-indicator-label {
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            font-size: 0.7rem;
+            color: #64748b;
+            margin-bottom: 6px;
+        }
+
+        .metric-indicator-value {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #0f172a;
+        }
+
+        .metric-overview {
+            display: grid;
+            grid-template-columns: minmax(180px, 240px) 1fr;
+            gap: 16px;
+            margin-top: 16px;
+            padding-top: 16px;
+            border-top: 1px solid #e2e8f0;
+            align-items: start;
+        }
+
+        .metric-overview .metric-indicator {
+            background: #ffffff;
+            box-shadow: none;
+            padding: 10px 12px;
+        }
+
+        .metric-overview .comparison-container {
+            margin-bottom: 0;
+            gap: 12px;
+        }
+
+        .metric-overview .comparison-panel {
+            padding: 12px;
+            border-width: 1px;
+        }
+
+        .metric-overview .comparison-panel-title {
+            font-size: 0.95rem;
+            margin-bottom: 8px;
+            padding-bottom: 6px;
+        }
+
+        .metric-overview .section-title {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        .metric-overview .stats-grid {
+            gap: 10px;
+            margin-bottom: 0;
+        }
+
+        .metric-overview .stat-card {
+            padding: 12px;
+        }
+
+        .metric-overview .stat-number {
+            font-size: 1.4rem;
+        }
+
+        .metric-overview .stat-label {
+            font-size: 0.8rem;
+        }
+
+        .metric-overview .empty-state {
+            padding: 20px;
+        }
+
+        .metric-overview .empty-state svg {
+            width: 60px;
+            height: 60px;
+            margin-bottom: 12px;
+        }
+
+        @media (max-width: 900px) {
+            .metric-overview {
+                grid-template-columns: 1fr;
+            }
         }
 
         .metric-selector {
@@ -448,39 +556,48 @@
 </head>
 <body>
     <div class="container">
-        <h1> Policy Analysis Dashboard</h1>
+        <header class="page-header">
+            <div class="title-block">
+                <div class="page-title">AI vs Manual Policy Lens</div>
+                <div class="page-subtitle">Side-by-side application of the framework to surface blind spots and capture signals experts might miss.</div>
+            </div>
+        </header>
         
         <div class="metric-selector">
             <h2 style="margin-bottom: 15px; color: #1e293b;">Select a Metric</h2>
             <div class="metric-grid" id="metricGrid"></div>
+            <div class="metric-overview">
+                <div class="metric-indicator">
+                    <div class="metric-indicator-label">Selected Metric</div>
+                    <div class="metric-indicator-value" id="selectedMetric">None</div>
+                </div>
+                <div id="overviewInline" class="overview-inline">
+                    <div class="empty-state">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                        </svg>
+                        <h2>Select a metric to view analysis</h2>
+                        <p>Choose from the options above to explore policy data</p>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <div class="content-container">
             <div class="tabs">
-                <div class="tab active" data-tab="overview">Overview</div>
-                <div class="tab" data-tab="legal">Legal Standards</div>
+                <div class="tab active" data-tab="legal">Legal Standards</div>
                 <div class="tab" data-tab="tiers">Tiers</div>
                 <div class="tab" data-tab="agencies">Agencies</div>
             </div>
 
-            <div id="overview" class="tab-content active">
-                <div class="empty-state">
-                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
-                    </svg>
-                    <h2>Select a metric to view analysis</h2>
-                    <p>Choose from the options above to explore policy data</p>
-                </div>
-            </div>
-
-            <div id="legal" class="tab-content">
+            <div id="legal" class="tab-content active">
                 <div class="comparison-container">
                     <div class="comparison-panel">
-                        <div class="comparison-panel-title">ChatGPT Response</div>
+                        <div class="comparison-panel-title">ChatGPT-Identified</div>
                         <div id="legalContentChatGPT"></div>
                     </div>
                     <div class="comparison-panel">
-                        <div class="comparison-panel-title">Manual Response</div>
+                        <div class="comparison-panel-title">Manually-Identified</div>
                         <div id="legalContentManual"></div>
                     </div>
                 </div>
@@ -493,11 +610,11 @@
             <div id="agencies" class="tab-content">
                 <div class="comparison-container">
                     <div class="comparison-panel">
-                        <div class="comparison-panel-title">ChatGPT Response</div>
+                        <div class="comparison-panel-title">ChatGPT-Identified</div>
                         <div id="agenciesContentChatGPT"></div>
                     </div>
                     <div class="comparison-panel">
-                        <div class="comparison-panel-title">Manual Response</div>
+                        <div class="comparison-panel-title">Manually-Identified</div>
                         <div id="agenciesContentManual"></div>
                     </div>
                 </div>
@@ -557,6 +674,10 @@
             });
 
             currentMetric = metric;
+            const selectedMetric = document.getElementById('selectedMetric');
+            if (selectedMetric) {
+                selectedMetric.textContent = formatMetricName(metric);
+            }
             
             // Load both datasets
             try {
@@ -616,11 +737,9 @@
             const chatgptStats = getStats(currentDataChatGPT || {});
             const manualStats = getStats(currentDataManual || {});
 
-            document.getElementById('overview').innerHTML = `
-                <h2 class="section-title">${formatMetricName(currentMetric)}</h2>
+            document.getElementById('overviewInline').innerHTML = `
                 <div class="comparison-container">
                     <div class="comparison-panel">
-                        <div class="comparison-panel-title">ChatGPT Analysis</div>
                         <div class="stats-grid">
                             <div class="stat-card">
                                 <div class="stat-number">${chatgptStats.legalCount}</div>
@@ -637,7 +756,6 @@
                         </div>
                     </div>
                     <div class="comparison-panel">
-                        <div class="comparison-panel-title">Manual Analysis</div>
                         <div class="stats-grid">
                             <div class="stat-card">
                                 <div class="stat-number">${manualStats.legalCount}</div>
