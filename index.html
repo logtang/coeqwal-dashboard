@@ -71,6 +71,21 @@
             box-shadow: 0 8px 24px rgba(0,0,0,0.3);
         }
 
+        .metric-card.disabled {
+            opacity: 0.45;
+            border-left-color: #9ca3af;
+            background: #f3f4f6;
+            color: #6b7280;
+            cursor: not-allowed;
+            box-shadow: none;
+            pointer-events: none;
+        }
+
+        .metric-card.disabled:hover {
+            transform: none;
+            box-shadow: none;
+        }
+
         .metric-name {
             text-transform: capitalize;
         }
@@ -167,6 +182,24 @@
             margin-bottom: 25px;
         }
 
+        .tiers-aligned {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .tier-row {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .tier-columns {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
         .tier-header {
             /* background: linear-gradient(135deg, #0ea5e9 0%, #38bdf8 100%); */
             color: #000000;
@@ -175,6 +208,20 @@
             margin-bottom: 15px;
             font-size: 1.3rem;
             font-weight: 700;
+            display: flex;
+            align-items: baseline;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .tier-header-title {
+            font-weight: 700;
+        }
+
+        .tier-header-note {
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: #475569;
         }
 
         .tier-1 { border-left-color: #10b981; }
@@ -346,6 +393,10 @@
             .comparison-container {
                 grid-template-columns: 1fr;
             }
+
+            .tier-columns {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
@@ -390,16 +441,7 @@
             </div>
 
             <div id="tiers" class="tab-content">
-                <div class="comparison-container">
-                    <div class="comparison-panel">
-                        <div class="comparison-panel-title">ChatGPT Response</div>
-                        <div id="tiersContentChatGPT"></div>
-                    </div>
-                    <div class="comparison-panel">
-                        <div class="comparison-panel-title">Manual Response</div>
-                        <div id="tiersContentManual"></div>
-                    </div>
-                </div>
+                <div id="tiersAligned" class="tiers-aligned"></div>
             </div>
 
             <div id="agencies" class="tab-content">
@@ -428,6 +470,7 @@
             'resevoir_storage',
             'salmon_abundance'
         ];
+        const allowedMetric = 'agricultural_productivity';
 
         let currentMetric = null;
         let currentData = null;
@@ -442,11 +485,16 @@
 
         function renderMetricCards() {
             const grid = document.getElementById('metricGrid');
-            grid.innerHTML = metrics.map(metric => `
-                <div class="metric-card" data-metric="${metric}" onclick="selectMetric('${metric}')">
+            grid.innerHTML = metrics.map(metric => {
+                const isAllowed = metric === allowedMetric;
+                const disabledClass = isAllowed ? '' : 'disabled';
+                const clickHandler = isAllowed ? `onclick="selectMetric('${metric}')"` : '';
+                return `
+                <div class="metric-card ${disabledClass}" data-metric="${metric}" ${clickHandler} aria-disabled="${!isAllowed}">
                     <div class="metric-name">${formatMetricName(metric)}</div>
                 </div>
-            `).join('');
+            `;
+            }).join('');
         }
 
         function formatMetricName(metric) {
@@ -454,6 +502,9 @@
         }
 
         async function selectMetric(metric) {
+            if (metric !== allowedMetric) {
+                return;
+            }
             // Update active state
             document.querySelectorAll('.metric-card').forEach(card => {
                 card.classList.toggle('active', card.dataset.metric === metric);
@@ -601,35 +652,54 @@
 
         function renderTiers() {
             if (!currentDataChatGPT && !currentDataManual) return;
+            const tierOrder = ['Tier 1', 'Tier 2', 'Tier 3', 'Tier 4'];
+            const tierDefinitions = {
+                'Tier 1': 'Revenue Increasing',
+                'Tier 2': 'Revenue Declining &lt;5%/year',
+                'Tier 3': 'Revenue Declining 5-20%/year',
+                'Tier 4': 'Revenue Declining &gt;20%/year'
+            };
+            const content = document.getElementById('tiersAligned');
+            const chatgptTiers = currentDataChatGPT && currentDataChatGPT.Tiers ? currentDataChatGPT.Tiers : null;
+            const manualTiers = currentDataManual && currentDataManual.Tiers ? currentDataManual.Tiers : null;
 
-            if (currentDataChatGPT && currentDataChatGPT.Tiers) {
-                renderTiersPanel(currentDataChatGPT, 'ChatGPT');
-            } else {
-                document.getElementById('tiersContentChatGPT').innerHTML = '<div class="error-display">Error: Missing Tiers</div>';
-            }
+            content.innerHTML = tierOrder.map((tierName) => {
+                const tierNumber = tierName.split(' ')[1];
+                const chatPolicies = chatgptTiers ? chatgptTiers[tierName] : null;
+                const manualPolicies = manualTiers ? manualTiers[tierName] : null;
+                const tierDefinition = tierDefinitions[tierName];
 
-            if (currentDataManual && currentDataManual.Tiers) {
-                renderTiersPanel(currentDataManual, 'Manual');
-            } else {
-                document.getElementById('tiersContentManual').innerHTML = '<div class="error-display">Error: Missing Tiers</div>';
-            }
+                return `
+                    <div class="tier-row">
+                        <div class="tier-header tier-${tierNumber}">
+                            <span class="tier-header-title">${tierName}</span>
+                            ${tierDefinition ? `<span class="tier-header-note">${tierDefinition}</span>` : ''}
+                        </div>
+                        <div class="tier-columns">
+                            <div class="comparison-panel">
+                                <div class="comparison-panel-title">ChatGPT Response</div>
+                                ${chatPolicies ? renderTierPolicies(chatPolicies, tierNumber) : '<div class="error-display">Error: Missing Tier</div>'}
+                            </div>
+                            <div class="comparison-panel">
+                                <div class="comparison-panel-title">Manual Response</div>
+                                ${manualPolicies ? renderTierPolicies(manualPolicies, tierNumber) : '<div class="error-display">Error: Missing Tier</div>'}
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }).join('');
         }
 
-        function renderTiersPanel(data, source) {
-            const tiers = data.Tiers;
-            const elementId = source === 'ChatGPT' ? 'tiersContentChatGPT' : 'tiersContentManual';
-            const content = document.getElementById(elementId);
-            
-            content.innerHTML = Object.entries(tiers).map(([tierName, policies]) => `
-                <div class="tier-section">
-                    <div class="tier-header">${tierName}</div>
-                    ${policies.map(policy => `
-                        <div class="policy-card tier-${tierName.split(' ')[1]}">
-                            <div class="policy-name">${policy.policy_name || '<span class="error-display" style="display: inline; padding: 2px 6px;">Error</span>'}</div>
-                            ${policy.relationship ? `<div class="relationship ${getRelationshipClass(policy.relationship)}">${policy.relationship}</div>` : '<div class="error-display" style="padding: 4px 12px; display: inline-block; font-size: 0.85rem;">Error: Missing relationship</div>'}
-                            <div class="card-note">${policy.note || '<span class="error-display" style="display: inline; padding: 2px 6px;">Error</span>'}</div>
-                        </div>
-                    `).join('')}
+        function renderTierPolicies(policies, tierNumber) {
+            if (!Array.isArray(policies) || policies.length === 0) {
+                return '<div class="empty-state"><h3>No policy data available for this tier</h3></div>';
+            }
+
+            return policies.map(policy => `
+                <div class="policy-card tier-${tierNumber}">
+                    <div class="policy-name">${policy.policy_name || '<span class="error-display" style="display: inline; padding: 2px 6px;">Error</span>'}</div>
+                    ${policy.relationship ? `<div class="relationship ${getRelationshipClass(policy.relationship)}">${policy.relationship}</div>` : '<div class="error-display" style="padding: 4px 12px; display: inline-block; font-size: 0.85rem;">Error: Missing relationship</div>'}
+                    <div class="card-note">${policy.note || '<span class="error-display" style="display: inline; padding: 2px 6px;">Error</span>'}</div>
                 </div>
             `).join('');
         }
