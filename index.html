@@ -12,7 +12,7 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            font-family: "Inter", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
             background: #ffffff;
             min-height: 100vh;
             padding: 20px;
@@ -185,29 +185,52 @@
         .tiers-aligned {
             display: flex;
             flex-direction: column;
-            gap: 24px;
+            gap: 22px;
         }
 
         .tier-row {
-            display: flex;
-            flex-direction: column;
-            gap: 16px;
+            border: 1px solid #e2e8f0;
+            border-radius: 10px;
+            background: #ffffff;
+            overflow: hidden;
+        }
+
+        .tier-row[open] {
+            box-shadow: 0 12px 24px rgba(15, 23, 42, 0.08);
         }
 
         .tier-columns {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 20px;
+            padding: 0 18px 18px;
         }
 
         .tier-header {
             /* background: linear-gradient(135deg, #0ea5e9 0%, #38bdf8 100%); */
             color: #000000;
-            padding: 15px 20px;
-            border-radius: 8px;
-            margin-bottom: 15px;
+            padding: 16px 18px;
             font-size: 1.3rem;
             font-weight: 700;
+            display: flex;
+            align-items: baseline;
+            justify-content: space-between;
+            gap: 16px;
+            cursor: pointer;
+            list-style: none;
+            border-left: 6px solid #e2e8f0;
+            background: #f8fafc;
+        }
+
+        .tier-header::-webkit-details-marker {
+            display: none;
+        }
+
+        .tier-header::marker {
+            content: "";
+        }
+
+        .tier-header-content {
             display: flex;
             align-items: baseline;
             gap: 12px;
@@ -222,6 +245,29 @@
             font-size: 0.95rem;
             font-weight: 500;
             color: #475569;
+        }
+
+        .tier-toggle {
+            width: 28px;
+            height: 28px;
+            border-radius: 999px;
+            border: 1px solid #cbd5e1;
+            display: grid;
+            place-items: center;
+            color: #64748b;
+            background: #ffffff;
+            flex-shrink: 0;
+        }
+
+        .tier-toggle::before {
+            content: ">";
+            font-size: 1rem;
+            transform: rotate(0deg);
+            transition: transform 0.2s ease;
+        }
+
+        .tier-row[open] .tier-toggle::before {
+            transform: rotate(90deg);
         }
 
         .tier-1 { border-left-color: #10b981; }
@@ -670,11 +716,14 @@
                 const tierDefinition = tierDefinitions[tierName];
 
                 return `
-                    <div class="tier-row">
-                        <div class="tier-header tier-${tierNumber}">
-                            <span class="tier-header-title">${tierName}</span>
-                            ${tierDefinition ? `<span class="tier-header-note">${tierDefinition}</span>` : ''}
-                        </div>
+                    <details class="tier-row" open>
+                        <summary class="tier-header tier-${tierNumber}">
+                            <span class="tier-header-content">
+                                <span class="tier-header-title">${tierName}</span>
+                                ${tierDefinition ? `<span class="tier-header-note">${tierDefinition}</span>` : ''}
+                            </span>
+                            <span class="tier-toggle" aria-hidden="true"></span>
+                        </summary>
                         <div class="tier-columns">
                             <div class="comparison-panel">
                                 <div class="comparison-panel-title">ChatGPT Response</div>
@@ -685,7 +734,7 @@
                                 ${manualPolicies ? renderTierPolicies(manualPolicies, tierNumber) : '<div class="error-display">Error: Missing Tier</div>'}
                             </div>
                         </div>
-                    </div>
+                    </details>
                 `;
             }).join('');
         }
