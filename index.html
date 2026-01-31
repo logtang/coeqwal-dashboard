@@ -202,7 +202,7 @@
             padding: 10px 8px;
             /* background: linear-gradient(135deg, #0ea5e9 0%, #38bdf8 100%); */
             color: #4e4e4e;
-            border-left: 8px solid #0ea5e9;
+            border: 1px solid #bcd4e6;
             cursor: pointer;
             transition: all 0.3s ease;
             text-align: center;
@@ -211,6 +211,7 @@
             align-items: center;
             justify-content: center;
             box-shadow: 0 4px 8px rgba(8, 104, 149, 0.1);
+            border-radius: 14px;
         }
 
 
@@ -226,7 +227,7 @@
 
         .metric-card.disabled {
             opacity: 0.45;
-            border-left-color: #9ca3af;
+            border-color: #9ca3af;
             background: #f3f4f6;
             color: #6b7280;
             cursor: not-allowed;
@@ -657,11 +658,25 @@
             </div>
 
             <div id="tiers" class="tab-content">
-                <div id="tiersAligned" class="tiers-aligned"></div>
+                <div id="tiersEmptyState" class="empty-state">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                    </svg>
+                    <h2>Select a metric to view analysis</h2>
+                    <p>Choose from the options above to explore policy data</p>
+                </div>
+                <div id="tiersAligned" class="tiers-aligned is-hidden"></div>
             </div>
 
             <div id="agencies" class="tab-content">
-                <div class="comparison-container">
+                <div id="agenciesEmptyState" class="empty-state">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                    </svg>
+                    <h2>Select a metric to view analysis</h2>
+                    <p>Choose from the options above to explore policy data</p>
+                </div>
+                <div id="agenciesComparison" class="comparison-container is-hidden">
                     <div class="comparison-panel">
                         <div class="comparison-panel-title">ChatGPT Results <span class="panel-count" id="agenciesCountChatGPT">(0)</span></div>
                         <div id="agenciesContentChatGPT"></div>
@@ -868,7 +883,21 @@
         }
 
         function renderTiers() {
-            if (!currentDataChatGPT && !currentDataManual) return;
+            const tiersEmptyState = document.getElementById('tiersEmptyState');
+            const tiersAligned = document.getElementById('tiersAligned');
+            if (!currentDataChatGPT && !currentDataManual) {
+                if (tiersEmptyState && tiersAligned) {
+                    tiersEmptyState.classList.remove('is-hidden');
+                    tiersAligned.classList.add('is-hidden');
+                }
+                return;
+            }
+
+            if (tiersEmptyState && tiersAligned) {
+                tiersEmptyState.classList.add('is-hidden');
+                tiersAligned.classList.remove('is-hidden');
+            }
+
             const tierOrder = ['Tier 1', 'Tier 2', 'Tier 3', 'Tier 4'];
             const tierDefinitions = {
                 'Tier 1': 'Revenue Increasing',
@@ -939,7 +968,20 @@
         }
 
         function renderAgencies() {
-            if (!currentDataChatGPT && !currentDataManual) return;
+            const agenciesEmptyState = document.getElementById('agenciesEmptyState');
+            const agenciesComparison = document.getElementById('agenciesComparison');
+            if (!currentDataChatGPT && !currentDataManual) {
+                if (agenciesEmptyState && agenciesComparison) {
+                    agenciesEmptyState.classList.remove('is-hidden');
+                    agenciesComparison.classList.add('is-hidden');
+                }
+                return;
+            }
+
+            if (agenciesEmptyState && agenciesComparison) {
+                agenciesEmptyState.classList.add('is-hidden');
+                agenciesComparison.classList.remove('is-hidden');
+            }
 
             const agenciesCountChatGPT = document.getElementById('agenciesCountChatGPT');
             const agenciesCountManual = document.getElementById('agenciesCountManual');
