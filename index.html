@@ -13,14 +13,31 @@
 
         body {
             font-family: "Inter", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            background: #ffffff;
+            background: radial-gradient(1200px 600px at 5% -10%, #e0f2fe 0%, transparent 55%),
+                radial-gradient(900px 500px at 95% -10%, #fef3c7 0%, transparent 55%),
+                linear-gradient(180deg, #f8fafc 0%, #eef2f7 100%);
             min-height: 100vh;
             padding: 20px;
+            color: #0f172a;
+            position: relative;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            background-image: radial-gradient(rgba(15, 23, 42, 0.08) 1px, transparent 1px);
+            background-size: 28px 28px;
+            opacity: 0.2;
+            pointer-events: none;
+            z-index: 0;
         }
 
         .container {
             max-width: 1400px;
             margin: 0 auto;
+            position: relative;
+            z-index: 1;
         }
 
         .page-header {
@@ -32,7 +49,7 @@
         }
 
         .page-title {
-            color: #0ea5e9;
+            color: #042980;
             font-size: 2.2rem;
             font-weight: 700;
             margin-bottom: 8px;
@@ -111,7 +128,12 @@
         }
 
         .metric-overview .stat-card {
-            padding: 12px;
+            padding: 12px 14px;
+            text-align: left;
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 10px;
+            box-shadow: 0 6px 16px rgba(15, 23, 42, 0.06);
         }
 
         .metric-overview .stat-number {
@@ -119,7 +141,30 @@
         }
 
         .metric-overview .stat-label {
+            font-size: 0.78rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+        }
+
+        .stat-split {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: #0f172a;
+            margin-top: 6px;
+        }
+
+        .stat-split-chatgpt {
+            color: #2563eb;
+        }
+
+        .stat-split-manual {
+            color: #0f766e;
+        }
+
+        .stat-split-note {
             font-size: 0.8rem;
+            color: #64748b;
+            margin-top: 4px;
         }
 
         .metric-overview .empty-state {
@@ -148,13 +193,13 @@
 
         .metric-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 15px;
-            margin-top: 15px;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 10px;
+            margin-top: 12px;
         }
 
         .metric-card {
-            padding: 15px;
+            padding: 10px 8px;
             /* background: linear-gradient(135deg, #0ea5e9 0%, #38bdf8 100%); */
             color: #4e4e4e;
             border-left: 8px solid #0ea5e9;
@@ -165,7 +210,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 4px 8px rgba(8, 104, 149, 0.1);        
+            box-shadow: 0 4px 8px rgba(8, 104, 149, 0.1);
         }
 
 
@@ -350,7 +395,7 @@
         }
 
         .tier-header-note {
-            font-size: 0.95rem;
+            font-size: inherit;
             font-weight: 500;
             color: #475569;
         }
@@ -378,10 +423,10 @@
             transform: rotate(90deg);
         }
 
-        .tier-1 { border-left-color: #10b981; }
-        .tier-2 { border-left-color: #3b82f6; }
-        .tier-3 { border-left-color: #f59e0b; }
-        .tier-4 { border-left-color: #ef4444; }
+        .tier-1 { border-left-color: #0ea5e9; }
+        .tier-2 { border-left-color: #0ea5e9; }
+        .tier-3 { border-left-color: #0ea5e9; }
+        .tier-4 { border-left-color: #0ea5e9; }
 
         .policy-card {
             background: white;
@@ -533,6 +578,11 @@
             border-bottom: 2px solid #0ea5e9;
         }
 
+        .panel-count {
+            color: #94a3b8;
+            font-weight: 600;
+        }
+
         .error-display {
             background: #fee2e2;
             border: 2px solid #fecaca;
@@ -563,7 +613,7 @@
         <header class="page-header">
             <div class="title-block">
                 <div class="page-title">AI vs Manual Policy Lens</div>
-                <div class="page-subtitle">Side-by-side application of the framework to surface blind spots and capture signals experts might miss.</div>
+                <!-- <div class="page-subtitle">Side-by-side application of the framework to surface blind spots and capture signals experts might miss.</div> -->
             </div>
         </header>
         
@@ -582,7 +632,7 @@
         <div class="content-container">
             <div class="tabs">
                 <div class="tab active" data-tab="legal">Legal Standards</div>
-                <div class="tab" data-tab="tiers">Tiers</div>
+                <div class="tab" data-tab="tiers">Tiered Implications</div>
                 <div class="tab" data-tab="agencies">Agencies</div>
             </div>
 
@@ -596,11 +646,11 @@
                 </div>
                 <div id="legalComparison" class="comparison-container is-hidden">
                     <div class="comparison-panel">
-                        <div class="comparison-panel-title">ChatGPT-Identified</div>
+                        <div class="comparison-panel-title">ChatGPT Results <span class="panel-count" id="legalCountChatGPT">(0)</span></div>
                         <div id="legalContentChatGPT"></div>
                     </div>
                     <div class="comparison-panel">
-                        <div class="comparison-panel-title">Manually-Identified</div>
+                        <div class="comparison-panel-title">Manual Results <span class="panel-count" id="legalCountManual">(0)</span></div>
                         <div id="legalContentManual"></div>
                     </div>
                 </div>
@@ -613,11 +663,11 @@
             <div id="agencies" class="tab-content">
                 <div class="comparison-container">
                     <div class="comparison-panel">
-                        <div class="comparison-panel-title">ChatGPT-Identified</div>
+                        <div class="comparison-panel-title">ChatGPT Results <span class="panel-count" id="agenciesCountChatGPT">(0)</span></div>
                         <div id="agenciesContentChatGPT"></div>
                     </div>
                     <div class="comparison-panel">
-                        <div class="comparison-panel-title">Manually-Identified</div>
+                        <div class="comparison-panel-title">Manual Results <span class="panel-count" id="agenciesCountManual">(0)</span></div>
                         <div id="agenciesContentManual"></div>
                     </div>
                 </div>
@@ -652,7 +702,8 @@
         function renderMetricCards() {
             const grid = document.getElementById('metricGrid');
             grid.innerHTML = metrics.map(metric => {
-                const isAllowed = metric === allowedMetric;
+                // const isAllowed = metric === allowedMetric;
+                const isAllowed = true; // Allow all metrics for selection
                 const disabledClass = isAllowed ? '' : 'disabled';
                 const clickHandler = isAllowed ? `onclick="selectMetric('${metric}')"` : '';
                 return `
@@ -668,9 +719,9 @@
         }
 
         async function selectMetric(metric) {
-            if (metric !== allowedMetric) {
-                return;
-            }
+            // if (metric !== allowedMetric) {
+            //     return;
+            // }
             // Update active state
             document.querySelectorAll('.metric-card').forEach(card => {
                 card.classList.toggle('active', card.dataset.metric === metric);
@@ -741,38 +792,21 @@
             const manualStats = getStats(currentDataManual || {});
 
             document.getElementById('overviewInline').innerHTML = `
-                <div class="comparison-container">
-                    <div class="comparison-panel">
-                        <div class="stats-grid">
-                            <div class="stat-card">
-                                <div class="stat-number">${chatgptStats.legalCount}</div>
-                                <div class="stat-label">Legal Standards</div>
-                            </div>
-                            <div class="stat-card">
-                                <div class="stat-number">${chatgptStats.totalPolicies}</div>
-                                <div class="stat-label">Total Policies</div>
-                            </div>
-                            <div class="stat-card">
-                                <div class="stat-number">${chatgptStats.agencyCount}</div>
-                                <div class="stat-label">Agencies</div>
-                            </div>
-                        </div>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-label">Legal Standards</div>
+                        <div class="stat-split"><span class="stat-split-chatgpt">ChatGPT +${chatgptStats.legalCount}</span> / <span class="stat-split-manual">Manual +${manualStats.legalCount}</span></div>
+                        <div class="stat-split-note">Count of legal standards identified</div>
                     </div>
-                    <div class="comparison-panel">
-                        <div class="stats-grid">
-                            <div class="stat-card">
-                                <div class="stat-number">${manualStats.legalCount}</div>
-                                <div class="stat-label">Legal Standards</div>
-                            </div>
-                            <div class="stat-card">
-                                <div class="stat-number">${manualStats.totalPolicies}</div>
-                                <div class="stat-label">Total Policies</div>
-                            </div>
-                            <div class="stat-card">
-                                <div class="stat-number">${manualStats.agencyCount}</div>
-                                <div class="stat-label">Agencies</div>
-                            </div>
-                        </div>
+                    <div class="stat-card">
+                        <div class="stat-label">Tiered Implications</div>
+                        <div class="stat-split"><span class="stat-split-chatgpt">ChatGPT +${chatgptStats.totalPolicies}</span> / <span class="stat-split-manual">Manual +${manualStats.totalPolicies}</span></div>
+                        <div class="stat-split-note">Count of policy implications across tiers</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-label">Agencies</div>
+                        <div class="stat-split"><span class="stat-split-chatgpt">ChatGPT +${chatgptStats.agencyCount}</span> / <span class="stat-split-manual">Manual +${manualStats.agencyCount}</span></div>
+                        <div class="stat-split-note">Governing agencies listed</div>
                     </div>
                 </div>
             `;
@@ -786,6 +820,15 @@
             if (legalEmptyState && legalComparison) {
                 legalEmptyState.classList.add('is-hidden');
                 legalComparison.classList.remove('is-hidden');
+            }
+
+            const legalCountChatGPT = document.getElementById('legalCountChatGPT');
+            const legalCountManual = document.getElementById('legalCountManual');
+            if (legalCountChatGPT) {
+                legalCountChatGPT.textContent = `(${currentDataChatGPT['Legal Standards']?.length || 0})`;
+            }
+            if (legalCountManual) {
+                legalCountManual.textContent = `(${currentDataManual['Legal Standards']?.length || 0})`;
             }
 
             renderLegalStandardsPanel(currentDataChatGPT, 'ChatGPT');
@@ -842,23 +885,25 @@
                 const chatPolicies = chatgptTiers ? chatgptTiers[tierName] : null;
                 const manualPolicies = manualTiers ? manualTiers[tierName] : null;
                 const tierDefinition = tierDefinitions[tierName];
+                const chatCount = Array.isArray(chatPolicies) ? chatPolicies.length : 0;
+                const manualCount = Array.isArray(manualPolicies) ? manualPolicies.length : 0;
 
                 return `
                     <details class="tier-row" open>
                         <summary class="tier-header tier-${tierNumber}">
                             <span class="tier-header-content">
                                 <span class="tier-header-title">${tierName}</span>
-                                ${tierDefinition ? `<span class="tier-header-note">${tierDefinition}</span>` : ''}
+                                ${tierDefinition ? `<span class="tier-header-note">&mdash; ${tierDefinition}</span>` : ''}
                             </span>
                             <span class="tier-toggle" aria-hidden="true"></span>
                         </summary>
                         <div class="tier-columns">
                             <div class="comparison-panel">
-                                <div class="comparison-panel-title">ChatGPT Response</div>
+                                <div class="comparison-panel-title">ChatGPT Results <span class="panel-count">(${chatCount})</span></div>
                                 ${chatPolicies ? renderTierPolicies(chatPolicies, tierNumber) : '<div class="error-display">Error: Missing Tier</div>'}
                             </div>
                             <div class="comparison-panel">
-                                <div class="comparison-panel-title">Manual Response</div>
+                                <div class="comparison-panel-title">Manual Results <span class="panel-count">(${manualCount})</span></div>
                                 ${manualPolicies ? renderTierPolicies(manualPolicies, tierNumber) : '<div class="error-display">Error: Missing Tier</div>'}
                             </div>
                         </div>
@@ -895,6 +940,15 @@
 
         function renderAgencies() {
             if (!currentDataChatGPT && !currentDataManual) return;
+
+            const agenciesCountChatGPT = document.getElementById('agenciesCountChatGPT');
+            const agenciesCountManual = document.getElementById('agenciesCountManual');
+            if (agenciesCountChatGPT) {
+                agenciesCountChatGPT.textContent = `(${currentDataChatGPT && currentDataChatGPT['Governing Agencies'] ? currentDataChatGPT['Governing Agencies'].length : 0})`;
+            }
+            if (agenciesCountManual) {
+                agenciesCountManual.textContent = `(${currentDataManual && currentDataManual['Governing Agencies'] ? currentDataManual['Governing Agencies'].length : 0})`;
+            }
 
             if (currentDataChatGPT && currentDataChatGPT['Governing Agencies']) {
                 renderAgenciesPanel(currentDataChatGPT, 'ChatGPT');
