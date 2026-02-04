@@ -49,38 +49,50 @@
         }
     ],
     "Tiers": {
-        "Tier 1": [
-            {
-                "policy_name": "Endangered Species Act (ESA)",
-                "relationship": "Foundational federal statute governing listing, recovery, and critical habitat when abundance is low.",
-                "note": "Tier inferred as top-level federal statute; confirm."
-            },
-            {
-                "policy_name": "Magnus-Stevens Fishery Conservation and Management Act (MSA)",
-                "relationship": "Foundational federal fishery statute setting overfishing limits and rebuilding requirements.",
-                "note": "Tier inferred as top-level federal statute; confirm."
-            }
-        ],
-        "Tier 2": [
-            {
-                "policy_name": "Pacific Coast Salmon Fishery Management Plan (PCSFMP)",
-                "relationship": "Implements MSA via salmon-specific control rules, escapement benchmarks, and harvest limits.",
-                "note": "Tier inferred as federal management plan under MSA; confirm."
-            }
-        ],
-        "Tier 3": [
-            {
-                "policy_name": "California State Law: AB 263 (2025)",
-                "relationship": "State statute extending emergency instream flow protections for key tributaries.",
-                "note": "Tier inferred as state law; confirm."
-            },
-            {
-                "policy_name": "Marine Life Protection Act (MLPA)",
-                "relationship": "State habitat protection framework via marine protected areas that support salmon life stages.",
-                "note": "Tier inferred as state habitat law; confirm."
-            }
-        ],
-        "Tier 4": []
+        "Tier 1": {
+            "threshold": ">=80% chance (>800/1000 runs) population grows 8x starting size (rolling 10-year average).",
+            "policies": [
+                {
+                    "policy_name": "Endangered Species Act (ESA)",
+                    "relationship": "Foundational federal statute governing listing, recovery, and critical habitat when abundance is low.",
+                    "note": "Tier inferred as top-level federal statute; confirm."
+                },
+                {
+                    "policy_name": "Magnus-Stevens Fishery Conservation and Management Act (MSA)",
+                    "relationship": "Foundational federal fishery statute setting overfishing limits and rebuilding requirements.",
+                    "note": "Tier inferred as top-level federal statute; confirm."
+                }
+            ]
+        },
+        "Tier 2": {
+            "threshold": ">=80% chance (>800/1000 runs) population grows 2-8x starting size (rolling 10-year average).",
+            "policies": [
+                {
+                    "policy_name": "Pacific Coast Salmon Fishery Management Plan (PCSFMP)",
+                    "relationship": "Implements MSA via salmon-specific control rules, escapement benchmarks, and harvest limits.",
+                    "note": "Tier inferred as federal management plan under MSA; confirm."
+                }
+            ]
+        },
+        "Tier 3": {
+            "threshold": ">=80% chance (>800/1000 runs) population exceeds starting size (rolling 10-year average).",
+            "policies": [
+                {
+                    "policy_name": "California State Law: AB 263 (2025)",
+                    "relationship": "State statute extending emergency instream flow protections for key tributaries.",
+                    "note": "Tier inferred as state law; confirm."
+                },
+                {
+                    "policy_name": "Marine Life Protection Act (MLPA)",
+                    "relationship": "State habitat protection framework via marine protected areas that support salmon life stages.",
+                    "note": "Tier inferred as state habitat law; confirm."
+                }
+            ]
+        },
+        "Tier 4": {
+            "threshold": "Does not satisfy Tier 1, 2, or 3.",
+            "policies": []
+        }
     },
     "Governing Agencies": [
         {
@@ -88,24 +100,24 @@
             "note": "Implements ESA for marine salmon, approves FMPs under MSA, designates critical habitat, conducts consultations"
         },
         {
-          "name": "Pacific Fishery Council",
-          "note": "Develops the Salmon FMP, sets ACLs and escapement goals under MSA."
+            "name": "Pacific Fishery Council",
+            "note": "Develops the Salmon FMP, sets ACLs and escapement goals under MSA."
         },
         {
-          "name": "U.S. Fish & Wildlife Service",
-          "note": "Shares ESA implementation for some salmon species."
+            "name": "U.S. Fish & Wildlife Service",
+            "note": "Shares ESA implementation for some salmon species."
         },
         {
-          "name": "California State Water Resources Control Board",
-          "note": "Sets water flows and instream protections (e.g., AB 263)."
+            "name": "California State Water Resources Control Board",
+            "note": "Sets water flows and instream protections (e.g., AB 263)."
         },
         {
-          "name": "California Dept. of Fish & Wildlife",
-          "note": "Implements state harvest regulations and participates in habitat restoration."
+            "name": "California Dept. of Fish & Wildlife",
+            "note": "Implements state harvest regulations and participates in habitat restoration."
         },
         {
-          "name": "Tribes",
-          "note": "Have treaty water/fish rights and collaborate on salmon resotration (e.g., Klamath protections)."
+            "name": "Tribes",
+            "note": "Have treaty water/fish rights and collaborate on salmon resotration (e.g., Klamath protections)."
         }
     ]
 }

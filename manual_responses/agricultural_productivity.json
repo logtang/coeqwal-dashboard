@@ -1,113 +1,122 @@
 {
-"Legal Standards": [
-    {
-        "name": "Agricultural Revenue (Private Sector)",
-        "note": "There are no legally established standards governing private-sector agricultural revenue; revenue outcomes are not directly regulated.",
-        "key_elements": []
-    },
-    {
-        "name": "Irrigation Water Supply (Agricultural Input)",
-        "note": "Legal standards apply to irrigation water supply as a regulated and essential input to agriculture, distinct from agricultural revenue itself.",
-        "key_elements": []
-    },
-    {
-        "name": "USDA Disaster Assistance and Risk Management Programs",
-        "note": "Publicly authorized and funded programs that are not legally mandated entitlements; participation is voluntary and accessed through application processes administered by USDA.",
-        "key_elements": [
-            {
-                "program_category": "Natural Disaster Assistance",
-                "programs": [
-                    {
-                        "name": "Drought Assistance",
-                        "criteria": "U.S. Drought Monitor ratings; loss thresholds often apply"
-                    },
-                    {
-                        "name": "Flood Assistance",
-                        "administering_agency": "Farm Service Agency (FSA)"
-                    }
-                ]
-            },
-            {
-                "program_category": "Revenue and Price Loss Protection",
-                "programs": [
-                    {
-                        "name": "Agriculture Risk Coverage (ARC)",
-                        "basis": "Revenue loss thresholds"
-                    },
-                    {
-                        "name": "Price Loss Coverage (PLC)",
-                        "basis": "Commodity price declines relative to statutory reference prices"
-                    },
-                    {
-                        "name": "Emergency Relief Program (ERP)",
-                        "basis": "Congressional authorization for disaster-related revenue losses"
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "name": "Irrigation Water Rights Priority",
-        "note": "Irrigation rights are protected under constitutional and statutory water-rights frameworks, following the principle of priority in time, and are subordinate only to human health and safety needs.",
-        "key_elements": [
-            {
-                "principle": "Priority in time (senior water rights)",
-                "constraint": "Human health and safety needs take precedence"
-            }
-        ]
-    }
-],
-
+    "Legal Standards": [
+        {
+            "name": "Agricultural Revenue (Private Sector)",
+            "note": "There are no legally established standards governing private-sector agricultural revenue; revenue outcomes are not directly regulated.",
+            "key_elements": []
+        },
+        {
+            "name": "Irrigation Water Supply (Agricultural Input)",
+            "note": "Legal standards apply to irrigation water supply as a regulated and essential input to agriculture, distinct from agricultural revenue itself.",
+            "key_elements": []
+        },
+        {
+            "name": "USDA Disaster Assistance and Risk Management Programs",
+            "note": "Publicly authorized and funded programs that are not legally mandated entitlements; participation is voluntary and accessed through application processes administered by USDA.",
+            "key_elements": [
+                {
+                    "program_category": "Natural Disaster Assistance",
+                    "programs": [
+                        {
+                            "name": "Drought Assistance",
+                            "criteria": "U.S. Drought Monitor ratings; loss thresholds often apply"
+                        },
+                        {
+                            "name": "Flood Assistance",
+                            "administering_agency": "Farm Service Agency (FSA)"
+                        }
+                    ]
+                },
+                {
+                    "program_category": "Revenue and Price Loss Protection",
+                    "programs": [
+                        {
+                            "name": "Agriculture Risk Coverage (ARC)",
+                            "basis": "Revenue loss thresholds"
+                        },
+                        {
+                            "name": "Price Loss Coverage (PLC)",
+                            "basis": "Commodity price declines relative to statutory reference prices"
+                        },
+                        {
+                            "name": "Emergency Relief Program (ERP)",
+                            "basis": "Congressional authorization for disaster-related revenue losses"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Irrigation Water Rights Priority",
+            "note": "Irrigation rights are protected under constitutional and statutory water-rights frameworks, following the principle of priority in time, and are subordinate only to human health and safety needs.",
+            "key_elements": [
+                {
+                    "principle": "Priority in time (senior water rights)",
+                    "constraint": "Human health and safety needs take precedence"
+                }
+            ]
+        }
+    ],
     "Tiers": {
-        "Tier 1": [
-            {
-                "policy_name": "Junior water rights curtailments",
-                "relationship": "Triggered under scarcity conditions",
-                "note": "Curtailments affect junior water rights holders when water is scarce. They are triggered by drought or water unavailability, not by agricultural revenue changes."
-            },
-            {
-                "policy_name": "State and federal economic policy responses",
-                "relationship": "Implicated but not automatic",
-                "note": "Revenue losses due to curtailments may activate economic support measures; changes in agricultural revenue track drought conditions but do not directly trigger curtailments."
-            }
-        ],
-        "Tier 2": [
-            {
-                "policy_name": "Water for irrigation / water rights enforcement",
-                "relationship": "Triggered / aligned with",
-                "note": "Curtailments follow constitutional water use priorities and rights, ensuring allocation aligns with seniority and scarcity conditions."
-            },
-            {
-                "policy_name": "CDFA economic relief programs",
-                "relationship": "Triggered / commonly implicated",
-                "note": "Direct producer grants, technical assistance, farm business management, financial planning, and marketing support are provided to farms affected by curtailed water deliveries."
-            },
-            {
-                "policy_name": "SGMA groundwater management",
-                "relationship": "Triggered / commonly implicated",
-                "note": "Increased dependence on groundwater triggers reduced pumping or curtailment orders, fees, and potential land fallowing under local GSA authority."
-            }
-        ],
-        "Tier 3": [
-            {
-                "policy_name": "Curtailment, CDFA, and SGMA measures",
-                "relationship": "Continued / reinforced",
-                "note": "Policies implemented in Tier 2 continue and are reinforced under more severe water scarcity conditions."
-            }
-        ],
-        "Tier 4": [
-            {
-                "policy_name": "Curtailment, groundwater, and local water source management",
-                "relationship": "Triggered / emergency level",
-                "note": "Unprecedented drought or catastrophic conditions result in full reliance on groundwater and local sources. Water supplies are heavily reduced and allocated only for basic human health, safety, and food security."
-            },
-            {
-                "policy_name": "Emergency plans and prioritization",
-                "relationship": "Strongly implicated / required",
-                "note": "Emergency water planning measures are implemented to allocate scarce resources to critical human and food needs."
-            }
-        ]
+        "Tier 1": {
+            "threshold": "Revenue increasing.",
+            "policies": [
+                {
+                    "policy_name": "Junior water rights curtailments",
+                    "relationship": "Triggered under scarcity conditions",
+                    "note": "Curtailments affect junior water rights holders when water is scarce. They are triggered by drought or water unavailability, not by agricultural revenue changes."
+                },
+                {
+                    "policy_name": "State and federal economic policy responses",
+                    "relationship": "Implicated but not automatic",
+                    "note": "Revenue losses due to curtailments may activate economic support measures; changes in agricultural revenue track drought conditions but do not directly trigger curtailments."
+                }
+            ]
+        },
+        "Tier 2": {
+            "threshold": "Revenue declining <5%/year.",
+            "policies": [
+                {
+                    "policy_name": "Water for irrigation / water rights enforcement",
+                    "relationship": "Triggered / aligned with",
+                    "note": "Curtailments follow constitutional water use priorities and rights, ensuring allocation aligns with seniority and scarcity conditions."
+                },
+                {
+                    "policy_name": "CDFA economic relief programs",
+                    "relationship": "Triggered / commonly implicated",
+                    "note": "Direct producer grants, technical assistance, farm business management, financial planning, and marketing support are provided to farms affected by curtailed water deliveries."
+                },
+                {
+                    "policy_name": "SGMA groundwater management",
+                    "relationship": "Triggered / commonly implicated",
+                    "note": "Increased dependence on groundwater triggers reduced pumping or curtailment orders, fees, and potential land fallowing under local GSA authority."
+                }
+            ]
+        },
+        "Tier 3": {
+            "threshold": "Revenue declining 5%-20%/year.",
+            "policies": [
+                {
+                    "policy_name": "Curtailment, CDFA, and SGMA measures",
+                    "relationship": "Continued / reinforced",
+                    "note": "Policies implemented in Tier 2 continue and are reinforced under more severe water scarcity conditions."
+                }
+            ]
+        },
+        "Tier 4": {
+            "threshold": "Revenue declining >20%/year.",
+            "policies": [
+                {
+                    "policy_name": "Curtailment, groundwater, and local water source management",
+                    "relationship": "Triggered / emergency level",
+                    "note": "Unprecedented drought or catastrophic conditions result in full reliance on groundwater and local sources. Water supplies are heavily reduced and allocated only for basic human health, safety, and food security."
+                },
+                {
+                    "policy_name": "Emergency plans and prioritization",
+                    "relationship": "Strongly implicated / required",
+                    "note": "Emergency water planning measures are implemented to allocate scarce resources to critical human and food needs."
+                }
+            ]
+        }
     }
-
-
 }

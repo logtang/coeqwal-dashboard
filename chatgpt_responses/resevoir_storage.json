@@ -40,96 +40,108 @@
             "note": "Storage may be capped downward by dam safety directives, limiting max reservoir elevation/contents, which directly changes how often it fills.",
             "key_elements": []
         }
-        ],
+    ],
     "Tiers": {
-        "Tier 1": [
-            {
-                "policy_name": "D-1641 / Bay-Delta Plan",
-                "relationship": "Most likely met / facilitated",
-                "note": "Meeting D-1641 / Bay-Delta Plan flow & operational objectives is generally easier because stored water is available to shape releases and Delta conditions. (D-1641 is the binding standard for SWP/CVP permits.)"
-            },
-            {
-                "policy_name": "ESA/CVPIA operational constraints",
-                "relationship": "Most likely met / facilitated",
-                "note": "ESA/CVPIA operational constraints are generally easier to satisfy (more cold-water pool / release flexibility), lowering the need for emergency deviations."
-            },
-            {
-                "policy_name": "Flood control operating constraints",
-                "relationship": "Most likely triggered / implicated",
-                "note": "Flood control operating constraints may still be implicated if April storage is high and late storms occur; USACE/DWR flood manuals can require releases to maintain flood space (not a 'violation,' but a controlling legal/operational regime)."
-            }
-        ],
-        "Tier 2": [
-            {
-                "policy_name": "D-1641 / ESA/CVPIA",
-                "relationship": "Most likely met",
-                "note": "D-1641 objectives and ESA/CVPIA requirements are often still achievable, but with tradeoffs (e.g., protecting cold-water pool vs. meeting Delta objectives). D-1641 assigns responsibility to DWR/USBR to meet 'flow-dependent numeric objectives.'"
-            },
-            {
-                "policy_name": "Project allocation and shortage policies",
-                "relationship": "Most likely triggered / implicated",
-                "note": "Project allocation and shortage policies become more prominent planning tools. CVP allocations are based on 'amounts of storage in CVP reservoirs, regulatory requirements …' SWP allocation updates (monthly adjustments) are often sensitive to existing storage entering spring/summer."
-            },
-            {
-                "policy_name": "Water quality / temperature limits",
-                "relationship": "Potential violations",
-                "note": "Tier 2 can be where local/seasonal water quality or temperature limits become tight late summer, depending on inflow and demand (implicating ESA/D-1641 compliance risk)."
-            }
-        ],
-        "Tier 3": [
-            {
-                "policy_name": "TUCP / Temporary Urgency Change Orders",
-                "relationship": "Most likely triggered / implicated",
-                "note": "TUCP requests and approvals become more likely when storage/inflow are insufficient to comply with D-1641 while preserving later health & safety supplies. SWRCB's TUCP authority allows petitions for 'a conditional, temporary change order' when 'Projects storage and inflow may not be enough to meet D-1641 requirements.'"
-            },
-            {
-                "policy_name": "Shortage allocation policies",
-                "relationship": "Most likely triggered / implicated",
-                "note": "Stronger use of shortage allocation policies (CVP) because allocations are explicitly based on forecasted inflows, storage, and regulatory requirements."
-            },
-            {
-                "policy_name": "D-1641 flow/salinity/outflow/export constraints",
-                "relationship": "Most likely at risk",
-                "note": "Operators may either (a) release more and harm summer storage or (b) seek temporary relaxation via TUCP—meaning D-1641 is directly implicated."
-            },
-            {
-                "policy_name": "ESA/CVPIA constraints",
-                "relationship": "Most likely at risk",
-                "note": "Lower storage reduces flexibility to meet fish flow/temperature measures while also meeting water quality standards."
-            }
-        ],
-        "Tier 4": [
-            {
-                "policy_name": "Emergency drought curtailment/regulations (Water Code § 1058.5)",
-                "relationship": "Most likely triggered",
-                "note": "SWRCB can find water is unavailable under priority and/or unreasonable use must be prevented. Emergency regulation can 'require curtailment of diversions when water is not available under the diverter's priority of right.'"
-            },
-            {
-                "policy_name": "TUCP filings/approvals",
-                "relationship": "Most likely triggered",
-                "note": "TUCP filings/approvals to temporarily change SWP/CVP permit conditions (often explicitly to deviate from D-1641 objectives to preserve minimum supplies), because storage shortfalls are a standard justification."
-            },
-            {
-                "policy_name": "Severe project delivery reductions / shortage allocations",
-                "relationship": "Most likely triggered",
-                "note": "Severe project delivery reductions / shortage allocations (CVP and often SWP), because storage is a stated input to allocation decisions."
-            },
-            {
-                "policy_name": "D-1641 / Bay-Delta Plan objectives",
-                "relationship": "Most likely violated / unable to meet without relief",
-                "note": "Tier 4 conditions often make it infeasible to meet all flow-dependent objectives and preserve later supplies, which is exactly why TUCPs seek temporary changes to 'conditions imposed pursuant to… D-1641.'"
-            },
-            {
-                "policy_name": "ESA/CVPIA operational measures",
-                "relationship": "Most likely violated / unable to meet without relief",
-                "note": "ESA/CVPIA operational measures become harder to implement (e.g., cold-water pool protection vs. required releases). CVPIA (b)(2) dedicates project yield for environmental purposes, which competes with deliveries in dry storage years."
-            },
-            {
-                "policy_name": "Constitutional reasonable use / Dam safety restrictions",
-                "relationship": "Also implicated",
-                "note": "Constitutional 'reasonable use' justification for strict conservation and limits in severe scarcity. If 'low storage' is due to dam safety restrictions (i.e., storage is capped), DSOD reservoir restriction authorities can be the direct cause of Tier 4 outcomes for that reservoir."
-            }
-        ]
+        "Tier 1": {
+            "threshold": "Storage >= top threshold in >=90% of years (April values). As of July 2025, top threshold = 50th percentile of recent historical CDEC data.",
+            "policies": [
+                {
+                    "policy_name": "D-1641 / Bay-Delta Plan",
+                    "relationship": "Most likely met / facilitated",
+                    "note": "Meeting D-1641 / Bay-Delta Plan flow & operational objectives is generally easier because stored water is available to shape releases and Delta conditions. (D-1641 is the binding standard for SWP/CVP permits.)"
+                },
+                {
+                    "policy_name": "ESA/CVPIA operational constraints",
+                    "relationship": "Most likely met / facilitated",
+                    "note": "ESA/CVPIA operational constraints are generally easier to satisfy (more cold-water pool / release flexibility), lowering the need for emergency deviations."
+                },
+                {
+                    "policy_name": "Flood control operating constraints",
+                    "relationship": "Most likely triggered / implicated",
+                    "note": "Flood control operating constraints may still be implicated if April storage is high and late storms occur; USACE/DWR flood manuals can require releases to maintain flood space (not a 'violation,' but a controlling legal/operational regime)."
+                }
+            ]
+        },
+        "Tier 2": {
+            "threshold": "Storage >= middle threshold in >=67% of years (April values). As of July 2025, middle threshold = 33rd percentile of recent historical CDEC data.",
+            "policies": [
+                {
+                    "policy_name": "D-1641 / ESA/CVPIA",
+                    "relationship": "Most likely met",
+                    "note": "D-1641 objectives and ESA/CVPIA requirements are often still achievable, but with tradeoffs (e.g., protecting cold-water pool vs. meeting Delta objectives). D-1641 assigns responsibility to DWR/USBR to meet 'flow-dependent numeric objectives.'"
+                },
+                {
+                    "policy_name": "Project allocation and shortage policies",
+                    "relationship": "Most likely triggered / implicated",
+                    "note": "Project allocation and shortage policies become more prominent planning tools. CVP allocations are based on 'amounts of storage in CVP reservoirs, regulatory requirements …' SWP allocation updates (monthly adjustments) are often sensitive to existing storage entering spring/summer."
+                },
+                {
+                    "policy_name": "Water quality / temperature limits",
+                    "relationship": "Potential violations",
+                    "note": "Tier 2 can be where local/seasonal water quality or temperature limits become tight late summer, depending on inflow and demand (implicating ESA/D-1641 compliance risk)."
+                }
+            ]
+        },
+        "Tier 3": {
+            "threshold": "Storage >= middle threshold in >=30% of years (April values). As of July 2025, middle threshold = 33rd percentile of recent historical CDEC data.",
+            "policies": [
+                {
+                    "policy_name": "TUCP / Temporary Urgency Change Orders",
+                    "relationship": "Most likely triggered / implicated",
+                    "note": "TUCP requests and approvals become more likely when storage/inflow are insufficient to comply with D-1641 while preserving later health & safety supplies. SWRCB's TUCP authority allows petitions for 'a conditional, temporary change order' when 'Projects storage and inflow may not be enough to meet D-1641 requirements.'"
+                },
+                {
+                    "policy_name": "Shortage allocation policies",
+                    "relationship": "Most likely triggered / implicated",
+                    "note": "Stronger use of shortage allocation policies (CVP) because allocations are explicitly based on forecasted inflows, storage, and regulatory requirements."
+                },
+                {
+                    "policy_name": "D-1641 flow/salinity/outflow/export constraints",
+                    "relationship": "Most likely at risk",
+                    "note": "Operators may either (a) release more and harm summer storage or (b) seek temporary relaxation via TUCP—meaning D-1641 is directly implicated."
+                },
+                {
+                    "policy_name": "ESA/CVPIA constraints",
+                    "relationship": "Most likely at risk",
+                    "note": "Lower storage reduces flexibility to meet fish flow/temperature measures while also meeting water quality standards."
+                }
+            ]
+        },
+        "Tier 4": {
+            "threshold": "Does not meet Tiers 1-3; storage below middle threshold (at or below lower threshold) in >70% of years (April values). As of July 2025, lower threshold = 20th percentile of recent historical values.",
+            "policies": [
+                {
+                    "policy_name": "Emergency drought curtailment/regulations (Water Code § 1058.5)",
+                    "relationship": "Most likely triggered",
+                    "note": "SWRCB can find water is unavailable under priority and/or unreasonable use must be prevented. Emergency regulation can 'require curtailment of diversions when water is not available under the diverter's priority of right.'"
+                },
+                {
+                    "policy_name": "TUCP filings/approvals",
+                    "relationship": "Most likely triggered",
+                    "note": "TUCP filings/approvals to temporarily change SWP/CVP permit conditions (often explicitly to deviate from D-1641 objectives to preserve minimum supplies), because storage shortfalls are a standard justification."
+                },
+                {
+                    "policy_name": "Severe project delivery reductions / shortage allocations",
+                    "relationship": "Most likely triggered",
+                    "note": "Severe project delivery reductions / shortage allocations (CVP and often SWP), because storage is a stated input to allocation decisions."
+                },
+                {
+                    "policy_name": "D-1641 / Bay-Delta Plan objectives",
+                    "relationship": "Most likely violated / unable to meet without relief",
+                    "note": "Tier 4 conditions often make it infeasible to meet all flow-dependent objectives and preserve later supplies, which is exactly why TUCPs seek temporary changes to 'conditions imposed pursuant to… D-1641.'"
+                },
+                {
+                    "policy_name": "ESA/CVPIA operational measures",
+                    "relationship": "Most likely violated / unable to meet without relief",
+                    "note": "ESA/CVPIA operational measures become harder to implement (e.g., cold-water pool protection vs. required releases). CVPIA (b)(2) dedicates project yield for environmental purposes, which competes with deliveries in dry storage years."
+                },
+                {
+                    "policy_name": "Constitutional reasonable use / Dam safety restrictions",
+                    "relationship": "Also implicated",
+                    "note": "Constitutional 'reasonable use' justification for strict conservation and limits in severe scarcity. If 'low storage' is due to dam safety restrictions (i.e., storage is capped), DSOD reservoir restriction authorities can be the direct cause of Tier 4 outcomes for that reservoir."
+                }
+            ]
+        }
     },
     "Governing Agencies": [
         {

@@ -1,127 +1,136 @@
 {
     "Legal Standards": [
-    {
-        "name": "Delta Reform Act",
-        "note": "Establishes overarching state policy and governance framework for the Sacramento–San Joaquin Delta, including requirements affecting freshwater Delta exports.",
-        "key_elements": []
-    },
-    {
-        "name": "Bay-Delta Water Quality Control Plan (Bay-Delta Plan)",
-        "note": "Defines water quality objectives and beneficial uses for the Bay-Delta; serves as a foundational document in the legal hierarchy governing Delta exports.",
-        "key_elements": []
-    },
-    {
-        "name": "Porter-Cologne Water Quality Control Act",
-        "note": "California’s primary water quality law authorizing regulation and enforcement of surface and groundwater quality standards in the Delta.",
-        "key_elements": []
-    },
-    {
-        "name": "California Water Code",
-        "note": "Statutory framework governing water rights, allocation, and administration, operating alongside Porter-Cologne and Delta-specific mandates.",
-        "key_elements": []
-    },
-    {
-        "name": "Federal Clean Water Act (CWA)",
-        "note": "Provides the federal legal basis for water quality standards applicable to Delta waters, with EPA oversight of state-adopted standards.",
-        "key_elements": []
-    },
-    {
-        "name": "Endangered Species Act (ESA)",
-        "note": "Imposes additional federal constraints on Delta operations to protect listed species, affecting freshwater export conditions.",
-        "key_elements": []
-    },
-    {
-        "name": "Tiered Agricultural Salinity Threshold (Above Legal Standard)",
-        "note": "A tiered water quality threshold that is more protective than the baseline legal standard for agricultural beneficial uses.",
-        "key_elements": [
-            {
-                "parameter": "Electrical Conductivity (EC)",
-                "averaging_period": "14-day average",
-                "threshold": "<= 450 µS/cm",
-                "applicable_water_years": "Most water years",
-                "locations": [
-                    "Jersey Point",
-                    "Emmaton",
-                    "Rock Slough"
-                ]
-            },
-            {
-                "note": "Additional water quality standards apply for municipal and industrial (M&I) uses."
-            }
-        ]
-    }
-],
-
+        {
+            "name": "Delta Reform Act",
+            "note": "Establishes overarching state policy and governance framework for the Sacramento–San Joaquin Delta, including requirements affecting freshwater Delta exports.",
+            "key_elements": []
+        },
+        {
+            "name": "Bay-Delta Water Quality Control Plan (Bay-Delta Plan)",
+            "note": "Defines water quality objectives and beneficial uses for the Bay-Delta; serves as a foundational document in the legal hierarchy governing Delta exports.",
+            "key_elements": []
+        },
+        {
+            "name": "Porter-Cologne Water Quality Control Act",
+            "note": "California’s primary water quality law authorizing regulation and enforcement of surface and groundwater quality standards in the Delta.",
+            "key_elements": []
+        },
+        {
+            "name": "California Water Code",
+            "note": "Statutory framework governing water rights, allocation, and administration, operating alongside Porter-Cologne and Delta-specific mandates.",
+            "key_elements": []
+        },
+        {
+            "name": "Federal Clean Water Act (CWA)",
+            "note": "Provides the federal legal basis for water quality standards applicable to Delta waters, with EPA oversight of state-adopted standards.",
+            "key_elements": []
+        },
+        {
+            "name": "Endangered Species Act (ESA)",
+            "note": "Imposes additional federal constraints on Delta operations to protect listed species, affecting freshwater export conditions.",
+            "key_elements": []
+        },
+        {
+            "name": "Tiered Agricultural Salinity Threshold (Above Legal Standard)",
+            "note": "A tiered water quality threshold that is more protective than the baseline legal standard for agricultural beneficial uses.",
+            "key_elements": [
+                {
+                    "parameter": "Electrical Conductivity (EC)",
+                    "averaging_period": "14-day average",
+                    "threshold": "<= 450 µS/cm",
+                    "applicable_water_years": "Most water years",
+                    "locations": [
+                        "Jersey Point",
+                        "Emmaton",
+                        "Rock Slough"
+                    ]
+                },
+                {
+                    "note": "Additional water quality standards apply for municipal and industrial (M&I) uses."
+                }
+            ]
+        }
+    ],
     "Tiers": {
-        "Tier 1": [
-            {
-                "policy_name": "Freshwater for Delta Exports / salinity standards",
-                "relationship": "Met / aligned with",
-                "note": "All scenarios analyzed fall in Tier 1; Delta export standards are maintained even under the most extreme current conditions."
-            },
-            {
-                "policy_name": "Water rights curtailments & seawater intrusion barriers",
-                "relationship": "Considered / possibly implicated",
-                "note": "May be implemented depending on observed conditions, even at Tier 1, because the state's legal threshold is lower than this tier."
-            }
-        ],
-        "Tier 2": [
-            {
-                "policy_name": "Freshwater for Delta Exports / salinity standards",
-                "relationship": "Triggered / commonly implicated",
-                "note": "Observed salinity at Emmaton and Jersey Point during extremely dry years aligns with this tier. Reflects drought conditions familiar to the state without significantly impacting export quality."
-            },
-            {
-                "policy_name": "Water rights curtailments & seawater intrusion barriers",
-                "relationship": "Likely triggered",
-                "note": "Curtailments and salinity barriers would almost certainly be implemented at this tier."
-            },
-            {
-                "policy_name": "TUCP/O salinity standards relaxation under SWRCB D-1641",
-                "relationship": "Implicated / allowed",
-                "note": "Water Code & SWRCB regulations allow temporary relaxation of salinity standards in these conditions."
-            }
-        ],
-        "Tier 3": [
-            {
-                "policy_name": "Freshwater for Delta Exports / salinity standards",
-                "relationship": "Implicated / stressed",
-                "note": "Salinity levels exceed those currently experienced; water management could mitigate somewhat but likely cannot meet current standards."
-            },
-            {
-                "policy_name": "Water treatment & supply management",
-                "relationship": "Triggered / strongly implicated",
-                "note": "More water treatment required, further reducing available supply under Tier 3 conditions."
-            },
-            {
-                "policy_name": "TUCP/O salinity standards relaxation under SWRCB D-1641",
-                "relationship": "Triggered / strongly implicated",
-                "note": "Temporary relaxation of salinity standards continues to allow operations under extreme conditions."
-            },
-            {
-                "policy_name": "Water rights curtailments & seawater intrusion barriers",
-                "relationship": "Continued implementation",
-                "note": "Measures from previous tiers remain in place."
-            }
-        ],
-        "Tier 4": [
-            {
-                "policy_name": "Freshwater for Delta Exports / salinity standards",
-                "relationship": "Severely exceeded / extreme emergency",
-                "note": "Critical salinity levels persist for much of the year, representing unprecedented drought and water quality challenges."
-            },
-            {
-                "policy_name": "Water project operations",
-                "relationship": "Strongly restricted / emergency level",
-                "note": "Project water deliveries may cease except for basic food and water security; conditions could persist for several years."
-            },
-            {
-                "policy_name": "Water reserves & emergency planning",
-                "relationship": "Triggered / strongly implicated",
-                "note": "Regions and localities would be required to use reserved water currently being set aside to maintain survival-level supply."
-            }
-        ]
+        "Tier 1": {
+            "threshold": "Max(EM, JP) below 900 uS/cm for >=75% of months and above 2500 uS/cm for <=5% of months.",
+            "policies": [
+                {
+                    "policy_name": "Freshwater for Delta Exports / salinity standards",
+                    "relationship": "Met / aligned with",
+                    "note": "All scenarios analyzed fall in Tier 1; Delta export standards are maintained even under the most extreme current conditions."
+                },
+                {
+                    "policy_name": "Water rights curtailments & seawater intrusion barriers",
+                    "relationship": "Considered / possibly implicated",
+                    "note": "May be implemented depending on observed conditions, even at Tier 1, because the state's legal threshold is lower than this tier."
+                }
+            ]
+        },
+        "Tier 2": {
+            "threshold": "Max(EM, JP) below 900 uS/cm for >=65% of months, below 1600 uS/cm for >=75% of months, and above 2500 uS/cm for <=12% of months.",
+            "policies": [
+                {
+                    "policy_name": "Freshwater for Delta Exports / salinity standards",
+                    "relationship": "Triggered / commonly implicated",
+                    "note": "Observed salinity at Emmaton and Jersey Point during extremely dry years aligns with this tier. Reflects drought conditions familiar to the state without significantly impacting export quality."
+                },
+                {
+                    "policy_name": "Water rights curtailments & seawater intrusion barriers",
+                    "relationship": "Likely triggered",
+                    "note": "Curtailments and salinity barriers would almost certainly be implemented at this tier."
+                },
+                {
+                    "policy_name": "TUCP/O salinity standards relaxation under SWRCB D-1641",
+                    "relationship": "Implicated / allowed",
+                    "note": "Water Code & SWRCB regulations allow temporary relaxation of salinity standards in these conditions."
+                }
+            ]
+        },
+        "Tier 3": {
+            "threshold": "Max(EM, JP) below 900 uS/cm for >=55% of months, below 1600 uS/cm for >=65% of months, and above 2500 uS/cm for <=20% of months.",
+            "policies": [
+                {
+                    "policy_name": "Freshwater for Delta Exports / salinity standards",
+                    "relationship": "Implicated / stressed",
+                    "note": "Salinity levels exceed those currently experienced; water management could mitigate somewhat but likely cannot meet current standards."
+                },
+                {
+                    "policy_name": "Water treatment & supply management",
+                    "relationship": "Triggered / strongly implicated",
+                    "note": "More water treatment required, further reducing available supply under Tier 3 conditions."
+                },
+                {
+                    "policy_name": "TUCP/O salinity standards relaxation under SWRCB D-1641",
+                    "relationship": "Triggered / strongly implicated",
+                    "note": "Temporary relaxation of salinity standards continues to allow operations under extreme conditions."
+                },
+                {
+                    "policy_name": "Water rights curtailments & seawater intrusion barriers",
+                    "relationship": "Continued implementation",
+                    "note": "Measures from previous tiers remain in place."
+                }
+            ]
+        },
+        "Tier 4": {
+            "threshold": "Max(EM, JP) below 900 uS/cm for <55% of months and/or above 2500 uS/cm for >20% of months.",
+            "policies": [
+                {
+                    "policy_name": "Freshwater for Delta Exports / salinity standards",
+                    "relationship": "Severely exceeded / extreme emergency",
+                    "note": "Critical salinity levels persist for much of the year, representing unprecedented drought and water quality challenges."
+                },
+                {
+                    "policy_name": "Water project operations",
+                    "relationship": "Strongly restricted / emergency level",
+                    "note": "Project water deliveries may cease except for basic food and water security; conditions could persist for several years."
+                },
+                {
+                    "policy_name": "Water reserves & emergency planning",
+                    "relationship": "Triggered / strongly implicated",
+                    "note": "Regions and localities would be required to use reserved water currently being set aside to maintain survival-level supply."
+                }
+            ]
+        }
     }
-
-
 }

@@ -1,158 +1,167 @@
 {
     "Legal Standards": [
-    {
-        "name": "Delta Estuary Health Standards (Delta Stewardship Council – Delta Science Program)",
-        "note": "Scientific standards developed by the Delta Science Program and incorporated into the Bay-Delta Water Quality Control Plan, emphasizing sufficiently high percentages of unimpaired flow (%UIF) to support multiple estuarine health variables.",
-        "key_elements": [
-            {
-                "concept": "Percent Unimpaired Flow (%UIF)",
-                "purpose": "Support estuarine health variables across this tier"
-            }
-        ]
-    },
-    {
-        "name": "Flow Regulation (SWRCB and Regional Water Boards)",
-        "note": "State authority to regulate flows exists but ranks lower in the legal hierarchy than other regulatory priorities. Flow objectives rely largely on discretionary operation of CVP and SWP reservoirs and are frequently unmet.",
-        "key_elements": [
-            {
-                "metric": "Percent Unimpaired Flow (%UIF)",
-                "implementation": "Discretionary CVP/SWP operations",
-                "compliance_status": "Goals regularly not met"
-            },
-            {
-                "regional_variation": [
-                    "Sacramento River and tributaries",
-                    "San Joaquin River and tributaries"
-                ]
-            },
-            {
-                "comparison": {
-                    "Bay-Delta Plan": "Annual average outflow-to-inflow ratio > 0.5 in dry and critically dry years",
-                    "ESA Biological Opinions (Delta Smelt)": "2:1 inflow-to-export ratio"
+        {
+            "name": "Delta Estuary Health Standards (Delta Stewardship Council – Delta Science Program)",
+            "note": "Scientific standards developed by the Delta Science Program and incorporated into the Bay-Delta Water Quality Control Plan, emphasizing sufficiently high percentages of unimpaired flow (%UIF) to support multiple estuarine health variables.",
+            "key_elements": [
+                {
+                    "concept": "Percent Unimpaired Flow (%UIF)",
+                    "purpose": "Support estuarine health variables across this tier"
                 }
-            }
-        ]
-    },
-    {
-        "name": "Freshwater Conditions and Salinity Control",
-        "note": "Maintenance of freshwater and low-salinity conditions in the Delta is highly dependent on diluting flows.",
-        "key_elements": [
-            {
-                "instrument": "SWRCB Water Right Decision 1641 (D-1641)",
-                "requirements": [
-                    "Maintenance of X2 near the eastern edge of Suisun Marsh",
-                    "Minimum Delta outflow requirements"
-                ],
-                "salinity_context": "Brackish salinity control"
-            }
-        ]
-    },
-    {
-        "name": "Submerged Aquatic Vegetation (SAV)",
-        "note": "Regulatory authority over SAV is fragmented, reflecting competing objectives between invasive species eradication, navigation and recreation safety, and ecological protection of native SAV.",
-        "key_elements": [
-            {
-                "regulatory_focus": "Invasive SAV eradication",
-                "programs": [
-                    "California Department of Boating and Waterways (DBW) herbicide program"
-                ],
-                "regulatory_strength": "Higher"
-            },
-            {
-                "regulatory_focus": "Native SAV protection",
-                "programs": [
-                    "Water Boards ecohydrological programs"
-                ],
-                "regulatory_strength": "Lower (guidelines)"
-            }
-        ]
-    },
-    {
-        "name": "Turbidity and Suspended Matter",
-        "note": "High turbidity—comprising suspended organic matter, silt, clay, and microorganisms—supports estuarine health through multiple ecological pathways.",
-        "key_elements": []
-    },
-    {
-        "name": "Microhabitat Protection",
-        "note": "Microhabitat protection is applied unevenly through species-based regulatory instruments and broader scientific guidance.",
-        "key_elements": [
-            {
-                "instrument": "ESA Biological Opinions (2024)",
-                "scope": "Protection of listed species and associated habitat patches",
-                "coverage": "Not comprehensive"
-            },
-            {
-                "instrument": "California Endangered Species Act (CESA)",
-                "scope": "Additional species-based habitat protections"
-            },
-            {
-                "instrument": "Delta Science Program Guidelines",
-                "scope": "Comprehensive microhabitat protection through restoration project guidance",
-                "regulatory_strength": "Lower"
-            },
-            {
-                "instrument": "Porter-Cologne Water Quality Control Act",
-                "scope": "Protection of beneficial uses, including native fish habitat"
-            }
-        ]
-    }
-],
-
+            ]
+        },
+        {
+            "name": "Flow Regulation (SWRCB and Regional Water Boards)",
+            "note": "State authority to regulate flows exists but ranks lower in the legal hierarchy than other regulatory priorities. Flow objectives rely largely on discretionary operation of CVP and SWP reservoirs and are frequently unmet.",
+            "key_elements": [
+                {
+                    "metric": "Percent Unimpaired Flow (%UIF)",
+                    "implementation": "Discretionary CVP/SWP operations",
+                    "compliance_status": "Goals regularly not met"
+                },
+                {
+                    "regional_variation": [
+                        "Sacramento River and tributaries",
+                        "San Joaquin River and tributaries"
+                    ]
+                },
+                {
+                    "comparison": {
+                        "Bay-Delta Plan": "Annual average outflow-to-inflow ratio > 0.5 in dry and critically dry years",
+                        "ESA Biological Opinions (Delta Smelt)": "2:1 inflow-to-export ratio"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Freshwater Conditions and Salinity Control",
+            "note": "Maintenance of freshwater and low-salinity conditions in the Delta is highly dependent on diluting flows.",
+            "key_elements": [
+                {
+                    "instrument": "SWRCB Water Right Decision 1641 (D-1641)",
+                    "requirements": [
+                        "Maintenance of X2 near the eastern edge of Suisun Marsh",
+                        "Minimum Delta outflow requirements"
+                    ],
+                    "salinity_context": "Brackish salinity control"
+                }
+            ]
+        },
+        {
+            "name": "Submerged Aquatic Vegetation (SAV)",
+            "note": "Regulatory authority over SAV is fragmented, reflecting competing objectives between invasive species eradication, navigation and recreation safety, and ecological protection of native SAV.",
+            "key_elements": [
+                {
+                    "regulatory_focus": "Invasive SAV eradication",
+                    "programs": [
+                        "California Department of Boating and Waterways (DBW) herbicide program"
+                    ],
+                    "regulatory_strength": "Higher"
+                },
+                {
+                    "regulatory_focus": "Native SAV protection",
+                    "programs": [
+                        "Water Boards ecohydrological programs"
+                    ],
+                    "regulatory_strength": "Lower (guidelines)"
+                }
+            ]
+        },
+        {
+            "name": "Turbidity and Suspended Matter",
+            "note": "High turbidity—comprising suspended organic matter, silt, clay, and microorganisms—supports estuarine health through multiple ecological pathways.",
+            "key_elements": []
+        },
+        {
+            "name": "Microhabitat Protection",
+            "note": "Microhabitat protection is applied unevenly through species-based regulatory instruments and broader scientific guidance.",
+            "key_elements": [
+                {
+                    "instrument": "ESA Biological Opinions (2024)",
+                    "scope": "Protection of listed species and associated habitat patches",
+                    "coverage": "Not comprehensive"
+                },
+                {
+                    "instrument": "California Endangered Species Act (CESA)",
+                    "scope": "Additional species-based habitat protections"
+                },
+                {
+                    "instrument": "Delta Science Program Guidelines",
+                    "scope": "Comprehensive microhabitat protection through restoration project guidance",
+                    "regulatory_strength": "Lower"
+                },
+                {
+                    "instrument": "Porter-Cologne Water Quality Control Act",
+                    "scope": "Protection of beneficial uses, including native fish habitat"
+                }
+            ]
+        }
+    ],
     "Tiers": {
-        "Tier 1": [
-            {
-                "policy_name": "Minimum flow requirements",
-                "relationship": "Monitored / standard practice",
-                "note": "Minimum flows are triggered year-round but are regularly not fully met; standard operations continue."
-            },
-            {
-                "policy_name": "Freshwater conditions (X2, EC, Chloride)",
-                "relationship": "Monitored / managed",
-                "note": "Mandated levels managed via discretionary storage releases; triggers have strong legal weight compared to minimum flows."
-            },
-            {
-                "policy_name": "Turbidity thresholds",
-                "relationship": "Managed locally / site-based",
-                "note": "Managed by reservoir/storage sites based on reported downstream conditions; many environmental requirements affect turbidity indirectly."
-            },
-            {
-                "policy_name": "SAV management (DBW herbicide spraying)",
-                "relationship": "Scheduled / routine",
-                "note": "Spraying occurs March–Nov based on invasive species growth and water temperature; coordinated with NOAA Fisheries & USFWS to avoid harm to endangered species."
-            },
-            {
-                "policy_name": "Microhabitat protections",
-                "relationship": "Monitored / standard practice",
-                "note": "Triggered by state actions that could harm ESA/CESA-protected species; routine protections in place."
-            }
-        ],
-        "Tier 2": [
-            {
-                "policy_name": "Water rights curtailments (junior holders)",
-                "relationship": "Likely triggered under moderate scarcity",
-                "note": "Curtailments for junior water rights occur if ecosystem indicators decline due to water unavailability."
-            },
-            {
-                "policy_name": "%UIF maintenance",
-                "relationship": "Triggered / standard enforcement",
-                "note": "Maintained in adherence to the Delta Plan unless emergency conditions exist."
-            }
-        ],
-        "Tier 3": [
-            {
-                "policy_name": "Water rights curtailments (senior holders)",
-                "relationship": "Triggered only under severe drought or ecosystem collapse",
-                "note": "Curtailment of senior rights occurs under extreme conditions; recent court decisions limit authority for scarcity alone to trigger senior curtailments."
-            }
-        ],
-        "Tier 4": [
-            {
-                "policy_name": "Delta Reform Act emergency interventions",
-                "relationship": "Triggered / extreme ecosystem collapse",
-                "note": "If Delta estuary health declines to collapse, mandatory actions are required under the Delta Reform Act."
-            }
-        ]
+        "Tier 1": {
+            "threshold": "Scenario scores in top 25% (low SAV, high turbidity, fresh conditions, expanded microhabitats in most years).",
+            "policies": [
+                {
+                    "policy_name": "Minimum flow requirements",
+                    "relationship": "Monitored / standard practice",
+                    "note": "Minimum flows are triggered year-round but are regularly not fully met; standard operations continue."
+                },
+                {
+                    "policy_name": "Freshwater conditions (X2, EC, Chloride)",
+                    "relationship": "Monitored / managed",
+                    "note": "Mandated levels managed via discretionary storage releases; triggers have strong legal weight compared to minimum flows."
+                },
+                {
+                    "policy_name": "Turbidity thresholds",
+                    "relationship": "Managed locally / site-based",
+                    "note": "Managed by reservoir/storage sites based on reported downstream conditions; many environmental requirements affect turbidity indirectly."
+                },
+                {
+                    "policy_name": "SAV management (DBW herbicide spraying)",
+                    "relationship": "Scheduled / routine",
+                    "note": "Spraying occurs March–Nov based on invasive species growth and water temperature; coordinated with NOAA Fisheries & USFWS to avoid harm to endangered species."
+                },
+                {
+                    "policy_name": "Microhabitat protections",
+                    "relationship": "Monitored / standard practice",
+                    "note": "Triggered by state actions that could harm ESA/CESA-protected species; routine protections in place."
+                }
+            ]
+        },
+        "Tier 2": {
+            "threshold": "Scenario scores in top 50% (unchanged SAV, high turbidity, fresh conditions, some microhabitats in most years).",
+            "policies": [
+                {
+                    "policy_name": "Water rights curtailments (junior holders)",
+                    "relationship": "Likely triggered under moderate scarcity",
+                    "note": "Curtailments for junior water rights occur if ecosystem indicators decline due to water unavailability."
+                },
+                {
+                    "policy_name": "%UIF maintenance",
+                    "relationship": "Triggered / standard enforcement",
+                    "note": "Maintained in adherence to the Delta Plan unless emergency conditions exist."
+                }
+            ]
+        },
+        "Tier 3": {
+            "threshold": "Scenario scores in top 75% (unchanged SAV, standard turbidity, moderate salinity, few microhabitats in most years).",
+            "policies": [
+                {
+                    "policy_name": "Water rights curtailments (senior holders)",
+                    "relationship": "Triggered only under severe drought or ecosystem collapse",
+                    "note": "Curtailment of senior rights occurs under extreme conditions; recent court decisions limit authority for scarcity alone to trigger senior curtailments."
+                }
+            ]
+        },
+        "Tier 4": {
+            "threshold": "None of the above; unchanged SAV, low turbidity, moderate to high salinity, few microhabitats in most years.",
+            "policies": [
+                {
+                    "policy_name": "Delta Reform Act emergency interventions",
+                    "relationship": "Triggered / extreme ecosystem collapse",
+                    "note": "If Delta estuary health declines to collapse, mandatory actions are required under the Delta Reform Act."
+                }
+            ]
+        }
     }
-
-
 }

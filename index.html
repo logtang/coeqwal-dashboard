@@ -797,7 +797,10 @@
                 
                 let totalPolicies = 0;
                 Object.values(data.Tiers || {}).forEach(tier => {
-                    totalPolicies += tier.length;
+                    const policies = Array.isArray(tier) ? tier : tier?.policies;
+                    if (Array.isArray(policies)) {
+                        totalPolicies += policies.length;
+                    }
                 });
 
                 return { legalCount, tierCount, agencyCount, totalPolicies };
@@ -899,21 +902,19 @@
             }
 
             const tierOrder = ['Tier 1', 'Tier 2', 'Tier 3', 'Tier 4'];
-            const tierDefinitions = {
-                'Tier 1': 'Revenue Increasing',
-                'Tier 2': 'Revenue Declining &lt;5%/year',
-                'Tier 3': 'Revenue Declining 5-20%/year',
-                'Tier 4': 'Revenue Declining &gt;20%/year'
-            };
             const content = document.getElementById('tiersAligned');
             const chatgptTiers = currentDataChatGPT && currentDataChatGPT.Tiers ? currentDataChatGPT.Tiers : null;
             const manualTiers = currentDataManual && currentDataManual.Tiers ? currentDataManual.Tiers : null;
 
             content.innerHTML = tierOrder.map((tierName) => {
                 const tierNumber = tierName.split(' ')[1];
-                const chatPolicies = chatgptTiers ? chatgptTiers[tierName] : null;
-                const manualPolicies = manualTiers ? manualTiers[tierName] : null;
-                const tierDefinition = tierDefinitions[tierName];
+                const chatTierData = chatgptTiers ? chatgptTiers[tierName] : null;
+                const manualTierData = manualTiers ? manualTiers[tierName] : null;
+                const chatPolicies = Array.isArray(chatTierData) ? chatTierData : chatTierData?.policies;
+                const manualPolicies = Array.isArray(manualTierData) ? manualTierData : manualTierData?.policies;
+                const tierDefinition = (!Array.isArray(chatTierData) && chatTierData?.threshold)
+                    || (!Array.isArray(manualTierData) && manualTierData?.threshold)
+                    || '';
                 const chatCount = Array.isArray(chatPolicies) ? chatPolicies.length : 0;
                 const manualCount = Array.isArray(manualPolicies) ? manualPolicies.length : 0;
 
