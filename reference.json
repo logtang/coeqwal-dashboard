@@ -1,0 +1,56 @@
+{
+    "Legal Standards": [
+        {
+            "name": "",
+            "note": "",
+            "key_elements": []
+        }
+    ],
+    "Tiers": {
+        "Tier 1": {
+            "threshold": "",
+            "policies": [
+                {
+                    "policy_name": "",
+                    "relationship": "",
+                    "note": ""
+                }
+            ]
+        },
+        "Tier 2": {
+            "threshold": "",
+            "policies": [
+                {
+                    "policy_name": "",
+                    "relationship": "",
+                    "note": ""
+                }
+            ]
+        },
+        "Tier 3": {
+            "threshold": "",
+            "policies": [
+                {
+                    "policy_name": "",
+                    "relationship": "",
+                    "note": ""
+                }
+            ]
+        },
+        "Tier 4": {
+            "threshold": "",
+            "policies": [
+                {
+                    "policy_name": "",
+                    "relationship": "",
+                    "note": ""
+                }
+            ]
+    },
+    "Governing Agencies": [
+        {
+            "name": "",
+            "note": ""
+        }
+    ]
+}
