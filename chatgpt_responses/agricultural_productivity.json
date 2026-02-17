@@ -1,168 +1,384 @@
 {
-    "Legal Standards": [
-        {
-            "name": "Reasonable use / beneficial use (California Constitution + Water Code)",
-            "note": "All water rights are limited to reasonable and beneficial use; waste/unreasonable methods are prohibited. During shortages, agencies can require conservation, change diversion practices, and scrutinize irrigation efficiency—directly affecting water deliveries and thus farm output/revenue.",
-            "key_elements": []
-        },
-        {
-            "name": "Drought emergency regulation + curtailment authority (State Water Board)",
-            "note": "In drought/critically dry conditions, the State Water Resources Control Board (SWRCB) can adopt emergency regulations and curtail diversions when water isn’t available under a diverter’s priority.",
-            "key_elements": []
-        },
-        {
-            "name": "Water rights enforcement (penalties / cease-and-desist)",
-            "note": "Diverting without authorization can lead to enforcement, civil liability, and cease-and-desist orders. In severe shortages, the legal risk isn’t 'low productivity'—it’s illegal diversion to avoid low productivity.",
-            "key_elements": []
-        },
-        {
-            "name": "Sustainable Groundwater Management Act (SGMA)",
-            "note": "Groundwater Sustainability Agencies (GSAs) must manage basins to avoid 'undesirable results', often via pumping allocations, metering, fees, and projects.",
-            "key_elements": []
-        },
-        {
-            "name": "Agricultural Water Management Planning Act + measurement requirements",
-            "note": "Large agricultural water suppliers must prepare/update Agricultural Water Management Plans (AWMPs) and comply with measurement/efficiency planning requirements.",
-            "key_elements": []
-        },
-        {
-            "name": "Annual shortage reporting (supplier-level shortage signal)",
-            "note": "Certain suppliers must perform Annual Water Supply and Demand Assessments and submit Annual Shortage Reports to DWR.",
-            "key_elements": []
-        },
-        {
-            "name": "Federal environmental allocation constraints affecting deliveries (CVPIA + ESA)",
-            "note": "These don’t regulate 'ag productivity,' but they change project operations and water available for irrigation, especially in the Central Valley.",
-            "key_elements": []
-        }
-    ],
-    "Tiers": {
-        "Tier 1": {
-            "threshold": "Revenue increasing.",
-            "policies": [
-                {
-                    "policy_name": "Reasonable use / beneficial use (California Constitution + Water Code)",
-                    "relationship": "Met / aligned with",
-                    "note": "Reasonable/beneficial use and conservation norms (if achieved via efficiency, crop switching, deficit irrigation, reuse, etc.), consistent with the constitutional/section 100 policy against waste."
-                },
-                {
-                    "policy_name": "Agricultural Water Management Planning Act + measurement requirements",
-                    "relationship": "Implicated (but not automatically triggered)",
-                    "note": "AWMP implementation and measurement (suppliers still must plan/report regardless of revenue trend)."
-                },
-                {
-                    "policy_name": "Sustainable Groundwater Management Act (SGMA)",
-                    "relationship": "Implicated (but not automatically triggered)",
-                    "note": "Revenue up can still coincide with overdraft, so SGMA obligations remain."
-                }
-            ]
-        },
-        "Tier 2": {
-            "threshold": "Revenue declining <5%/year.",
-            "policies": [
-                {
-                    "policy_name": "Annual shortage reporting (supplier-level shortage signal)",
-                    "relationship": "Triggered / commonly implicated",
-                    "note": "Supplier shortage assessment/reporting (where the entity is covered, this is the formal mechanism for declaring/recording shortage conditions and actions)."
-                },
-                {
-                    "policy_name": "Agricultural Water Management Planning Act + measurement requirements",
-                    "relationship": "Triggered / commonly implicated",
-                    "note": "AWMP operational measures (allocation rules, delivery scheduling, conservation programs) as part of planned shortage response."
-                },
-                {
-                    "policy_name": "Reasonable use / beneficial use (California Constitution + Water Code)",
-                    "relationship": "Implicated",
-                    "note": "Reasonable use review pressure increases during shortages, especially if visible inefficiencies persist."
-                },
-                {
-                    "policy_name": "Water rights enforcement (penalties / cease-and-desist)",
-                    "relationship": "Violation risk",
-                    "note": "Still not inherent. Risk emerges if parties respond by diverting outside legal right or failing required reporting if applicable."
-                }
-            ]
-        },
-        "Tier 3": {
-            "threshold": "Revenue declining 5%-20%/year.",
-            "policies": [
-                {
-                    "policy_name": "Drought emergency regulation + curtailment authority (State Water Board)",
-                    "relationship": "Triggered / more likely",
-                    "note": "SWRCB drought emergency actions / curtailments when conditions support them (curtailments are explicitly authorized to match diversions to priority/availability). Local or watershed-specific emergency regulations may apply."
-                },
-                {
-                    "policy_name": "Sustainable Groundwater Management Act (SGMA)",
-                    "relationship": "Triggered / more likely",
-                    "note": "SGMA pumping allocations / ramp-down implementation in stressed basins to avoid undesirable results."
-                },
-                {
-                    "policy_name": "Federal environmental allocation constraints affecting deliveries (CVPIA + ESA)",
-                    "relationship": "Implicated",
-                    "note": "Federal project operational constraints (CVPIA/ESA) can be a significant cause of reduced allocations in some areas/years."
-                },
-                {
-                    "policy_name": "Water rights enforcement (penalties / cease-and-desist)",
-                    "relationship": "Violation risk (becomes non-trivial)",
-                    "note": "If curtailed users continue diverting, that can become unauthorized diversion exposure (civil liability structure in section 1052; SWRCB enforcement)."
-                }
-            ]
-        },
-        "Tier 4": {
-            "threshold": "Revenue declining >20%/year.",
-            "policies": [
-                {
-                    "policy_name": "Drought emergency regulation + curtailment authority (State Water Board)",
-                    "relationship": "Triggered / strongly implicated",
-                    "note": "Curtailments and/or emergency regulations are much more likely in severe scarcity because the statute expressly contemplates emergency rules and curtailment when water is unavailable under priority."
-                },
-                {
-                    "policy_name": "Sustainable Groundwater Management Act (SGMA)",
-                    "relationship": "Triggered / strongly implicated",
-                    "note": "Aggressive SGMA compliance actions (hard caps/allocations, fees, enforcement) to stop significant and unreasonable basin impacts."
-                },
-                {
-                    "policy_name": "Annual shortage reporting (supplier-level shortage signal)",
-                    "relationship": "Triggered / strongly implicated",
-                    "note": "Supplier shortage reporting and drought-stage restrictions (where covered), and intensified shortage allocation/rotation at irrigation-district/supplier level."
-                },
-                {
-                    "policy_name": "Federal environmental allocation constraints affecting deliveries (CVPIA + ESA)",
-                    "relationship": "Triggered / strongly implicated",
-                    "note": "Federal CVP/ESA constraints often become binding in dry years, reducing delivered water."
-                },
-                {
-                    "policy_name": "Water rights enforcement (penalties / cease-and-desist)",
-                    "relationship": "Where violation is most likely to occur",
-                    "note": "Diverting/pumping contrary to curtailment/emergency conditions or without right -> enforcement tools (CDOs) and civil liability under section 1052 become central."
-                },
-                {
-                    "policy_name": "Reasonable use / beneficial use (California Constitution + Water Code)",
-                    "relationship": "Also implicated",
-                    "note": "Reasonable use / anti-waste scrutiny tends to intensify when scarcity is extreme (e.g., pressure to stop clearly inefficient methods)."
-                }
-            ]
-        }
+  "meta": {
+    "outcome_domain": "agricultural_productivity_revenue",
+    "tier_interpretation_note": "These tiers reflect year-over-year changes in agricultural revenue. Laws rarely set revenue targets directly; instead, they affect revenue by changing water availability, reliability, operating constraints, compliance costs, and/or legal risk. Likelihood scores reflect policy-to-outcome plausibility (how strongly a legal standard can drive conditions that commonly correlate with those revenue tiers), not a guarantee of any tier.",
+    "likelihood_scale": {
+      "1": "most likely",
+      "2": "moderately likely",
+      "3": "least likely"
     },
-    "Governing Agencies": [
+    "schema_changes_note": "I added: (a) stable legal_standard_id keys, (b) likelihood_score + likelihood_label as categorical fields (not free-form), and (c) optional per-law sources[] arrays for traceability."
+  },
+  "Legal Standards": [
+    {
+      "legal_standard_id": "REASONABLE_BENEFICIAL_USE",
+      "name": "Reasonable Use / Beneficial Use Doctrine (California Constitution Article X, §2 + Water Code §100)",
+      "note": "All California water rights are limited to water that is reasonably required for beneficial use; waste, unreasonable use, or unreasonable methods of diversion/use are prohibited. In shortages, this doctrine often underpins conservation expectations, operational changes, and scrutiny of inefficient practices—affecting agricultural water reliability/costs and, by extension, revenue.",
+      "key_elements": [
         {
-            "name": "State Water Resources Control Board (SWRCB)",
-            "note": "Emergency regulations, curtailments, water-right enforcement, cease-and-desist orders."
+          "term": "Beneficial use",
+          "plain_definition": "A socially recognized and lawful purpose for using water (e.g., irrigation), subject to limits against waste."
         },
         {
-            "name": "California Department of Water Resources (DWR)",
-            "note": "AWMP guidance/review support, shortage assessment program administration, statewide planning/technical standards."
-        },
-        {
-            "name": "Groundwater Sustainability Agencies (GSAs)",
-            "note": "SGMA compliance via pumping allocations, projects, and enforcement to avoid undesirable results."
-        },
-        {
-            "name": "U.S. Bureau of Reclamation (USBR)",
-            "note": "Operates federal projects (e.g., CVP) whose allocations materially affect ag supply."
-        },
-        {
-            "name": "U.S. Fish & Wildlife Service (USFWS) / NOAA Fisheries",
-            "note": "ESA consultation drivers affecting operations/diversions and project pumping constraints."
+          "term": "Reasonable use",
+          "plain_definition": "Using only the water reasonably needed and using reasonable methods; wasting water can violate this requirement."
         }
-    ]
+      ],
+      "sources": [
+        "https://law.justia.com/constitution/california/article-x/section-2/",
+        "https://www.waterboards.ca.gov/waterrights/board_info/water_rights_process.html"
+      ]
+    },
+    {
+      "legal_standard_id": "DROUGHT_EMERGENCY_CURTAILMENT",
+      "name": "Drought Emergency Regulation + Curtailment Authority (SWRCB) (Water Code §1058.5 and related curtailment tools)",
+      "note": "In drought emergencies, the State Water Board can adopt emergency regulations to prevent waste/unreasonable use and can issue curtailment orders directing certain diverters to stop diverting when water is unavailable under their priority. Curtailments can directly reduce irrigation supply, leading to fallowing, crop switching, yield loss, and revenue declines.",
+      "key_elements": [
+        {
+          "term": "Curtailment order",
+          "plain_definition": "A directive to stop diverting water under a particular right/claim when water is not available under that priority."
+        },
+        {
+          "term": "Priority system",
+          "plain_definition": "California’s ordering of water rights (e.g., senior rights before junior rights) that governs who is cut back first in shortages."
+        },
+        {
+          "term": "Emergency regulation",
+          "plain_definition": "A temporary rule adopted during an emergency to address urgent conditions (e.g., drought)."
+        }
+      ],
+      "sources": [
+        "https://codes.findlaw.com/ca/water-code/wat-sect-1058-5/",
+        "https://www.waterboards.ca.gov/drought/delta/docs/refg_eregorder.pdf"
+      ]
+    },
+    {
+      "legal_standard_id": "WATER_RIGHTS_ENFORCEMENT",
+      "name": "Unauthorized Diversion Prohibition + Enforcement (Water Code §1052; cease-and-desist authority in Water Code §§1831–1836)",
+      "note": "Diverting or using water without authorization is a ‘trespass’ and can trigger enforcement (cease-and-desist orders, penalties). During shortages/curtailments, legal risk increases if parties continue diverting without right. Enforcement pressure can change behavior (reducing diversions) and can also increase costs/risk that affect operations and revenue.",
+      "key_elements": [
+        {
+          "term": "Unauthorized diversion",
+          "plain_definition": "Taking water without a valid legal basis (e.g., outside the scope of a right/permit)."
+        },
+        {
+          "term": "Cease and Desist Order (CDO)",
+          "plain_definition": "A formal enforcement order requiring the diverter to stop an illegal or threatened illegal diversion/use."
+        }
+      ],
+      "sources": [
+        "https://law.justia.com/codes/california/code-wat/division-2/part-1/chapter-2/section-1052/"
+      ]
+    },
+    {
+      "legal_standard_id": "SGMA",
+      "name": "Sustainable Groundwater Management Act (SGMA) (Water Code §10720 et seq.)",
+      "note": "SGMA requires local Groundwater Sustainability Agencies (GSAs) to manage groundwater basins to avoid ‘undesirable results’ and achieve sustainability. In practice, this often leads to pumping allocations, fees, metering, land-use impacts, and reduced groundwater availability—directly affecting irrigated acreage, yields, and farm revenue in groundwater-dependent regions.",
+      "key_elements": [
+        {
+          "term": "GSA (Groundwater Sustainability Agency)",
+          "plain_definition": "Local agency (or set of agencies) responsible for SGMA planning and groundwater management in a basin."
+        },
+        {
+          "term": "GSP (Groundwater Sustainability Plan)",
+          "plain_definition": "The plan a GSA adopts to achieve sustainable groundwater management."
+        },
+        {
+          "term": "Undesirable results",
+          "plain_definition": "Harmful basin conditions SGMA is designed to avoid (e.g., chronic groundwater level decline, land subsidence, water quality degradation)."
+        },
+        {
+          "term": "Sustainable yield",
+          "plain_definition": "How much groundwater can be pumped long-term without causing undesirable results."
+        }
+      ],
+      "sources": [
+        "https://www.waterboards.ca.gov/laws_regulations/docs/sgma-booklet.pdf",
+        "https://www.waterboards.ca.gov/water_issues/programs/gmp/docs/sgma/sgma_20190101.pdf"
+      ]
+    },
+    {
+      "legal_standard_id": "AG_WATER_MANAGEMENT_PLANNING",
+      "name": "Agricultural Water Management Planning Act (Water Code Division 6, Part 2.8) + related agricultural supplier reporting/measurement (e.g., Water Code §531.10)",
+      "note": "Requires certain agricultural water suppliers to prepare Agricultural Water Management Plans (AWMPs) and report delivery data. These requirements can influence revenue indirectly through conservation planning, allocation rules, measurement costs, and—sometimes—more efficient water management that stabilizes production during shortages.",
+      "key_elements": [
+        {
+          "term": "AWMP",
+          "plain_definition": "A planning document describing how an agricultural water supplier measures, manages, and improves water use efficiency."
+        },
+        {
+          "term": "Farm-gate delivery data",
+          "plain_definition": "Water delivery information tracked at the point water is delivered to farms (aggregated for reporting)."
+        }
+      ],
+      "sources": [
+        "https://law.justia.com/codes/california/code-wat/division-6/part-2-8/chapter-3/",
+        "https://law.justia.com/codes/california/code-wat/division-1/chapter-8/article-4-3/section-531-10/"
+      ]
+    },
+    {
+      "legal_standard_id": "BAY_DELTA_PLAN_D1641",
+      "name": "Bay-Delta Water Quality Control Plan + D-1641 implementation terms for CVP/SWP (water quality/flow obligations affecting deliveries)",
+      "note": "Water quality and flow obligations for the Bay-Delta system can constrain CVP/SWP operations (including exports and reservoir releases), which can reduce or shift water deliveries used for irrigation—especially in dry years—affecting agricultural productivity and revenue.",
+      "key_elements": [
+        {
+          "term": "Water quality objective",
+          "plain_definition": "A target (often numeric) for water conditions the state aims to achieve to protect uses, implemented through operational rules."
+        },
+        {
+          "term": "Project operations constraints",
+          "plain_definition": "Limits on how much/when the projects can pump, store, or release water to meet legal obligations."
+        }
+      ],
+      "sources": [
+        "https://www.waterboards.ca.gov/waterrights/water_issues/programs/compliance_monitoring/sacramento_sanjoaquin/",
+        "https://www.waterboards.ca.gov/waterrights/board_decisions/adopted_orders/decisions/d1600_d1649/wrd1641_1999dec29.pdf"
+      ]
+    },
+    {
+      "legal_standard_id": "ESA",
+      "name": "Federal Endangered Species Act (ESA) (16 U.S.C. §1531 et seq.) — operational constraints affecting water supply reliability",
+      "note": "ESA can require operational changes to reduce harm to listed species (often through consultations/BiOps/RPAs). For water projects and diversion operations, ESA constraints can reduce pumping/export capacity or change timing/flows—reducing reliability of irrigation supplies and impacting farm revenue (especially for CVP/SWP-dependent agriculture).",
+      "key_elements": [
+        {
+          "term": "Biological Opinion (BiOp)",
+          "plain_definition": "An expert agency document evaluating whether a federal action would jeopardize a listed species and specifying required measures."
+        },
+        {
+          "term": "Reasonable and Prudent Alternatives (RPAs)",
+          "plain_definition": "Operational/habitat changes required so a project can proceed without jeopardizing a listed species."
+        }
+      ],
+      "sources": [
+        "https://www.fisheries.noaa.gov/topic/endangered-species-conservation"
+      ]
+    },
+    {
+      "legal_standard_id": "CVPIA",
+      "name": "Central Valley Project Improvement Act (CVPIA) (Pub. L. 102-575, Title XXXIV)",
+      "note": "CVPIA mandates fish-and-wildlife-oriented changes to CVP management, including dedicating a portion of CVP yield to fish and wildlife purposes. This can reduce water available for irrigation deliveries (or change timing), affecting agricultural production and revenue—particularly in dry years or for CVP contractors.",
+      "key_elements": [
+        {
+          "term": "800,000 acre-feet (b)(2) water",
+          "plain_definition": "A portion of CVP yield directed primarily to fish, wildlife, and habitat restoration purposes (reducing operational flexibility for other deliveries)."
+        }
+      ],
+      "sources": [
+        "https://www.usbr.gov/mp/cvpia/",
+        "https://www.doi.gov/ocl/central-valley-project"
+      ]
+    }
+  ],
+  "Tiers": {
+    "Tier 1": {
+      "threshold": "Revenue increasing",
+      "policies": [
+        {
+          "policy_name": "Reasonable Use / Beneficial Use Doctrine",
+          "legal_standard_id": "REASONABLE_BENEFICIAL_USE",
+          "relationship": "Generally aligned with stability/efficiency but not a revenue guarantee",
+          "likelihood_score": 3,
+          "likelihood_label": "least likely",
+          "driver_type": "baseline constraint",
+          "note": "Mechanism: Encourages efficient/non-wasteful practices that can support resilience, but does not directly increase revenue; revenue depends on markets, weather, and water supply."
+        },
+        {
+          "policy_name": "Agricultural Water Management Planning + measurement/reporting",
+          "legal_standard_id": "AG_WATER_MANAGEMENT_PLANNING",
+          "relationship": "Indirect—can support efficiency that may correlate with stable or increasing revenue",
+          "likelihood_score": 3,
+          "likelihood_label": "least likely",
+          "driver_type": "indirect lever",
+          "note": "Mechanism: Planning/measurement can enable better allocation and efficiency, but Tier 1 revenue increases are mostly driven by water availability plus crop prices and costs."
+        },
+        {
+          "policy_name": "SGMA",
+          "legal_standard_id": "SGMA",
+          "relationship": "Often constraining; Tier 1 more plausible where SGMA impacts are mild or mitigated (recharge, transfers, crop changes)",
+          "likelihood_score": 2,
+          "likelihood_label": "moderately likely",
+          "driver_type": "direct constraint",
+          "note": "Mechanism: In some basins, early SGMA actions (caps/fees) can increase costs or reduce acreage; maintaining revenue growth often requires adaptation (efficiency, higher-value crops, alternative supplies)."
+        }
+      ]
+    },
+    "Tier 2": {
+      "threshold": "Revenue declining <5%/year",
+      "policies": [
+        {
+          "policy_name": "Drought Emergency Regulation + Curtailment Authority",
+          "legal_standard_id": "DROUGHT_EMERGENCY_CURTAILMENT",
+          "relationship": "Conditional driver—can contribute to modest declines when curtailments are limited in scope/duration",
+          "likelihood_score": 2,
+          "likelihood_label": "moderately likely",
+          "driver_type": "direct constraint",
+          "note": "Mechanism: Partial/short curtailments can reduce plantings or increase pumping costs enough to cause small revenue declines, especially for junior diverters."
+        },
+        {
+          "policy_name": "SGMA",
+          "legal_standard_id": "SGMA",
+          "relationship": "Commonly implicated—moderate restrictions/fees can produce small-to-moderate revenue impacts",
+          "likelihood_score": 2,
+          "likelihood_label": "moderately likely",
+          "driver_type": "direct constraint",
+          "note": "Mechanism: Early allocation programs, metering, and fees can slightly reduce margins and/or acreage before deeper ramp-downs occur."
+        },
+        {
+          "policy_name": "Bay-Delta Plan + D-1641 project ops constraints (water quality/flows)",
+          "legal_standard_id": "BAY_DELTA_PLAN_D1641",
+          "relationship": "Indirect/conditional—can contribute to reduced allocations for CVP/SWP contractors depending on year",
+          "likelihood_score": 2,
+          "likelihood_label": "moderately likely",
+          "driver_type": "indirect lever",
+          "note": "Mechanism: Operational limits to meet water quality/flow obligations can reduce delivered supplies (or shift timing), sometimes translating into modest revenue declines."
+        }
+      ]
+    },
+    "Tier 3": {
+      "threshold": "Revenue declining 5%–20%/year",
+      "policies": [
+        {
+          "policy_name": "Drought Emergency Regulation + Curtailment Authority",
+          "legal_standard_id": "DROUGHT_EMERGENCY_CURTAILMENT",
+          "relationship": "Strong driver of larger declines when curtailments are broad/long or when hydrology is very dry",
+          "likelihood_score": 1,
+          "likelihood_label": "most likely",
+          "driver_type": "direct constraint",
+          "note": "Mechanism: Reduced surface water diversions force fallowing, deficit irrigation, or costlier pumping/alternative supplies, producing substantial revenue impacts."
+        },
+        {
+          "policy_name": "SGMA",
+          "legal_standard_id": "SGMA",
+          "relationship": "Often a strong contributor where pumping reductions ramp up or allocations tighten",
+          "likelihood_score": 1,
+          "likelihood_label": "most likely",
+          "driver_type": "direct constraint",
+          "note": "Mechanism: Pumping caps and reduced groundwater availability can reduce irrigated acreage and yields, pushing revenue declines into this range absent mitigation measures."
+        },
+        {
+          "policy_name": "ESA operational constraints affecting water deliveries",
+          "legal_standard_id": "ESA",
+          "relationship": "Conditional but potentially significant for project-dependent agriculture, especially in dry years",
+          "likelihood_score": 2,
+          "likelihood_label": "moderately likely",
+          "driver_type": "direct constraint",
+          "note": "Mechanism: ESA-driven export/flow constraints can reduce CVP/SWP allocations or shift timing, which can materially affect crop decisions and yields for contractors."
+        },
+        {
+          "policy_name": "CVPIA fish-and-wildlife allocations/requirements",
+          "legal_standard_id": "CVPIA",
+          "relationship": "Conditional but potentially significant for CVP contractors",
+          "likelihood_score": 2,
+          "likelihood_label": "moderately likely",
+          "driver_type": "direct constraint",
+          "note": "Mechanism: CVPIA requirements reduce operational flexibility and can reduce irrigation deliveries, contributing to medium-scale revenue impacts depending on hydrology and reliance on CVP supply."
+        },
+        {
+          "policy_name": "Unauthorized diversion prohibition + enforcement",
+          "legal_standard_id": "WATER_RIGHTS_ENFORCEMENT",
+          "relationship": "Not a revenue driver by itself, but enforcement risk grows as shortages intensify",
+          "likelihood_score": 2,
+          "likelihood_label": "moderately likely",
+          "driver_type": "enforcement",
+          "note": "Mechanism: Under curtailment pressure, some users may face enforcement that forces abrupt operational changes or increases legal/penalty exposure, adding to revenue stress."
+        }
+      ]
+    },
+    "Tier 4": {
+      "threshold": "Revenue declining >20%/year",
+      "policies": [
+        {
+          "policy_name": "Drought Emergency Regulation + Curtailment Authority",
+          "legal_standard_id": "DROUGHT_EMERGENCY_CURTAILMENT",
+          "relationship": "Most direct legal lever associated with severe supply loss and major revenue declines",
+          "likelihood_score": 1,
+          "likelihood_label": "most likely",
+          "driver_type": "direct constraint",
+          "note": "Mechanism: Widespread/extended curtailments (plus very low inflow years) can force large-scale fallowing and major yield losses, often pushing revenue declines beyond 20% for affected regions/crops."
+        },
+        {
+          "policy_name": "SGMA",
+          "legal_standard_id": "SGMA",
+          "relationship": "Strong driver where pumping reductions are deep and alternatives are limited",
+          "likelihood_score": 1,
+          "likelihood_label": "most likely",
+          "driver_type": "direct constraint",
+          "note": "Mechanism: Significant groundwater ramp-down (allocations, fees, well shutdowns) can cause large land-use change/fallowing and large revenue drops—especially in groundwater-dependent areas."
+        },
+        {
+          "policy_name": "ESA operational constraints affecting water deliveries",
+          "legal_standard_id": "ESA",
+          "relationship": "Conditional—can contribute to severe declines when combined with drought and tight project allocations",
+          "likelihood_score": 2,
+          "likelihood_label": "moderately likely",
+          "driver_type": "direct constraint",
+          "note": "Mechanism: In very dry years, ESA constraints can become binding alongside hydrologic scarcity, further reducing project deliveries and exacerbating revenue losses for project-dependent agriculture."
+        },
+        {
+          "policy_name": "CVPIA fish-and-wildlife allocations/requirements",
+          "legal_standard_id": "CVPIA",
+          "relationship": "Conditional—can exacerbate severe declines for CVP contractors in dry years",
+          "likelihood_score": 2,
+          "likelihood_label": "moderately likely",
+          "driver_type": "direct constraint",
+          "note": "Mechanism: Environmental allocations and operational requirements can further limit irrigation deliveries when supplies are already very low."
+        },
+        {
+          "policy_name": "Bay-Delta Plan + D-1641 project ops constraints (water quality/flows)",
+          "legal_standard_id": "BAY_DELTA_PLAN_D1641",
+          "relationship": "Conditional—can exacerbate severe shortages for contractors depending on year/region",
+          "likelihood_score": 2,
+          "likelihood_label": "moderately likely",
+          "driver_type": "indirect lever",
+          "note": "Mechanism: Water quality/flow obligations can constrain exports and project operations, compounding scarcity-driven allocation cuts that translate into large revenue losses."
+        },
+        {
+          "policy_name": "Unauthorized diversion prohibition + enforcement",
+          "legal_standard_id": "WATER_RIGHTS_ENFORCEMENT",
+          "relationship": "Enforcement becomes most salient when scarcity is extreme and noncompliance risk rises",
+          "likelihood_score": 2,
+          "likelihood_label": "moderately likely",
+          "driver_type": "enforcement",
+          "note": "Mechanism: Enforcement actions (CDOs/penalties) can force immediate cessation of diversions and impose costs—particularly when users divert despite curtailment or outside their right—worsening severe revenue outcomes."
+        }
+      ]
+    }
+  },
+  "Governing Agencies": [
+    {
+      "name": "State Water Resources Control Board (SWRCB)",
+      "note": "Administers and enforces California surface water rights; adopts drought emergency regulations and issues curtailment orders; enforces unauthorized diversion prohibitions (e.g., cease-and-desist); implements water quality-related constraints that can affect project operations and deliveries.",
+      "pertains_to_legal_standards": [
+        "REASONABLE_BENEFICIAL_USE",
+        "DROUGHT_EMERGENCY_CURTAILMENT",
+        "WATER_RIGHTS_ENFORCEMENT",
+        "BAY_DELTA_PLAN_D1641"
+      ]
+    },
+    {
+      "name": "California Department of Water Resources (DWR)",
+      "note": "Provides planning/technical support and guidance for agricultural water management and reporting programs; supports statewide water planning and interacts with water allocation/shortage planning that can influence supplier-level actions affecting agricultural reliability.",
+      "pertains_to_legal_standards": ["AG_WATER_MANAGEMENT_PLANNING"]
+    },
+    {
+      "name": "Groundwater Sustainability Agencies (GSAs)",
+      "note": "Local agencies responsible for developing and implementing GSPs under SGMA; set pumping allocations, projects, fees, and enforcement actions that directly affect agricultural groundwater availability and costs.",
+      "pertains_to_legal_standards": ["SGMA"]
+    },
+    {
+      "name": "U.S. Bureau of Reclamation (USBR)",
+      "note": "Operates the Central Valley Project (CVP); allocation and operational decisions affect irrigation water deliveries; implements CVPIA requirements through CVP management and coordinates on ESA-related operational constraints for federal actions.",
+      "pertains_to_legal_standards": ["CVPIA", "ESA", "BAY_DELTA_PLAN_D1641"]
+    },
+    {
+      "name": "NOAA Fisheries (NMFS)",
+      "note": "Implements ESA for listed anadromous species via Section 7 consultations and Biological Opinions that can constrain CVP/SWP and related federal actions, indirectly affecting agricultural water reliability for project-dependent users.",
+      "pertains_to_legal_standards": ["ESA"]
+    },
+    {
+      "name": "U.S. Fish & Wildlife Service (USFWS)",
+      "note": "Participates in ESA implementation for species under its jurisdiction and engages in CVPIA-related fish and wildlife programs; these roles can influence operational/restoration priorities that affect CVP deliveries and agricultural reliability.",
+      "pertains_to_legal_standards": ["ESA", "CVPIA"]
+    }
+  ]
 }

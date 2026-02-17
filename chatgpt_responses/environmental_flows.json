@@ -1,198 +1,379 @@
 {
-    "Legal Standards": [
+  "meta": {
+    "outcome_domain": "environmental_flows_functional_flow_regime",
+    "tier_interpretation_note": "These tiers reflect the probability (across years) that functional seasonal flow patterns are maintained to support native freshwater species (e.g., higher winter/spring mean daily flows than summer, and meeting functional-flow coverage thresholds). Legal standards rarely encode your exact functional-flow tier metrics; they influence outcomes by constraining reservoir operations, diversion/export limits, hydropower licensing conditions, water quality/water-right permit terms, and project-level mitigation. Likelihood scores reflect policy-to-outcome plausibility (strength/directness of operational leverage), not a guarantee of meeting any tier.",
+    "likelihood_scale": {
+      "1": "most likely",
+      "2": "moderately likely",
+      "3": "least likely"
+    }
+  },
+  "Legal Standards": [
+    {
+      "legal_standard_id": "ESA",
+      "name": "Federal Endangered Species Act (ESA) — Section 7 consultation / Biological Opinions / RPAs (16 U.S.C. §1531 et seq.)",
+      "note": "Where listed aquatic species (or critical habitat) are affected, ESA can impose enforceable operational constraints on federal actions (including project operations) to avoid jeopardy/adverse modification—often translating into flow, temperature, ramping, and entrainment constraints that shape flow regimes.",
+      "key_elements": [
         {
-            "name": "California Fish & Game Code § 5937",
-            "note": "Creates a direct legal duty on dam owners/operators to release sufficient water to keep fish populations below the dam in 'good condition.'",
-            "key_elements": []
+          "term": "Section 7 consultation",
+          "plain_definition": "Process where a federal agency must evaluate and consult to ensure its action won’t jeopardize a listed species or damage its critical habitat."
         },
         {
-            "name": "Federal Endangered Species Act (ESA) § 7",
-            "note": "If your scenario involves federal actions, the action must avoid jeopardy/adverse modification.",
-            "key_elements": []
+          "term": "Biological Opinion (BiOp)",
+          "plain_definition": "The consulting agency’s determination about jeopardy/adverse modification, often including required conditions."
         },
         {
-            "name": "California Endangered Species Act (CESA)",
-            "note": "CESA prohibits 'take' of listed species; if low flows cause mortality/harm, projects may need authorizations.",
-            "key_elements": []
+          "term": "Reasonable and Prudent Alternatives (RPAs)",
+          "plain_definition": "Required operational or project changes that allow the action to proceed without jeopardy."
         },
         {
-            "name": "Bay-Delta Water Quality Control Plan",
-            "note": "Establishes flow-dependent water quality objectives to protect beneficial uses.",
-            "key_elements": []
-        },
-        {
-            "name": "Porter-Cologne Water Quality Control Act",
-            "note": "Requires protection of beneficial uses through water quality control plans.",
-            "key_elements": []
-        },
-        {
-            "name": "Clean Water Act (CWA) § 401",
-            "note": "California can condition federal approvals via 401 certification, including operational measures.",
-            "key_elements": []
-        },
-        {
-            "name": "California Constitution Article X, § 2",
-            "note": "All water rights/uses are limited by 'reasonable and beneficial use.'",
-            "key_elements": []
-        },
-        {
-            "name": "Water Code § 275",
-            "note": "Gives SWRCB/DWR a mandate to prevent 'waste' or 'unreasonable use.'",
-            "key_elements": []
-        },
-        {
-            "name": "Public Trust Doctrine",
-            "note": "Requires the state to consider and protect public trust uses when allocating water diversions.",
-            "key_elements": []
-        },
-        {
-            "name": "Central Valley Project Improvement Act (CVPIA) § 3406(b)(2)",
-            "note": "Dedicates a portion of CVP yield for fish, wildlife, and habitat purposes.",
-            "key_elements": []
-        },
-        {
-            "name": "Water Code § 1707",
-            "note": "Provides a legal pathway to change a water right to keep water instream for fish and wildlife.",
-            "key_elements": []
+          "term": "Incidental take statement",
+          "plain_definition": "Authorization/limits on unintended harm to listed species if certain measures are followed."
         }
-    ],
-    "Tiers": {
-        "Tier 1": {
-            "threshold": "Functional ecosystem: functional flows to sustain native freshwater species in 90% of years; higher mean daily flows in spring/winter than summer.",
-            "policies": [
-                {
-                    "policy_name": "Reasonable Use / California Constitution Article X § 2 + Water Code § 275",
-                    "relationship": "Likely met / supported",
-                    "note": "Tier 1 is most consistent with state policy to prevent 'unreasonable use' and support public welfare, including ecosystem values."
-                },
-                {
-                    "policy_name": "Public Trust Doctrine",
-                    "relationship": "Likely met / supported",
-                    "note": "Tier 1 most likely to avoid avoidable impairment to trust resources (fish, ecological and recreational values)."
-                },
-                {
-                    "policy_name": "Porter-Cologne beneficial uses / Bay-Delta Plan 'protection of fish and wildlife'",
-                    "relationship": "Likely met / supported",
-                    "note": "Tier 1 conditions are most likely to achieve flow-dependent beneficial-use protection."
-                }
-            ]
-        },
-        "Tier 2": {
-            "threshold": "Modified functional flows: partial functional flows in wet season and spring; full functional flows in summer in 75% of years; higher mean daily flows in spring/winter than summer.",
-            "policies": [
-                {
-                    "policy_name": "Reasonable Use / Public Trust",
-                    "relationship": "Potentially consistent",
-                    "note": "Often consistent if remaining alterations don't create serious ecological harm in dry years."
-                },
-                {
-                    "policy_name": "ESA § 7 / CESA",
-                    "relationship": "At risk",
-                    "note": "Partial functional regime may cause dry-year recruitment failure or migration barriers for listed species, becoming insufficient for 'not likely to jeopardize' standard."
-                },
-                {
-                    "policy_name": "Fish & Game Code § 5937",
-                    "relationship": "At risk",
-                    "note": "May be fine in many years but could be challenged if low-flow years produce demonstrable 'not in good condition' outcomes below a dam."
-                }
-            ]
-        },
-        "Tier 3": {
-            "threshold": "Existing flow requirements: CalSim minimum flow constraints for Baseline Scenario in 50% of years.",
-            "policies": [
-                {
-                    "policy_name": "D-1641 / Bay-Delta Plan implementation",
-                    "relationship": "Likely met (where constraints mirror enforceable requirements)",
-                    "note": "Tier 3 aligns with existing requirements if baseline constraints encode D-1641-type minima. D-1641 is an enforceable order implementing Bay-Delta objectives."
-                },
-                {
-                    "policy_name": "ESA § 7 / CESA",
-                    "relationship": "Still potentially violated",
-                    "note": "Existing baseline minima are not guaranteed to satisfy no-jeopardy/no-take across all hydrologic sequences; legal standard is independent of model baseline."
-                },
-                {
-                    "policy_name": "Fish & Game Code § 5937",
-                    "relationship": "Still potentially violated",
-                    "note": "Minimum flow constraint can still be too low to keep fish in 'good condition,' depending on dam, reach, and species."
-                },
-                {
-                    "policy_name": "Public Trust Doctrine / Reasonable Use",
-                    "relationship": "Still potentially violated",
-                    "note": "Baseline minimums can be found unreasonable if they cause substantial avoidable degradation."
-                }
-            ]
-        },
-        "Tier 4": {
-            "threshold": "No function: none of the above thresholds met.",
-            "policies": [
-                {
-                    "policy_name": "Fish & Game Code § 5937",
-                    "relationship": "Likely violated",
-                    "note": "Persistent low flows harming fish condition below a dam becomes a prime enforcement hook."
-                },
-                {
-                    "policy_name": "ESA § 7 (federal nexus)",
-                    "relationship": "Likely violated",
-                    "note": "'No function' conditions that harm listed species/habitat elevate jeopardy/adverse modification risk."
-                },
-                {
-                    "policy_name": "CESA take prohibition",
-                    "relationship": "Likely violated",
-                    "note": "Same logic at state level if listed species are harmed."
-                },
-                {
-                    "policy_name": "Porter-Cologne beneficial uses / Bay-Delta Plan",
-                    "relationship": "Likely violated",
-                    "note": "'No function' is difficult to reconcile with protecting fish/wildlife beneficial uses where flow is controlling."
-                },
-                {
-                    "policy_name": "Public Trust + Reasonable Use / Water Code § 275",
-                    "relationship": "Likely violated",
-                    "note": "Persistent ecosystem collapse increases likelihood that diversions/operations are unreasonable and inadequately protective of trust resources."
-                }
-            ]
-        }
+      ]
     },
-    "Governing Agencies": [
+    {
+      "legal_standard_id": "CESA",
+      "name": "California Endangered Species Act (CESA) (Fish & Game Code §2050 et seq.)",
+      "note": "State analogue to ESA. For state/local projects and some operations, CESA can constrain activities that could ‘take’ listed species and can require avoidance/minimization/mitigation measures that affect instream flow, timing, and habitat conditions.",
+      "key_elements": [
         {
-            "name": "State Water Resources Control Board (SWRCB)",
-            "note": "Water rights permits/licenses; Bay-Delta Plan; D-1641; public trust + reasonable use integration; some 401 certifications."
+          "term": "Take",
+          "plain_definition": "Broadly, harming, killing, or otherwise adversely affecting a protected species."
         },
         {
-            "name": "Regional Water Quality Control Boards (RWQCBs)",
-            "note": "Basin Plans and water-quality permitting/enforcement under Porter-Cologne (often where flow is needed to meet temperature/salinity/habitat objectives)."
-        },
-        {
-            "name": "California Department of Fish and Wildlife (CDFW)",
-            "note": "CESA implementation and fisheries expertise; participates in instream flow dedications."
-        },
-        {
-            "name": "California Department of Water Resources (DWR)",
-            "note": "SWP operator; subject to D-1641 for Bay-Delta standards."
-        },
-        {
-            "name": "U.S. Bureau of Reclamation (USBR)",
-            "note": "CVP operator; implements CVPIA and ESA requirements; subject to D-1641 where applicable."
-        },
-        {
-            "name": "NOAA Fisheries (NMFS)",
-            "note": "ESA consultations that frequently dictate operational/flow requirements."
-        },
-        {
-            "name": "U.S. Fish and Wildlife Service (USFWS)",
-            "note": "ESA consultations that frequently dictate operational/flow requirements."
-        },
-        {
-            "name": "U.S. EPA",
-            "note": "Federal permitting that can trigger ESA §7 and CWA §401 conditioning."
-        },
-        {
-            "name": "U.S. Army Corps of Engineers (USACE)",
-            "note": "Federal permitting that can trigger ESA §7 and CWA §401 conditioning."
-        },
-        {
-            "name": "Federal Energy Regulatory Commission (FERC)",
-            "note": "Federal permitting that can trigger ESA §7 and CWA §401 conditioning."
+          "term": "Incidental Take Permit (ITP)",
+          "plain_definition": "A CDFW permit that can allow incidental take if impacts are minimized/avoided and fully mitigated."
         }
-    ]
+      ]
+    },
+    {
+      "legal_standard_id": "CWA_401",
+      "name": "Clean Water Act (CWA) — Section 401 Water Quality Certification (33 U.S.C. §1251 et seq.)",
+      "note": "For federally permitted/licensed projects that may discharge to waters, Section 401 allows the state to certify compliance with water quality standards and impose conditions (or deny), which can include flow/temperature-related requirements to protect aquatic uses.",
+      "key_elements": [
+        {
+          "term": "Section 401 certification",
+          "plain_definition": "State approval (often with conditions) required before a federal permit/license can be issued if a project may discharge to waters."
+        },
+        {
+          "term": "Water quality standards",
+          "plain_definition": "Designated uses (like aquatic life) plus criteria/objectives intended to protect those uses."
+        }
+      ]
+    },
+    {
+      "legal_standard_id": "PORTER_COLOGNE",
+      "name": "Porter-Cologne Water Quality Control Act (California Water Code §13000 et seq.)",
+      "note": "California’s core water quality law. Water Boards adopt Basin Plans with beneficial uses and water quality objectives (which can include aquatic habitat protections). These objectives can drive operational requirements that intersect with flow and temperature regimes.",
+      "key_elements": [
+        {
+          "term": "Beneficial uses",
+          "plain_definition": "The recognized uses of a waterbody (including ecosystem uses like fish habitat) that water quality rules must protect."
+        },
+        {
+          "term": "Water quality objectives",
+          "plain_definition": "Numeric or narrative targets intended to protect beneficial uses (can include temperature/flow-related components)."
+        },
+        {
+          "term": "Basin Plan",
+          "plain_definition": "Regional water quality control plan that lists beneficial uses, objectives, and implementation actions."
+        }
+      ]
+    },
+    {
+      "legal_standard_id": "BAY_DELTA_PLAN",
+      "name": "SWRCB Bay-Delta Water Quality Control Plan (Bay-Delta Plan) (under CWA + Porter-Cologne; includes flow requirements and implementation tools such as D-1641 in the Delta context)",
+      "note": "A major statewide instrument establishing water quality control measures and flow requirements to protect beneficial uses (including fish and wildlife) in the Bay-Delta watershed—directly shaping operational flow/outflow requirements and sometimes seasonal patterns.",
+      "key_elements": [
+        {
+          "term": "Program of implementation",
+          "plain_definition": "The enforceable steps/requirements used to achieve water quality and flow objectives (often through operational rules and permits)."
+        },
+        {
+          "term": "Flow requirements",
+          "plain_definition": "Operational obligations (e.g., minimum flows/outflow regimes) set to protect beneficial uses."
+        }
+      ]
+    },
+    {
+      "legal_standard_id": "FGC_5937",
+      "name": "California Fish & Game Code §5937 (dam flow requirement)",
+      "note": "Requires dam owners to pass sufficient water to keep fish downstream in ‘good condition’ (through a fishway or over/around the dam). This can translate into minimum releases and operational changes that affect seasonal instream flows below dams.",
+      "key_elements": [
+        {
+          "term": "Fishway",
+          "plain_definition": "A structure that helps fish move around a dam or barrier."
+        },
+        {
+          "term": "Sufficient water",
+          "plain_definition": "Enough flow to keep downstream fish populations in good condition (interpreted case-by-case)."
+        }
+      ]
+    },
+    {
+      "legal_standard_id": "WATER_RIGHTS_PUBLIC_TRUST",
+      "name": "California water right permitting/public interest + Public Trust Doctrine considerations (SWRCB water-right administration; public trust balancing)",
+      "note": "SWRCB’s water-right decisions and ongoing administration can impose permit/license terms (e.g., bypass flows, instream requirements) and must consider public trust resources (like fisheries) when allocating water—often shaping flow protections and operational limits.",
+      "key_elements": [
+        {
+          "term": "Bypass flow",
+          "plain_definition": "A required amount of water that must remain in the river (not diverted) to protect instream uses."
+        },
+        {
+          "term": "Public trust resources",
+          "plain_definition": "Resources the state has a duty to protect for the public (commonly fisheries, wildlife, navigation, recreation)."
+        }
+      ]
+    },
+    {
+      "legal_standard_id": "WATERCODE_1707",
+      "name": "Water Code §1707 — Instream Flow Dedication (water right change to keep water instream)",
+      "note": "Allows rights holders to petition the State Water Board to change an existing right to dedicate water to instream beneficial use—creating a mechanism to legally protect flows in-stream (often targeted/local rather than basin-wide).",
+      "key_elements": [
+        {
+          "term": "Instream flow dedication",
+          "plain_definition": "A legal change to a water right so water stays in the stream for ecological/instream purposes."
+        },
+        {
+          "term": "Petition for change",
+          "plain_definition": "The formal request process to modify a water right (e.g., purpose/place/use) to support instream flow."
+        }
+      ]
+    },
+    {
+      "legal_standard_id": "FPA_FERC",
+      "name": "Federal Power Act (FPA) hydropower licensing (FERC licensing; fish passage and environmental conditions)",
+      "note": "Hydropower licenses can include mandatory fish passage prescriptions and fish-and-wildlife conditions and recommendations that affect dam operations—often including minimum flows, ramping rates, and seasonal regimes.",
+      "key_elements": [
+        {
+          "term": "License conditions",
+          "plain_definition": "Operational requirements attached to a hydropower license (often including flow and passage measures)."
+        },
+        {
+          "term": "Fish passage prescription",
+          "plain_definition": "A required fishway/fish passage measure that must be included in a hydropower license where applicable."
+        }
+      ]
+    },
+    {
+      "legal_standard_id": "CEQA",
+      "name": "California Environmental Quality Act (CEQA) (Pub. Res. Code §21000 et seq.)",
+      "note": "Procedural law requiring agencies to analyze and disclose significant environmental impacts of discretionary projects and adopt feasible mitigation/alternatives where possible—often shaping project design and operations affecting instream flows, channel alteration, and habitat.",
+      "key_elements": [
+        {
+          "term": "Lead agency",
+          "plain_definition": "The public agency with primary responsibility for approving/carrying out a project and ensuring CEQA review is done."
+        },
+        {
+          "term": "Mitigation",
+          "plain_definition": "Feasible changes/conditions to reduce significant environmental impacts."
+        }
+      ]
+    },
+    {
+      "legal_standard_id": "DELTA_REFORM_ACT",
+      "name": "Sacramento–San Joaquin Delta Reform Act of 2009 + Delta Plan consistency (Water Code §85000 et seq.; consistency requirements for covered actions)",
+      "note": "Governance framework requiring certain state/local actions in the Delta to be consistent with the Delta Plan, embedding ecosystem protection/restoration as a legally enforceable objective that can influence flow-related project decisions and constraints.",
+      "key_elements": [
+        {
+          "term": "Covered action",
+          "plain_definition": "A qualifying state/local project/action in the Delta that must certify consistency with the Delta Plan."
+        },
+        {
+          "term": "Consistency certification",
+          "plain_definition": "Written findings submitted to show a covered action aligns with Delta Plan policies."
+        }
+      ]
+    }
+  ],
+  "Tiers": {
+    "Tier 1": {
+      "threshold": "Functional Ecosystem: Functional flows to sustain native freshwater species in 90% of years; Must have higher mean daily flows in spring and winter than summer.",
+      "policies": [
+        {
+          "policy_name": "SWRCB Bay-Delta Plan",
+          "legal_standard_id": "BAY_DELTA_PLAN",
+          "relationship": "Strong alignment where flow objectives and implementation are stringent and enforced across key tributaries/operations",
+          "likelihood_score": 1,
+          "likelihood_label": "most likely",
+          "driver_type": "direct operational leverage",
+          "note": "Mechanism: Enforceable flow/outflow and water quality control measures can directly drive seasonal release/export constraints that help maintain winter/spring-dominant flow regimes in many years (system-dependent)."
+        },
+        {
+          "policy_name": "ESA (federal)",
+          "legal_standard_id": "ESA",
+          "relationship": "Often strong for regulated systems when RPAs/BiOps impose seasonal flow and operational constraints",
+          "likelihood_score": 2,
+          "likelihood_label": "moderately likely",
+          "driver_type": "direct operational leverage",
+          "note": "Mechanism: ESA conditions can force seasonal flow, temperature, and diversion/pumping limits to protect listed species; achieving Tier 1 across 90% of years may require broader, sustained multi-tool implementation beyond ESA alone."
+        },
+        {
+          "policy_name": "Fish & Game Code §5937",
+          "legal_standard_id": "FGC_5937",
+          "relationship": "Strong but geographically limited (dam-by-dam) lever for instream releases",
+          "likelihood_score": 2,
+          "likelihood_label": "moderately likely",
+          "driver_type": "direct operational leverage",
+          "note": "Mechanism: Minimum releases below dams can support functional flow components locally; Tier 1 at WBA/basin scale depends on coverage across multiple infrastructure points and hydrology."
+        },
+        {
+          "policy_name": "FPA/FERC hydropower licensing conditions",
+          "legal_standard_id": "FPA_FERC",
+          "relationship": "Strong in hydropower-regulated reaches; basin-scale outcomes depend on extent of hydropower control points",
+          "likelihood_score": 2,
+          "likelihood_label": "moderately likely",
+          "driver_type": "direct operational leverage",
+          "note": "Mechanism: License conditions can impose seasonal minimum flows and ramping requirements; Tier 1’s broad frequency requirement is harder where large non-hydropower diversions dominate the hydrograph."
+        }
+      ]
+    },
+    "Tier 2": {
+      "threshold": "Modified Functional Flows: Partial functional flows in wet season and spring; full functional flows in summer in 75% of years. Must have higher mean daily flows in spring and winter than summer.",
+      "policies": [
+        {
+          "policy_name": "SWRCB Bay-Delta Plan",
+          "legal_standard_id": "BAY_DELTA_PLAN",
+          "relationship": "Direct lever likely to support partial functional-flow performance depending on objectives and compliance",
+          "likelihood_score": 1,
+          "likelihood_label": "most likely",
+          "driver_type": "direct operational leverage",
+          "note": "Mechanism: Flow requirements and implementation measures can shape wet-season/spring regimes and constrain diversions/exports, making Tier 2 plausibly achievable in more years than Tier 1."
+        },
+        {
+          "policy_name": "Porter-Cologne + Basin Plans (flow/temperature objectives where applicable)",
+          "legal_standard_id": "PORTER_COLOGNE",
+          "relationship": "Indirect-to-conditional lever (depends on how objectives are written/enforced and whether flow is the controllable pathway to meet objectives)",
+          "likelihood_score": 2,
+          "likelihood_label": "moderately likely",
+          "driver_type": "indirect/conditional influence",
+          "note": "Mechanism: If water quality objectives (e.g., temperature, habitat) require operational changes that effectively mean higher summer baseflows or spring pulses, implementation can support Tier 2 patterns."
+        },
+        {
+          "policy_name": "CWA §401 certification conditions",
+          "legal_standard_id": "CWA_401",
+          "relationship": "Conditional—strong for specific licensed/permitted projects (e.g., hydropower) rather than basin-wide",
+          "likelihood_score": 2,
+          "likelihood_label": "moderately likely",
+          "driver_type": "project-level leverage",
+          "note": "Mechanism: 401 conditions attached to federal licenses/permits can require minimum flows, ramping, or temperature controls that improve seasonal flow functionality in affected reaches."
+        },
+        {
+          "policy_name": "CESA (state) project/operations constraints",
+          "legal_standard_id": "CESA",
+          "relationship": "Conditional—often meaningful for specific projects and operations affecting listed fish",
+          "likelihood_score": 2,
+          "likelihood_label": "moderately likely",
+          "driver_type": "project-level leverage",
+          "note": "Mechanism: Avoidance/minimization/mitigation measures (including flow-related terms) can reduce harm and improve flow-related habitat conditions, helping move performance toward Tier 2 in some systems."
+        }
+      ]
+    },
+    "Tier 3": {
+      "threshold": "Existing Flow Requirements: CalSim minimum flow constraints for Baseline Scenario in 50% of years",
+      "policies": [
+        {
+          "policy_name": "SWRCB Bay-Delta Plan (existing implementation terms and minimum requirements)",
+          "legal_standard_id": "BAY_DELTA_PLAN",
+          "relationship": "Direct—often maps to baseline minimum constraints captured in operations models",
+          "likelihood_score": 1,
+          "likelihood_label": "most likely",
+          "driver_type": "direct operational leverage",
+          "note": "Mechanism: Existing enforceable minimums (modeled as constraints) are a common reason baseline operations meet ‘minimum flow’ requirements in some fraction of years."
+        },
+        {
+          "policy_name": "ESA (existing BiOps/RPAs reflected in operations constraints)",
+          "legal_standard_id": "ESA",
+          "relationship": "Direct—often appears as operational constraints in baseline modeling assumptions",
+          "likelihood_score": 1,
+          "likelihood_label": "most likely",
+          "driver_type": "direct operational leverage",
+          "note": "Mechanism: ESA-driven operational constraints (e.g., minimum releases, export limits) are frequently incorporated into baseline operational rules, supporting Tier 3-type “existing minimums” outcomes."
+        },
+        {
+          "policy_name": "Fish & Game Code §5937 (minimum releases below dams, where implemented)",
+          "legal_standard_id": "FGC_5937",
+          "relationship": "Direct but localized—often contributes to minimum-release constraints",
+          "likelihood_score": 2,
+          "likelihood_label": "moderately likely",
+          "driver_type": "direct operational leverage",
+          "note": "Mechanism: Where §5937 requirements have been operationalized, they can act like minimum instream release constraints that show up in baseline operations for affected facilities."
+        },
+        {
+          "policy_name": "Water rights/public trust-based permit terms (bypass flows, instream conditions)",
+          "legal_standard_id": "WATER_RIGHTS_PUBLIC_TRUST",
+          "relationship": "Direct but variable—depends on permits and enforcement history in the basin",
+          "likelihood_score": 2,
+          "likelihood_label": "moderately likely",
+          "driver_type": "direct operational leverage",
+          "note": "Mechanism: Permit/license conditions requiring bypass flows or seasonal limits can create baseline minimum-flow constraints captured in operational modeling."
+        }
+      ]
+    },
+    "Tier 4": {
+      "threshold": "No function: none of the above thresholds met",
+      "policies": [
+        {
+          "policy_name": "CEQA",
+          "legal_standard_id": "CEQA",
+          "relationship": "Weak-to-conditional as a driver (procedural) and may not overcome hydrology/senior demands/operational constraints",
+          "likelihood_score": 3,
+          "likelihood_label": "least likely",
+          "driver_type": "procedural/indirect",
+          "note": "Mechanism: CEQA can require mitigation/alternatives for specific projects, but it does not mandate achieving a functional flow regime; Tier 4 can persist even with CEQA if broader operations/demand dominate."
+        },
+        {
+          "policy_name": "Water Code §1707 instream dedication",
+          "legal_standard_id": "WATERCODE_1707",
+          "relationship": "Conditional—helpful where water is actually dedicated instream, but often not large enough or widespread to shift system performance alone",
+          "likelihood_score": 3,
+          "likelihood_label": "least likely",
+          "driver_type": "voluntary/transactional",
+          "note": "Mechanism: Instream dedications can protect targeted flows; Tier 4 indicates dedications (if any) are insufficient in magnitude/coverage relative to hydrologic stress and competing demands."
+        },
+        {
+          "policy_name": "Delta Reform Act / Delta Plan consistency",
+          "legal_standard_id": "DELTA_REFORM_ACT",
+          "relationship": "Indirect governance lever—can shape decisions but not necessarily create enforceable functional flows by itself",
+          "likelihood_score": 3,
+          "likelihood_label": "least likely",
+          "driver_type": "governance/constraint",
+          "note": "Mechanism: Consistency requirements can influence covered actions and align projects with ecosystem goals, but Tier 4 can persist without more direct flow-setting instruments."
+        }
+      ]
+    }
+  },
+  "Governing Agencies": [
+    {
+      "name": "State Water Resources Control Board (SWRCB) + Regional Water Quality Control Boards",
+      "note": "Adopt and implement water quality control plans (Basin Plans) under Porter-Cologne; administer CWA §401 certifications; develop and implement the Bay-Delta Plan (including flow requirements) and incorporate conditions into permits/orders that shape operational flows.",
+      "pertains_to_legal_standards": ["PORTER_COLOGNE", "CWA_401", "BAY_DELTA_PLAN", "WATER_RIGHTS_PUBLIC_TRUST"]
+    },
+    {
+      "name": "NOAA Fisheries (NMFS)",
+      "note": "Leads ESA Section 7 consultation for many anadromous fish species and issues BiOps/RPAs that can impose operational flow/temperature constraints on federal actions; also participates in hydropower licensing contexts via fish passage/habitat expertise (as applicable).",
+      "pertains_to_legal_standards": ["ESA", "FPA_FERC"]
+    },
+    {
+      "name": "U.S. Fish & Wildlife Service (USFWS)",
+      "note": "ESA Section 7 consulting agency for species under its jurisdiction and a key fish-and-wildlife agency in hydropower licensing contexts, including fish passage prescriptions and recommendations that can affect flow regimes.",
+      "pertains_to_legal_standards": ["ESA", "FPA_FERC"]
+    },
+    {
+      "name": "Federal Energy Regulatory Commission (FERC)",
+      "note": "Issues and enforces hydropower licenses under the Federal Power Act; incorporates mandatory fish passage prescriptions and other environmental conditions that often include minimum flows, ramping, and seasonal operational measures.",
+      "pertains_to_legal_standards": ["FPA_FERC", "CWA_401"]
+    },
+    {
+      "name": "California Department of Fish and Wildlife (CDFW)",
+      "note": "Implements CESA (including Incidental Take Permits) and provides biological expertise and conditions/mitigation recommendations (often affecting instream flow, timing, and habitat) in CEQA and permitting processes.",
+      "pertains_to_legal_standards": ["CESA", "CEQA"]
+    },
+    {
+      "name": "Delta Stewardship Council (DSC)",
+      "note": "Implements the Delta Reform Act’s Delta Plan and oversees the Delta Plan consistency program for covered actions, which can constrain or reshape projects affecting flow-related conditions in the Delta.",
+      "pertains_to_legal_standards": ["DELTA_REFORM_ACT"]
+    }
+  ]
 }

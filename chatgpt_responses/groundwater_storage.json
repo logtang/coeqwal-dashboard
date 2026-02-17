@@ -1,231 +1,310 @@
 {
-    "Legal Standards": [
+  "meta": {
+    "outcome_domain": "groundwater_storage_trend_wba",
+    "tier_interpretation_note": "These tiers reflect modeled/measured groundwater storage trends within a Water Balance Area (WBA) over 1960–2021 relative to a reference scenario, including whether the fitted linear trend is stable/increasing or declining (and how steep the decline is). Legal standards rarely encode a specific storage-trend slope; they influence groundwater outcomes by changing pumping rules, recharge requirements, monitoring, enforcement, surface-water substitution, and water-quality constraints. Likelihood scores reflect policy-to-outcome plausibility (directness/strength of leverage), not a guarantee of any tier.",
+    "likelihood_scale": {
+      "1": "most likely",
+      "2": "moderately likely",
+      "3": "least likely"
+    }
+  },
+  "Legal Standards": [
+    {
+      "legal_standard_id": "SGMA",
+      "name": "Sustainable Groundwater Management Act (SGMA) (California Water Code §10720 et seq.)",
+      "note": "Primary statewide framework requiring local Groundwater Sustainability Agencies (GSAs) to develop and implement Groundwater Sustainability Plans (GSPs) that achieve sustainability and avoid specified “undesirable results.” SGMA is the most direct legal lever for changing pumping levels and increasing recharge, which directly affects groundwater storage trends in basins/WBAs.",
+      "key_elements": [
         {
-            "name": "Sustainable Groundwater Management Act (SGMA) — Water Code, Part 2.74 (commencing § 10720)",
-            "note": "SGMA is the primary statewide legal regime that directly regulates long-term groundwater storage outcomes by requiring basins to avoid 'undesirable results,' including 'reduction of groundwater storage' and 'chronic lowering of groundwater levels'.",
-            "key_elements": [
-                {
-                    "name": "Sustainable groundwater management (definition)",
-                    "note": "\"Sustainable groundwater management\" means the management and use of groundwater... without causing undesirable results."
-                },
-                {
-                    "name": "Undesirable result (definition)",
-                    "note": "\"Undesirable result\" means... (1) Chronic lowering of groundwater levels... (2) Significant and unreasonable reduction of groundwater storage..."
-                },
-                {
-                    "name": "Sustainable yield (definition)",
-                    "note": "\"Sustainable yield\" means the maximum quantity... that can be withdrawn annually... without causing an undesirable result."
-                }
-            ]
+          "term": "GSA (Groundwater Sustainability Agency)",
+          "plain_definition": "Local agency (or group of agencies) that manages groundwater under SGMA in a basin."
         },
         {
-            "name": "SGMA Groundwater Sustainability Plan (GSP) Regulations — Title 23, CCR (DWR)",
-            "note": "The regulations operationalize 'storage' through minimum thresholds, measurable objectives, and required justification/monitoring—often using groundwater levels as a proxy for storage in practice.",
-            "key_elements": [
-                {
-                    "name": "Minimum thresholds for chronic lowering",
-                    "note": "\"Minimum thresholds... shall be defined as follows... (1) Chronic Lowering... supported by... (A) The rate of groundwater elevation decline...\""
-                },
-                {
-                    "name": "Minimum thresholds for reduction of groundwater storage",
-                    "note": "\"(2) Reduction of Groundwater Storage. The minimum threshold... shall be a total volume of groundwater that can be withdrawn... without... undesirable results.\""
-                },
-                {
-                    "name": "Measurable objectives and interim milestones",
-                    "note": "\"Each Agency shall establish measurable objectives, including interim milestones... to achieve the sustainability goal... within 20 years...\""
-                }
-            ]
+          "term": "GSP (Groundwater Sustainability Plan)",
+          "plain_definition": "The basin plan that sets measurable objectives, projects, and rules (often including pumping limits) to reach sustainability."
         },
         {
-            "name": "DWR Review/Evaluation Standard for GSPs — Water Code § 10733.4",
-            "note": "DWR formally evaluates whether a basin's plan and implementation is likely to achieve sustainability—meaning trends and storage outcomes are indirectly regulated via plan adequacy determinations.",
-            "key_elements": [
-                {
-                    "name": "Plan evaluation and corrective actions",
-                    "note": "\"The department shall evaluate the groundwater sustainability plan... and issue an assessment... [with] recommended corrective actions...\""
-                },
-                {
-                    "name": "DWR public description of evaluation",
-                    "note": "\"DWR evaluates GSPs to determine if they comply with SGMA... and whether implementation... is likely to achieve the sustainability goal...\""
-                }
-            ]
+          "term": "Undesirable results",
+          "plain_definition": "Harmful conditions SGMA requires avoiding (e.g., chronic groundwater level decline, land subsidence, degraded water quality, depletion of connected surface water)."
         },
         {
-            "name": "State Intervention / Probationary Basin Standard — Water Code § 10735.2 (State Water Board)",
-            "note": "If plans are missing, inadequate, uncoordinated, or not implemented to achieve sustainability, the State Water Board can designate a basin probationary and impose interim requirements.",
-            "key_elements": [
-                {
-                    "name": "Probationary basin authority",
-                    "note": "\"The board... may designate... as a probationary basin...\""
-                },
-                {
-                    "name": "Practical triggering condition (SWRCB factsheet)",
-                    "note": "\"DWR... fails a plan or determines a plan is not being implemented in a manner likely to achieve sustainability...\""
-                }
-            ]
+          "term": "Sustainable yield",
+          "plain_definition": "How much groundwater can be pumped long-term without causing undesirable results."
         },
         {
-            "name": "Groundwater Basin Boundaries — DWR Bulletin 118",
-            "note": "DWR's authoritative basin framework defining management geography; frequently used to scope storage accounting and models.",
-            "key_elements": [
-                {
-                    "name": "Bulletin 118 basin identification",
-                    "note": "Bulletin 118 \"identified... groundwater basins and subbasins... [including] storage capacity...\""
-                }
-            ]
-        },
-        {
-            "name": "Well Construction Standards & Local Permitting — Water Code §§ 13800 et seq.",
-            "note": "California regulates well construction/abandonment through state-recommended standards and county/local enforcement by Local Enforcing Agencies (LEAs).",
-            "key_elements": [
-                {
-                    "name": "Local enforcing agency role",
-                    "note": "\"A local enforcing agency (LEA), such as a county environmental health department, is tasked with... well permitting...\""
-                }
-            ]
-        },
-        {
-            "name": "Porter–Cologne Water Quality Control Act — Water Code Division 7",
-            "note": "Storage interacts with managed aquifer recharge and groundwater quality; Regional Water Boards can require permits/conditions for discharges affecting groundwater quality.",
-            "key_elements": []
-        },
-        {
-            "name": "Groundwater Adjudications",
-            "note": "In adjudicated basins, storage/levels constrained through court-approved pumping limits; SGMA links to adjudication processes and 'undesirable results' concepts.",
-            "key_elements": []
+          "term": "Probationary basin",
+          "plain_definition": "A basin the state flags for failure to form a GSA, submit/implement an adequate plan, or address chronic overdraft—triggering potential state intervention."
         }
-    ],
-    "Tiers": {
-        "Tier 1": {
-            "threshold": "Trend stable or increasing (1960-2021) and average total storage > reference scenario.",
-            "policies": [
-                {
-                    "policy_name": "Sustainable Groundwater Management Act (SGMA) — Water Code, Part 2.74 (commencing § 10720)",
-                    "relationship": "Most likely status",
-                    "note": "Meets SGMA intent and is consistent with avoiding storage-related undesirable results. SGMA sustainability concept: management that can be maintained \"without causing undesirable results.\" Avoidance of the undesirable results most directly connected to your metric: \"Chronic lowering of groundwater levels...\" and \"reduction of groundwater storage...\" (i.e., your trend is non-declining)."
-                },
-                {
-                    "policy_name": "SGMA Groundwater Sustainability Plan (GSP) Regulations — Title 23, CCR (DWR)",
-                    "relationship": "Implicated (still relevant, not \"triggered\")",
-                    "note": "GSP regs still require minimum thresholds/measurable objectives and monitoring, even when trends are good: Minimum thresholds must be defined for storage and levels. Measurable objectives + interim milestones must exist."
-                }
-            ]
-        },
-        "Tier 2": {
-            "threshold": "Trend stable or increasing, but average total storage < reference scenario.",
-            "policies": [
-                {
-                    "policy_name": "Sustainable Groundwater Management Act (SGMA) — Water Code, Part 2.74 (commencing § 10720)",
-                    "relationship": "Most likely status",
-                    "note": "Not automatically a violation. SGMA does not require being above a \"reference scenario\"; it requires avoiding \"significant and unreasonable\" storage reduction and meeting locally adopted thresholds/objectives."
-                },
-                {
-                    "policy_name": "Sustainable Groundwater Management Act (SGMA) — Water Code, Part 2.74 (commencing § 10720)",
-                    "relationship": "Implicated",
-                    "note": "The SGMA \"undesirable result\" definition explicitly includes \"Significant and unreasonable reduction of groundwater storage.\" Your tier condition (\"less than reference\") flags a risk screen that the basin may be closer to that line, depending on how the GSA defined \"significant/unreasonable.\""
-                },
-                {
-                    "policy_name": "SGMA Groundwater Sustainability Plan (GSP) Regulations — Title 23, CCR (DWR)",
-                    "relationship": "Implicated",
-                    "note": "GSP regulation requires a storage minimum threshold definition: \"Minimum threshold... for reduction of groundwater storage shall be a total volume... withdrawable... without... undesirable results.\""
-                },
-                {
-                    "policy_name": "Sustainable Groundwater Management Act (SGMA) — Water Code, Part 2.74 (commencing § 10720)",
-                    "relationship": "Potentially met / potentially violated (depends on the GSP)",
-                    "note": "Met if modeled/observed storage remains above the GSP's minimum threshold(s) and on track with interim milestones. Violated/triggered only if \"below reference\" also corresponds to (or causes) exceedance of locally adopted minimum thresholds or failure to stay on the \"reasonable path\" to sustainability."
-                }
-            ]
-        },
-        "Tier 3": {
-            "threshold": "Trend declining at moderate rate; fitted slope > -0.015 ft/yr.",
-            "policies": [
-                {
-                    "policy_name": "Sustainable Groundwater Management Act (SGMA) — Water Code, Part 2.74 (commencing § 10720)",
-                    "relationship": "Most likely status",
-                    "note": "Strongly implicated under SGMA; may indicate the basin is moving toward (or already in) chronic lowering and/or storage reduction conditions that must be prevented from becoming \"significant and unreasonable.\" Statutory undesirable result includes \"Chronic lowering of groundwater levels...\" if it indicates significant/unreasonable depletion over the planning horizon."
-                },
-                {
-                    "policy_name": "SGMA Groundwater Sustainability Plan (GSP) Regulations — Title 23, CCR (DWR)",
-                    "relationship": "Implicated / may be triggered",
-                    "note": "GSP minimum thresholds for chronic lowering must be supported by \"the rate of groundwater elevation decline\" (your slope metric directly aligns with this regulatory concept). If interim milestones aren't being met, the plan may be found deficient in implementation: \"measurable objectives, including interim milestones...\""
-                },
-                {
-                    "policy_name": "Sustainable Groundwater Management Act (SGMA) — Water Code, Part 2.74 (commencing § 10720)",
-                    "relationship": "Potential violations (tier alone doesn't prove them, but it's the direction that matters)",
-                    "note": "If this declining trend causes exceedance of minimum thresholds (levels or storage), the basin is in/near an SGMA \"undesirable result\" condition."
-                },
-                {
-                    "policy_name": "DWR Review/Evaluation Standard for GSPs — Water Code § 10733.4",
-                    "relationship": "Escalation pathway (not automatic, but plausible)",
-                    "note": "Persistent decline inconsistent with the GSP's \"reasonable path\" can contribute to DWR concerns about whether implementation is likely to achieve sustainability."
-                }
-            ]
-        },
-        "Tier 4": {
-            "threshold": "Trend declining more severely; slope <= -0.015 ft/yr.",
-            "policies": [
-                {
-                    "policy_name": "Sustainable Groundwater Management Act (SGMA) — Water Code, Part 2.74 (commencing § 10720)",
-                    "relationship": "Most likely status",
-                    "note": "Highest likelihood of SGMA noncompliance in practice (because severe declines commonly push groundwater elevations/storage below local minimum thresholds and harm other SGMA indicators like subsidence and interconnected surface water)."
-                },
-                {
-                    "policy_name": "Sustainable Groundwater Management Act (SGMA) — Water Code, Part 2.74 (commencing § 10720)",
-                    "relationship": "Likely violated / triggered (depending on adopted thresholds)",
-                    "note": "\"Undesirable result\" includes: \"Chronic lowering of groundwater levels...\" \"Significant and unreasonable reduction of groundwater storage.\""
-                },
-                {
-                    "policy_name": "SGMA Groundwater Sustainability Plan (GSP) Regulations — Title 23, CCR (DWR)",
-                    "relationship": "Regulatory linkage to rates-of-decline justification becomes especially salient",
-                    "note": "Minimum thresholds for chronic lowering supported by \"the rate of groundwater elevation decline...\""
-                },
-                {
-                    "policy_name": "DWR Review/Evaluation Standard for GSPs — Water Code § 10733.4",
-                    "relationship": "State oversight more likely to be implicated",
-                    "note": "DWR evaluation/assessment authority (risk of \"deficiencies\" and \"corrective actions\")."
-                },
-                {
-                    "policy_name": "State Intervention / Probationary Basin Standard — Water Code § 10735.2 (State Water Board)",
-                    "relationship": "State oversight more likely to be implicated",
-                    "note": "If DWR determines a plan is inadequate or not implemented to likely achieve sustainability, State Water Board intervention becomes possible: SWRCB factsheet: \"DWR... determines a plan is not being implemented... likely to achieve sustainability...\" Statute: SWRCB may designate a basin probationary."
-                },
-                {
-                    "policy_name": "Well Construction Standards & Local Permitting — Water Code §§ 13800 et seq.",
-                    "relationship": "Ancillary regulatory implications (common in Tier 4 conditions)",
-                    "note": "Well permitting pressure/deeper wells -> county LEA well-permitting regimes become operationally stressed/active."
-                },
-                {
-                    "policy_name": "Porter–Cologne Water Quality Control Act — Water Code Division 7",
-                    "relationship": "Ancillary regulatory implications (common in Tier 4 conditions)",
-                    "note": "If \"storage recovery\" is pursued through recharge projects, water-quality permits/conditions under Porter-Cologne may be implicated."
-                }
-            ]
-        }
+      ]
     },
-    "Governing Agencies": [
+    {
+      "legal_standard_id": "SWRCB_STATE_INTERVENTION_SGMA",
+      "name": "State Water Resources Control Board (SWRCB) SGMA backstop (probationary basin + interim plan authority)",
+      "note": "If local SGMA implementation fails (e.g., no adequate GSP or lack of progress), SWRCB can designate a basin probationary and adopt an interim plan, which can require pumping reporting, extraction limits, and fees—directly affecting storage trends by reducing overdraft and improving accountability.",
+      "key_elements": [
         {
-            "name": "Local Groundwater Sustainability Agencies (GSAs)",
-            "note": "Set basin sustainability goals; adopt/enforce pumping/recharge management to avoid 'undesirable results' (including storage loss). Authority derives from SGMA definitions/requirements."
+          "term": "Interim plan",
+          "plain_definition": "A state-imposed set of requirements for a basin when local management fails, which can include pumping restrictions and reporting."
         },
         {
-            "name": "California Department of Water Resources (DWR)",
-            "note": "Defines basin framework (Bulletin 118); evaluates GSPs and plan implementation likelihood of meeting sustainability."
-        },
-        {
-            "name": "State Water Resources Control Board (SWRCB)",
-            "note": "SGMA state intervention (probationary basins/interim plans) when statutory triggers are met."
-        },
-        {
-            "name": "Regional Water Quality Control Boards (RWQCBs) + SWRCB",
-            "note": "Regulate discharges that may affect groundwater quality (often relevant for recharge-as-storage strategies)."
-        },
-        {
-            "name": "County/Local Well Permitting Agencies (LEAs)",
-            "note": "Permit wells and enforce local well standards—often stressed/implicated under declining-storage scenarios."
-        },
-        {
-            "name": "SWRCB – Division of Drinking Water (DDW)",
-            "note": "Additional requirements for wells supplying public water systems (often implicated when falling storage/levels affect supply reliability)."
+          "term": "Extraction reporting",
+          "plain_definition": "Required measurement/estimation and reporting of how much groundwater is pumped."
         }
-    ]
+      ]
+    },
+    {
+      "legal_standard_id": "GROUNDWATER_ADJUDICATIONS",
+      "name": "Groundwater adjudications (court decrees, watermaster administration) (judicial, basin-specific)",
+      "note": "In adjudicated basins, courts allocate pumping rights and impose enforceable extraction limits and monitoring. This can be a strong driver of stabilizing/increasing storage where caps are binding and compliance is enforced, but it is geographically contingent (applies only where adjudications exist).",
+      "key_elements": [
+        {
+          "term": "Adjudication",
+          "plain_definition": "A court process that determines and limits who can pump groundwater and how much, usually with a management entity."
+        },
+        {
+          "term": "Watermaster",
+          "plain_definition": "An entity designated to administer and enforce a court-ordered groundwater allocation (tracking pumping, collecting assessments, enforcing limits)."
+        }
+      ]
+    },
+    {
+      "legal_standard_id": "REASONABLE_USE_BENEFICIAL_USE",
+      "name": "Reasonable Use / Beneficial Use Doctrine (California Constitution Article X, §2 + Water Code §100)",
+      "note": "Foundational constraint that all water use must be reasonable and beneficial and not wasteful. For groundwater, it can support pressure toward efficiency, conservation, and (in some cases) constraints on unreasonable extraction practices—typically indirectly unless paired with specific SGMA/adjudication actions.",
+      "key_elements": [
+        {
+          "term": "Beneficial use",
+          "plain_definition": "A lawful purpose for using water (e.g., irrigation, municipal), subject to limits against waste."
+        },
+        {
+          "term": "Unreasonable use",
+          "plain_definition": "Using water in a wasteful or unjustified way given conditions; can be challenged legally."
+        }
+      ]
+    },
+    {
+      "legal_standard_id": "PUBLIC_TRUST_CONNECTED_SURFACE_WATER",
+      "name": "Public Trust Doctrine (as applied in California water management; especially where groundwater pumping depletes connected surface waters)",
+      "note": "A legal doctrine requiring the state to consider and protect public trust resources (like fisheries, navigable waters) in water allocation decisions. Increasingly relevant where groundwater pumping depletes streamflows or harms ecosystems, potentially motivating pumping constraints or mitigation that affects storage trends—often indirect and case-specific.",
+      "key_elements": [
+        {
+          "term": "Public trust resources",
+          "plain_definition": "Natural resources the state has a duty to protect for the public (commonly linked to waterways, fisheries, recreation)."
+        },
+        {
+          "term": "Hydrologic connection",
+          "plain_definition": "When groundwater pumping affects nearby rivers/streams (reducing flows) because the systems are physically connected."
+        }
+      ]
+    },
+    {
+      "legal_standard_id": "PORTER_COLOGNE_GW_QUALITY",
+      "name": "Porter-Cologne Water Quality Control Act (California Water Code §13000 et seq.) — groundwater quality regulation",
+      "note": "Water Boards regulate discharges that can affect groundwater quality and can require monitoring and cleanup. While this is not a direct storage-management law, groundwater quality constraints can reduce usable storage (e.g., contamination), increase treatment costs, and influence pumping/recharge strategies that interact with storage trends.",
+      "key_elements": [
+        {
+          "term": "Beneficial uses (groundwater)",
+          "plain_definition": "Recognized uses of groundwater (e.g., drinking water, irrigation) that water-quality rules aim to protect."
+        },
+        {
+          "term": "Cleanup and abatement",
+          "plain_definition": "Actions required to stop pollution and clean contaminated groundwater."
+        }
+      ]
+    },
+    {
+      "legal_standard_id": "SAFE_DRINKING_WATER_GW",
+      "name": "Safe Drinking Water Act (federal and California implementation) — groundwater as a drinking-water source",
+      "note": "Drinking-water standards and regulatory requirements influence how groundwater is treated, protected, and monitored as a potable supply. This affects ‘effective storage’ (usable supply) more than physical storage, but can shift reliance toward/away from groundwater and shape recharge and blending strategies.",
+      "key_elements": [
+        {
+          "term": "MCL (Maximum Contaminant Level)",
+          "plain_definition": "A legal limit on how much of a contaminant can be in drinking water."
+        },
+        {
+          "term": "Source water protection",
+          "plain_definition": "Programs and requirements intended to protect the quality of groundwater used for drinking."
+        }
+      ]
+    }
+  ],
+  "Tiers": {
+    "Tier 1": {
+      "threshold": "Groundwater trend in a WBA is stable or increasing (1960–2021) AND average total storage is greater than in the reference scenario",
+      "policies": [
+        {
+          "policy_name": "SGMA",
+          "legal_standard_id": "SGMA",
+          "relationship": "Primary legal mechanism most aligned with achieving stable/increasing trends and higher storage through pumping management + recharge projects",
+          "likelihood_score": 1,
+          "likelihood_label": "most likely",
+          "driver_type": "direct operational leverage",
+          "note": "Mechanism: Enforceable pumping allocations, demand management, recharge projects (spreading, banking), and requirements to avoid chronic declines can drive storage stabilization and (if aggressive) increases relative to reference."
+        },
+        {
+          "policy_name": "SWRCB SGMA backstop (probationary basin/interim plan)",
+          "legal_standard_id": "SWRCB_STATE_INTERVENTION_SGMA",
+          "relationship": "Strong leverage when state intervention occurs (typically in failing basins)",
+          "likelihood_score": 2,
+          "likelihood_label": "moderately likely",
+          "driver_type": "direct operational leverage",
+          "note": "Mechanism: Interim plan requirements (reporting, limits, fees) can force reductions in overdraft and improve management, but it is conditional on a basin entering probationary/interim status."
+        },
+        {
+          "policy_name": "Groundwater adjudications (court decrees + watermaster)",
+          "legal_standard_id": "GROUNDWATER_ADJUDICATIONS",
+          "relationship": "Can directly produce stable/increasing trends where caps and compliance are strong, but only in adjudicated basins",
+          "likelihood_score": 2,
+          "likelihood_label": "moderately likely",
+          "driver_type": "direct operational leverage",
+          "note": "Mechanism: Court-ordered pumping rights/caps and watermaster enforcement can reduce extraction to (near) recharge levels and promote recharge funding—supporting Tier 1 outcomes locally."
+        },
+        {
+          "policy_name": "Porter-Cologne (groundwater quality regulation)",
+          "legal_standard_id": "PORTER_COLOGNE_GW_QUALITY",
+          "relationship": "Indirect—supports ‘usable’ groundwater conditions and can shape recharge/pumping strategies",
+          "likelihood_score": 3,
+          "likelihood_label": "least likely",
+          "driver_type": "indirect/conditional influence",
+          "note": "Mechanism: Water-quality constraints can prevent practices that degrade groundwater and can require cleanup; these shape effective storage and management choices, but do not directly mandate higher physical storage."
+        }
+      ]
+    },
+    "Tier 2": {
+      "threshold": "Groundwater trend in a WBA is stable or increasing BUT total storage is less than in the reference scenario",
+      "policies": [
+        {
+          "policy_name": "SGMA",
+          "legal_standard_id": "SGMA",
+          "relationship": "Direct leverage—Tier 2 can reflect partial SGMA success (stabilizing trend) without building storage above reference",
+          "likelihood_score": 1,
+          "likelihood_label": "most likely",
+          "driver_type": "direct operational leverage",
+          "note": "Mechanism: Pumping caps and management can stop declines (trend stabilizes) while still leaving long-term storage below reference if recharge projects are modest, lagged, or hydrology limits rebound."
+        },
+        {
+          "policy_name": "Groundwater adjudications (court decrees + watermaster)",
+          "legal_standard_id": "GROUNDWATER_ADJUDICATIONS",
+          "relationship": "Direct leverage where caps stabilize trends but do not restore storage to reference levels",
+          "likelihood_score": 2,
+          "likelihood_label": "moderately likely",
+          "driver_type": "direct operational leverage",
+          "note": "Mechanism: Allocations may prevent further decline but not require enough recharge or reductions to rebuild storage above reference."
+        },
+        {
+          "policy_name": "Reasonable use / beneficial use doctrine",
+          "legal_standard_id": "REASONABLE_USE_BENEFICIAL_USE",
+          "relationship": "Indirect—supports efficiency and reduced waste; rarely sufficient alone to produce Tier 2 outcomes",
+          "likelihood_score": 3,
+          "likelihood_label": "least likely",
+          "driver_type": "baseline constraint",
+          "note": "Mechanism: Can support conservation pressure or enforcement arguments, but the main drivers of stabilizing trends are typically SGMA/adjudication rules."
+        }
+      ]
+    },
+    "Tier 3": {
+      "threshold": "Groundwater trend is declining, but moderately (fitted linear trend slope is less negative than -0.015 ft/yr)",
+      "policies": [
+        {
+          "policy_name": "SGMA",
+          "legal_standard_id": "SGMA",
+          "relationship": "Direct—Tier 3 can indicate under-powered implementation, delayed projects, or partial compliance in overdrafted systems",
+          "likelihood_score": 1,
+          "likelihood_label": "most likely",
+          "driver_type": "direct operational leverage",
+          "note": "Mechanism: If pumping reductions/recharge projects are insufficient or phased in slowly, SGMA may reduce the rate of decline without stopping it—producing moderate negative trends."
+        },
+        {
+          "policy_name": "SWRCB SGMA backstop (probationary basin/interim plan)",
+          "legal_standard_id": "SWRCB_STATE_INTERVENTION_SGMA",
+          "relationship": "Conditional—can push a basin out of Tier 3 if activated, but only applies in failing basins",
+          "likelihood_score": 2,
+          "likelihood_label": "moderately likely",
+          "driver_type": "direct operational leverage",
+          "note": "Mechanism: State intervention can accelerate reporting and reductions; however, it is contingent on governance failure triggers and still may take time to reverse a declining trend."
+        },
+        {
+          "policy_name": "Public Trust Doctrine (connected surface water impacts)",
+          "legal_standard_id": "PUBLIC_TRUST_CONNECTED_SURFACE_WATER",
+          "relationship": "Indirect—can motivate pumping constraints/mitigation where pumping harms streams, potentially reducing decline rates",
+          "likelihood_score": 3,
+          "likelihood_label": "least likely",
+          "driver_type": "governance/constraint",
+          "note": "Mechanism: Legal pressure to protect public trust resources can influence decisions where groundwater pumping depletes surface waters, but translation into basin-wide storage trend changes is case-specific."
+        }
+      ]
+    },
+    "Tier 4": {
+      "threshold": "Groundwater trend is declining severely (slope <= -0.015 ft/yr)",
+      "policies": [
+        {
+          "policy_name": "SGMA",
+          "legal_standard_id": "SGMA",
+          "relationship": "Direct—Tier 4 often indicates continued overdraft, delayed compliance, or inadequate controls relative to pumping demand",
+          "likelihood_score": 1,
+          "likelihood_label": "most likely",
+          "driver_type": "direct operational leverage",
+          "note": "Mechanism: Weak/late pumping limits, insufficient recharge capacity, or noncompliance can allow severe declines. Strengthening SGMA implementation is typically the main lever to move out of Tier 4."
+        },
+        {
+          "policy_name": "SWRCB SGMA backstop (probationary basin/interim plan)",
+          "legal_standard_id": "SWRCB_STATE_INTERVENTION_SGMA",
+          "relationship": "Direct but conditional—most relevant when local failure is severe enough to trigger state action",
+          "likelihood_score": 2,
+          "likelihood_label": "moderately likely",
+          "driver_type": "direct operational leverage",
+          "note": "Mechanism: In severe decline conditions, state intervention can impose reporting, fees, and pumping limits; effect depends on timing and enforceability and may still lag trend reversal."
+        },
+        {
+          "policy_name": "Groundwater adjudications (court decrees + watermaster)",
+          "legal_standard_id": "GROUNDWATER_ADJUDICATIONS",
+          "relationship": "Potentially strong where pursued, but contingent on basin being adjudicated and decree terms being strict enough",
+          "likelihood_score": 2,
+          "likelihood_label": "moderately likely",
+          "driver_type": "direct operational leverage",
+          "note": "Mechanism: A new or strengthened adjudication can impose enforceable caps and funding for recharge/management, but it is not statewide and requires litigation/settlement and administrative capacity."
+        },
+        {
+          "policy_name": "Porter-Cologne + Safe Drinking Water constraints (quality limits reduce ‘usable’ supply and may force operational shifts)",
+          "legal_standard_id": "PORTER_COLOGNE_GW_QUALITY",
+          "relationship": "Indirect—can exacerbate effective scarcity and management pressure but does not directly control storage trend slope",
+          "likelihood_score": 3,
+          "likelihood_label": "least likely",
+          "driver_type": "indirect/conditional influence",
+          "note": "Mechanism: Contamination can reduce usable supply and drive increased pumping elsewhere or higher costs; these laws shape quality protection and cleanup, not direct storage trend requirements."
+        }
+      ]
+    }
+  },
+  "Governing Agencies": [
+    {
+      "name": "Groundwater Sustainability Agencies (GSAs)",
+      "note": "Primary local implementers of SGMA: adopt and enforce Groundwater Sustainability Plans (GSPs), set pumping allocations/fees, implement recharge and demand-management projects, and track progress toward sustainability.",
+      "pertains_to_legal_standards": ["SGMA"]
+    },
+    {
+      "name": "California Department of Water Resources (DWR)",
+      "note": "Reviews and evaluates GSPs for adequacy under SGMA, provides basin boundary data and technical guidance/support, and tracks statewide groundwater planning/implementation progress.",
+      "pertains_to_legal_standards": ["SGMA"]
+    },
+    {
+      "name": "State Water Resources Control Board (SWRCB)",
+      "note": "SGMA backstop authority: can designate probationary basins and adopt an interim plan if local SGMA implementation fails; also can require reporting/fees and enforce interim requirements.",
+      "pertains_to_legal_standards": ["SWRCB_STATE_INTERVENTION_SGMA", "REASONABLE_USE_BENEFICIAL_USE"]
+    },
+    {
+      "name": "California Regional Water Quality Control Boards (RWQCBs)",
+      "note": "Implement Porter-Cologne regionally for groundwater quality: regulate discharges, require monitoring, and order cleanup/abatement that affect groundwater ‘usable’ conditions and management choices.",
+      "pertains_to_legal_standards": ["PORTER_COLOGNE_GW_QUALITY"]
+    },
+    {
+      "name": "California Superior Courts (basin-specific) + Watermasters (where appointed)",
+      "note": "In adjudicated basins, courts establish pumping rights/allocations and approve management regimes; watermasters administer, monitor, and enforce decree terms affecting extraction and (sometimes) recharge funding.",
+      "pertains_to_legal_standards": ["GROUNDWATER_ADJUDICATIONS"]
+    },
+    {
+      "name": "California Department of Public Health / State Water Resources Control Board (Drinking Water Division) + Local primacy agencies",
+      "note": "Implement drinking-water regulatory programs affecting groundwater as a potable source (monitoring, compliance with contaminant limits), which influences how groundwater is used, treated, and protected as supply.",
+      "pertains_to_legal_standards": ["SAFE_DRINKING_WATER_GW"]
+    }
+  ]
 }

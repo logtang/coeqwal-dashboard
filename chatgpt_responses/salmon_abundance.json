@@ -117,7 +117,7 @@
   ],
   "Tiers": {
     "Tier 1": {
-      "threshold": "≥ 80% chance (>800/1000 model runs) that salmon population grows 8× its starting size, using a rolling 10-year average",
+      "threshold": "≥ 80% chance that salmon population grows 8× its starting size, using a rolling 10-year average",
       "policies": [
         {
           "policy_name": "Federal Endangered Species Act (ESA)",
@@ -212,7 +212,7 @@
       ]
     },
     "Tier 2": {
-      "threshold": "≥ 80% chance (>800/1000 model runs) that salmon population grows 2×–8× its starting size, using a rolling 10-year average",
+      "threshold": "≥ 80% chance that salmon population grows 2×–8× its starting size, using a rolling 10-year average",
       "policies": [
         {
           "policy_name": "Federal Endangered Species Act (ESA)",
@@ -307,7 +307,7 @@
       ]
     },
     "Tier 3": {
-      "threshold": "≥ 80% chance (>800/1000 model runs) that salmon population exceeds its starting size, using a rolling 10-year average",
+      "threshold": "≥ 80% chance that salmon population exceeds its starting size, using a rolling 10-year average",
       "policies": [
         {
           "policy_name": "Federal Endangered Species Act (ESA)",

@@ -474,10 +474,49 @@
             margin-top: 15px;
         }
 
+        .key-elements summary {
+            list-style: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .key-elements summary::-webkit-details-marker {
+            display: none;
+        }
+
+        .key-elements summary::marker {
+            display: none;
+        }
+
+        .key-elements summary::after {
+            content: ">";
+            font-size: 0.95rem;
+            color: #64748b;
+            transform: rotate(0deg);
+            transition: transform 0.2s ease;
+        }
+
+        .key-elements[open] summary::after {
+            transform: rotate(90deg);
+        }
+
+        .key-elements-star {
+            color: #facc15;
+            font-size: 1rem;
+            line-height: 1;
+        }
+
         .key-elements-title {
             font-weight: 700;
             color: #0f172a;
             margin-bottom: 10px;
+        }
+
+        .key-elements summary .key-elements-title {
+            margin-bottom: 0;
+            line-height: 1;
         }
 
         .key-elements-container {
@@ -499,9 +538,7 @@
         }
 
         .key-element-row {
-            display: flex;
-            gap: 6px;
-            flex-wrap: wrap;
+            display: block;
             color: #334155;
             font-size: 0.95rem;
             line-height: 1.4;
@@ -510,6 +547,7 @@
         .key-element-label {
             font-weight: 700;
             color: #0f172a;
+            margin-right: 6px;
         }
 
         .agency-grid {
@@ -668,7 +706,6 @@
         <header class="page-header">
             <div class="title-block">
                 <div class="page-title">AI vs Manual Policy Lens</div>
-                <!-- <div class="page-subtitle">Side-by-side application of the framework to surface blind spots and capture signals experts might miss.</div> -->
             </div>
         </header>
         
@@ -923,8 +960,11 @@
                     <div class="card-title">${standard.name || '<span class="error-display" style="display: inline; padding: 2px 6px;">Error</span>'}</div>
                     <div class="card-note">${standard.note || '<span class="error-display" style="display: inline; padding: 2px 6px;">Error</span>'}</div>
                     ${standard.key_elements && standard.key_elements.length > 0 ? `
-                        <div class="key-elements">
-                            <div class="key-elements-title">Key Terms</div>
+                        <details class="key-elements">
+                            <summary>
+                                <span class="key-elements-star" aria-hidden="true">★</span>
+                                <span class="key-elements-title">Key Terms</span>
+                            </summary>
                             <div class="key-elements-container">
                                 ${standard.key_elements.map(elem => {
                                     const term = elem?.term || '';
@@ -943,7 +983,7 @@
                                     `;
                                 }).join('')}
                             </div>
-                        </div>
+                        </details>
                     ` : ''}
                 </div>
             `).join('');
@@ -1106,6 +1146,14 @@
 
         function renderAgenciesPanel(data, source) {
             const agencies = data['Governing Agencies'] || [];
+            const sortedAgencies = [...agencies].sort((a, b) => {
+                const aCount = Array.isArray(a.pertains_to_legal_standards) ? a.pertains_to_legal_standards.length : 0;
+                const bCount = Array.isArray(b.pertains_to_legal_standards) ? b.pertains_to_legal_standards.length : 0;
+                if (bCount !== aCount) return bCount - aCount;
+                const aName = (a.name || '').toLowerCase();
+                const bName = (b.name || '').toLowerCase();
+                return aName.localeCompare(bName);
+            });
             const elementId = source === 'ChatGPT' ? 'agenciesContentChatGPT' : 'agenciesContentManual';
             const content = document.getElementById(elementId);
             
@@ -1120,7 +1168,7 @@
 
             content.innerHTML = `
                 <div class="agency-grid">
-                    ${agencies.map(agency => `
+                    ${sortedAgencies.map(agency => `
                         <div class="agency-card">
                             <div class="agency-name">${agency.name || '<span class="error-display" style="display: inline; padding: 2px 6px;">Error</span>'}</div>
                             <div class="agency-chip">In ${Array.isArray(agency.pertains_to_legal_standards) ? agency.pertains_to_legal_standards.length : 0} Legal Standards</div>

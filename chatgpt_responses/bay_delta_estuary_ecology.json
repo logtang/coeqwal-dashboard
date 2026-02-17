@@ -1,186 +1,312 @@
 {
-    "Legal Standards": [
+  "meta": {
+    "outcome_domain": "delta_estuary_health_riparian_habitat_SAV_turbidity_salinity_microhabitats",
+    "tier_interpretation_note": "These tiers reflect relative ecosystem condition (ranked performance across scenarios/years) using indicators like submerged aquatic vegetation (SAV), turbidity, salinity, and microhabitat availability. Legal standards do not encode “top 25%” ecosystem-score targets; they influence these indicators indirectly by constraining Delta outflow/salinity regimes, project operations, dredge/fill and restoration permitting, water quality objectives, and species protections. Likelihood scores reflect policy-to-outcome plausibility (directness/strength of leverage), not a guarantee of meeting any tier.",
+    "likelihood_scale": {
+      "1": "most likely",
+      "2": "moderately likely",
+      "3": "least likely"
+    }
+  },
+  "Legal Standards": [
+    {
+      "legal_standard_id": "BAY_DELTA_PLAN",
+      "name": "SWRCB Bay-Delta Water Quality Control Plan (Bay-Delta Plan) (under CWA + Porter-Cologne; includes flow/outflow and salinity-related objectives implemented through operational requirements)",
+      "note": "Core statewide instrument that establishes water quality control measures and flow requirements needed to protect beneficial uses in the Bay-Delta watershed, including ecosystem-related uses. Strongest state lever that can directly change salinity regimes, outflow patterns, and related habitat conditions that feed into estuary health indicators.",
+      "key_elements": [
         {
-            "name": "Bay-Delta Water Quality Control Plan (WQCP)",
-            "note": "California water quality standards for the estuary. Establishes beneficial uses and water quality objectives to protect estuarine ecology, implemented through water-rights requirements affecting flows, salinity, turbidity, and habitat availability.",
-            "key_elements": []
+          "term": "Beneficial uses",
+          "plain_definition": "Legally protected uses of water, including ecosystem uses like fish and wildlife habitat."
         },
         {
-            "name": "SWRCB Water Right Decision 1641 (D-1641)",
-            "note": "Enforceable water-rights conditions implementing Bay-Delta objectives. Principal instrument translating objectives into operational requirements (outflow, export limits, salinity compliance points, DCC operations).",
-            "key_elements": []
+          "term": "Water quality control measures",
+          "plain_definition": "Enforceable requirements (often operational) used to achieve water quality and flow objectives."
         },
         {
-            "name": "Federal Clean Water Act water-quality standards framework",
-            "note": "Bay-Delta Plan is explicitly framed as CWA water quality standards for the estuary, providing legal backbone for salinity/flow objectives.",
-            "key_elements": []
-        },
-        {
-            "name": "Federal Endangered Species Act (ESA) — Section 7",
-            "note": "Federal agencies must ensure actions are not likely to jeopardize listed species or adversely modify critical habitat. Implemented through Biological Opinions with operational constraints affecting flows, exports, and habitat conditions.",
-            "key_elements": []
-        },
-        {
-            "name": "California Endangered Species Act (CESA)",
-            "note": "Prohibits take of state-listed species unless authorized via Incidental Take Permit with minimization/mitigation. Poor ecological conditions can increase take risk and trigger permit compliance issues.",
-            "key_elements": []
-        },
-        {
-            "name": "Central Valley Project Improvement Act (CVPIA)",
-            "note": "Legally dedicates 800,000 acre-feet annually to fish, wildlife, and habitat purposes, including Bay-Delta protection and ESA obligations.",
-            "key_elements": []
-        },
-        {
-            "name": "Delta Reform Act / Delta Plan coequal goals",
-            "note": "Major governing policy mandate: Delta actions evaluated against coequal goals including protecting, restoring, and enhancing the Delta ecosystem.",
-            "key_elements": []
+          "term": "Delta outflow",
+          "plain_definition": "Freshwater flow from the Delta to the Bay; it strongly influences salinity and habitat conditions."
         }
-    ],
-    "Tiers": {
-        "Tier 1": {
-            "threshold": "Scenario scores in top 25% (low SAV, high turbidity, fresh conditions, expanded microhabitats in most years).",
-            "policies": [
-                {
-                    "policy_name": "Bay-Delta Water Quality Control Plan (WQCP)",
-                    "relationship": "Likely met / supported",
-                    "note": "Fish and wildlife objectives include salinity, Delta outflow, and export limits."
-                },
-                {
-                    "policy_name": "SWRCB Water Right Decision 1641 (D-1641)",
-                    "relationship": "Likely met / supported",
-                    "note": "Compliance is more likely achievable without exceedances when the estuary is consistently fresh and habitat is broadly available."
-                },
-                {
-                    "policy_name": "Federal Endangered Species Act (ESA) — Section 7",
-                    "relationship": "Likely met / supported",
-                    "note": "Lower risk of jeopardy or adverse modification concerns relative to worse tiers because habitat conditions are generally more supportive."
-                },
-                {
-                    "policy_name": "California Endangered Species Act (CESA)",
-                    "relationship": "Likely met / supported",
-                    "note": "Lower take exposure relative to worse tiers, assuming operations remain within permit conditions where applicable."
-                }
-            ]
-        },
-        "Tier 2": {
-            "threshold": "Scenario scores in top 50% (unchanged SAV, high turbidity, fresh conditions, some microhabitats in most years).",
-            "policies": [
-                {
-                    "policy_name": "Bay-Delta Water Quality Control Plan (WQCP)",
-                    "relationship": "Likely met / generally consistent",
-                    "note": "Objectives are still plausibly met because fresh conditions reduce salinity-objective exceedance pressure."
-                },
-                {
-                    "policy_name": "SWRCB Water Right Decision 1641 (D-1641)",
-                    "relationship": "Likely met / generally consistent",
-                    "note": "Operational constraints (exports, outflow targets, gate operations) become binding in dry years to prevent slipping into Tier 3/4 conditions."
-                },
-                {
-                    "policy_name": "Federal Endangered Species Act (ESA) — Section 7",
-                    "relationship": "Potentially triggered / watched",
-                    "note": "If some microhabitats available means frequent bottlenecks in dry sequences, operations may need to tighten to avoid jeopardy or adverse modification risk."
-                },
-                {
-                    "policy_name": "California Endangered Species Act (CESA)",
-                    "relationship": "Potentially triggered / watched",
-                    "note": "If bottlenecks occur in dry sequences, operators may need to tighten operations to avoid take or habitat degradation."
-                }
-            ]
-        },
-        "Tier 3": {
-            "threshold": "Scenario scores in top 75% (unchanged SAV, standard turbidity, moderate salinity, few microhabitats in most years).",
-            "policies": [
-                {
-                    "policy_name": "Bay-Delta Water Quality Control Plan (WQCP)",
-                    "relationship": "Potentially violated / at-risk",
-                    "note": "Moderate salinity and constrained habitat are consistent with conditions where salinity objectives and outflow/export constraints become difficult."
-                },
-                {
-                    "policy_name": "SWRCB Water Right Decision 1641 (D-1641)",
-                    "relationship": "Potentially violated / at-risk",
-                    "note": "Implements salinity, outflow, and export requirements through project obligations."
-                },
-                {
-                    "policy_name": "Federal Endangered Species Act (ESA) — Section 7",
-                    "relationship": "Triggered / more likely",
-                    "note": "Stronger consultation constraints and re-evaluation pressure if operations push habitat conditions toward adverse modification risk."
-                },
-                {
-                    "policy_name": "California Endangered Species Act (CESA)",
-                    "relationship": "Triggered / more likely",
-                    "note": "ITP minimization and mitigation stress where authorized take must be minimized and fully mitigated."
-                },
-                {
-                    "policy_name": "Central Valley Project Improvement Act (CVPIA)",
-                    "relationship": "Other implicated programs",
-                    "note": "CVPIA (b)(2) water is more likely to be called upon or prioritized to improve conditions because it is dedicated to fish and habitat and to help protect the Delta."
-                }
-            ]
-        },
-        "Tier 4": {
-            "threshold": "None of the above; unchanged SAV, low turbidity, moderate to high salinity, few microhabitats in most years.",
-            "policies": [
-                {
-                    "policy_name": "Bay-Delta Water Quality Control Plan (WQCP)",
-                    "relationship": "Most likely violated / noncompliant (or requiring formal exceptions)",
-                    "note": "Objective exceedances become most plausible here because the Plan's core fish and wildlife protection tools include salinity, Delta outflow, river flows, and export limits."
-                },
-                {
-                    "policy_name": "SWRCB Water Right Decision 1641 (D-1641)",
-                    "relationship": "Most likely violated / noncompliant (or requiring formal exceptions)",
-                    "note": "Formal noncompliance pathways can become necessary when objectives cannot be met."
-                },
-                {
-                    "policy_name": "Federal Endangered Species Act (ESA) — Section 7",
-                    "relationship": "Triggered / highest regulatory exposure",
-                    "note": "Strongest risk that operational regimes could be characterized as causing or contributing to habitat degradation approaching adverse modification or jeopardy."
-                },
-                {
-                    "policy_name": "California Endangered Species Act (CESA)",
-                    "relationship": "Triggered / highest regulatory exposure",
-                    "note": "Heightened likelihood that take risk increases and compliance with minimized and fully mitigated becomes challenging."
-                },
-                {
-                    "policy_name": "Delta Reform Act / Delta Plan coequal goals",
-                    "relationship": "Broader governance implications",
-                    "note": "Ecosystem protection mandate becomes sharply implicated because Tier 4 reflects persistent ecosystem degradation relative to the coequal goal of protecting, restoring, and enhancing the Delta ecosystem."
-                },
-                {
-                    "policy_name": "Central Valley Project Improvement Act (CVPIA)",
-                    "relationship": "Broader governance implications",
-                    "note": "Intensified pressure to deploy (b)(2) water and related restoration measures because the statute explicitly links the dedication to protecting the Delta and meeting ESA obligations."
-                }
-            ]
-        }
+      ]
     },
-    "Governing Agencies": [
+    {
+      "legal_standard_id": "PORTER_COLOGNE",
+      "name": "Porter-Cologne Water Quality Control Act (California Water Code §13000 et seq.)",
+      "note": "California’s backbone water quality law. Requires Water Boards to set beneficial uses and water quality objectives in Basin Plans. These objectives (e.g., estuarine habitat uses, narrative habitat protections, temperature/turbidity-related objectives where applicable) can shape permitting, restoration requirements, and operational expectations that affect the Delta’s habitat condition.",
+      "key_elements": [
         {
-            "name": "SWRCB (State Water Board)",
-            "note": "Sets Bay-Delta Plan objectives; implements via water-rights decisions (notably D-1641) and compliance oversight."
+          "term": "Basin Plan",
+          "plain_definition": "Regional plan that lists beneficial uses, objectives, and implementation actions for water quality."
         },
         {
-            "name": "DWR (CA Dept. of Water Resources)",
-            "note": "Operates the State Water Project; must operate to meet applicable SWRCB requirements and other legal constraints (often coordinated with USBR)."
-        },
-        {
-            "name": "USBR (Bureau of Reclamation)",
-            "note": "Operates the Central Valley Project; implements CVPIA and is a key ESA §7 action agency."
-        },
-        {
-            "name": "USFWS & NOAA Fisheries (NMFS)",
-            "note": "ESA consulting agencies issuing BiOps/terms that constrain operations to protect listed species/habitat."
-        },
-        {
-            "name": "CDFW (CA Dept. of Fish and Wildlife)",
-            "note": "Administers CESA and incidental take permits; enforces take prohibition."
-        },
-        {
-            "name": "Delta Stewardship Council",
-            "note": "Administers the Delta Plan consistency program under the coequal goals framework."
-        },
-        {
-            "name": "U.S. EPA",
-            "note": "Federal Clean Water Act oversight of water quality standards (as referenced in the Plan’s framing)."
+          "term": "Water quality objectives",
+          "plain_definition": "Numeric or narrative thresholds meant to protect beneficial uses (can include habitat-related conditions)."
         }
-    ]
+      ]
+    },
+    {
+      "legal_standard_id": "CWA_401_404",
+      "name": "Federal Clean Water Act — especially Section 401 Water Quality Certification + Section 404 dredge/fill permitting",
+      "note": "Major driver for Delta restoration, levee modification, wetlands creation, dredging, and channel work. Section 401 allows California to condition or deny federal permits/licenses to ensure compliance with water quality standards. Section 404 governs dredge/fill in waters/wetlands—directly relevant to riparian/wetland microhabitat creation and disturbance control.",
+      "key_elements": [
+        {
+          "term": "Section 401 certification",
+          "plain_definition": "State approval (often with conditions) required before certain federal permits/licenses can be issued if a discharge may occur."
+        },
+        {
+          "term": "Section 404 permit",
+          "plain_definition": "Federal permit for discharge of dredged or fill material into waters/wetlands, common in habitat and infrastructure work."
+        },
+        {
+          "term": "Avoid/minimize/mitigate",
+          "plain_definition": "Permit logic requiring impacts be avoided where feasible, reduced where not, and compensated where impacts remain."
+        }
+      ]
+    },
+    {
+      "legal_standard_id": "ESA",
+      "name": "Federal Endangered Species Act (ESA) (16 U.S.C. §1531 et seq.)",
+      "note": "Where listed species and critical habitat are affected (including Delta-dependent listed fish and species that interact with the same habitat), ESA can impose enforceable operational and project constraints (via Section 7 consultation, BiOps, and RPAs) that change flow/salinity operations, timing, construction methods, and habitat measures—affecting the conditions that drive turbidity/salinity/microhabitats and, indirectly, SAV dynamics.",
+      "key_elements": [
+        {
+          "term": "Section 7 consultation",
+          "plain_definition": "Process requiring federal agencies to ensure their actions won’t jeopardize listed species or damage critical habitat."
+        },
+        {
+          "term": "Biological Opinion (BiOp)",
+          "plain_definition": "Document stating whether jeopardy exists and what enforceable measures are required."
+        },
+        {
+          "term": "Reasonable and Prudent Alternatives (RPAs)",
+          "plain_definition": "Required operational/project changes to avoid jeopardy while allowing the action to proceed."
+        }
+      ]
+    },
+    {
+      "legal_standard_id": "CESA",
+      "name": "California Endangered Species Act (CESA) (Fish & Game Code §2050 et seq.)",
+      "note": "State analogue to ESA. Often applies to state/local projects and can require avoidance, minimization, and mitigation of impacts to listed species (including habitat-related measures). This can shape project design and timing for Delta habitat actions that influence microhabitat availability and disturbance.",
+      "key_elements": [
+        {
+          "term": "Take",
+          "plain_definition": "Broadly, harming/killing/harassing a protected species (including through habitat impacts)."
+        },
+        {
+          "term": "Incidental Take Permit (ITP)",
+          "plain_definition": "Permit allowing incidental take if impacts are minimized/avoided and fully mitigated."
+        }
+      ]
+    },
+    {
+      "legal_standard_id": "DELTA_REFORM_ACT",
+      "name": "Sacramento–San Joaquin Delta Reform Act of 2009 + Delta Plan consistency (Water Code §85000 et seq.; consistency certification for covered actions)",
+      "note": "Creates a legally enforceable planning/consistency framework that embeds ecosystem protection/restoration as a coequal goal alongside water supply reliability. Can constrain or reshape Delta projects and conveyance/restoration actions (including those affecting habitat and salinity/flow-related conditions) via the Delta Plan covered action consistency process.",
+      "key_elements": [
+        {
+          "term": "Covered action",
+          "plain_definition": "A qualifying state/local project or action in the Delta that must certify consistency with the Delta Plan."
+        },
+        {
+          "term": "Consistency certification",
+          "plain_definition": "The formal written finding submitted to show a covered action aligns with Delta Plan policies."
+        }
+      ]
+    },
+    {
+      "legal_standard_id": "CEQA",
+      "name": "California Environmental Quality Act (CEQA) (Pub. Res. Code §21000 et seq.)",
+      "note": "Procedural law requiring analysis and feasible mitigation/alternatives for significant environmental impacts of discretionary projects. In the Delta, CEQA often shapes restoration design, levee changes, dredging approaches, construction windows, and mitigation that can affect microhabitats and disturbance-driven turbidity.",
+      "key_elements": [
+        {
+          "term": "Mitigation",
+          "plain_definition": "Feasible measures required to reduce significant project impacts."
+        },
+        {
+          "term": "Lead agency",
+          "plain_definition": "The public agency primarily responsible for approving a project and completing CEQA review."
+        }
+      ]
+    },
+    {
+      "legal_standard_id": "MSA_EFH",
+      "name": "Magnuson-Stevens Fishery Conservation and Management Act — Essential Fish Habitat (EFH) consultation provisions (16 U.S.C. §1801 et seq.)",
+      "note": "Requires federal agencies to consult with NOAA Fisheries on actions that may adversely affect EFH, enabling NOAA to recommend conservation measures. In estuary contexts, EFH consultation can support habitat-protective project modifications, though it often has weaker ‘teeth’ than ESA/CWA.",
+      "key_elements": [
+        {
+          "term": "Essential Fish Habitat (EFH)",
+          "plain_definition": "Waters and habitat necessary for fish to spawn, breed, feed, or grow to maturity."
+        },
+        {
+          "term": "EFH conservation recommendations",
+          "plain_definition": "NOAA’s recommended measures to avoid/minimize/offset adverse effects to EFH."
+        }
+      ]
+    }
+  ],
+  "Tiers": {
+    "Tier 1": {
+      "threshold": "Scenario scores in the top 25% (yearly ecosystem indicators): low SAV, high turbidity, fresh conditions, expanded microhabitats in most years",
+      "policies": [
+        {
+          "policy_name": "Bay-Delta Plan",
+          "legal_standard_id": "BAY_DELTA_PLAN",
+          "relationship": "Most aligned state instrument for maintaining fresher conditions and system-wide habitat-supportive objectives",
+          "likelihood_score": 1,
+          "likelihood_label": "most likely",
+          "driver_type": "direct operational leverage",
+          "note": "Mechanism: Flow/outflow and salinity-related objectives (and their enforceable implementation) can directly maintain fresher estuarine conditions and influence habitat suitability; achieving top-quartile multi-indicator performance still depends on hydrology and complementary habitat actions."
+        },
+        {
+          "policy_name": "CWA §401/§404 + Porter-Cologne (restoration permitting and enforceable conditions)",
+          "legal_standard_id": "CWA_401_404",
+          "relationship": "Strong project-level lever for expanding microhabitats and controlling habitat disturbance/quality",
+          "likelihood_score": 2,
+          "likelihood_label": "moderately likely",
+          "driver_type": "project-level leverage",
+          "note": "Mechanism: Conditions on restoration, wetlands/riparian projects, and dredge/fill work can require designs that increase microhabitat complexity and protect water quality; basin-wide Tier 1 conditions require many projects + supportive operations."
+        },
+        {
+          "policy_name": "ESA (federal)",
+          "legal_standard_id": "ESA",
+          "relationship": "Often a strong constraint on harmful operations and projects; Tier 1 requires broader ecosystem improvements beyond ESA alone",
+          "likelihood_score": 2,
+          "likelihood_label": "moderately likely",
+          "driver_type": "direct constraint + conditional operational leverage",
+          "note": "Mechanism: ESA measures can alter operations and require habitat protections that improve conditions for listed species and associated habitat; however, ‘top 25%’ ecosystem scoring across multiple indicators typically needs additional flow/water quality and restoration levers."
+        }
+      ]
+    },
+    "Tier 2": {
+      "threshold": "Scenario scores in the top 50%: unchanged SAV, high turbidity, fresh conditions, some microhabitats available in most years",
+      "policies": [
+        {
+          "policy_name": "Bay-Delta Plan",
+          "legal_standard_id": "BAY_DELTA_PLAN",
+          "relationship": "Directly supports fresh-condition maintenance in many years where objectives are binding and met",
+          "likelihood_score": 1,
+          "likelihood_label": "most likely",
+          "driver_type": "direct operational leverage",
+          "note": "Mechanism: By constraining salinity/outflow-related operations, the Bay-Delta Plan can help sustain fresher conditions. Tier 2 is more plausible than Tier 1 because it tolerates less improvement in microhabitats and no SAV reduction requirement."
+        },
+        {
+          "policy_name": "Porter-Cologne (Basin Plans) + CWA §401 conditions",
+          "legal_standard_id": "PORTER_COLOGNE",
+          "relationship": "Indirect-to-conditional support for maintaining water-quality/habitat baseline and enabling/conditioning habitat projects",
+          "likelihood_score": 2,
+          "likelihood_label": "moderately likely",
+          "driver_type": "indirect/conditional influence",
+          "note": "Mechanism: Basin Plan objectives and 401 conditions can protect aquatic habitat uses and shape projects to maintain turbidity/habitat protections; outcomes depend on how objectives are written/enforced and where projects occur."
+        },
+        {
+          "policy_name": "Delta Reform Act / Delta Plan consistency",
+          "legal_standard_id": "DELTA_REFORM_ACT",
+          "relationship": "Governance lever that can push projects toward ecosystem-protective designs and mitigation",
+          "likelihood_score": 2,
+          "likelihood_label": "moderately likely",
+          "driver_type": "governance/constraint",
+          "note": "Mechanism: Delta Plan consistency requirements can constrain covered actions and embed ecosystem restoration priorities, supporting Tier 2-type improvements when paired with Bay-Delta Plan and permitting tools."
+        }
+      ]
+    },
+    "Tier 3": {
+      "threshold": "Scenario scores in the top 75%: unchanged SAV, standard turbidity, moderate salinity, few microhabitats available in most years",
+      "policies": [
+        {
+          "policy_name": "Bay-Delta Plan (baseline protections)",
+          "legal_standard_id": "BAY_DELTA_PLAN",
+          "relationship": "Often supports baseline salinity/outflow protections that can keep conditions from degrading into Tier 4, but may still allow moderate salinity and limited habitat expansion",
+          "likelihood_score": 1,
+          "likelihood_label": "most likely",
+          "driver_type": "direct operational leverage (baseline)",
+          "note": "Mechanism: Baseline objectives can maintain moderate salinity and partial protections; Tier 3 aligns with ‘some protections, but not enough’ to deliver consistently fresh conditions or broad habitat expansion."
+        },
+        {
+          "policy_name": "CEQA (project mitigation)",
+          "legal_standard_id": "CEQA",
+          "relationship": "Moderate—can reduce harm and require mitigation for discrete projects but doesn’t force system-wide ecological improvement",
+          "likelihood_score": 2,
+          "likelihood_label": "moderately likely",
+          "driver_type": "procedural/project-level",
+          "note": "Mechanism: CEQA can avoid the worst project-level impacts and require mitigation that modestly improves or preserves microhabitats, but Tier 3 conditions can persist without stronger operational/water-quality drivers."
+        },
+        {
+          "policy_name": "CESA (state-listed species protections)",
+          "legal_standard_id": "CESA",
+          "relationship": "Conditional—can shape certain projects and operations toward avoidance/mitigation, supporting incremental habitat protection",
+          "likelihood_score": 2,
+          "likelihood_label": "moderately likely",
+          "driver_type": "project/operations constraint",
+          "note": "Mechanism: CESA-driven avoidance/mitigation can prevent further habitat loss and may support small habitat gains, but outcomes depend on project mix and enforcement."
+        }
+      ]
+    },
+    "Tier 4": {
+      "threshold": "None of the above: unchanged SAV, low turbidity, moderate to high salinity, few microhabitats available in most years",
+      "policies": [
+        {
+          "policy_name": "Magnuson-Stevens EFH consultation",
+          "legal_standard_id": "MSA_EFH",
+          "relationship": "Helpful but usually insufficient alone to prevent Tier 4 conditions if stronger flow/salinity levers are not achieved",
+          "likelihood_score": 3,
+          "likelihood_label": "least likely",
+          "driver_type": "advisory/conditional",
+          "note": "Mechanism: EFH conservation recommendations can improve project design, but if not adopted or if major operational drivers push salinity higher and reduce habitat quality, Tier 4 can persist."
+        },
+        {
+          "policy_name": "CEQA (procedural constraints)",
+          "legal_standard_id": "CEQA",
+          "relationship": "Weak as a system-wide driver; Tier 4 can persist even with CEQA compliance",
+          "likelihood_score": 3,
+          "likelihood_label": "least likely",
+          "driver_type": "procedural",
+          "note": "Mechanism: CEQA can mitigate discrete project harms, but it does not mandate fresher conditions, turbidity targets, or microhabitat expansion at estuary scale."
+        },
+        {
+          "policy_name": "Delta Reform Act / Delta Plan consistency",
+          "legal_standard_id": "DELTA_REFORM_ACT",
+          "relationship": "Indirect governance lever; by itself may not overcome hydrology/export pressure and baseline water quality objectives",
+          "likelihood_score": 3,
+          "likelihood_label": "least likely",
+          "driver_type": "governance/constraint",
+          "note": "Mechanism: Consistency can shape covered actions, but Tier 4 conditions can remain if salinity/outflow and water quality requirements are not sufficiently protective or are not met in practice."
+        }
+      ]
+    }
+  },
+  "Governing Agencies": [
+    {
+      "name": "State Water Resources Control Board (SWRCB) + Regional Water Quality Control Boards",
+      "note": "Adopt and implement the Bay-Delta Plan and Basin Plans under Porter-Cologne; set water quality objectives/beneficial uses; administer CWA §401 certifications and can attach enforceable conditions (or deny) to protect water quality and aquatic habitat—directly affecting salinity/habitat protections and restoration permitting.",
+      "pertains_to_legal_standards": ["BAY_DELTA_PLAN", "PORTER_COLOGNE", "CWA_401_404"]
+    },
+    {
+      "name": "U.S. Army Corps of Engineers (USACE)",
+      "note": "Primary federal permitting agency for CWA §404 dredge/fill permits and related authorizations affecting wetlands/riparian and channel projects in the Delta (often paired with state §401 certification).",
+      "pertains_to_legal_standards": ["CWA_401_404"]
+    },
+    {
+      "name": "NOAA Fisheries (NMFS)",
+      "note": "ESA Section 7 consulting agency for many anadromous fish and EFH consultation lead under Magnuson-Stevens; provides BiOps/RPAs and EFH conservation recommendations that can impose or recommend habitat-protective measures affecting Delta projects and operations.",
+      "pertains_to_legal_standards": ["ESA", "MSA_EFH"]
+    },
+    {
+      "name": "U.S. Fish & Wildlife Service (USFWS)",
+      "note": "ESA consulting agency for species under its jurisdiction; participates in consultations that can constrain projects/operations affecting Delta habitats and associated ecological conditions.",
+      "pertains_to_legal_standards": ["ESA"]
+    },
+    {
+      "name": "California Department of Fish and Wildlife (CDFW)",
+      "note": "Implements CESA (including Incidental Take Permits) and acts as a CEQA trustee/responsible agency, providing biological review and recommending/conditioning mitigation affecting habitat quality and project design.",
+      "pertains_to_legal_standards": ["CESA", "CEQA"]
+    },
+    {
+      "name": "Delta Stewardship Council (DSC)",
+      "note": "Implements the Delta Reform Act’s Delta Plan and oversees the covered action consistency certification process that can constrain or reshape Delta projects with ecosystem implications.",
+      "pertains_to_legal_standards": ["DELTA_REFORM_ACT"]
+    },
+    {
+      "name": "California Department of Water Resources (DWR) and U.S. Bureau of Reclamation (USBR)",
+      "note": "Operate SWP/CVP and implement operational decisions that strongly influence salinity/outflow patterns and habitat conditions; their actions interact with Bay-Delta Plan requirements and federal consultations/permits affecting habitat projects.",
+      "pertains_to_legal_standards": ["BAY_DELTA_PLAN", "ESA", "CWA_401_404", "DELTA_REFORM_ACT"]
+    }
+  ]
 }
