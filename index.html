@@ -9,83 +9,86 @@
 </head>
 <body>
     <div class="container">
-        <header class="page-header">
-            <div class="title-block">
-                <div class="page-title">COEQWAL, AI-Enabled Threshold Analysis </div>
-            </div>
-        </header>
-        
-        <div class="metric-selector">
-            <h2 style="margin-bottom: 15px; color: var(--ink); font-weight: 700;">Select an Outcome</h2>
-            <div class="metric-grid" id="metricGrid"></div>
-            <div class="metric-overview">
-                <div class="metric-indicator">
-                    <div class="metric-indicator-label">Selected Outcome</div>
-                    <div class="metric-indicator-value" id="selectedMetric">None</div>
-                </div>
-                <div id="overviewInline" class="overview-inline"></div>
-            </div>
-        </div>
-
-        <div class="content-container">
-            <div class="tabs">
-                <div class="tab active" data-tab="legal">Legal Standards</div>
-                <div class="tab" data-tab="tiers">Tiered Implications</div>
-                <div class="tab" data-tab="agencies">Agencies</div>
-            </div>
-
-            <div id="legal" class="tab-content active">
-                <div id="legalEmptyState" class="empty-state">
-                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
-                    </svg>
-                    <h2>Select an outcome to view analysis</h2>
-                    <p>Choose from the options above to explore policy data</p>
-                </div>
-                <div id="legalComparison" class="comparison-container is-hidden">
-                    <div class="comparison-panel">
-                        <div class="comparison-panel-title">Manual Results <span class="panel-count" id="legalCountManual">(0)</span></div>
-                        <div id="legalContentManual"></div>
+        <div class="app-shell">
+            <aside class="sidebar">
+                <header class="page-header">
+                    <div class="title-block">
+                        <div class="page-title">COEQWAL, AI-Enabled Threshold Analysis</div>
                     </div>
-                    <div class="comparison-panel">
-                        <div class="comparison-panel-title">ChatGPT Results <span class="panel-count" id="legalCountChatGPT">(0)</span></div>
-                        <div id="legalContentChatGPT"></div>
-                    </div>
+                </header>
+                
+                <div class="metric-selector">
+                    <h2 style="margin-bottom: 15px; color: var(--ink); font-weight: 700;">Select an Outcome</h2>
+                    <div class="metric-grid" id="metricGrid"></div>
                 </div>
-            </div>
+            </aside>
 
-            <div id="tiers" class="tab-content">
-                <div id="tiersEmptyState" class="empty-state">
-                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
-                    </svg>
-                    <h2>Select an outcome to view analysis</h2>
-                    <p>Choose from the options above to explore policy data</p>
+            <main class="main-content">
+                <div class="summary-bar is-empty">
+                    <div id="overviewInline" class="overview-inline content-mount"></div>
                 </div>
-                <div id="tiersAligned" class="tiers-aligned is-hidden"></div>
-            </div>
+                <div class="content-container">
+                    <div class="tabs">
+                        <div class="tab active" data-tab="legal">Legal Standards</div>
+                        <div class="tab" data-tab="tiers">Tiered Implications</div>
+                        <div class="tab" data-tab="agencies">Agencies</div>
+                    </div>
 
-            <div id="agencies" class="tab-content">
-                <div id="agenciesEmptyState" class="empty-state">
-                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
-                    </svg>
-                    <h2>Select an outcome to view analysis</h2>
-                    <p>Choose from the options above to explore policy data</p>
-                </div>
-                <div id="agenciesComparison" class="comparison-container is-hidden">
-                    <div class="comparison-panel">
-                        <div class="comparison-panel-title">Manual Results <span class="panel-count" id="agenciesCountManual">(0)</span></div>
-                        <div id="agenciesContentManual"></div>
+                    <div id="legal" class="tab-content active">
+                        <div id="legalEmptyState" class="empty-state">
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                            </svg>
+                            <h2>Select an outcome to view analysis</h2>
+                            <p>Choose from the options above to explore policy data</p>
+                        </div>
+                        <div id="legalComparison" class="comparison-container content-mount is-hidden">
+                            <div class="comparison-panel">
+                                <div class="comparison-panel-title">Manual Results <span class="panel-count" id="legalCountManual">(0)</span></div>
+                                <div id="legalContentManual"></div>
+                            </div>
+                            <div class="comparison-panel">
+                                <div class="comparison-panel-title">ChatGPT Results <span class="panel-count" id="legalCountChatGPT">(0)</span></div>
+                                <div id="legalContentChatGPT"></div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="comparison-panel">
-                        <div class="comparison-panel-title">ChatGPT Results <span class="panel-count" id="agenciesCountChatGPT">(0)</span></div>
-                        <div id="agenciesContentChatGPT"></div>
+
+                    <div id="tiers" class="tab-content">
+                        <div id="tiersEmptyState" class="empty-state">
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                            </svg>
+                            <h2>Select an outcome to view analysis</h2>
+                            <p>Choose from the options above to explore policy data</p>
+                        </div>
+                        <div id="tiersAligned" class="tiers-aligned content-mount is-hidden"></div>
+                    </div>
+
+                    <div id="agencies" class="tab-content">
+                        <div id="agenciesEmptyState" class="empty-state">
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                            </svg>
+                            <h2>Select an outcome to view analysis</h2>
+                            <p>Choose from the options above to explore policy data</p>
+                        </div>
+                        <div id="agenciesComparison" class="comparison-container content-mount is-hidden">
+                            <div class="comparison-panel">
+                                <div class="comparison-panel-title">Manual Results <span class="panel-count" id="agenciesCountManual">(0)</span></div>
+                                <div id="agenciesContentManual"></div>
+                            </div>
+                            <div class="comparison-panel">
+                                <div class="comparison-panel-title">ChatGPT Results <span class="panel-count" id="agenciesCountChatGPT">(0)</span></div>
+                                <div id="agenciesContentChatGPT"></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </main>
         </div>
     </div>
+
 
     <script>
         const metrics = [
@@ -242,6 +245,11 @@
                     </div>
                 </div>
             `;
+            triggerMount(document.getElementById('overviewInline'));
+            const summaryBar = document.querySelector('.summary-bar');
+            if (summaryBar) {
+                summaryBar.classList.remove('is-empty');
+            }
         }
 
         function renderLegalStandards() {
@@ -265,6 +273,7 @@
 
             renderLegalStandardsPanel(currentDataChatGPT, 'ChatGPT');
             renderLegalStandardsPanel(currentDataManual, 'Manual');
+            triggerMount(legalComparison);
         }
 
         function renderLegalStandardsPanel(data, source) {
@@ -369,6 +378,7 @@
             }).join('');
 
             setupTierToggleAnimation();
+            triggerMount(content);
         }
 
         function setupTierToggleAnimation() {
@@ -501,6 +511,14 @@
             } else {
                 document.getElementById('agenciesContentManual').innerHTML = '<div class="error-display">Error: No agency data</div>';
             }
+            triggerMount(agenciesComparison);
+        }
+
+        function triggerMount(element) {
+            if (!element) return;
+            element.classList.remove('is-mounted');
+            void element.offsetHeight;
+            element.classList.add('is-mounted');
         }
 
         function renderAgenciesPanel(data, source) {
