@@ -35,18 +35,12 @@
             "note": "A tiered water quality threshold that is more protective than the baseline legal standard for agricultural beneficial uses.",
             "key_elements": [
                 {
-                    "parameter": "Electrical Conductivity (EC)",
-                    "averaging_period": "14-day average",
-                    "threshold": "<= 450 µS/cm",
-                    "applicable_water_years": "Most water years",
-                    "locations": [
-                        "Jersey Point",
-                        "Emmaton",
-                        "Rock Slough"
-                    ]
+                    "term": "Parameter",
+                    "plain_definition": "Electrical Conductivity (EC); averaging period: 14-day average; threshold: <= 450 µS/cm; applicable water years: Most water years; locations: Jersey Point, Emmaton, Rock Slough"
                 },
                 {
-                    "note": "Additional water quality standards apply for municipal and industrial (M&I) uses."
+                    "term": "Note",
+                    "plain_definition": "Additional water quality standards apply for municipal and industrial (M&I) uses."
                 }
             ]
         }

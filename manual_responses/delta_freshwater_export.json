@@ -35,29 +35,16 @@
             "note": "State mandate for agricultural beneficial uses in the Delta, developed by the Delta Stewardship Council using best available science; applies to USBR/CVP operations only.",
             "key_elements": [
                 {
-                    "parameter": "Electrical Conductivity (EC)",
-                    "season": "Summer",
-                    "standard": "700 µS/cm",
-                    "locations": [
-                        "Brandt Bridge",
-                        "Old River near Middle River",
-                        "Airport Way",
-                        "Vernalis"
-                    ]
+                    "term": "Parameter",
+                    "plain_definition": "Electrical Conductivity (EC); season: Summer; standard: 700 µS/cm; locations: Brandt Bridge, Old River near Middle River, Airport Way, Vernalis"
                 },
                 {
-                    "parameter": "Electrical Conductivity (EC)",
-                    "season": "Winter",
-                    "standard": "1000 µS/cm",
-                    "locations": [
-                        "Brandt Bridge",
-                        "Old River near Middle River",
-                        "Airport Way",
-                        "Vernalis"
-                    ]
+                    "term": "Parameter",
+                    "plain_definition": "Electrical Conductivity (EC); season: Winter; standard: 1000 µS/cm; locations: Brandt Bridge, Old River near Middle River, Airport Way, Vernalis"
                 },
                 {
-                    "note": "Additional salinity standards exist for municipal and industrial (M&I) uses."
+                    "term": "Note",
+                    "plain_definition": "Additional salinity standards exist for municipal and industrial (M&I) uses."
                 }
             ]
         }

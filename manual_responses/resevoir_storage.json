@@ -5,9 +5,8 @@
             "note": "Each reservoir operates under site-specific storage and operational specifications, which vary widely by facility and include management of the cold pool to maintain lower-temperature water for downstream uses and ecological protection.",
             "key_elements": [
                 {
-                    "component": "Cold pool",
-                    "definition": "Deep reservoir water that maintains colder average temperatures due to sufficient depth",
-                    "management_objective": "Temperature control for downstream releases"
+                    "term": "Component",
+                    "plain_definition": "Cold pool; definition: Deep reservoir water that maintains colder average temperatures due to sufficient depth; management objective: Temperature control for downstream releases"
                 }
             ]
         },
@@ -16,13 +15,12 @@
             "note": "SWRCB issues permits through separate regulatory processes for water diversion and water storage and monitors compliance with permit conditions governing reservoir releases.",
             "key_elements": [
                 {
-                    "permit_types": [
-                        "Diversion permits",
-                        "Storage permits"
-                    ]
+                    "term": "Permit Types",
+                    "plain_definition": "Diversion permits, Storage permits"
                 },
                 {
-                    "oversight": "Monitoring of reservoir release conditions"
+                    "term": "Oversight",
+                    "plain_definition": "Monitoring of reservoir release conditions"
                 }
             ]
         },
@@ -31,13 +29,8 @@
             "note": "Reservoir releases may be managed discretionarily to satisfy multiple overlapping legal and operational objectives.",
             "key_elements": [
                 {
-                    "objectives": [
-                        "Salinity control",
-                        "Compliance with senior water rights",
-                        "U.S. Fish and Wildlife Service requirements",
-                        "Environmental Protection Agency requirements",
-                        "Clean Water Act (CWA) compliance"
-                    ]
+                    "term": "Objectives",
+                    "plain_definition": "Salinity control, Compliance with senior water rights, U.S. Fish and Wildlife Service requirements, Environmental Protection Agency requirements, Clean Water Act (CWA) compliance"
                 }
             ]
         }

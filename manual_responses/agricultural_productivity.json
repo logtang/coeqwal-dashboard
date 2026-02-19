@@ -15,34 +15,12 @@
             "note": "Publicly authorized and funded programs that are not legally mandated entitlements; participation is voluntary and accessed through application processes administered by USDA.",
             "key_elements": [
                 {
-                    "program_category": "Natural Disaster Assistance",
-                    "programs": [
-                        {
-                            "name": "Drought Assistance",
-                            "criteria": "U.S. Drought Monitor ratings; loss thresholds often apply"
-                        },
-                        {
-                            "name": "Flood Assistance",
-                            "administering_agency": "Farm Service Agency (FSA)"
-                        }
-                    ]
+                    "term": "Program Category",
+                    "plain_definition": "Natural Disaster Assistance; programs: Drought Assistance (criteria: U.S. Drought Monitor ratings; loss thresholds often apply); Flood Assistance (administering agency: Farm Service Agency (FSA))"
                 },
                 {
-                    "program_category": "Revenue and Price Loss Protection",
-                    "programs": [
-                        {
-                            "name": "Agriculture Risk Coverage (ARC)",
-                            "basis": "Revenue loss thresholds"
-                        },
-                        {
-                            "name": "Price Loss Coverage (PLC)",
-                            "basis": "Commodity price declines relative to statutory reference prices"
-                        },
-                        {
-                            "name": "Emergency Relief Program (ERP)",
-                            "basis": "Congressional authorization for disaster-related revenue losses"
-                        }
-                    ]
+                    "term": "Program Category",
+                    "plain_definition": "Revenue and Price Loss Protection; programs: Agriculture Risk Coverage (ARC) (basis: Revenue loss thresholds); Price Loss Coverage (PLC) (basis: Commodity price declines relative to statutory reference prices); Emergency Relief Program (ERP) (basis: Congressional authorization for disaster-related revenue losses)"
                 }
             ]
         },
@@ -51,8 +29,8 @@
             "note": "Irrigation rights are protected under constitutional and statutory water-rights frameworks, following the principle of priority in time, and are subordinate only to human health and safety needs.",
             "key_elements": [
                 {
-                    "principle": "Priority in time (senior water rights)",
-                    "constraint": "Human health and safety needs take precedence"
+                    "term": "Principle",
+                    "plain_definition": "Priority in time (senior water rights); constraint: Human health and safety needs take precedence"
                 }
             ]
         }

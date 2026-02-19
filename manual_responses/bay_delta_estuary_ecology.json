@@ -5,8 +5,8 @@
             "note": "Scientific standards developed by the Delta Science Program and incorporated into the Bay-Delta Water Quality Control Plan, emphasizing sufficiently high percentages of unimpaired flow (%UIF) to support multiple estuarine health variables.",
             "key_elements": [
                 {
-                    "concept": "Percent Unimpaired Flow (%UIF)",
-                    "purpose": "Support estuarine health variables across this tier"
+                    "term": "Concept",
+                    "plain_definition": "Percent Unimpaired Flow (%UIF); purpose: Support estuarine health variables across this tier"
                 }
             ]
         },
@@ -15,21 +15,16 @@
             "note": "State authority to regulate flows exists but ranks lower in the legal hierarchy than other regulatory priorities. Flow objectives rely largely on discretionary operation of CVP and SWP reservoirs and are frequently unmet.",
             "key_elements": [
                 {
-                    "metric": "Percent Unimpaired Flow (%UIF)",
-                    "implementation": "Discretionary CVP/SWP operations",
-                    "compliance_status": "Goals regularly not met"
+                    "term": "Metric",
+                    "plain_definition": "Percent Unimpaired Flow (%UIF); implementation: Discretionary CVP/SWP operations; compliance status: Goals regularly not met"
                 },
                 {
-                    "regional_variation": [
-                        "Sacramento River and tributaries",
-                        "San Joaquin River and tributaries"
-                    ]
+                    "term": "Regional Variation",
+                    "plain_definition": "Sacramento River and tributaries, San Joaquin River and tributaries"
                 },
                 {
-                    "comparison": {
-                        "Bay-Delta Plan": "Annual average outflow-to-inflow ratio > 0.5 in dry and critically dry years",
-                        "ESA Biological Opinions (Delta Smelt)": "2:1 inflow-to-export ratio"
-                    }
+                    "term": "Comparison",
+                    "plain_definition": "Bay-Delta Plan: Annual average outflow-to-inflow ratio > 0.5 in dry and critically dry years; ESA Biological Opinions (Delta Smelt): 2:1 inflow-to-export ratio"
                 }
             ]
         },
@@ -38,12 +33,8 @@
             "note": "Maintenance of freshwater and low-salinity conditions in the Delta is highly dependent on diluting flows.",
             "key_elements": [
                 {
-                    "instrument": "SWRCB Water Right Decision 1641 (D-1641)",
-                    "requirements": [
-                        "Maintenance of X2 near the eastern edge of Suisun Marsh",
-                        "Minimum Delta outflow requirements"
-                    ],
-                    "salinity_context": "Brackish salinity control"
+                    "term": "Requirements",
+                    "plain_definition": "Maintenance of X2 near the eastern edge of Suisun Marsh, Minimum Delta outflow requirements; instrument: SWRCB Water Right Decision 1641 (D-1641); salinity context: Brackish salinity control"
                 }
             ]
         },
@@ -52,18 +43,12 @@
             "note": "Regulatory authority over SAV is fragmented, reflecting competing objectives between invasive species eradication, navigation and recreation safety, and ecological protection of native SAV.",
             "key_elements": [
                 {
-                    "regulatory_focus": "Invasive SAV eradication",
-                    "programs": [
-                        "California Department of Boating and Waterways (DBW) herbicide program"
-                    ],
-                    "regulatory_strength": "Higher"
+                    "term": "Regulatory Focus",
+                    "plain_definition": "Invasive SAV eradication; programs: California Department of Boating and Waterways (DBW) herbicide program; regulatory strength: Higher"
                 },
                 {
-                    "regulatory_focus": "Native SAV protection",
-                    "programs": [
-                        "Water Boards ecohydrological programs"
-                    ],
-                    "regulatory_strength": "Lower (guidelines)"
+                    "term": "Regulatory Focus",
+                    "plain_definition": "Native SAV protection; programs: Water Boards ecohydrological programs; regulatory strength: Lower (guidelines)"
                 }
             ]
         },
@@ -77,22 +62,20 @@
             "note": "Microhabitat protection is applied unevenly through species-based regulatory instruments and broader scientific guidance.",
             "key_elements": [
                 {
-                    "instrument": "ESA Biological Opinions (2024)",
-                    "scope": "Protection of listed species and associated habitat patches",
-                    "coverage": "Not comprehensive"
+                    "term": "Instrument",
+                    "plain_definition": "ESA Biological Opinions (2024); scope: Protection of listed species and associated habitat patches; coverage: Not comprehensive"
                 },
                 {
-                    "instrument": "California Endangered Species Act (CESA)",
-                    "scope": "Additional species-based habitat protections"
+                    "term": "Instrument",
+                    "plain_definition": "California Endangered Species Act (CESA); scope: Additional species-based habitat protections"
                 },
                 {
-                    "instrument": "Delta Science Program Guidelines",
-                    "scope": "Comprehensive microhabitat protection through restoration project guidance",
-                    "regulatory_strength": "Lower"
+                    "term": "Instrument",
+                    "plain_definition": "Delta Science Program Guidelines; scope: Comprehensive microhabitat protection through restoration project guidance; regulatory strength: Lower"
                 },
                 {
-                    "instrument": "Porter-Cologne Water Quality Control Act",
-                    "scope": "Protection of beneficial uses, including native fish habitat"
+                    "term": "Instrument",
+                    "plain_definition": "Porter-Cologne Water Quality Control Act; scope: Protection of beneficial uses, including native fish habitat"
                 }
             ]
         }

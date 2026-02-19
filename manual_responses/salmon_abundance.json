@@ -3,11 +3,10 @@
         {
             "name": "Endangered Species Act (ESA) / California Endangered Species Act (CESA)",
             "note": "State and federal legislation providing primary legal protection for salmon and other listed species. ESA implementation requires Biological Opinions (BiOps), which carry the force of federal law and govern operations affecting endangered species.",
-            "key_elements_old": [
+            "key_elements": [
                 {
-                    "instrument": "Biological Opinions (BiOps)",
-                    "scope": "Operational requirements for activities affecting listed species such as salmon",
-                    "legal_weight": "Federal law"
+                    "term": "Instrument",
+                    "plain_definition": "Biological Opinions (BiOps); scope: Operational requirements for activities affecting listed species such as salmon; legal weight: Federal law"
                 }
             ]
         },
@@ -24,49 +23,38 @@
         {
             "name": "Federal Clean Water Act (CWA) / Porter-Cologne Water Quality Control Act",
             "note": "Establish the authority and scope of water quality regulation, including determination of covered waters. Temperature is explicitly addressed as a water quality parameter under this regulatory umbrella.",
-            "key_elements_old": [
+            "key_elements": [
                 {
-                    "parameter": "Water temperature",
-                    "regulatory_context": "Water quality objective"
+                    "term": "Parameter",
+                    "plain_definition": "Water temperature; regulatory context: Water quality objective"
                 }
             ]
         },
         {
             "name": "Central Valley Project Improvement Act (CVPIA) / Anadromous Fish Restoration Program (AFRP)",
             "note": "Requires population doubling of anadromous fish in Central Valley streams and mitigation of adverse impacts from CVP operations. Multiple environmental factors are implicated.",
-            "key_elements_old": [
+            "key_elements": [
                 {
-                    "objective": "Doubling of anadromous fish populations",
-                    "implicated_factors": [
-                        "Flows",
-                        "Temperature",
-                        "Water quality",
-                        "Riparian habitat"
-                    ]
+                    "term": "Objective",
+                    "plain_definition": "Doubling of anadromous fish populations; implicated factors: Flows, Temperature, Water quality, Riparian habitat"
                 }
             ]
         },
         {
             "name": "SWRCB Order 90-5 and USBR Temperature Management Plan",
             "note": "Regulates USBR water releases to protect salmon, native fish, and habitat in the Sacramento and Trinity River Basins, with a primary focus on temperature control through reservoir operations.",
-            "key_elements_old": [
+            "key_elements": [
                 {
-                    "requirement": "Daily average water temperature of 56°F",
-                    "location": "Sacramento River at Red Bluff",
-                    "mechanism": "Reservoir release management (e.g., Shasta Dam)"
+                    "term": "Requirement",
+                    "plain_definition": "Daily average water temperature of 56°F; location: Sacramento River at Red Bluff; mechanism: Reservoir release management (e.g., Shasta Dam)"
                 },
                 {
-                    "facilities_covered": [
-                        "Keswick Dam",
-                        "Spring Creek Power Plant",
-                        "Trinity River Division (Upper Sacramento River)"
-                    ]
+                    "term": "Facilities Covered",
+                    "plain_definition": "Keswick Dam, Spring Creek Power Plant, Trinity River Division (Upper Sacramento River)"
                 },
                 {
-                    "requirements": [
-                        "Monitoring",
-                        "Reporting"
-                    ]
+                    "term": "Requirements",
+                    "plain_definition": "Monitoring, Reporting"
                 }
             ]
         },

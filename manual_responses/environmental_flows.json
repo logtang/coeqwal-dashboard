@@ -5,9 +5,8 @@
             "note": "Provide one of the strongest legal bases for environmental flow requirements, implemented through enforceable species-specific ecological health and habitat requirements.",
             "key_elements": [
                 {
-                    "mechanism": "Biological Opinions (BiOps)",
-                    "implementation_basis": "Species ecological health requirements",
-                    "legal_strength": "High (federal law)"
+                    "term": "Mechanism",
+                    "plain_definition": "Biological Opinions (BiOps); implementation basis: Species ecological health requirements; legal strength: High (federal law)"
                 }
             ]
         },
@@ -16,11 +15,8 @@
             "note": "Does not establish direct regulatory standards for functional flows due to the absence of state or federal flow standards. Instead, it provides legal authority to address flows indirectly through existing regulatory controls.",
             "key_elements": [
                 {
-                    "flow_dimensions": [
-                        "Volume",
-                        "Water quality",
-                        "Timing"
-                    ]
+                    "term": "Flow Dimensions",
+                    "plain_definition": "Volume, Water quality, Timing"
                 }
             ]
         },
@@ -29,27 +25,20 @@
             "note": "Environmental and operational flow requirements are imposed regionally through a combination of federal and state regulatory instruments.",
             "key_elements": [
                 {
-                    "instrument": "FERC License",
-                    "applicability": "Non-federal hydroelectric projects"
+                    "term": "Instrument",
+                    "plain_definition": "FERC License; applicability: Non-federal hydroelectric projects"
                 },
                 {
-                    "instrument": "State Water Resources Control Board (SWRCB) Orders",
-                    "context": "Sometimes issued in response to ESA Biological Opinions"
+                    "term": "Instrument",
+                    "plain_definition": "State Water Resources Control Board (SWRCB) Orders; context: Sometimes issued in response to ESA Biological Opinions"
                 },
                 {
-                    "instrument": "Clean Water Act Section 401 Water Quality Certification",
-                    "authority": "Water quality-based conditions under the CWA",
-                    "conditions": [
-                        "Minimum flows",
-                        "Seasonal flow regimes",
-                        "Ramping rates (increasing and decreasing flows)",
-                        "Temperature control",
-                        "Pulse flows"
-                    ]
+                    "term": "Instrument",
+                    "plain_definition": "Clean Water Act Section 401 Water Quality Certification; authority: Water quality-based conditions under the CWA; conditions: Minimum flows, Seasonal flow regimes, Ramping rates (increasing and decreasing flows), Temperature control, Pulse flows"
                 },
                 {
-                    "instrument": "Other Regulatory Requirements",
-                    "note": "Additional federal, state, or local regulations that may impose flow-related conditions."
+                    "term": "Instrument",
+                    "plain_definition": "Other Regulatory Requirements; note: Additional federal, state, or local regulations that may impose flow-related conditions."
                 }
             ]
         }

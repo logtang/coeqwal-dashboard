@@ -5,12 +5,12 @@
             "note": "Establishes a basin-based groundwater management framework implemented by local Groundwater Sustainability Agencies (GSAs).",
             "key_elements": [
                 {
-                    "implementing_entities": "Groundwater Sustainability Agencies (GSAs)",
-                    "management_scale": "Basin-based (local)"
+                    "term": "Implementing Entities",
+                    "plain_definition": "Groundwater Sustainability Agencies (GSAs); management scale: Basin-based (local)"
                 },
                 {
-                    "basin_priority": "High- and Medium-Priority Basins",
-                    "coverage": "Basins accounting for approximately 98% of statewide groundwater use"
+                    "term": "Basin Priority",
+                    "plain_definition": "High- and Medium-Priority Basins; coverage: Basins accounting for approximately 98% of statewide groundwater use"
                 }
             ]
         },
@@ -19,8 +19,8 @@
             "note": "Required planning instruments under SGMA for high- and medium-priority groundwater basins.",
             "key_elements": [
                 {
-                    "requirement": "Development and implementation of GSPs",
-                    "applicability": "High- and Medium-Priority Basins"
+                    "term": "Requirement",
+                    "plain_definition": "Development and implementation of GSPs; applicability: High- and Medium-Priority Basins"
                 }
             ]
         },
@@ -29,13 +29,8 @@
             "note": "Legal doctrines and principles governing locally managed groundwater pumping restrictions within a basin.",
             "key_elements": [
                 {
-                    "principles": [
-                        "Constitutional priorities",
-                        "Priority in time (water rights seniority)",
-                        "Equity among basin rights holders",
-                        "Physical solutions",
-                        "Self-help"
-                    ]
+                    "term": "Principles",
+                    "plain_definition": "Constitutional priorities, Priority in time (water rights seniority), Equity among basin rights holders, Physical solutions, Self-help"
                 }
             ]
         },
@@ -44,11 +39,8 @@
             "note": "Provides the statutory authority for groundwater regulations, including SGMA and Water Budget Analysis (WBA) requirements, as codified in state law.",
             "key_elements": [
                 {
-                    "authority_scope": [
-                        "SGMA implementation",
-                        "Groundwater Sustainability Plans (GSPs)",
-                        "Water Budget Analysis (WBA) requirements"
-                    ]
+                    "term": "Authority Scope",
+                    "plain_definition": "SGMA implementation, Groundwater Sustainability Plans (GSPs), Water Budget Analysis (WBA) requirements"
                 }
             ]
         }
