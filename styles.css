@@ -14,7 +14,7 @@
             --panel-muted: #f7f8fa;
             --border: #d6dde6;
             --border-strong: #c7d0db;
-            --shadow-soft: 0 10px 24px rgba(15, 23, 42, 0.08);
+            --shadow-soft: 0 10px 16px rgba(15, 23, 42, 0.08);
             --shadow-lift: 0 16px 36px rgba(15, 23, 42, 0.12);
         }
 
@@ -625,9 +625,9 @@
         }
 
         .key-elements-container {
-            border: 1px solid #e2e8f0;
+            /* border: 1px solid #e2e8f0; */
             border-radius: 1.5rem;
-            background: #f8fafc;
+            /* background: #f8fafc; */
             padding: 12px;
             display: grid;
             gap: 10px;
@@ -666,6 +666,7 @@
             border: 1px solid #e2e8f0;
             border-radius: 8px;
             padding: 15px;
+            box-shadow: var(--shadow-soft);
         }
 
         .agency-chip {
@@ -760,8 +761,8 @@
             background: var(--panel);
             border-radius: 12px;
             padding: 20px;
-            border: 1px solid var(--border);
-            box-shadow: var(--shadow-soft);
+            /* border: 1px solid var(--border); */
+            /* box-shadow: var(--shadow-soft); */
         }
 
         .comparison-panel-title {
