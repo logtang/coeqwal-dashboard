@@ -118,8 +118,7 @@
         function renderMetricCards() {
             const grid = document.getElementById('metricGrid');
             grid.innerHTML = metrics.map(metric => {
-                // const isAllowed = metric === allowedMetric;
-                const isAllowed = true; // Allow all metrics for selection
+                const isAllowed = metric === allowedMetric;
                 const disabledClass = isAllowed ? '' : 'disabled';
                 const clickHandler = isAllowed ? `onclick="selectMetric('${metric}')"` : '';
                 return `
@@ -135,9 +134,9 @@
         }
 
         async function selectMetric(metric) {
-            // if (metric !== allowedMetric) {
-            //     return;
-            // }
+            if (metric !== allowedMetric) {
+                return;
+            }
             // Update active state
             document.querySelectorAll('.metric-card').forEach(card => {
                 card.classList.toggle('active', card.dataset.metric === metric);
