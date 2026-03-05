@@ -491,6 +491,11 @@
             line-height: 1.6;
         }
 
+        .card-caption {
+            color: var(--primary-interactive);
+            line-height: 1.6;
+        }
+
         .tier-section {
             margin-bottom: 25px;
         }
@@ -646,6 +651,61 @@
             font-weight: 600;
             color: var(--ink);
             margin-bottom: 5px;
+        }
+
+        .policy-card-toggle {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            border: 1px solid var(--border);
+            background: var(--panel-muted);
+            color: var(--ink);
+            padding: 4px 10px;
+            border-radius: 999px;
+            font-size: 0.72rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            margin-top: 6px;
+        }
+
+        .policy-card-toggle:hover {
+            border-color: var(--border-strong);
+            box-shadow: var(--shadow-soft);
+        }
+
+        .policy-card-toggle-icon {
+            width: 9px;
+            height: 9px;
+            border-right: 2px solid var(--ink);
+            border-bottom: 2px solid var(--ink);
+            transform: rotate(45deg);
+            transition: transform 0.35s cubic-bezier(0.2, 0.7, 0.2, 1);
+        }
+
+        .policy-card-toggle[aria-expanded="true"] .policy-card-toggle-icon {
+            transform: rotate(-135deg);
+        }
+
+        .policy-card-expand {
+            display: grid;
+            grid-template-rows: 0fr;
+            opacity: 0;
+            transform: translateY(-6px);
+            transition: grid-template-rows 0.5s cubic-bezier(0.2, 0.8, 0.2, 1),
+                opacity 0.5s ease,
+                transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+        }
+
+        .policy-card-expand > * {
+            overflow: hidden;
+            min-height: 0;
+        }
+
+        .policy-card.is-expanded .policy-card-expand {
+            grid-template-rows: 1fr;
+            opacity: 1;
+            transform: translateY(0);
         }
 
         .relationship {

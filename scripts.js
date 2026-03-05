@@ -309,11 +309,11 @@ function renderTiers() {
                 <div class="tier-columns">
                     <div class="comparison-panel">
                         <div class="comparison-panel-title">Manual Results <span class="panel-count">(${manualCount})</span></div>
-                        ${manualPolicies ? renderTierPolicies(manualPolicies, tierNumber) : '<div class="error-display">Error: Missing Tier</div>'}
+                        ${manualPolicies ? renderTierPolicies(manualPolicies, tierNumber, 'manual') : '<div class="error-display">Error: Missing Tier</div>'}
                     </div>
                     <div class="comparison-panel">
                         <div class="comparison-panel-title">ChatGPT Results <span class="panel-count">(${chatCount})</span></div>
-                        ${chatPolicies ? renderTierPolicies(chatPolicies, tierNumber) : '<div class="error-display">Error: Missing Tier</div>'}
+                        ${chatPolicies ? renderTierPolicies(chatPolicies, tierNumber, 'chatgpt') : '<div class="error-display">Error: Missing Tier</div>'}
                     </div>
                 </div>
             </details>
@@ -321,6 +321,7 @@ function renderTiers() {
     }).join('');
 
     setupTierToggleAnimation();
+    setupPolicyCardDropdowns(content);
     triggerMount(content);
 }
 
@@ -360,7 +361,7 @@ function setupTierToggleAnimation() {
 }
 
 // Render policy cards within a tier column.
-function renderTierPolicies(policies, tierNumber) {
+function renderTierPolicies(policies, tierNumber, source) {
     if (!Array.isArray(policies) || policies.length === 0) {
         return '<div class="empty-state"><h3>No policy data available for this tier</h3></div>';
     }
@@ -376,15 +377,39 @@ function renderTierPolicies(policies, tierNumber) {
 
     return `
         <div class="tier-policy-grid">
-            ${sortedPolicies.map(policy => `
+            ${sortedPolicies.map((policy, index) => `
                 <div class="policy-card tier-${tierNumber}">
                     <div class="policy-name">${policy.policy_name || '<span class="error-display" style="display: inline; padding: 2px 6px;">Error</span>'}</div>
                     ${policy.relationship ? `<div class="relationship ${getLikelihoodClass(policy.likelihood_score) || getRelationshipClass(policy.relationship)}">${getLikelihoodLabel(policy.likelihood_score) || policy.relationship}</div>` : '<div class="error-display" style="padding: 4px 12px; display: inline-block; font-size: 0.85rem;">Error: Missing relationship</div>'}
-                    <div class="card-note">${policy.note || '<span class="error-display" style="display: inline; padding: 2px 6px;">Error</span>'}</div>
+                    <button class="policy-card-toggle" type="button" aria-expanded="false" aria-controls="policy-expand-${source}-${tierNumber}-${index}">
+                        <span class="policy-card-toggle-label">Details</span>
+                        <span class="policy-card-toggle-icon" aria-hidden="true"></span>
+                    </button>
+                    <div class="policy-card-expand" id="policy-expand-${source}-${tierNumber}-${index}" aria-hidden="true">
+                        <div class="card-note">${policy.note || '<span class="error-display" style="display: inline; padding: 2px 6px;">Error</span>'}</div>
+                    </div>
                 </div>
             `).join('')}
 </div>
 `;
+}
+
+function setupPolicyCardDropdowns(container) {
+    if (!container) return;
+    container.querySelectorAll('.policy-card-toggle').forEach((button) => {
+        button.addEventListener('click', () => {
+            const card = button.closest('.policy-card');
+            if (!card) return;
+            const isExpanded = button.getAttribute('aria-expanded') === 'true';
+            const nextExpanded = !isExpanded;
+            button.setAttribute('aria-expanded', String(nextExpanded));
+            card.classList.toggle('is-expanded', nextExpanded);
+            const expandTarget = card.querySelector('.policy-card-expand');
+            if (expandTarget) {
+                expandTarget.setAttribute('aria-hidden', String(!nextExpanded));
+            }
+        });
+    });
 }
 
 // Map likelihood score to a CSS class.
