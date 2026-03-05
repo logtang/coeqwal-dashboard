@@ -13,8 +13,8 @@
     {
       "legal_standard_id": "REASONABLE_USE_BENEFICIAL_USE",
       "legal_standard": "Reasonable Use / Beneficial Use Doctrine (California Constitution Article X, §2; California Water Code §100)",
-      "caption": "California’s constitutional rule that all water must be used reasonably and beneficially limits agricultural diversions and irrigation practices, creating a baseline legal standard that shapes how farms use water during both normal and drought conditions.",
-      "info": "The Reasonable Use Doctrine is one of the foundational principles of California water law. It states that all water use—including agricultural irrigation—must be both beneficial and reasonable under current conditions. Even when a farmer or irrigation district holds a valid water right, the state can challenge uses that are wasteful, inefficient, or unreasonable given available technology or competing needs. This doctrine becomes especially important during droughts or conflicts between agricultural supply, urban demand, and environmental protections. In practice, the doctrine influences agricultural productivity indirectly: it can encourage efficiency improvements (such as drip irrigation or better scheduling), justify regulatory scrutiny of inefficient practices, and provide legal support for actions limiting diversions that harm other beneficial uses. While it does not directly regulate agricultural revenue, it shapes the legal expectations for irrigation practices and can influence production costs, water availability, and operational flexibility across agricultural regions.",
+      "caption": "California law requires that all water be used reasonably and beneficially, limiting wasteful agricultural water use.",
+      "info": "The Reasonable Use Doctrine is a foundational principle of California water law. It states that all water use—including agricultural irrigation—must be both beneficial and reasonable under current conditions. Even when a farmer or irrigation district holds a valid water right, the state can challenge uses that are wasteful, inefficient, or unreasonable given available technology or competing needs. This doctrine becomes particularly relevant during droughts or conflicts among agricultural, urban, and environmental water demands. In practice, the doctrine influences agricultural productivity indirectly: it can encourage efficiency improvements, justify regulatory scrutiny of inefficient practices, and support actions limiting diversions that harm other beneficial uses. Although it does not regulate agricultural revenue directly, it shapes irrigation practices, operational costs, and water availability that ultimately influence farm productivity.",
       "vocabulary": [
         {
           "term": "Beneficial use",
@@ -22,7 +22,7 @@
         },
         {
           "term": "Reasonable use",
-          "definition": "A legal standard requiring water to be used efficiently and appropriately under existing conditions, including technological feasibility and competing demands."
+          "definition": "A legal standard requiring water to be used efficiently and appropriately under existing conditions."
         },
         {
           "term": "Waste of water",
@@ -30,41 +30,40 @@
         }
       ],
       "sources": [
-        "https://law.justia.com/constitution/california/article-x/section-2/",
-        "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=100.&lawCode=WAT",
-        "https://www.waterboards.ca.gov/waterrights/law.html"
+        "California Constitution Article X Section 2",
+        "California Water Code Section 100",
+        "State Water Resources Control Board Water Rights Law Overview"
       ]
     },
     {
       "legal_standard_id": "SWRCB_CURTAILMENT_AUTHORITY",
       "legal_standard": "State Water Resources Control Board Curtailment and Emergency Drought Authority",
-      "caption": "During drought or water shortages, the State Water Resources Control Board can issue curtailment orders and emergency regulations that directly restrict agricultural diversions when water is not legally available.",
-      "info": "The State Water Resources Control Board (SWRCB) has authority to enforce water-right priorities and adopt emergency drought regulations when hydrologic conditions make water unavailable for some users. When flows are insufficient to satisfy all water rights, the Board may issue curtailment orders requiring junior rights holders to reduce or stop diversions. This authority directly affects agricultural productivity because many farms depend on surface water deliveries that can be curtailed in dry years. Curtailments may lead to reduced irrigation supply, forcing producers to fallow land, shift crops, or substitute groundwater pumping. Emergency regulations may also require reporting, measurement, and conservation actions that increase operational costs. Although curtailment decisions are based on water availability and legal priority rather than economic outcomes, the practical result can be major changes in farm production and revenue during drought conditions.",
+      "caption": "The State Water Board can restrict agricultural diversions during drought when water is unavailable under priority rules.",
+      "info": "The State Water Resources Control Board (SWRCB) has authority to enforce water-right priorities and adopt emergency drought regulations when water supplies are insufficient. During shortages, the Board may issue curtailment orders requiring some water users—often those with junior rights—to reduce or stop diversions. These actions directly affect agricultural productivity because farms frequently depend on surface water deliveries that may be curtailed in dry years. When curtailments occur, producers may fallow land, reduce planting, or rely on groundwater pumping or water transfers. Emergency drought regulations may also impose reporting and conservation requirements that increase operational costs. Although curtailments are based on hydrologic availability and legal priority rather than economic considerations, they can strongly influence agricultural production and revenue outcomes.",
       "vocabulary": [
         {
           "term": "Curtailment",
-          "definition": "An official order requiring water users to reduce or stop diverting water because supply is insufficient under the priority system."
+          "definition": "An order requiring water users to reduce or stop diverting water because supply is insufficient."
         },
         {
           "term": "Water-right priority",
-          "definition": "The legal hierarchy determining which users receive water first during shortages, typically based on the seniority of the right."
+          "definition": "The legal hierarchy determining which users receive water first when supplies are limited."
         },
         {
           "term": "Emergency regulation",
-          "definition": "Temporary rules adopted quickly by agencies during urgent situations such as droughts."
+          "definition": "Temporary rules adopted during urgent conditions such as severe drought."
         }
       ],
       "sources": [
-        "https://www.waterboards.ca.gov/waterrights/water_issues/programs/drought/",
-        "https://www.waterboards.ca.gov/waterrights/water_issues/programs/curtailment/",
-        "https://www.waterboards.ca.gov/laws_regulations/docs/california_water_code.pdf"
+        "State Water Resources Control Board Drought Program",
+        "California Water Code Curtailment Authorities"
       ]
     },
     {
       "legal_standard_id": "SGMA",
-      "legal_standard": "Sustainable Groundwater Management Act (California Water Code §10720 et seq.)",
-      "caption": "SGMA requires groundwater basins to achieve long-term sustainability, often limiting agricultural pumping and altering the availability of groundwater used to stabilize farm production during surface-water shortages.",
-      "info": "The Sustainable Groundwater Management Act (SGMA), enacted in 2014, established a statewide framework requiring local Groundwater Sustainability Agencies (GSAs) to manage groundwater basins to avoid long-term depletion and related impacts such as land subsidence and degraded water quality. Agriculture is the largest groundwater user in California, so SGMA implementation has major implications for agricultural productivity. Groundwater Sustainability Plans may include pumping allocations, metering requirements, fees, recharge projects, and other management tools designed to reduce overdraft. For farmers, this often means groundwater—historically a key backup supply during drought—becomes more regulated and potentially more expensive. In the short term, SGMA can reduce the ability of farms to compensate for reduced surface-water deliveries. Over the long term, however, the law aims to prevent severe aquifer depletion that could otherwise threaten agricultural viability. The overall impact on revenue depends on basin conditions, management decisions, and the availability of recharge or water transfer opportunities.",
+      "legal_standard": "Sustainable Groundwater Management Act (SGMA)",
+      "caption": "SGMA requires groundwater basins to reach sustainable pumping levels, affecting agricultural groundwater availability.",
+      "info": "The Sustainable Groundwater Management Act (SGMA), enacted in 2014, established a statewide framework requiring local agencies to manage groundwater basins sustainably. Agriculture is the largest groundwater user in California, making SGMA implementation highly relevant to agricultural productivity. Local Groundwater Sustainability Agencies develop Groundwater Sustainability Plans that may include pumping allocations, monitoring requirements, fees, and groundwater recharge projects. Because many farms rely on groundwater during droughts when surface supplies are limited, restrictions on pumping can affect irrigation availability and farm operations. Although SGMA aims to prevent long-term aquifer depletion and associated impacts such as land subsidence and well failures, the transition to sustainable pumping levels can alter water costs, land use patterns, and crop choices across agricultural regions.",
       "vocabulary": [
         {
           "term": "Groundwater Sustainability Agency (GSA)",
@@ -72,57 +71,51 @@
         },
         {
           "term": "Groundwater Sustainability Plan (GSP)",
-          "definition": "A management plan describing how a basin will achieve sustainable groundwater use."
+          "definition": "A plan describing how a basin will achieve sustainable groundwater management."
         },
         {
           "term": "Overdraft",
           "definition": "A condition in which groundwater is extracted faster than it is replenished."
-        },
-        {
-          "term": "Pumping allocation",
-          "definition": "A limit placed on the amount of groundwater that a user may extract during a specific period."
         }
       ],
       "sources": [
-        "https://water.ca.gov/programs/groundwater-management/sgma-groundwater-management",
-        "https://leginfo.legislature.ca.gov/faces/codes_displayexpandedbranch.xhtml?tocCode=WAT&division=6.&title=&part=2.74.",
-        "https://sgma.water.ca.gov/portal/"
+        "California Sustainable Groundwater Management Act (Water Code §10720 et seq.)",
+        "California Department of Water Resources SGMA Program"
       ]
     },
     {
       "legal_standard_id": "AG_WATER_MANAGEMENT_PLANNING_ACT",
-      "legal_standard": "Agricultural Water Management Planning Act (California Water Code §10800 et seq.)",
-      "caption": "California requires large agricultural water suppliers to prepare water management plans and measure deliveries, improving transparency and efficiency in irrigation systems that support farm productivity.",
-      "info": "The Agricultural Water Management Planning Act requires large agricultural water suppliers—such as irrigation districts—to develop and regularly update Agricultural Water Management Plans (AWMPs). These plans document water supplies, delivery infrastructure, conservation practices, and efficiency programs. The law also requires suppliers to measure water deliveries and evaluate opportunities to improve efficiency. Although it does not directly regulate individual farms, the planning and reporting framework influences how irrigation districts allocate water, structure conservation programs, and respond to shortages. These decisions can affect farm-level productivity by determining how water is delivered, how shortages are distributed, and whether efficiency investments are encouraged or required. During drought periods, AWMPs often provide the institutional framework that guides allocation reductions and conservation measures across agricultural service areas.",
+      "legal_standard": "Agricultural Water Management Planning Act",
+      "caption": "Large agricultural water suppliers must prepare management plans and measure irrigation deliveries.",
+      "info": "The Agricultural Water Management Planning Act requires major agricultural water suppliers to prepare and update Agricultural Water Management Plans that describe water supplies, delivery systems, and conservation practices. The law also requires measurement of water deliveries and evaluation of water-use efficiency improvements. Although it does not regulate individual farm revenue, it affects the institutional framework governing irrigation deliveries. Irrigation districts use these planning processes to determine allocation rules, conservation programs, and drought management actions. These operational decisions can influence agricultural productivity by shaping how much water is delivered, how shortages are distributed, and how efficiency investments are encouraged across irrigation systems.",
       "vocabulary": [
         {
           "term": "Agricultural water supplier",
-          "definition": "An organization—often an irrigation district—that delivers water to farms for irrigation."
+          "definition": "An organization such as an irrigation district that delivers water to farms."
         },
         {
           "term": "Agricultural Water Management Plan (AWMP)",
-          "definition": "A planning document describing water supplies, demand, and conservation strategies for agricultural water systems."
+          "definition": "A document describing water supplies, demand, and efficiency strategies for agricultural water systems."
         },
         {
           "term": "Water measurement",
-          "definition": "The practice of tracking how much water is delivered or used, often required for efficient allocation and conservation programs."
+          "definition": "Tracking how much water is delivered or used within an irrigation system."
         }
       ],
       "sources": [
-        "https://water.ca.gov/programs/water-use-and-efficiency/agricultural-water-use-efficiency",
-        "https://leginfo.legislature.ca.gov/faces/codes_displayText.xhtml?division=6.&chapter=3.&part=2.8.&lawCode=WAT",
-        "https://water.ca.gov/Programs/Water-Use-And-Efficiency/Agricultural-Water-Use-Efficiency/Agricultural-Water-Management-Plans"
+        "California Water Code Agricultural Water Management Planning Act",
+        "California Department of Water Resources Agricultural Water Use Efficiency Program"
       ]
     },
     {
       "legal_standard_id": "CVPIA_PROJECT_OPERATIONS",
-      "legal_standard": "Central Valley Project Improvement Act (CVPIA) and Environmental Operational Constraints",
-      "caption": "Federal project operations under laws such as the Central Valley Project Improvement Act and related environmental requirements can reduce water deliveries to agricultural contractors, influencing farm production and revenue.",
-      "info": "The Central Valley Project Improvement Act (CVPIA) restructured the operation of the federal Central Valley Project (CVP) by dedicating water to environmental purposes, fish and wildlife restoration, and habitat protection. These requirements operate alongside other environmental laws such as the Endangered Species Act, which can impose additional operational constraints on project pumping and reservoir releases. Because many agricultural regions depend on CVP water deliveries, these operational rules can reduce the volume of water allocated to irrigation districts in some years. Reduced allocations may lead farmers to fallow land, shift crop choices, or rely more heavily on groundwater or water transfers. While these laws primarily target environmental outcomes rather than agricultural productivity, their influence on project operations makes them an important factor in determining water availability and therefore agricultural economic outcomes.",
+      "legal_standard": "Central Valley Project Improvement Act (CVPIA)",
+      "caption": "Federal project operations may reduce water deliveries to agriculture to support environmental objectives.",
+      "info": "The Central Valley Project Improvement Act (CVPIA) modified the operation of the federal Central Valley Project by dedicating water to fish and wildlife restoration and environmental protection. These requirements interact with other environmental laws and operational rules governing reservoirs and pumping facilities. Because many irrigation districts depend on Central Valley Project deliveries, environmental allocation requirements can reduce the amount of water available to agricultural contractors in certain years. Reduced allocations may lead farmers to fallow land, shift crop choices, or rely more heavily on groundwater or water transfers. Although the law primarily targets environmental objectives rather than agricultural revenue, its operational effects can influence irrigation supply and farm productivity.",
       "vocabulary": [
         {
           "term": "Central Valley Project (CVP)",
-          "definition": "A federal system of dams, reservoirs, and canals that delivers water to farms and cities across California."
+          "definition": "A federal network of dams, reservoirs, and canals that supplies water to farms and cities in California."
         },
         {
           "term": "Water allocation",
@@ -130,16 +123,34 @@
         },
         {
           "term": "Water transfer",
-          "definition": "The sale or exchange of water supply between users to manage shortages."
+          "definition": "The exchange or sale of water supplies between users to manage shortages."
         }
       ],
       "sources": [
-        "https://www.usbr.gov/mp/cvpia/",
-        "https://www.usbr.gov/projects/index.php?id=515",
-        "https://www.congress.gov/bill/102nd-congress/house-bill/429"
+        "Central Valley Project Improvement Act (Public Law 102-575)",
+        "U.S. Bureau of Reclamation Central Valley Project Overview"
       ]
+    },
+    {  
+      "order": 1,
+      "legal_standard_id": "random stuff",
+      "legal_standard": "The Other One",
+      "caption": "This is the sample other caption. I am going to keep writing now. I am going to write until this is as long.",
+      "info": "Publicly authorized and funded programs that are not legally mandated entitlements; participation is voluntary and accessed through application processes administered by USDA.",
+      "vocabulary": [
+        {
+          "term": "Program Category",
+          "definition": "Natural Disaster Assistance; programs: Drought Assistance (criteria: U.S. Drought Monitor ratings; loss thresholds often apply); Flood Assistance (administering agency: Farm Service Agency (FSA))"
+        },
+        {
+          "term": "Program Category",
+          "definition": "Revenue and Price Loss Protection; programs: Agriculture Risk Coverage (ARC) (basis: Revenue loss thresholds); Price Loss Coverage (PLC) (basis: Commodity price declines relative to statutory reference prices); Emergency Relief Program (ERP) (basis: Congressional authorization for disaster-related revenue losses)"
+        }
+      ],
+      "sources": []
     }
   ],
+
   "Tiers": {
     "Tier 1": {
       "threshold": "Revenue increasing",

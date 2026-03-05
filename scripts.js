@@ -15,13 +15,14 @@ let currentData = null;
 let currentDataChatGPT = null;
 let currentDataManual = null;
 
-// Initialize
+// Initialize UI state and bind listeners.
 function init() {
     renderMetricCards();
     setupTabListeners();
     updateTabState(false);
 }
 
+// Render metric selector cards with enabled/disabled state.
 function renderMetricCards() {
     const grid = document.getElementById('metricGrid');
     grid.innerHTML = metrics.map(metric => {
@@ -36,10 +37,12 @@ function renderMetricCards() {
     }).join('');
 }
 
+// Convert metric keys into display-friendly titles.
 function formatMetricName(metric) {
     return metric.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
 }
 
+// Handle metric selection and load data for all panels.
 async function selectMetric(metric) {
     if (metric !== allowedMetric) {
         return;
@@ -77,6 +80,7 @@ async function selectMetric(metric) {
     }
 }
 
+// Wire tab click behavior and content switching.
 function setupTabListeners() {
     document.querySelectorAll('.tab').forEach(tab => {
         tab.addEventListener('click', () => {
@@ -98,6 +102,7 @@ function setupTabListeners() {
     });
 }
 
+// Enable or disable tabs based on selection state.
 function updateTabState(isEnabled) {
     document.querySelectorAll('.tab').forEach(tab => {
         tab.classList.toggle('is-disabled', !isEnabled);
@@ -110,6 +115,7 @@ function updateTabState(isEnabled) {
     });
 }
 
+// Render summary stats for the selected metric.
 function renderOverview() {
     if (!currentDataChatGPT && !currentDataManual) return;
 
@@ -158,6 +164,7 @@ function renderOverview() {
     }
 }
 
+// Show legal standards panels and counts.
 function renderLegalStandards() {
     if (!currentDataChatGPT || !currentDataManual) return;
 
@@ -182,6 +189,7 @@ function renderLegalStandards() {
     triggerMount(legalComparison);
 }
 
+// Render one legal standards column (ChatGPT or Manual).
 function renderLegalStandardsPanel(data, source) {
     if (!data['Legal Standards']) {
         const elementId = source === 'ChatGPT' ? 'legalContentChatGPT' : 'legalContentManual';
@@ -190,53 +198,72 @@ function renderLegalStandardsPanel(data, source) {
     }
 
     const standards = data['Legal Standards'];
+    const ordered = [];
+    const unordered = [];
+    standards.forEach((standard, index) => {
+        const orderValue = Number(standard?.order);
+        if (Number.isFinite(orderValue)) {
+            ordered.push({ standard, index, orderValue });
+        } else {
+            unordered.push({ standard, index });
+        }
+    });
+    ordered.sort((a, b) => {
+        if (b.orderValue !== a.orderValue) {
+            return b.orderValue - a.orderValue;
+        }
+        return a.index - b.index;
+    });
+    const renderCard = (standard, index) => `
+        <div class="card legal-card" data-legal-standard="${standard.legal_standard_id || ''}" data-legal-index="${index}">
+            <div class="legal-card-header">
+                <div class="card-title">${standard.legal_standard || '<span class="error-display" style="display: inline; padding: 2px 6px;">Error</span>'}</div>
+                <button class="legal-card-toggle" type="button" aria-expanded="false" aria-controls="legal-expand-${source}-${index}">
+                    <span class="legal-card-toggle-label">Details</span>
+                    <span class="legal-card-toggle-icon" aria-hidden="true"></span>
+                </button>
+            </div>
+            <div class="card-caption">${standard.caption || '<span class="error-display" style="display: inline; padding: 2px 6px;">Error</span>'}</div>
+            <div class="legal-card-expand" id="legal-expand-${source}-${index}" aria-hidden="true">
+                <div class="card-note">${standard.info || '<span class="error-display" style="display: inline; padding: 2px 6px;">Error</span>'}</div>
+            </div>
+        </div>
+    `;
+    const orderedStandards = ordered.map(item => item.standard);
+    const unorderedStandards = unordered.map(item => item.standard);
     const elementId = source === 'ChatGPT' ? 'legalContentChatGPT' : 'legalContentManual';
     const content = document.getElementById(elementId);
     
-    content.innerHTML = standards.map(standard => `
-        <div class="card legal-card" role="button" tabindex="0" data-legal-standard="${standard.legal_standard_id || ''}">
-            <div class="card-title">${standard.name || '<span class="error-display" style="display: inline; padding: 2px 6px;">Error</span>'}</div>
-            <div class="card-note">${standard.note || '<span class="error-display" style="display: inline; padding: 2px 6px;">Error</span>'}</div>
-            ${standard.vocabulary && standard.vocabulary.length > 0 ? `
-                <details class="key-elements">
-                    <summary>
-                        <span class="key-elements-star" aria-hidden="true">★</span>
-                        <span class="key-elements-title">Key Terms</span>
-                    </summary>
-                    <div class="key-elements-container">
-                        ${standard.vocabulary.map(elem => {
-                            const term = elem?.term || '';
-                            const definition = elem?.definition || '';
-                            return `
-                                <div class="key-element">
-                                    <div class="key-element-row">
-                                        <span class="key-element-label">Term:</span>
-                                        <span>${term || '<span class="error-display" style="display: inline; padding: 2px 6px;">Error</span>'}</span>
-                                    </div>
-                                    <div class="key-element-row">
-                                        <span class="key-element-label">Definition:</span>
-                                        <span>${definition || '<span class="error-display" style="display: inline; padding: 2px 6px;">Error</span>'}</span>
-                                    </div>
-                                </div>
-                            `;
-                        }).join('')}
-                    </div>
-                </details>
-            ` : ''}
-        </div>
-    `).join('');
+    const contentParts = [];
+    let cardIndex = 0;
+    if (orderedStandards.length > 0) {
+        contentParts.push(orderedStandards.map((standard) => renderCard(standard, cardIndex++)).join(''));
+    }
+    if (orderedStandards.length > 0 && unorderedStandards.length > 0) {
+        contentParts.push('<div class="legal-standards-divider">Standards Without Order</div>');
+    }
+    if (unorderedStandards.length > 0) {
+        contentParts.push(unorderedStandards.map((standard) => renderCard(standard, cardIndex++)).join(''));
+    }
+    content.innerHTML = contentParts.join('');
 
-    content.querySelectorAll('.legal-card').forEach(card => {
-        card.addEventListener('click', openEmptyLegalModal);
-        card.addEventListener('keydown', (event) => {
-            if (event.key === 'Enter' || event.key === ' ') {
-                event.preventDefault();
-                openEmptyLegalModal();
+    content.querySelectorAll('.legal-card-toggle').forEach((button) => {
+        button.addEventListener('click', () => {
+            const card = button.closest('.legal-card');
+            if (!card) return;
+            const isExpanded = button.getAttribute('aria-expanded') === 'true';
+            const nextExpanded = !isExpanded;
+            button.setAttribute('aria-expanded', String(nextExpanded));
+            card.classList.toggle('is-expanded', nextExpanded);
+            const expandTarget = card.querySelector('.legal-card-expand');
+            if (expandTarget) {
+                expandTarget.setAttribute('aria-hidden', String(!nextExpanded));
             }
         });
     });
 }
 
+// Render tiered implications comparison layout.
 function renderTiers() {
     const tiersEmptyState = document.getElementById('tiersEmptyState');
     const tiersAligned = document.getElementById('tiersAligned');
@@ -297,6 +324,7 @@ function renderTiers() {
     triggerMount(content);
 }
 
+// Animate tier collapse/expand behavior for details rows.
 function setupTierToggleAnimation() {
     document.querySelectorAll('.tier-row > summary').forEach((summary) => {
         const details = summary.parentElement;
@@ -331,6 +359,7 @@ function setupTierToggleAnimation() {
     });
 }
 
+// Render policy cards within a tier column.
 function renderTierPolicies(policies, tierNumber) {
     if (!Array.isArray(policies) || policies.length === 0) {
         return '<div class="empty-state"><h3>No policy data available for this tier</h3></div>';
@@ -358,6 +387,7 @@ function renderTierPolicies(policies, tierNumber) {
 `;
 }
 
+// Map likelihood score to a CSS class.
 function getLikelihoodClass(score) {
     if (score === 1) return 'likelihood-1';
     if (score === 2) return 'likelihood-2';
@@ -365,6 +395,7 @@ function getLikelihoodClass(score) {
     return '';
 }
 
+// Rank likelihood score for sorting (lower is higher priority).
 function getLikelihoodRank(score) {
     if (score === 3) return 0; // Most Likely first
     if (score === 2) return 1;
@@ -372,6 +403,7 @@ function getLikelihoodRank(score) {
     return 3;
 }
 
+// Map likelihood score to a human-friendly label.
 function getLikelihoodLabel(score) {
     if (score === 1) return 'Least Likely';
     if (score === 2) return 'Moderately Likely';
@@ -379,6 +411,7 @@ function getLikelihoodLabel(score) {
     return '';
 }
 
+// Map relationship text to a CSS class.
 function getRelationshipClass(relationship) {
     const rel = relationship.toLowerCase();
     if (rel.includes('met') || rel.includes('aligned') || rel.includes('supported')) {
@@ -391,6 +424,7 @@ function getRelationshipClass(relationship) {
     return 'relationship-other';
 }
 
+// Render governing agencies comparison panels.
 function renderAgencies() {
     const agenciesEmptyState = document.getElementById('agenciesEmptyState');
     const agenciesComparison = document.getElementById('agenciesComparison');
@@ -430,35 +464,7 @@ function renderAgencies() {
     triggerMount(agenciesComparison);
 }
 
-function openEmptyLegalModal() {
-    const modal = document.getElementById('legalModal');
-    if (!modal) return;
-    modal.classList.add('is-open');
-    modal.setAttribute('aria-hidden', 'false');
-}
-
-function closeEmptyLegalModal() {
-    const modal = document.getElementById('legalModal');
-    if (!modal) return;
-    modal.classList.remove('is-open');
-    modal.setAttribute('aria-hidden', 'true');
-}
-
-function setupModalListeners() {
-    const modal = document.getElementById('legalModal');
-    if (!modal) return;
-
-    modal.querySelectorAll('[data-modal-close]').forEach((element) => {
-        element.addEventListener('click', closeEmptyLegalModal);
-    });
-
-    document.addEventListener('keydown', (event) => {
-        if (event.key === 'Escape' && modal.classList.contains('is-open')) {
-            closeEmptyLegalModal();
-        }
-    });
-}
-
+// Retrigger mount animation on an element.
 function triggerMount(element) {
     if (!element) return;
     element.classList.remove('is-mounted');
@@ -466,6 +472,7 @@ function triggerMount(element) {
     element.classList.add('is-mounted');
 }
 
+// Render one agencies column (ChatGPT or Manual).
 function renderAgenciesPanel(data, source) {
     const agencies = data['Governing Agencies'] || [];
     const sortedAgencies = [...agencies].sort((a, b) => {
@@ -503,4 +510,3 @@ function renderAgenciesPanel(data, source) {
 
 // Initialize on load
 init();
-setupModalListeners();

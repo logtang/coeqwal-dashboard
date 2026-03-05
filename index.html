@@ -8,34 +8,44 @@
 
 </head>
 <body>
+    <!-- App Container -->
     <div class="container">
         <div class="app-shell">
             
+            <!-- Sidebar -->
             <aside class="sidebar">
+                <!-- Sidebar Header -->
                 <header class="page-header">
                     <div class="title-block">
                         <div class="page-title">COEQWAL, AI-Enabled Threshold Analysis</div>
                     </div>
                 </header>
                 
+                <!-- Metric Selector -->
                 <div class="metric-selector">
                     <h2 style="margin-bottom: 15px; color: var(--ink); font-weight: 700;">Select an Outcome</h2>
                     <div class="metric-grid" id="metricGrid"></div>
                 </div>
             </aside>
 
+            <!-- Main Content -->
             <main class="main-content">
+                <!-- Summary Bar -->
                 <div class="summary-bar is-empty">
                     <div id="overviewInline" class="overview-inline content-mount"></div>
                 </div>
+                <!-- Tabbed Content -->
                 <div class="content-container">
+                    <!-- Tabs -->
                     <div class="tabs">
                         <div class="tab active" data-tab="legal">Legal Standards</div>
                         <div class="tab" data-tab="tiers">Tiered Implications</div>
                         <div class="tab" data-tab="agencies">Agencies</div>
                     </div>
 
+                    <!-- Legal Standards Panel -->
                     <div id="legal" class="tab-content active">
+                        <!-- Legal Standards Empty State -->
                         <div id="legalEmptyState" class="empty-state">
                             <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
@@ -43,6 +53,7 @@
                             <h2>Select an outcome to view analysis</h2>
                             <p>Choose from the options above to explore policy data</p>
                         </div>
+                        <!-- Legal Standards Comparison -->
                         <div id="legalComparison" class="comparison-container content-mount is-hidden">
                             <div class="comparison-panel">
                                 <div class="comparison-panel-title">Manual Results <span class="panel-count" id="legalCountManual">(0)</span></div>
@@ -55,7 +66,9 @@
                         </div>
                     </div>
 
+                    <!-- Tiered Implications Panel -->
                     <div id="tiers" class="tab-content">
+                        <!-- Tiered Implications Empty State -->
                         <div id="tiersEmptyState" class="empty-state">
                             <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
@@ -63,10 +76,13 @@
                             <h2>Select an outcome to view analysis</h2>
                             <p>Choose from the options above to explore policy data</p>
                         </div>
+                        <!-- Tiered Implications Content -->
                         <div id="tiersAligned" class="tiers-aligned content-mount is-hidden"></div>
                     </div>
 
+                    <!-- Agencies Panel -->
                     <div id="agencies" class="tab-content">
+                        <!-- Agencies Empty State -->
                         <div id="agenciesEmptyState" class="empty-state">
                             <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
@@ -74,6 +90,7 @@
                             <h2>Select an outcome to view analysis</h2>
                             <p>Choose from the options above to explore policy data</p>
                         </div>
+                        <!-- Agencies Comparison -->
                         <div id="agenciesComparison" class="comparison-container content-mount is-hidden">
                             <div class="comparison-panel">
                                 <div class="comparison-panel-title">Manual Results <span class="panel-count" id="agenciesCountManual">(0)</span></div>
@@ -89,14 +106,9 @@
             </main>
         </div>
     </div>
-    <div id="legalModal" class="modal" aria-hidden="true" role="dialog" aria-modal="true">
-        <div class="modal-backdrop" data-modal-close></div>
-        <div class="modal-panel" role="document">
-            <button class="modal-close" type="button" data-modal-close aria-label="Close modal">Close</button>
-            <div class="modal-body" id="legalModalBody"></div>
-        </div>
-    </div>
-
+    
+    <!-- Legal Standards Modal -->
+    <!-- App Script -->
     <script src="scripts.js"></script>
 </body>
 </html>

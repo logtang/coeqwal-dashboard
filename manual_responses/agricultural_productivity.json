@@ -1,41 +1,58 @@
 {
-    "Legal Standards": [
+  "Legal Standards": [
+    {
+      "legal_standard_id": "AG_REVENUE_PRIVATE_SECTOR",
+      "legal_standard": "Agricultural Revenue (Private Sector)",
+      "caption": "There are no legally established standards governing private-sector agricultural revenue.",
+      "info": "There are no legally established standards governing private-sector agricultural revenue; revenue outcomes are not directly regulated.",
+      "vocabulary": [],
+      "sources": []
+    },
+    {
+      "legal_standard_id": "IRRIGATION_WATER_SUPPLY",
+      "legal_standard": "Irrigation Water Supply (Agricultural Input)",
+      "caption": "Legal standards apply to irrigation water supply as a regulated and essential input to agriculture.",
+      "info": "Legal standards apply to irrigation water supply as a regulated and essential input to agriculture, distinct from agricultural revenue itself.",
+      "vocabulary": [],
+      "sources": []
+    },
+    {
+      "legal_standard_id": "USDA_DISASTER_RISK_PROGRAMS",
+      "legal_standard": "USDA Disaster Assistance and Risk Management Programs",
+      "caption": "Publicly authorized and funded programs that provide financial support during agricultural losses.",
+      "info": "Publicly authorized and funded programs that are not legally mandated entitlements; participation is voluntary and accessed through application processes administered by USDA.",
+      "vocabulary": [
         {
-            "name": "Agricultural Revenue (Private Sector)",
-            "note": "There are no legally established standards governing private-sector agricultural revenue; revenue outcomes are not directly regulated.",
-            "vocabulary": []
+          "term": "Program Category",
+          "definition": "Natural Disaster Assistance; programs: Drought Assistance (criteria: U.S. Drought Monitor ratings; loss thresholds often apply); Flood Assistance (administering agency: Farm Service Agency (FSA))"
         },
         {
-            "name": "Irrigation Water Supply (Agricultural Input)",
-            "note": "Legal standards apply to irrigation water supply as a regulated and essential input to agriculture, distinct from agricultural revenue itself.",
-            "vocabulary": []
-        },
-        {
-            "name": "USDA Disaster Assistance and Risk Management Programs",
-            "note": "Publicly authorized and funded programs that are not legally mandated entitlements; participation is voluntary and accessed through application processes administered by USDA.",
-            "vocabulary": [
-                {
-                    "term": "Program Category",
-                    "definition": "Natural Disaster Assistance; programs: Drought Assistance (criteria: U.S. Drought Monitor ratings; loss thresholds often apply); Flood Assistance (administering agency: Farm Service Agency (FSA))"
-                },
-                {
-                    "term": "Program Category",
-                    "definition": "Revenue and Price Loss Protection; programs: Agriculture Risk Coverage (ARC) (basis: Revenue loss thresholds); Price Loss Coverage (PLC) (basis: Commodity price declines relative to statutory reference prices); Emergency Relief Program (ERP) (basis: Congressional authorization for disaster-related revenue losses)"
-                }
-            ]
-        },
-        {
-            "name": "Irrigation Water Rights Priority",
-            "note": "Irrigation rights are protected under constitutional and statutory water-rights frameworks, following the principle of priority in time, and are subordinate only to human health and safety needs.",
-            "vocabulary": [
-                {
-                    "term": "Principle",
-                    "definition": "Priority in time (senior water rights); constraint: Human health and safety needs take precedence"
-                }
-            ]
+          "term": "Program Category",
+          "definition": "Revenue and Price Loss Protection; programs: Agriculture Risk Coverage (ARC) (basis: Revenue loss thresholds); Price Loss Coverage (PLC) (basis: Commodity price declines relative to statutory reference prices); Emergency Relief Program (ERP) (basis: Congressional authorization for disaster-related revenue losses)"
         }
-    ],
-    "Tiers": {
+      ],
+      "sources": []
+    },
+    {  
+      "order": 1,
+      "legal_standard_id": "test_card",
+      "legal_standard": "This is a Test",
+      "caption": "This is the same policy as the card from the ChatGPT response. I am now writing to make sure it's as long.",
+      "info": "Publicly authorized and funded programs that are not legally mandated entitlements; participation is voluntary and accessed through application processes administered by USDA.",
+      "vocabulary": [
+        {
+          "term": "Program Category",
+          "definition": "Natural Disaster Assistance; programs: Drought Assistance (criteria: U.S. Drought Monitor ratings; loss thresholds often apply); Flood Assistance (administering agency: Farm Service Agency (FSA))"
+        },
+        {
+          "term": "Program Category",
+          "definition": "Revenue and Price Loss Protection; programs: Agriculture Risk Coverage (ARC) (basis: Revenue loss thresholds); Price Loss Coverage (PLC) (basis: Commodity price declines relative to statutory reference prices); Emergency Relief Program (ERP) (basis: Congressional authorization for disaster-related revenue losses)"
+        }
+      ],
+      "sources": []
+    }
+  ],
+  "Tiers": {
         "Tier 1": {
             "threshold": "Revenue increasing.",
             "policies": [

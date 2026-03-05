@@ -384,8 +384,89 @@
             box-shadow: var(--shadow-soft);
         }
 
+        .legal-standards-divider {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin: 18px 0;
+            color: var(--muted);
+            font-size: 0.78rem;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+        }
+
+        .legal-standards-divider::before,
+        .legal-standards-divider::after {
+            content: "";
+            flex: 1;
+            height: 1px;
+            background: var(--border);
+        }
+
         .legal-card {
+            cursor: default;
+        }
+
+        .legal-card-header {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 14px;
+        }
+
+        .legal-card-toggle {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            border: 1px solid var(--border);
+            background: var(--panel-muted);
+            color: var(--ink);
+            padding: 6px 12px;
+            border-radius: 999px;
+            font-size: 0.78rem;
+            font-weight: 600;
             cursor: pointer;
+            transition: all 0.2s ease;
+            flex-shrink: 0;
+        }
+
+        .legal-card-toggle:hover {
+            border-color: var(--border-strong);
+            box-shadow: var(--shadow-soft);
+        }
+
+        .legal-card-toggle-icon {
+            width: 10px;
+            height: 10px;
+            border-right: 2px solid var(--ink);
+            border-bottom: 2px solid var(--ink);
+            transform: rotate(45deg);
+            transition: transform 0.35s cubic-bezier(0.2, 0.7, 0.2, 1);
+        }
+
+        .legal-card-toggle[aria-expanded="true"] .legal-card-toggle-icon {
+            transform: rotate(-135deg);
+        }
+
+        .legal-card-expand {
+            display: grid;
+            grid-template-rows: 0fr;
+            opacity: 0;
+            transform: translateY(-6px);
+            transition: grid-template-rows 0.5s cubic-bezier(0.2, 0.8, 0.2, 1),
+                opacity 0.05s ease,
+                transform 0.05s cubic-bezier(0.2, 0.8, 0.2, 1);
+        }
+
+        .legal-card-expand > * {
+            overflow: hidden;
+            min-height: 0;
+        }
+
+        .legal-card.is-expanded .legal-card-expand {
+            grid-template-rows: 1fr;
+            opacity: 1;
+            transform: translateY(0);
         }
 
         .legal-card:focus-visible {
@@ -408,61 +489,6 @@
         .card-note {
             color: var(--muted);
             line-height: 1.6;
-        }
-
-        .modal {
-            position: fixed;
-            inset: 0;
-            display: none;
-            align-items: center;
-            justify-content: center;
-            z-index: 60;
-        }
-
-        .modal.is-open {
-            display: flex;
-        }
-
-        .modal-backdrop {
-            position: absolute;
-            inset: 0;
-            background: rgba(15, 23, 42, 0.55);
-            backdrop-filter: blur(2px);
-        }
-
-        .modal-panel {
-            position: relative;
-            width: min(720px, 92vw);
-            min-height: 240px;
-            background: var(--panel);
-            border-radius: 18px;
-            border: 1px solid var(--border);
-            box-shadow: var(--shadow-lift);
-            padding: 24px;
-            z-index: 1;
-        }
-
-        .modal-close {
-            position: absolute;
-            top: 16px;
-            right: 16px;
-            border: 1px solid var(--border);
-            background: var(--panel-muted);
-            color: var(--ink);
-            border-radius: 999px;
-            padding: 6px 14px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.2s ease;
-        }
-
-        .modal-close:hover {
-            border-color: var(--border-strong);
-            box-shadow: var(--shadow-soft);
-        }
-
-        .modal-body {
-            min-height: 160px;
         }
 
         .tier-section {
