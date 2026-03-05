@@ -3,37 +3,37 @@
         {
             "name": "Reasonable use / beneficial use (California Constitution + Water Code)",
             "note": "All water rights are limited to reasonable and beneficial use; waste/unreasonable methods are prohibited. During shortages, agencies can require conservation, change diversion practices, and scrutinize irrigation efficiency—directly affecting water deliveries and thus farm output/revenue.",
-            "key_elements": []
+            "vocabulary": []
         },
         {
             "name": "Drought emergency regulation + curtailment authority (State Water Board)",
             "note": "In drought/critically dry conditions, the State Water Resources Control Board (SWRCB) can adopt emergency regulations and curtail diversions when water isn’t available under a diverter’s priority.",
-            "key_elements": []
+            "vocabulary": []
         },
         {
             "name": "Water rights enforcement (penalties / cease-and-desist)",
             "note": "Diverting without authorization can lead to enforcement, civil liability, and cease-and-desist orders. In severe shortages, the legal risk isn’t 'low productivity'—it’s illegal diversion to avoid low productivity.",
-            "key_elements": []
+            "vocabulary": []
         },
         {
             "name": "Sustainable Groundwater Management Act (SGMA)",
             "note": "Groundwater Sustainability Agencies (GSAs) must manage basins to avoid 'undesirable results', often via pumping allocations, metering, fees, and projects.",
-            "key_elements": []
+            "vocabulary": []
         },
         {
             "name": "Agricultural Water Management Planning Act + measurement requirements",
             "note": "Large agricultural water suppliers must prepare/update Agricultural Water Management Plans (AWMPs) and comply with measurement/efficiency planning requirements.",
-            "key_elements": []
+            "vocabulary": []
         },
         {
             "name": "Annual shortage reporting (supplier-level shortage signal)",
             "note": "Certain suppliers must perform Annual Water Supply and Demand Assessments and submit Annual Shortage Reports to DWR.",
-            "key_elements": []
+            "vocabulary": []
         },
         {
             "name": "Federal environmental allocation constraints affecting deliveries (CVPIA + ESA)",
             "note": "These don’t regulate 'ag productivity,' but they change project operations and water available for irrigation, especially in the Central Valley.",
-            "key_elements": []
+            "vocabulary": []
         }
     ],
     "Tiers": {

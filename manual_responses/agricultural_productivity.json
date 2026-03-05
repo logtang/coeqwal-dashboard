@@ -3,34 +3,34 @@
         {
             "name": "Agricultural Revenue (Private Sector)",
             "note": "There are no legally established standards governing private-sector agricultural revenue; revenue outcomes are not directly regulated.",
-            "key_elements": []
+            "vocabulary": []
         },
         {
             "name": "Irrigation Water Supply (Agricultural Input)",
             "note": "Legal standards apply to irrigation water supply as a regulated and essential input to agriculture, distinct from agricultural revenue itself.",
-            "key_elements": []
+            "vocabulary": []
         },
         {
             "name": "USDA Disaster Assistance and Risk Management Programs",
             "note": "Publicly authorized and funded programs that are not legally mandated entitlements; participation is voluntary and accessed through application processes administered by USDA.",
-            "key_elements": [
+            "vocabulary": [
                 {
                     "term": "Program Category",
-                    "plain_definition": "Natural Disaster Assistance; programs: Drought Assistance (criteria: U.S. Drought Monitor ratings; loss thresholds often apply); Flood Assistance (administering agency: Farm Service Agency (FSA))"
+                    "definition": "Natural Disaster Assistance; programs: Drought Assistance (criteria: U.S. Drought Monitor ratings; loss thresholds often apply); Flood Assistance (administering agency: Farm Service Agency (FSA))"
                 },
                 {
                     "term": "Program Category",
-                    "plain_definition": "Revenue and Price Loss Protection; programs: Agriculture Risk Coverage (ARC) (basis: Revenue loss thresholds); Price Loss Coverage (PLC) (basis: Commodity price declines relative to statutory reference prices); Emergency Relief Program (ERP) (basis: Congressional authorization for disaster-related revenue losses)"
+                    "definition": "Revenue and Price Loss Protection; programs: Agriculture Risk Coverage (ARC) (basis: Revenue loss thresholds); Price Loss Coverage (PLC) (basis: Commodity price declines relative to statutory reference prices); Emergency Relief Program (ERP) (basis: Congressional authorization for disaster-related revenue losses)"
                 }
             ]
         },
         {
             "name": "Irrigation Water Rights Priority",
             "note": "Irrigation rights are protected under constitutional and statutory water-rights frameworks, following the principle of priority in time, and are subordinate only to human health and safety needs.",
-            "key_elements": [
+            "vocabulary": [
                 {
                     "term": "Principle",
-                    "plain_definition": "Priority in time (senior water rights); constraint: Human health and safety needs take precedence"
+                    "definition": "Priority in time (senior water rights); constraint: Human health and safety needs take precedence"
                 }
             ]
         }

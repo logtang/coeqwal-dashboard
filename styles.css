@@ -384,6 +384,15 @@
             box-shadow: var(--shadow-soft);
         }
 
+        .legal-card {
+            cursor: pointer;
+        }
+
+        .legal-card:focus-visible {
+            outline: 3px solid rgba(14, 165, 233, 0.35);
+            outline-offset: 2px;
+        }
+
         .card:hover {
             box-shadow: var(--shadow-lift);
             transform: translateY(-2px);
@@ -399,6 +408,61 @@
         .card-note {
             color: var(--muted);
             line-height: 1.6;
+        }
+
+        .modal {
+            position: fixed;
+            inset: 0;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 60;
+        }
+
+        .modal.is-open {
+            display: flex;
+        }
+
+        .modal-backdrop {
+            position: absolute;
+            inset: 0;
+            background: rgba(15, 23, 42, 0.55);
+            backdrop-filter: blur(2px);
+        }
+
+        .modal-panel {
+            position: relative;
+            width: min(720px, 92vw);
+            min-height: 240px;
+            background: var(--panel);
+            border-radius: 18px;
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow-lift);
+            padding: 24px;
+            z-index: 1;
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            border: 1px solid var(--border);
+            background: var(--panel-muted);
+            color: var(--ink);
+            border-radius: 999px;
+            padding: 6px 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .modal-close:hover {
+            border-color: var(--border-strong);
+            box-shadow: var(--shadow-soft);
+        }
+
+        .modal-body {
+            min-height: 160px;
         }
 
         .tier-section {
