@@ -782,6 +782,8 @@
             margin-bottom: 8px;
         }
 
+        .relationship-direct { background: #e6f4ef; color: #0f5132; }
+        .relationship-indirect { background: #fff2e0; color: #8a4b0f; }
         .relationship-met { background: #e6f4ef; color: #0f5132; }
         .relationship-triggered { background: #fff2e0; color: #8a4b0f; }
         .relationship-violated { background: #ffe4e6; color: #9f1239; }

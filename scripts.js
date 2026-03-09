@@ -487,6 +487,11 @@ function getLikelihoodLabel(score) {
 // Map relationship text to a CSS class.
 function getRelationshipClass(relationship) {
     const rel = relationship.toLowerCase();
+    if (rel.includes('indirect')) {
+        return 'relationship-indirect';
+    } else if (rel.includes('direct')) {
+        return 'relationship-direct';
+    }
     if (rel.includes('met') || rel.includes('aligned') || rel.includes('supported')) {
         return 'relationship-met';
     } else if (rel.includes('triggered') || rel.includes('watched')) {
