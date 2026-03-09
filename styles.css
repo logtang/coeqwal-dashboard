@@ -460,11 +460,28 @@
             display: flex;
             align-items: center;
             gap: 12px;
-            margin: 18px 0;
+            margin: 0 0 10px;
             color: var(--muted);
             font-size: 0.78rem;
             letter-spacing: 0.12em;
             text-transform: uppercase;
+            padding: 6px 10px;
+            border-radius: 999px;
+            background: transparent;
+        }
+
+        .legal-standards-section {
+            padding: 12px;
+            border-radius: 16px;
+            margin-bottom: 16px;
+        }
+
+        .legal-standards-section--unique {
+            background: rgba(107, 114, 128, 0.12);
+        }
+
+        .legal-standards-section--similar {
+            background: rgba(16, 185, 129, 0.12);
         }
 
         .legal-standards-divider::before,

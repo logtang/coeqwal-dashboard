@@ -263,8 +263,10 @@ function renderLegalStandards() {
                     ChatGPT Results <span class="panel-count">(${chatgptStandards.length})</span>
                 </div>
             </div>
-            <div class="legal-standards-divider">Matching Standards</div>
-            ${pairedRowsHTML}
+            <div class="legal-standards-section legal-standards-section--similar">
+                <div class="legal-standards-divider">Similar Standards</div>
+                ${pairedRowsHTML}
+            </div>
         `;
     }
 
@@ -282,8 +284,9 @@ function renderLegalStandards() {
                 </div>
             `;
         }
-        html += `<div class="legal-standards-divider">Unique Standards</div>`;
         html += `
+            <div class="legal-standards-section legal-standards-section--unique">
+            <div class="legal-standards-divider">Unique Standards</div>
             <div class="comparison-container" style="margin-top: 4px;">
                 <div class="comparison-panel">
                     ${unorderedManualHTML || ''}
@@ -291,6 +294,7 @@ function renderLegalStandards() {
                 <div class="comparison-panel">
                     ${unorderedChatgptHTML || ''}
                 </div>
+            </div>
             </div>
         `;
     }
