@@ -1,0 +1,5 @@
+# Policy Analysis Pipeline — Python dependencies
+# Install with: pip install -r pipeline/requirements.txt --break-system-packages
+
+openai>=1.0.0
+jsonschema>=4.0.0

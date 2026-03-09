@@ -1,0 +1,80 @@
+{
+  "_comment": "Static source of truth for the Groundwater Storage outcome domain.",
+
+  "outcome": {
+    "id": "groundwater_storage",
+    "name": "Groundwater Storage",
+    "domain_label": "groundwater_storage",
+    "definition": "The volume of water stored in California's groundwater basins, measured relative to sustainable yield, historical averages, and minimum thresholds defined in Groundwater Sustainability Plans. This outcome domain captures how California water law and regulatory frameworks govern groundwater extraction, recharge, and basin management—through SGMA implementation, local groundwater sustainability plans, and related water quality protections. Legal standards rarely specify storage volumes directly; instead, they define extraction limits, sustainability criteria, and management obligations that collectively determine whether basin storage is maintained, drawn down, or restored over time.",
+    "tier_interpretation_note": "These tiers reflect groundwater storage conditions in California basins relative to sustainable yield and historical averages. Legal standards affect this outcome by constraining extraction rates, mandating recharge programs, and establishing sustainability criteria. Each tier entry identifies a legal standard whose mechanism is classified as either direct (a clear operational or regulatory pathway that affects groundwater storage) or indirect (a conditional, secondary, or system-level influence on storage conditions)."
+  },
+
+  "tiers": [
+    {
+      "tier_number": 1,
+      "tier_label": "Tier 1",
+      "threshold": "Under Tier 1 conditions, the groundwater trend in a WBA is stable or increasing from 1960-2021 and average total storage is greater than in the reference scenario"
+    },
+    {
+      "tier_number": 2,
+      "tier_label": "Tier 2",
+      "threshold": "Under Tier 2 conditions, the groundwater trend in a WBA is stable or increasing but total storage is less than in the reference"
+    },
+    {
+      "tier_number": 3,
+      "tier_label": "Tier 3",
+      "threshold": "Under Tier 3, the groundwater trend is declining (not stable or increasing as in Tiers 1 or 2) but at a moderate rate (fitted linear trend is less negative than -0.015 ft/yr)"
+    },
+    {
+      "tier_number": 4,
+      "tier_label": "Tier 4",
+      "threshold": "In Tier 4, groundwater trends in a WBA are declining more severely, at a rate greater than 0.015 ft/year (slope <= -0.015 ft/yr)"
+    }
+  ],
+
+  "legal_standards": {
+    "_comment": "Canonical legal standard IDs for this outcome domain.",
+    "standards": [
+      {
+        "legal_standard_id": "SGMA_SUSTAINABILITY_CRITERIA",
+        "title": "Sustainable Groundwater Management Act — Sustainability Criteria and GSP Requirements",
+        "citation": "California Water Code §10720 et seq.",
+        "scope_note": "Establishes the core SGMA framework requiring local Groundwater Sustainability Agencies to develop and implement GSPs that achieve sustainable groundwater management by eliminating undesirable results including chronic lowering of groundwater levels, reduction of storage, and land subsidence."
+      },
+      {
+        "legal_standard_id": "SGMA_PROBATIONARY_INTERVENTION",
+        "title": "Sustainable Groundwater Management Act — State Intervention and Probationary Basins",
+        "citation": "California Water Code §10735 et seq.",
+        "scope_note": "Authorizes DWR and SWRCB to place basins on probationary status and impose state-administered management if local agencies fail to develop adequate GSPs or make progress toward sustainability; triggers direct state control over extraction."
+      },
+      {
+        "legal_standard_id": "LOCAL_GSP_EXTRACTION_ALLOCATIONS",
+        "title": "Local Groundwater Sustainability Plan — Extraction Allocations and Monitoring",
+        "citation": "Local GSP authority under SGMA (California Water Code §10727 et seq.)",
+        "scope_note": "Local GSAs implement SGMA through GSP-defined extraction allocations, well permits, fees, and monitoring requirements that directly control how much groundwater each user may pump; the primary operational mechanism affecting basin storage trajectories."
+      },
+      {
+        "legal_standard_id": "PORTER_COLOGNE_GROUNDWATER_QUALITY",
+        "title": "Porter-Cologne Water Quality Control Act — Groundwater Quality Protection",
+        "citation": "California Water Code §13000 et seq.",
+        "scope_note": "Protects groundwater quality by regulating discharges and contamination sources; degraded groundwater quality can reduce the usable storage in a basin even if physical water levels are maintained, and remediation requirements can affect extraction patterns."
+      },
+      {
+        "legal_standard_id": "SWRCB_GROUNDWATER_RIGHTS_ADJUDICATION",
+        "title": "SWRCB and Court-Administered Groundwater Adjudications",
+        "citation": "California Water Code §2500 et seq.; various adjudicated basin decrees",
+        "scope_note": "In adjudicated basins, court decrees and watermaster management define per-user extraction rights and basin-wide extraction limits; these orders directly constrain total groundwater withdrawal and affect storage outcomes independent of SGMA."
+      },
+      {
+        "legal_standard_id": "MANAGED_AQUIFER_RECHARGE_AUTHORITY",
+        "title": "Managed Aquifer Recharge — Legal Authorizations and Water Rights",
+        "citation": "California Water Code §1242; SWRCB recharge permit authorities",
+        "scope_note": "Legal authorities governing the capture and storage of surface water for aquifer recharge, including water rights for recharge operations and SGMA provisions encouraging conjunctive use; recharge programs are a primary mechanism for restoring groundwater storage."
+      }
+    ],
+
+    "deprecated_aliases": {
+      "_comment": "No legacy aliases for this domain — this is a new config."
+    }
+  }
+}

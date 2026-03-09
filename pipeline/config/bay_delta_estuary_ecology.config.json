@@ -1,0 +1,86 @@
+{
+  "_comment": "Static source of truth for the Bay-Delta Estuary Ecology outcome domain.",
+
+  "outcome": {
+    "id": "bay_delta_estuary_ecology",
+    "name": "Bay-Delta Estuary Ecology",
+    "domain_label": "bay_delta_estuary_ecology",
+    "definition": "Ecological condition of the Sacramento-San Joaquin Delta and San Francisco Bay-Delta estuary, assessed through indicators such as native fish abundance, species diversity, habitat quality, and biological integrity. This outcome domain captures how California water law and regulatory frameworks affect the estuary's ecological function—through changes to freshwater flows, salinity gradients, water quality, export operations, and habitat conditions. Legal standards rarely target ecological outcomes directly; instead, they influence estuarine health by shaping the hydrological and water quality conditions on which native species depend.",
+    "tier_interpretation_note": "These tiers reflect the overall ecological condition of the Bay-Delta estuary. Legal standards affect this outcome by shaping the flow regimes, salinity conditions, water quality, and operational rules that determine habitat suitability for native species. Each tier entry identifies a legal standard whose mechanism is classified as either direct (a clear operational or regulatory pathway that affects estuarine conditions relevant to that tier) or indirect (a conditional, secondary, or system-level influence on those conditions)."
+  },
+
+  "tiers": [
+    {
+      "tier_number": 1,
+      "tier_label": "Tier 1",
+      "threshold": "Scenario scores in the top 25% based on yearly evaluation of ecosystem indicators: low SAV, high turbidity, fresh conditions, expanded microhabitats in most years"
+    },
+    {
+      "tier_number": 2,
+      "tier_label": "Tier 2",
+      "threshold": "Tier 2 Scenario scores in the top 50% based on yearly evaluation of ecosystem indicators: unchanged SAV, high turbidity, fresh conditions, some microhabitats available in most years"
+    },
+    {
+      "tier_number": 3,
+      "tier_label": "Tier 3",
+      "threshold": "Tier 3 Scenario scores in the top 75% based on yearly evaluation of ecosystem indicators: unchanged SAV, standard turbidity, moderate salinity, few microhabitats available in most years"
+    },
+    {
+      "tier_number": 4,
+      "tier_label": "Tier 4",
+      "threshold": "Tier 4. None of the above thresholds met: unchanged SAV, low turbidity, moderate to high salinity, few microhabitats available in most years"
+    }
+  ],
+
+  "legal_standards": {
+    "_comment": "Canonical legal standard IDs for this outcome domain.",
+    "standards": [
+      {
+        "legal_standard_id": "BAY_DELTA_WATER_QUALITY_CONTROL_PLAN",
+        "title": "Bay-Delta Water Quality Control Plan",
+        "citation": "State Water Resources Control Board, Bay-Delta Water Quality Control Plan (2018 amendments and prior versions)",
+        "scope_note": "Establishes water quality objectives and flow standards for the Sacramento-San Joaquin Delta and its tributaries; the primary regulatory framework governing the hydrological and chemical conditions of the estuary."
+      },
+      {
+        "legal_standard_id": "D1641_WATER_RIGHTS_DECISION",
+        "title": "State Water Board Decision 1641",
+        "citation": "State Water Resources Control Board Decision 1641 (2000)",
+        "scope_note": "Implements Bay-Delta Plan water quality objectives through conditions on CVP and SWP water right permits; governs project operations, export limits, and salinity standards that directly shape estuarine conditions."
+      },
+      {
+        "legal_standard_id": "ESA_DELTA_SPECIES",
+        "title": "Endangered Species Act — Delta and Estuarine Species Protections",
+        "citation": "Endangered Species Act §7; Biological Opinions for CVP/SWP operations (NMFS, USFWS)",
+        "scope_note": "ESA Section 7 consultations and Biological Opinions for listed Delta smelt, longfin smelt, and salmonid species impose operational constraints on CVP/SWP pumping and water management, directly affecting flow and habitat conditions in the estuary."
+      },
+      {
+        "legal_standard_id": "DELTA_REFORM_ACT",
+        "title": "Sacramento-San Joaquin Delta Reform Act of 2009",
+        "citation": "California Water Code §85000 et seq.",
+        "scope_note": "Establishes co-equal goals of water supply reliability and Delta ecosystem restoration; creates the Delta Stewardship Council and Delta Plan with binding regulatory authority over actions that affect the Delta."
+      },
+      {
+        "legal_standard_id": "CVPIA_FISH_WILDLIFE_RESTORATION",
+        "title": "Central Valley Project Improvement Act — Fish and Wildlife Restoration",
+        "citation": "Public Law 102-575, Title XXXIV",
+        "scope_note": "Requires dedication of CVP water to fish and wildlife restoration and mandates measures to double natural production of anadromous fish; directly shapes operational rules affecting estuarine inflows and habitat."
+      },
+      {
+        "legal_standard_id": "PORTER_COLOGNE_WATER_QUALITY",
+        "title": "Porter-Cologne Water Quality Control Act",
+        "citation": "California Water Code §13000 et seq.",
+        "scope_note": "State framework for water quality control; authorizes Regional Water Quality Control Boards to establish Basin Plans with beneficial use designations and water quality objectives that protect estuarine and aquatic habitat."
+      },
+      {
+        "legal_standard_id": "PUBLIC_TRUST_DOCTRINE",
+        "title": "Public Trust Doctrine",
+        "citation": "California common law; National Audubon Society v. Superior Court (1983)",
+        "scope_note": "Requires the state to consider and protect public trust resources — including fish, wildlife, and ecological values — in water allocation and use decisions; can require reallocation of water rights to protect estuarine ecology."
+      }
+    ],
+
+    "deprecated_aliases": {
+      "_comment": "No legacy aliases for this domain — this is a new config."
+    }
+  }
+}

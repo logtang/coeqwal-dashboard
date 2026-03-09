@@ -1,0 +1,102 @@
+{
+  "_comment": "Static source of truth for the Agricultural Productivity outcome domain. The pipeline reads this file, injects it into the prompt, and validates the model's output against output_schema.json before writing to chatgpt_responses/.",
+
+  "outcome": {
+    "id": "agricultural_productivity",
+    "name": "Agricultural Productivity",
+    "domain_label": "agricultural_productivity_revenue",
+    "definition": "California agricultural revenue outcomes, measured as year-over-year change in gross farm revenue across the state. This outcome domain captures how California water law and regulatory frameworks affect the financial performance of agricultural operations—through changes to water availability, delivery reliability, operational constraints, compliance costs, and legal risk. Legal standards rarely set revenue targets directly; instead, they influence revenue by altering the conditions under which farms operate.",
+    "tier_interpretation_note": "These tiers reflect year-over-year changes in agricultural revenue. Laws rarely set revenue targets directly; instead, they affect revenue by changing water availability, reliability, operating constraints, compliance costs, and/or legal risk. Each tier entry identifies a legal standard whose mechanism is classified as either direct (a clear operational or regulatory pathway that affects conditions relevant to that tier) or indirect (a conditional, secondary, or system-level influence on those conditions)."
+  },
+
+  "tiers": [
+    {
+      "tier_number": 1,
+      "tier_label": "Tier 1",
+      "threshold": "Revenue increasing"
+    },
+    {
+      "tier_number": 2,
+      "tier_label": "Tier 2",
+      "threshold": "Revenue declining <5%/year"
+    },
+    {
+      "tier_number": 3,
+      "tier_label": "Tier 3",
+      "threshold": "Revenue declining 5%–20%/year"
+    },
+    {
+      "tier_number": 4,
+      "tier_label": "Tier 4",
+      "threshold": "Revenue declining >20%/year"
+    }
+  ],
+
+  "legal_standards": {
+    "_comment": "Canonical legal standard IDs for this outcome domain. The pipeline instructs the model to generate a full Legal Standards definition for each entry, and to reference these exact IDs in Tiers and Governing Agencies. Do not use the legacy alias IDs listed in 'deprecated_aliases' below.",
+    "standards": [
+      {
+        "legal_standard_id": "REASONABLE_USE_BENEFICIAL_USE",
+        "title": "Reasonable Use / Beneficial Use Doctrine",
+        "citation": "California Constitution Article X, §2; California Water Code §100",
+        "scope_note": "Foundational doctrine governing all California water use; relevant to agricultural efficiency mandates and regulatory scrutiny of wasteful practices."
+      },
+      {
+        "legal_standard_id": "SWRCB_CURTAILMENT_AUTHORITY",
+        "title": "State Water Resources Control Board Curtailment and Emergency Drought Authority",
+        "citation": "California Water Code, SWRCB Drought Program authorities",
+        "scope_note": "SWRCB authority to issue curtailment orders and emergency drought regulations restricting surface water diversions when supplies are insufficient under priority rules."
+      },
+      {
+        "legal_standard_id": "SGMA",
+        "title": "Sustainable Groundwater Management Act (SGMA)",
+        "citation": "California Water Code §10720 et seq.",
+        "scope_note": "Statewide framework requiring local agencies to manage groundwater basins sustainably; directly constrains agricultural groundwater pumping through GSP allocations, fees, and enforcement."
+      },
+      {
+        "legal_standard_id": "AG_WATER_MANAGEMENT_PLANNING_ACT",
+        "title": "Agricultural Water Management Planning Act",
+        "citation": "California Water Code, Agricultural Water Management Planning Act",
+        "scope_note": "Requires major agricultural water suppliers to prepare AWMPs, measure deliveries, and evaluate efficiency—shaping how irrigation districts allocate and manage supplies."
+      },
+      {
+        "legal_standard_id": "CVPIA_PROJECT_OPERATIONS",
+        "title": "Central Valley Project Improvement Act (CVPIA)",
+        "citation": "Public Law 102-575",
+        "scope_note": "Modifies CVP operations to dedicate water to environmental purposes; can reduce irrigation deliveries to agricultural contractors depending on hydrology and year."
+      },
+      {
+        "legal_standard_id": "DROUGHT_EMERGENCY_CURTAILMENT",
+        "title": "Drought Emergency Regulations and Curtailment Orders",
+        "citation": "California Water Code; SWRCB emergency rulemaking authority",
+        "scope_note": "Specific emergency drought regulations (distinct from standing curtailment authority) that may impose mandatory conservation, reporting requirements, and diversion restrictions during declared drought emergencies."
+      },
+      {
+        "legal_standard_id": "BAY_DELTA_PLAN_D1641",
+        "title": "Bay-Delta Water Quality Control Plan and D-1641 Project Operations",
+        "citation": "State Water Board Bay-Delta Plan; Decision 1641",
+        "scope_note": "Water quality objectives and flow requirements governing CVP and SWP operations in the Bay-Delta; operational constraints can reduce or delay water deliveries to agricultural contractors."
+      },
+      {
+        "legal_standard_id": "ESA_OPERATIONS",
+        "title": "Endangered Species Act — Operational Constraints on Water Project Deliveries",
+        "citation": "Endangered Species Act §7; Federal Biological Opinions (NMFS, USFWS)",
+        "scope_note": "ESA Section 7 consultations and Biological Opinions constrain CVP/SWP pumping and operations to protect listed species; can reduce project water allocations in ways that affect agricultural water reliability."
+      },
+      {
+        "legal_standard_id": "WATER_RIGHTS_ENFORCEMENT",
+        "title": "Unauthorized Diversion Prohibition and Water Rights Enforcement",
+        "citation": "California Water Code; SWRCB enforcement authority",
+        "scope_note": "SWRCB authority to enforce water rights, issue cease-and-desist orders, and impose penalties for unauthorized diversions; enforcement risk intensifies when scarcity is severe and curtailments are in effect."
+      }
+    ],
+
+    "deprecated_aliases": {
+      "_comment": "These IDs appeared in the original chatgpt_responses/agricultural_productivity.json but are non-canonical. They reflect inconsistencies between the Legal Standards section and the Tiers section of that legacy file. New pipeline output must use only the canonical IDs above. The legacy file's policy classification model has been replaced by the direct/indirect effect_type system.",
+      "REASONABLE_BENEFICIAL_USE": "use REASONABLE_USE_BENEFICIAL_USE",
+      "AG_WATER_MANAGEMENT_PLANNING": "use AG_WATER_MANAGEMENT_PLANNING_ACT",
+      "CVPIA": "use CVPIA_PROJECT_OPERATIONS",
+      "ESA": "use ESA_OPERATIONS"
+    }
+  }
+}

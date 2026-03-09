@@ -1,0 +1,80 @@
+{
+  "_comment": "Static source of truth for the Delta Freshwater Export outcome domain.",
+
+  "outcome": {
+    "id": "delta_freshwater_export",
+    "name": "Delta Freshwater Export",
+    "domain_label": "delta_freshwater_export",
+    "definition": "Volume of freshwater exported from the Sacramento-San Joaquin Delta through the State Water Project (SWP) and Central Valley Project (CVP) pumping facilities, measured relative to long-term average entitlements and delivery contracts. This outcome domain captures how California water law and regulatory frameworks constrain or enable the operation of Delta export pumps—through water rights conditions, biological opinion requirements, flow and salinity objectives, and project operational rules. Legal standards rarely set export targets directly; instead, they impose operational constraints that determine how much water can be pumped in any given period.",
+    "tier_interpretation_note": "These tiers reflect Delta freshwater export volumes relative to project entitlements and historical averages. Legal standards affect this outcome by shaping operational constraints on CVP and SWP pumping facilities. Each tier entry identifies a legal standard whose mechanism is classified as either direct (a clear operational or regulatory pathway that constrains or enables export volumes) or indirect (a conditional, secondary, or system-level influence on export capacity)."
+  },
+
+  "tiers": [
+    {
+      "tier_number": 1,
+      "tier_label": "Tier 1",
+      "threshold": "Average of both Banks & Jones salinity is below 900 uS/cm for all 12 months per year for 95% of years"
+    },
+    {
+      "tier_number": 2,
+      "tier_label": "Tier 2",
+      "threshold": "Average of Banks and Jones salinity is between 900 and 1600 uS/cm for at least 10 months per year for 95% of years"
+    },
+    {
+      "tier_number": 3,
+      "tier_label": "Tier 3",
+      "threshold": "Average of Banks and Jones salinity is above 1600 uS/cm for 2 or more months in any year, or more than 5% of years at either site"
+    },
+    {
+      "tier_number": 4,
+      "tier_label": "Tier 4",
+      "threshold": "Average of Banks and Jones salinity is greater than 2500 uS/cm for 2 or more months in any year"
+    }
+  ],
+
+  "legal_standards": {
+    "_comment": "Canonical legal standard IDs for this outcome domain.",
+    "standards": [
+      {
+        "legal_standard_id": "D1641_EXPORT_OPERATIONS",
+        "title": "State Water Board Decision 1641 — Export Operation Conditions",
+        "citation": "State Water Resources Control Board Decision 1641 (2000)",
+        "scope_note": "Implements water quality objectives through operational conditions on CVP and SWP water right permits, including export-to-inflow ratios, Old and Middle River flow standards, and salinity requirements that directly limit pumping."
+      },
+      {
+        "legal_standard_id": "ESA_PUMPING_CONSTRAINTS",
+        "title": "Endangered Species Act — Pumping and Export Constraints",
+        "citation": "Endangered Species Act §7; Biological Opinions for CVP/SWP (NMFS, USFWS)",
+        "scope_note": "Biological Opinions issued under ESA Section 7 impose real-time and seasonal constraints on CVP/SWP pumping to protect listed fish species including Delta smelt and salmonids; these constraints are among the most direct operational limits on export volumes."
+      },
+      {
+        "legal_standard_id": "BAY_DELTA_PLAN_FLOW_OBJECTIVES",
+        "title": "Bay-Delta Water Quality Control Plan — Flow and Salinity Objectives",
+        "citation": "State Water Resources Control Board, Bay-Delta Water Quality Control Plan",
+        "scope_note": "Establishes flow objectives for Delta inflows, outflows, and interior channels and salinity standards that constrain the rate of export pumping to maintain water quality throughout the estuary."
+      },
+      {
+        "legal_standard_id": "DELTA_REFORM_ACT_COEQUAL_GOALS",
+        "title": "Sacramento-San Joaquin Delta Reform Act — Co-Equal Goals",
+        "citation": "California Water Code §85000 et seq.",
+        "scope_note": "Establishes co-equal goals of water supply reliability and Delta ecosystem restoration, requiring that export operations be managed to advance both goals; Delta Plan regulatory policies can impose additional constraints on export facilities."
+      },
+      {
+        "legal_standard_id": "CVP_SWP_WATER_RIGHT_PERMITS",
+        "title": "CVP and SWP Water Right Permits",
+        "citation": "State Water Resources Control Board water right permits for CVP and SWP operations",
+        "scope_note": "The foundational water right permits governing CVP and SWP diversions establish maximum diversion quantities, points of diversion, and conditions of use that define the legal ceiling on export volumes before operational constraints are applied."
+      },
+      {
+        "legal_standard_id": "CVPIA_INSTREAM_FLOW_REQUIREMENTS",
+        "title": "Central Valley Project Improvement Act — Instream Flow Requirements",
+        "citation": "Public Law 102-575, Title XXXIV",
+        "scope_note": "Requires dedication of 800,000 acre-feet of CVP yield annually to fish and wildlife purposes, directly reducing the water available for export from Delta facilities."
+      }
+    ],
+
+    "deprecated_aliases": {
+      "_comment": "No legacy aliases for this domain — this is a new config."
+    }
+  }
+}

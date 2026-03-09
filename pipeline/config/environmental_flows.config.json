@@ -1,0 +1,86 @@
+{
+  "_comment": "Static source of truth for the Environmental Flows outcome domain.",
+
+  "outcome": {
+    "id": "environmental_flows",
+    "name": "Environmental Flows",
+    "domain_label": "environmental_flows",
+    "definition": "The degree to which streamflows in California rivers and tributaries meet biological and ecological flow objectives, including minimum instream flows, seasonal pulse flows, and flushing flows required to support native fish migration, spawning, riparian habitat, and aquatic ecosystem function. This outcome domain captures how California water law and regulatory frameworks determine the allocation of water to instream uses versus out-of-stream diversions. Legal standards rarely guarantee specific flow conditions; instead, they impose constraints on diversions, project operations, and hydropower facilities that shape the timing, volume, and variability of flows available to support environmental objectives.",
+    "tier_interpretation_note": "These tiers reflect the extent to which biological and ecological flow objectives are met across California's regulated river systems. Legal standards affect this outcome by constraining diversions and project operations that would otherwise reduce or alter flows. Each tier entry identifies a legal standard whose mechanism is classified as either direct (a clear operational or regulatory pathway that affects instream flow conditions) or indirect (a conditional, secondary, or system-level influence on flow availability)."
+  },
+
+  "tiers": [
+    {
+      "tier_number": 1,
+      "tier_label": "Tier 1",
+      "threshold": "Tier 1 Functional Ecosystem: Functional flows to sustain native freshwater species in 90% of years; Must have higher mean daily flows (volume/# days) in spring and winter than summer."
+    },
+    {
+      "tier_number": 2,
+      "tier_label": "Tier 2",
+      "threshold": "Tier 2. Modified Functional Flows: Partial functional flows in wet season and spring; full functional flows in summer in 75% of years. Must have higher mean daily flows (volume/# days) in spring and winter than summer."
+    },
+    {
+      "tier_number": 3,
+      "tier_label": "Tier 3",
+      "threshold": "Tier 3-Existing Flow Requirements: CalSim minimum flow constraints for Baseline Scenario in 50% of years"
+    },
+    {
+      "tier_number": 4,
+      "tier_label": "Tier 4",
+      "threshold": "Tier 4 No function: none of the above thresholds met"
+    }
+  ],
+
+  "legal_standards": {
+    "_comment": "Canonical legal standard IDs for this outcome domain.",
+    "standards": [
+      {
+        "legal_standard_id": "PUBLIC_TRUST_DOCTRINE_FLOWS",
+        "title": "Public Trust Doctrine — Instream Flow Protection",
+        "citation": "California common law; National Audubon Society v. Superior Court (1983)",
+        "scope_note": "Requires the state to consider and protect public trust resources including fish, wildlife, and ecological values when allocating water; authorizes reconsideration of existing water rights where instream flows are insufficient to protect public trust uses."
+      },
+      {
+        "legal_standard_id": "PORTER_COLOGNE_FLOW_OBJECTIVES",
+        "title": "Porter-Cologne Water Quality Control Act — Flow Objectives in Basin Plans",
+        "citation": "California Water Code §13000 et seq.; Regional Water Quality Control Board Basin Plans",
+        "scope_note": "Authorizes Regional Water Quality Control Boards to establish narrative and numeric flow objectives in Basin Plans to protect beneficial uses including fish migration, cold freshwater habitat, and aquatic life; these objectives can impose constraints on diversions."
+      },
+      {
+        "legal_standard_id": "ESA_FLOW_REQUIREMENTS",
+        "title": "Endangered Species Act — Flow Requirements for Listed Species",
+        "citation": "Endangered Species Act §7 and §9; Biological Opinions (NMFS, USFWS)",
+        "scope_note": "ESA Section 7 consultations with dam operators and water project proponents impose flow requirements, ramping rate conditions, and temperature standards to protect listed fish species; these requirements translate directly into minimum instream flow obligations."
+      },
+      {
+        "legal_standard_id": "FERC_HYDROPOWER_LICENSING",
+        "title": "FERC Hydropower Licensing — Flow and Operational Conditions",
+        "citation": "Federal Power Act §10(j); FERC license conditions",
+        "scope_note": "FERC licenses for hydropower facilities include mandatory flow conditions negotiated with state and federal fish and wildlife agencies; these conditions establish minimum releases and pulse flows at major dams that substantially determine instream flow availability downstream."
+      },
+      {
+        "legal_standard_id": "SWRCB_INSTREAM_FLOW_POLICY",
+        "title": "State Water Board Instream Flow Policy and Minimum Flow Conditions",
+        "citation": "State Water Resources Control Board, Instream Flow Policy (2001); Water Code §1243",
+        "scope_note": "SWRCB policy and statutory authority to require reservation of water for instream uses and to impose minimum flow conditions on water right permits; provides the primary mechanism for protecting instream flows within the water rights system."
+      },
+      {
+        "legal_standard_id": "BAY_DELTA_PLAN_TRIBUTARY_FLOWS",
+        "title": "Bay-Delta Water Quality Control Plan — Tributary Flow Objectives",
+        "citation": "State Water Resources Control Board, Bay-Delta Water Quality Control Plan",
+        "scope_note": "Includes flow objectives for major Bay-Delta tributaries specifying minimum percentages of unimpaired flow during critical migration and spawning periods; implementation of these objectives is the subject of ongoing proceedings affecting water rights holders."
+      },
+      {
+        "legal_standard_id": "REASONABLE_USE_INSTREAM",
+        "title": "Reasonable Use Doctrine — Instream Flow Application",
+        "citation": "California Constitution Article X, §2; California Water Code §100",
+        "scope_note": "The reasonable use doctrine limits diversions that are wasteful or unreasonable, which can include diversions that cause serious harm to instream flows and dependent ecosystems; provides a basis for challenging diversions that undermine environmental flow conditions."
+      }
+    ],
+
+    "deprecated_aliases": {
+      "_comment": "No legacy aliases for this domain — this is a new config."
+    }
+  }
+}

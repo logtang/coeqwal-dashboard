@@ -164,57 +164,9 @@ function renderOverview() {
     }
 }
 
-// Show legal standards panels and counts.
-function renderLegalStandards() {
-    if (!currentDataChatGPT || !currentDataManual) return;
-
-    const legalEmptyState = document.getElementById('legalEmptyState');
-    const legalComparison = document.getElementById('legalComparison');
-    if (legalEmptyState && legalComparison) {
-        legalEmptyState.classList.add('is-hidden');
-        legalComparison.classList.remove('is-hidden');
-    }
-
-    const legalCountChatGPT = document.getElementById('legalCountChatGPT');
-    const legalCountManual = document.getElementById('legalCountManual');
-    if (legalCountChatGPT) {
-        legalCountChatGPT.textContent = `(${currentDataChatGPT['Legal Standards']?.length || 0})`;
-    }
-    if (legalCountManual) {
-        legalCountManual.textContent = `(${currentDataManual['Legal Standards']?.length || 0})`;
-    }
-
-    renderLegalStandardsPanel(currentDataChatGPT, 'ChatGPT');
-    renderLegalStandardsPanel(currentDataManual, 'Manual');
-    triggerMount(legalComparison);
-}
-
-// Render one legal standards column (ChatGPT or Manual).
-function renderLegalStandardsPanel(data, source) {
-    if (!data['Legal Standards']) {
-        const elementId = source === 'ChatGPT' ? 'legalContentChatGPT' : 'legalContentManual';
-        document.getElementById(elementId).innerHTML = '<div class="error-display">Error: Missing Legal Standards</div>';
-        return;
-    }
-
-    const standards = data['Legal Standards'];
-    const ordered = [];
-    const unordered = [];
-    standards.forEach((standard, index) => {
-        const orderValue = Number(standard?.order);
-        if (Number.isFinite(orderValue)) {
-            ordered.push({ standard, index, orderValue });
-        } else {
-            unordered.push({ standard, index });
-        }
-    });
-    ordered.sort((a, b) => {
-        if (b.orderValue !== a.orderValue) {
-            return b.orderValue - a.orderValue;
-        }
-        return a.index - b.index;
-    });
-    const renderCard = (standard, index) => `
+// Render a single legal standard card.
+function renderLegalCard(standard, source, index) {
+    return `
         <div class="card legal-card" data-legal-standard="${standard.legal_standard_id || ''}" data-legal-index="${index}">
             <div class="legal-card-header">
                 <div class="card-title">${standard.legal_standard || '<span class="error-display" style="display: inline; padding: 2px 6px;">Error</span>'}</div>
@@ -229,25 +181,119 @@ function renderLegalStandardsPanel(data, source) {
             </div>
         </div>
     `;
-    const orderedStandards = ordered.map(item => item.standard);
-    const unorderedStandards = unordered.map(item => item.standard);
-    const elementId = source === 'ChatGPT' ? 'legalContentChatGPT' : 'legalContentManual';
-    const content = document.getElementById(elementId);
-    
-    const contentParts = [];
-    let cardIndex = 0;
-    if (orderedStandards.length > 0) {
-        contentParts.push(orderedStandards.map((standard) => renderCard(standard, cardIndex++)).join(''));
-    }
-    if (orderedStandards.length > 0 && unorderedStandards.length > 0) {
-        contentParts.push('<div class="legal-standards-divider">Standards Without Order</div>');
-    }
-    if (unorderedStandards.length > 0) {
-        contentParts.push(unorderedStandards.map((standard) => renderCard(standard, cardIndex++)).join(''));
-    }
-    content.innerHTML = contentParts.join('');
+}
 
-    content.querySelectorAll('.legal-card-toggle').forEach((button) => {
+// Show legal standards with paired-row arrows for cards sharing an order value.
+function renderLegalStandards() {
+    if (!currentDataChatGPT || !currentDataManual) return;
+
+    const legalEmptyState = document.getElementById('legalEmptyState');
+    const legalComparison = document.getElementById('legalComparison');
+    if (legalEmptyState && legalComparison) {
+        legalEmptyState.classList.add('is-hidden');
+        legalComparison.classList.remove('is-hidden');
+    }
+
+    const manualStandards = currentDataManual['Legal Standards'] || [];
+    const chatgptStandards = currentDataChatGPT['Legal Standards'] || [];
+
+    // Separate each source's standards into ordered (has order field) and unordered.
+    const groupByOrder = (standards) => {
+        const ordered = new Map();
+        const unordered = [];
+        standards.forEach((standard) => {
+            const orderValue = Number(standard?.order);
+            if (Number.isFinite(orderValue)) {
+                ordered.set(orderValue, standard);
+            } else {
+                unordered.push(standard);
+            }
+        });
+        return { ordered, unordered };
+    };
+
+    const manual = groupByOrder(manualStandards);
+    const chatgpt = groupByOrder(chatgptStandards);
+
+    // All order keys present in either source, ascending.
+    const allOrderKeys = new Set([...manual.ordered.keys(), ...chatgpt.ordered.keys()]);
+    const sortedOrderKeys = [...allOrderKeys].sort((a, b) => a - b);
+    const hasPaired = sortedOrderKeys.length > 0;
+    const hasUnordered = manual.unordered.length > 0 || chatgpt.unordered.length > 0;
+
+    let idCounter = 0;
+
+    // Build one paired row per shared order value.
+    const pairedRowsHTML = sortedOrderKeys.map(orderKey => {
+        const manualStd = manual.ordered.get(orderKey);
+        const chatgptStd = chatgpt.ordered.get(orderKey);
+        return `
+            <div class="legal-pair-row">
+                <div class="legal-pair-cell">
+                    ${manualStd
+                        ? renderLegalCard(manualStd, 'Manual', idCounter++)
+                        : '<div class="legal-pair-empty">Not identified</div>'}
+                </div>
+                <div class="legal-pair-connector">
+                    <span class="legal-pair-arrow">&#x2194;</span>
+                </div>
+                <div class="legal-pair-cell">
+                    ${chatgptStd
+                        ? renderLegalCard(chatgptStd, 'ChatGPT', idCounter++)
+                        : '<div class="legal-pair-empty">Not identified</div>'}
+                </div>
+            </div>
+        `;
+    }).join('');
+
+    // Build unordered two-column section.
+    const unorderedManualHTML = manual.unordered.map(std => renderLegalCard(std, 'Manual', idCounter++)).join('');
+    const unorderedChatgptHTML = chatgpt.unordered.map(std => renderLegalCard(std, 'ChatGPT', idCounter++)).join('');
+
+    let html = '';
+
+    if (hasPaired) {
+        html += `
+            <div class="legal-pair-header">
+                <div class="comparison-panel-title" style="border:none;margin:0;padding:0;">
+                    Manual Results <span class="panel-count">(${manualStandards.length})</span>
+                </div>
+                <div></div>
+                <div class="comparison-panel-title" style="border:none;margin:0;padding:0;">
+                    ChatGPT Results <span class="panel-count">(${chatgptStandards.length})</span>
+                </div>
+            </div>
+            ${pairedRowsHTML}
+        `;
+    }
+
+    if (hasPaired && hasUnordered) {
+        html += `<div class="legal-standards-divider">Unique Standards</div>`;
+    }
+
+    if (hasUnordered) {
+        html += `
+            <div class="comparison-container" style="margin-top: 4px;">
+                <div class="comparison-panel">
+                    ${!hasPaired ? `<div class="comparison-panel-title">Manual Results <span class="panel-count">(${manualStandards.length})</span></div>` : ''}
+                    ${unorderedManualHTML || ''}
+                </div>
+                <div class="comparison-panel">
+                    ${!hasPaired ? `<div class="comparison-panel-title">ChatGPT Results <span class="panel-count">(${chatgptStandards.length})</span></div>` : ''}
+                    ${unorderedChatgptHTML || ''}
+                </div>
+            </div>
+        `;
+    }
+
+    if (!hasPaired && !hasUnordered) {
+        html = '<div class="empty-state"><h3>No legal standards data available</h3></div>';
+    }
+
+    legalComparison.innerHTML = html;
+
+    // Attach expand/collapse toggle listeners.
+    legalComparison.querySelectorAll('.legal-card-toggle').forEach((button) => {
         button.addEventListener('click', () => {
             const card = button.closest('.legal-card');
             if (!card) return;
@@ -261,6 +307,8 @@ function renderLegalStandardsPanel(data, source) {
             }
         });
     });
+
+    triggerMount(legalComparison);
 }
 
 // Render tiered implications comparison layout.

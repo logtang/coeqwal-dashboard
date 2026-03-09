@@ -1,0 +1,80 @@
+{
+  "_comment": "Static source of truth for the Freshwater in the Delta outcome domain.",
+
+  "outcome": {
+    "id": "freshwater_in_delta",
+    "name": "Freshwater in the Delta",
+    "domain_label": "freshwater_in_delta",
+    "definition": "The availability and quality of freshwater within the Sacramento-San Joaquin Delta, measured through salinity levels, X2 position (the location of the 2 parts-per-thousand isohaline), interior channel flows, and compliance with water quality objectives at key Delta compliance stations. This outcome domain captures how California water law and regulatory frameworks shape the balance between upstream diversions, project exports, and freshwater inflows that determine Delta salinity gradients and water quality. Legal standards do not guarantee specific salinity conditions; instead, they impose operational constraints on upstream water users and Delta export facilities that collectively determine the freshwater character of the Delta.",
+    "tier_interpretation_note": "These tiers reflect the salinity and freshwater conditions within the Delta relative to water quality objectives and beneficial use requirements. Legal standards affect this outcome by shaping upstream inflows, project operational rules, and export constraints that determine how much freshwater moves through the Delta. Each tier entry identifies a legal standard whose mechanism is classified as either direct (a clear operational or regulatory pathway that affects Delta salinity or freshwater conditions) or indirect (a conditional, secondary, or system-level influence on those conditions)."
+  },
+
+  "tiers": [
+    {
+      "tier_number": 1,
+      "tier_label": "Tier 1",
+      "threshold": "Maximum of Emmaton and Jersey Point salinity is below 900 uS/cm for 75% of all months and above 2500 uS/cm no more than 5% of all months"
+    },
+    {
+      "tier_number": 2,
+      "tier_label": "Tier 2",
+      "threshold": "Maximum of Emmaton and Jersey Point salinity is below 900 uS/cm for at least 65% of all months, below 1600 uS/cm for at least 75% of months, and above 2500 uS/cm no more than 12% of all months"
+    },
+    {
+      "tier_number": 3,
+      "tier_label": "Tier 3",
+      "threshold": "Maximum of Emmaton and Jersey Point salinity is below 900 uS/cm for at least 55% of all months, below 1600 uS/cm for at least 65% of months, and above 2500 uS/cm no more than 20% of all months"
+    },
+    {
+      "tier_number": 4,
+      "tier_label": "Tier 4",
+      "threshold": "Maximum of Emmaton and Jersey Point salinity is below 900 uS/cm less than 55% of all months and/or above 2500 uS/cm more than 20% of all months"
+    }
+  ],
+
+  "legal_standards": {
+    "_comment": "Canonical legal standard IDs for this outcome domain.",
+    "standards": [
+      {
+        "legal_standard_id": "D1641_SALINITY_STANDARDS",
+        "title": "State Water Board Decision 1641 — Delta Salinity and Water Quality Conditions",
+        "citation": "State Water Resources Control Board Decision 1641 (2000)",
+        "scope_note": "Directly imposes salinity and water quality conditions on CVP and SWP operations, including X2 location requirements, compliance station standards, and operational rules designed to maintain freshwater conditions within the Delta."
+      },
+      {
+        "legal_standard_id": "BAY_DELTA_PLAN_WATER_QUALITY_OBJECTIVES",
+        "title": "Bay-Delta Water Quality Control Plan — Delta Water Quality Objectives",
+        "citation": "State Water Resources Control Board, Bay-Delta Water Quality Control Plan",
+        "scope_note": "Establishes numeric and narrative water quality objectives for the Delta at specific compliance points, protecting beneficial uses including municipal and industrial water supply, agricultural water supply, and fish and wildlife habitat."
+      },
+      {
+        "legal_standard_id": "DELTA_REFORM_ACT_ECOSYSTEM_GOALS",
+        "title": "Sacramento-San Joaquin Delta Reform Act — Ecosystem Restoration Goals",
+        "citation": "California Water Code §85000 et seq.",
+        "scope_note": "Establishes ecosystem restoration as a co-equal goal with water supply reliability; requires consideration of Delta ecosystem needs, including freshwater conditions, in project operations and water management decisions."
+      },
+      {
+        "legal_standard_id": "ESA_DELTA_FRESHWATER_HABITAT",
+        "title": "Endangered Species Act — Delta Freshwater Habitat Requirements",
+        "citation": "Endangered Species Act §7; Biological Opinions for CVP/SWP (NMFS, USFWS)",
+        "scope_note": "Biological Opinions impose operational requirements to maintain habitat conditions for listed Delta species, including freshwater and salinity standards that constrain project pumping and affect Delta water quality."
+      },
+      {
+        "legal_standard_id": "PORTER_COLOGNE_DELTA_BENEFICIAL_USES",
+        "title": "Porter-Cologne Water Quality Control Act — Delta Beneficial Use Protections",
+        "citation": "California Water Code §13000 et seq.; San Francisco Bay Regional Water Quality Control Board Basin Plan",
+        "scope_note": "Designates and protects beneficial uses of Delta waters, including municipal and domestic supply and estuarine habitat; Regional Water Quality Control Boards have authority to impose conditions on discharges and diversions affecting Delta water quality."
+      },
+      {
+        "legal_standard_id": "SWRCB_UPSTREAM_DIVERSION_CURTAILMENT",
+        "title": "SWRCB Upstream Diversion Curtailment Authority",
+        "citation": "California Water Code; SWRCB water rights enforcement authority",
+        "scope_note": "SWRCB authority to curtail upstream diversions during dry periods when Delta inflows are insufficient to meet water quality objectives; directly affects the volume of freshwater entering the Delta from tributary watersheds."
+      }
+    ],
+
+    "deprecated_aliases": {
+      "_comment": "No legacy aliases for this domain — this is a new config."
+    }
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "_comment": "Static source of truth for the Salmon Abundance outcome domain.",
+
+  "outcome": {
+    "id": "salmon_abundance",
+    "name": "Salmon Abundance",
+    "domain_label": "salmon_abundance",
+    "definition": "The abundance and population status of Central Valley salmon runs—principally Sacramento River winter-run Chinook, spring-run Chinook, fall-run Chinook, and Central Valley steelhead—measured through adult escapement counts, juvenile outmigration indices, and progress toward recovery targets established under ESA and CVPIA. This outcome domain captures how California water law and regulatory frameworks affect salmon survival and reproduction by shaping the flow regimes, water temperatures, Delta conditions, and passage conditions on which salmon life stages depend. Legal standards rarely set population targets directly; instead, they impose operational constraints on water projects and land management that determine whether adequate habitat conditions exist for each life stage.",
+    "tier_interpretation_note": "These tiers reflect salmon population status relative to recovery targets and historical baselines. Legal standards affect this outcome by shaping the environmental conditions—flows, temperature, Delta salinity, passage—that determine salmon survival at each life stage. Each tier entry identifies a legal standard whose mechanism is classified as either direct (a clear operational or regulatory pathway that affects salmon habitat or survival conditions) or indirect (a conditional, secondary, or system-level influence on population outcomes)."
+  },
+
+  "tiers": [
+    {
+      "tier_number": 1,
+      "tier_label": "Tier 1",
+      "threshold": "Tier 1 is met if there’s at least an 80% chance (>800 out of 1,000 model runs) that the salmon population grows 8 times its starting size, using a rolling 10-year average."
+    },
+    {
+      "tier_number": 2,
+      "tier_label": "Tier 2",
+      "threshold": "Tier 2 is met if there’s at least an 80% chance (>800 out of 1,000 model runs) that the salmon population grows 2 to 8 times its starting size, using a rolling 10-year average"
+    },
+    {
+      "tier_number": 3,
+      "tier_label": "Tier 3",
+      "threshold": "Tier 3 is met if there’s at least an 80% chance (>800 out of 1,000 model runs) that the salmon population exceeds its starting size, using a rolling 10-year average."
+    },
+    {
+      "tier_number": 4,
+      "tier_label": "Tier 4",
+      "threshold": "Tier 4 is assigned if the change in population size does not satisfy Tier 1, 2, or 3."
+    }
+  ],
+
+  "legal_standards": {
+    "_comment": "Canonical legal standard IDs for this outcome domain.",
+    "standards": [
+      {
+        "legal_standard_id": "ESA_SALMON_LISTINGS",
+        "title": "Endangered Species Act — Central Valley Salmon and Steelhead Listings",
+        "citation": "Endangered Species Act §4, §7, §9; NMFS recovery plans for Sacramento River winter-run Chinook and Central Valley steelhead",
+        "scope_note": "ESA listings of Central Valley salmon and steelhead runs trigger Section 7 consultation requirements for all federal nexus activities, including water project operations, dam relicensing, and flood control; jeopardy findings and Reasonable and Prudent Alternatives impose the most direct operational constraints on activities affecting salmon habitat."
+      },
+      {
+        "legal_standard_id": "CVPIA_FISH_DOUBLING_MANDATE",
+        "title": "Central Valley Project Improvement Act — Anadromous Fish Doubling Mandate",
+        "citation": "Public Law 102-575, §3406(b)(1)",
+        "scope_note": "Requires the Secretary of the Interior to make all reasonable efforts to double the natural production of anadromous fish in the Central Valley; mandates dedication of 800,000 acre-feet of CVP yield annually to fish and wildlife and funds habitat restoration directly linked to salmon recovery."
+      },
+      {
+        "legal_standard_id": "BIOLOGICAL_OPINIONS_CVP_SWP",
+        "title": "Biological Opinions for CVP and SWP Operations",
+        "citation": "NMFS Biological Opinion (2019 and prior); USFWS Biological Opinion for delta smelt; Endangered Species Act §7",
+        "scope_note": "Binding operational requirements issued by NMFS and USFWS specifying real-time flow, export, and temperature constraints on CVP and SWP operations to avoid jeopardizing salmon and other listed species; the most immediate regulatory mechanism affecting water project operations in relation to salmon."
+      },
+      {
+        "legal_standard_id": "BAY_DELTA_PLAN_SALMON_FLOWS",
+        "title": "Bay-Delta Water Quality Control Plan — Tributary Flow Objectives for Salmon",
+        "citation": "State Water Resources Control Board, Bay-Delta Water Quality Control Plan",
+        "scope_note": "Establishes flow objectives for salmon-bearing tributaries to the Delta, specifying percentages of unimpaired flow during critical migration and spawning windows; implementation requires upstream water rights holders to reduce diversions to meet flow standards."
+      },
+      {
+        "legal_standard_id": "FERC_SALMON_FLOW_CONDITIONS",
+        "title": "FERC Hydropower Licensing — Salmon Flow and Passage Conditions",
+        "citation": "Federal Power Act §10(j); CWA §401 certification; FERC license conditions for Central Valley dams",
+        "scope_note": "FERC licenses and associated Clean Water Act Section 401 certifications require dam operators to provide minimum flows for salmon migration, maintain cold water pools, and in some cases install fish passage facilities; these conditions directly determine salmon access to upstream spawning habitat."
+      },
+      {
+        "legal_standard_id": "CWA_401_TEMPERATURE_STANDARDS",
+        "title": "Clean Water Act Section 401 Certification — Temperature and Water Quality Standards",
+        "citation": "Clean Water Act §401; California temperature standards for salmon-bearing waters",
+        "scope_note": "State 401 certifications for federal permits and licenses condition approval on compliance with temperature standards protective of salmon; requires reservoir operators and diverters to manage operations to avoid thermal impacts that impair salmon spawning, egg incubation, and juvenile rearing."
+      },
+      {
+        "legal_standard_id": "PUBLIC_TRUST_DOCTRINE_SALMON",
+        "title": "Public Trust Doctrine — Salmon and Fishery Protection",
+        "citation": "California common law; National Audubon Society v. Superior Court (1983)",
+        "scope_note": "Requires the state to consider and protect public trust resources including fish and wildlife in water allocation decisions; has been applied to challenge water diversions that threaten salmon populations and provides a legal basis for reconsideration of existing water rights to protect fisheries."
+      }
+    ],
+
+    "deprecated_aliases": {
+      "_comment": "No legacy aliases for this domain — this is a new config."
+    }
+  }
+}

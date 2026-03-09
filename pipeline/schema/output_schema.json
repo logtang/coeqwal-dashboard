@@ -1,0 +1,212 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Policy Analysis Dashboard — AI Output Schema",
+  "description": "Canonical schema for AI-generated outcome domain JSON files. Files matching this schema are written to chatgpt_responses/{outcome_id}.json and loaded by the dashboard UI. The top-level key names ('Legal Standards', 'Tiers', 'Governing Agencies') must be preserved exactly as shown — the UI reads them by these exact strings.",
+
+  "type": "object",
+  "required": ["meta", "Legal Standards", "Tiers", "Governing Agencies"],
+  "additionalProperties": false,
+
+  "properties": {
+
+    "meta": {
+      "type": "object",
+      "description": "Outcome-level metadata injected from the static config. Not rendered directly by the UI but used for traceability.",
+      "required": ["outcome_domain", "tier_interpretation_note"],
+      "additionalProperties": false,
+      "properties": {
+        "outcome_domain": {
+          "type": "string",
+          "description": "Snake-case identifier matching the config outcome.domain_label.",
+          "example": "agricultural_productivity_revenue"
+        },
+        "tier_interpretation_note": {
+          "type": "string",
+          "description": "Plain-language note explaining how tiers should be interpreted for this outcome domain.",
+          "minLength": 20
+        },
+        "generated_at": {
+          "type": "string",
+          "description": "ISO 8601 timestamp set by the pipeline at generation time.",
+          "format": "date-time"
+        },
+        "config_version": {
+          "type": "string",
+          "description": "Semver string of the config file used to generate this output.",
+          "example": "1.0.0"
+        }
+      }
+    },
+
+    "Legal Standards": {
+      "type": "array",
+      "description": "One object per legal standard relevant to this outcome domain. The legal_standard_id is the backbone — every policy in Tiers and every agency in Governing Agencies references these IDs.",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["legal_standard_id", "legal_standard", "caption", "info", "vocabulary", "sources"],
+        "additionalProperties": false,
+        "properties": {
+          "legal_standard_id": {
+            "type": "string",
+            "description": "Stable SCREAMING_SNAKE_CASE identifier. Must match a canonical ID from the config's legal_standards.standards array. Never invent new IDs; use only what the config defines.",
+            "pattern": "^[A-Z][A-Z0-9_]+$"
+          },
+          "legal_standard": {
+            "type": "string",
+            "description": "Full formal name of the legal standard, including citation in parentheses where appropriate.",
+            "minLength": 5,
+            "maxLength": 300
+          },
+          "caption": {
+            "type": "string",
+            "description": "One-sentence plain-language summary shown as a subtitle on the legal standard card in the UI.",
+            "minLength": 10,
+            "maxLength": 300
+          },
+          "info": {
+            "type": "string",
+            "description": "Full explanatory paragraph(s) shown in the expanded card body. Should explain the mechanism by which this standard affects the outcome domain.",
+            "minLength": 50
+          },
+          "vocabulary": {
+            "type": "array",
+            "description": "Key terms and definitions for this legal standard. May be empty array if no terms are needed.",
+            "items": {
+              "type": "object",
+              "required": ["term", "definition"],
+              "additionalProperties": false,
+              "properties": {
+                "term": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 200
+                },
+                "definition": {
+                  "type": "string",
+                  "minLength": 5,
+                  "maxLength": 1000
+                }
+              }
+            }
+          },
+          "sources": {
+            "type": "array",
+            "description": "List of authoritative source strings (statute citations, agency document titles, etc.) supporting this legal standard entry.",
+            "items": { "type": "string", "minLength": 3 }
+          },
+          "order": {
+            "type": "integer",
+            "description": "Optional. When present, the UI draws a visual connector pairing the legal standard with the manual-side card that shares the same order value. Used for cross-panel comparison alignment."
+          }
+        }
+      }
+    },
+
+    "Tiers": {
+      "type": "object",
+      "description": "One key per tier (Tier 1 through Tier 4). Each contains the threshold label and an array of policy entries that are 'in play' when the outcome is in that tier.",
+      "required": ["Tier 1", "Tier 2", "Tier 3", "Tier 4"],
+      "additionalProperties": false,
+      "properties": {
+        "Tier 1": { "$ref": "#/definitions/tier" },
+        "Tier 2": { "$ref": "#/definitions/tier" },
+        "Tier 3": { "$ref": "#/definitions/tier" },
+        "Tier 4": { "$ref": "#/definitions/tier" }
+      }
+    },
+
+    "Governing Agencies": {
+      "type": "array",
+      "description": "Agencies with authority over legal standards relevant to this outcome domain. Sorted by the UI in descending order of pertains_to_legal_standards array length.",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["name", "note", "pertains_to_legal_standards"],
+        "additionalProperties": false,
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Full agency name with abbreviation in parentheses.",
+            "minLength": 3,
+            "maxLength": 200
+          },
+          "note": {
+            "type": "string",
+            "description": "Plain-language description of the agency's role with respect to this outcome domain. Should reference specific legal standards by name.",
+            "minLength": 20
+          },
+          "pertains_to_legal_standards": {
+            "type": "array",
+            "description": "Array of legal_standard_id strings this agency governs. Must reference only canonical IDs defined in the Legal Standards array above.",
+            "minItems": 1,
+            "items": {
+              "type": "string",
+              "pattern": "^[A-Z][A-Z0-9_]+$"
+            }
+          }
+        }
+      }
+    }
+
+  },
+
+  "definitions": {
+    "tier": {
+      "type": "object",
+      "required": ["threshold", "policies"],
+      "additionalProperties": false,
+      "properties": {
+        "threshold": {
+          "type": "string",
+          "description": "Short label describing the outcome condition for this tier (e.g., 'Revenue declining <5%/year'). Must match the value defined in the config tiers array.",
+          "minLength": 3,
+          "maxLength": 200
+        },
+        "policies": {
+          "type": "array",
+          "description": "Legal standards that are active, implicated, or in play when the outcome is in this tier. May be empty if no standards are meaningfully applicable.",
+          "items": {
+            "type": "object",
+            "required": [
+              "policy_name",
+              "legal_standard_id",
+              "relationship",
+              "effect_type",
+              "note"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "policy_name": {
+                "type": "string",
+                "description": "Short display name for the policy entry shown on the policy card. May abbreviate the full legal standard name.",
+                "minLength": 3,
+                "maxLength": 200
+              },
+              "legal_standard_id": {
+                "type": "string",
+                "description": "Must reference a canonical legal_standard_id from the Legal Standards array in this file.",
+                "pattern": "^[A-Z][A-Z0-9_]+$"
+              },
+              "relationship": {
+                "type": "string",
+                "description": "Display label shown on the policy card by the current UI. Must mirror effect_type in human-readable form: 'Direct' when effect_type is 'direct', 'Indirect' when effect_type is 'indirect'. Kept as a separate field for UI compatibility; the canonical machine-readable classification lives in effect_type.",
+                "enum": ["Direct", "Indirect"]
+              },
+              "effect_type": {
+                "type": "string",
+                "description": "Canonical machine-readable classification. 'direct' = clear operational or regulatory pathway affecting conditions relevant to this tier. 'indirect' = conditional, secondary, or system-level influence. Drives the value of relationship and any future UI logic.",
+                "enum": ["direct", "indirect"]
+              },
+              "note": {
+                "type": "string",
+                "description": "Explanatory note shown in the expanded policy card Details section. Should describe the mechanism (how this standard drives the tier condition).",
+                "minLength": 10
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
