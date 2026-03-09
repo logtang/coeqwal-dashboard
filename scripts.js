@@ -254,7 +254,7 @@ function renderLegalStandards() {
 
     if (hasPaired) {
         html += `
-            <div class="legal-pair-header">
+            <div class="legal-pair-header legal-pair-header-plain">
                 <div class="comparison-panel-title" style="border:none;margin:0;padding:0;">
                     Manual Results <span class="panel-count">(${manualStandards.length})</span>
                 </div>
@@ -263,23 +263,32 @@ function renderLegalStandards() {
                     ChatGPT Results <span class="panel-count">(${chatgptStandards.length})</span>
                 </div>
             </div>
+            <div class="legal-standards-divider">Matching Standards</div>
             ${pairedRowsHTML}
         `;
     }
 
-    if (hasPaired && hasUnordered) {
-        html += `<div class="legal-standards-divider">Unique Standards</div>`;
-    }
-
     if (hasUnordered) {
+        if (!hasPaired) {
+            html += `
+                <div class="legal-pair-header legal-pair-header-plain">
+                    <div class="comparison-panel-title" style="border:none;margin:0;padding:0;">
+                        Manual Results <span class="panel-count">(${manualStandards.length})</span>
+                    </div>
+                    <div></div>
+                    <div class="comparison-panel-title" style="border:none;margin:0;padding:0;">
+                        ChatGPT Results <span class="panel-count">(${chatgptStandards.length})</span>
+                    </div>
+                </div>
+            `;
+        }
+        html += `<div class="legal-standards-divider">Unique Standards</div>`;
         html += `
             <div class="comparison-container" style="margin-top: 4px;">
                 <div class="comparison-panel">
-                    ${!hasPaired ? `<div class="comparison-panel-title">Manual Results <span class="panel-count">(${manualStandards.length})</span></div>` : ''}
                     ${unorderedManualHTML || ''}
                 </div>
                 <div class="comparison-panel">
-                    ${!hasPaired ? `<div class="comparison-panel-title">ChatGPT Results <span class="panel-count">(${chatgptStandards.length})</span></div>` : ''}
                     ${unorderedChatgptHTML || ''}
                 </div>
             </div>

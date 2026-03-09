@@ -394,6 +394,12 @@
             border-bottom: 1px solid var(--border);
         }
 
+        .legal-pair-header-plain {
+            margin-bottom: 10px;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+
         .legal-pair-row {
             display: grid;
             grid-template-columns: 1fr 60px 1fr;
