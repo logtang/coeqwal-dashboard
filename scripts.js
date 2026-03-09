@@ -553,6 +553,10 @@ function triggerMount(element) {
 // Render one agencies column (ChatGPT or Manual).
 function renderAgenciesPanel(data, source) {
     const agencies = data['Governing Agencies'] || [];
+    const legalStandards = data['Legal Standards'] || [];
+    const legalStandardMap = new Map(
+        legalStandards.map((standard) => [standard.legal_standard_id, standard.legal_standard])
+    );
     const sortedAgencies = [...agencies].sort((a, b) => {
         const aCount = Array.isArray(a.pertains_to_legal_standards) ? a.pertains_to_legal_standards.length : 0;
         const bCount = Array.isArray(b.pertains_to_legal_standards) ? b.pertains_to_legal_standards.length : 0;
@@ -575,13 +579,28 @@ function renderAgenciesPanel(data, source) {
 
     content.innerHTML = `
         <div class="agency-grid">
-            ${sortedAgencies.map(agency => `
+            ${sortedAgencies.map(agency => {
+                const standards = Array.isArray(agency.pertains_to_legal_standards)
+                    ? agency.pertains_to_legal_standards
+                    : [];
+                const standardLabels = standards.map((id) => legalStandardMap.get(id) || id);
+                const standardsMarkup = standardLabels.length
+                    ? standardLabels.map((name) => `<div class="agency-standard">${name}</div>`).join('')
+                    : '<div class="agency-standard agency-standard-empty">No legal standards listed</div>';
+                return `
                 <div class="agency-card">
                     <div class="agency-name">${agency.name || '<span class="error-display" style="display: inline; padding: 2px 6px;">Error</span>'}</div>
                     <div class="agency-chip">In ${Array.isArray(agency.pertains_to_legal_standards) ? agency.pertains_to_legal_standards.length : 0} Legal Standards</div>
                     <div class="card-note">${agency.note || '<span class="error-display" style="display: inline; padding: 2px 6px;">Error</span>'}</div>
+                    <details class="agency-standards">
+                        <summary>Legal standards (${standards.length})</summary>
+                        <div class="agency-standards-list">
+                            ${standardsMarkup}
+                        </div>
+                    </details>
                 </div>
-            `).join('')}
+            `;
+            }).join('')}
         </div>
     `;
 }

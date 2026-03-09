@@ -899,6 +899,62 @@
             margin-bottom: 10px;
         }
 
+        .agency-standards {
+            margin-top: 12px;
+        }
+
+        .agency-standards summary {
+            list-style: none;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            border: 1px solid var(--border);
+            background: var(--panel-muted);
+            color: var(--ink);
+            padding: 6px 12px;
+            border-radius: 999px;
+            font-size: 0.78rem;
+            font-weight: 600;
+        }
+
+        .agency-standards summary::-webkit-details-marker {
+            display: none;
+        }
+
+        .agency-standards summary::after {
+            content: ">";
+            font-size: 0.85rem;
+            color: var(--muted);
+            transform: rotate(0deg);
+            transition: transform 0.2s ease;
+        }
+
+        .agency-standards[open] summary::after {
+            transform: rotate(-90deg);
+        }
+
+        .agency-standards-list {
+            margin-top: 10px;
+            display: grid;
+            gap: 6px;
+        }
+
+        .agency-standard {
+            padding: 8px 10px;
+            background: #ffffff;
+            border-radius: 10px;
+            border: 1px solid #e2e8f0;
+            color: #334155;
+            font-size: 0.9rem;
+            line-height: 1.4;
+        }
+
+        .agency-standard-empty {
+            color: var(--muted);
+            background: #f8fafc;
+        }
+
         .agency-name {
             font-weight: 700;
             color: #1e1e1e;
