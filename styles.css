@@ -7,6 +7,7 @@
             --ink: var(--primary-text);
             --ink-soft: #4b5563;
             --muted: #6b7280;
+            --caption-color: #0c395a;
             --accent: var(--primary-interactive);
             --accent-strong: #08293f;
             --accent-soft: rgba(12, 57, 90, 0.08);
@@ -560,10 +561,12 @@
         .card-note {
             color: var(--muted);
             line-height: 1.6;
+            margin-top: 10px;
         }
 
         .card-caption {
-            color: var(--primary-interactive);
+            color: var(--caption-color);
+            font-weight: 700;
             line-height: 1.6;
         }
 
