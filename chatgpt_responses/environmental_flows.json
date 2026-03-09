@@ -1,0 +1,246 @@
+{
+  "meta": {
+    "outcome_domain": "environmental_flows",
+    "tier_interpretation_note": "These tiers reflect the extent to which biological and ecological flow objectives are met across California's regulated river systems. Legal standards affect this outcome by constraining diversions and project operations that would otherwise reduce or alter flows. Each tier entry identifies a legal standard whose mechanism is classified as either direct (a clear operational or regulatory pathway that affects instream flow conditions) or indirect (a conditional, secondary, or system-level influence on flow availability).",
+    "generated_at": "2026-03-09T19:01:59.928236+00:00",
+    "config_version": "1.0.0"
+  },
+  "Legal Standards": [
+    {
+      "legal_standard_id": "PUBLIC_TRUST_DOCTRINE_FLOWS",
+      "legal_standard": "Public Trust Doctrine — Instream Flow Protection",
+      "caption": "Mandates protection of public trust resources, influencing water allocation for instream uses.",
+      "info": "The Public Trust Doctrine requires California to protect public trust resources, including fish and wildlife, when allocating water. This doctrine allows for the reconsideration of existing water rights if instream flows are insufficient to protect these resources. It serves as a legal basis for ensuring that water allocations do not compromise ecological values, thereby indirectly influencing the availability of environmental flows.",
+      "vocabulary": [
+        {
+          "term": "Public Trust Doctrine",
+          "definition": "A legal principle that mandates the protection of natural resources for public use."
+        },
+        {
+          "term": "Instream Flows",
+          "definition": "Water flow within a river or stream that is necessary to maintain ecosystems."
+        }
+      ],
+      "sources": [
+        "California common law; National Audubon Society v. Superior Court (1983)"
+      ]
+    },
+    {
+      "legal_standard_id": "PORTER_COLOGNE_FLOW_OBJECTIVES",
+      "legal_standard": "Porter-Cologne Water Quality Control Act — Flow Objectives in Basin Plans",
+      "caption": "Empowers regional boards to set flow objectives to protect aquatic life, affecting diversions.",
+      "info": "The Porter-Cologne Act authorizes Regional Water Quality Control Boards to establish flow objectives in Basin Plans. These objectives are designed to protect beneficial uses such as fish migration and aquatic life. By imposing constraints on water diversions, this act indirectly influences the availability of environmental flows, ensuring that water quality and ecosystem health are maintained.",
+      "vocabulary": [
+        {
+          "term": "Basin Plans",
+          "definition": "Plans developed by regional boards to manage water quality and quantity in specific areas."
+        },
+        {
+          "term": "Flow Objectives",
+          "definition": "Targets for water flow levels to support ecological and water quality goals."
+        }
+      ],
+      "sources": [
+        "California Water Code §13000 et seq.; Regional Water Quality Control Board Basin Plans"
+      ]
+    },
+    {
+      "legal_standard_id": "ESA_FLOW_REQUIREMENTS",
+      "legal_standard": "Endangered Species Act — Flow Requirements for Listed Species",
+      "caption": "Imposes flow requirements to protect endangered species, directly affecting instream flows.",
+      "info": "The Endangered Species Act requires consultations with dam operators to impose flow requirements that protect listed fish species. These requirements include minimum instream flow obligations and temperature standards, directly affecting the availability of environmental flows. By ensuring that water projects do not jeopardize endangered species, the ESA plays a crucial role in maintaining ecological flow conditions.",
+      "vocabulary": [
+        {
+          "term": "Endangered Species Act",
+          "definition": "A federal law aimed at protecting species at risk of extinction."
+        },
+        {
+          "term": "Biological Opinions",
+          "definition": "Documents stating the impact of a project on endangered species and prescribing mitigation measures."
+        }
+      ],
+      "sources": [
+        "Endangered Species Act §7 and §9; Biological Opinions (NMFS, USFWS)"
+      ]
+    },
+    {
+      "legal_standard_id": "FERC_HYDROPOWER_LICENSING",
+      "legal_standard": "FERC Hydropower Licensing — Flow and Operational Conditions",
+      "caption": "Sets flow conditions in hydropower licenses, directly influencing downstream flows.",
+      "info": "FERC licenses for hydropower facilities include mandatory flow conditions negotiated with fish and wildlife agencies. These conditions establish minimum releases and pulse flows at major dams, directly determining the availability of instream flows downstream. By regulating hydropower operations, FERC licensing ensures that ecological flow needs are met.",
+      "vocabulary": [
+        {
+          "term": "FERC",
+          "definition": "Federal Energy Regulatory Commission, which oversees hydropower licensing."
+        },
+        {
+          "term": "Pulse Flows",
+          "definition": "Short-term increases in river flow to mimic natural hydrological events."
+        }
+      ],
+      "sources": [
+        "Federal Power Act §10(j); FERC license conditions"
+      ]
+    },
+    {
+      "legal_standard_id": "SWRCB_INSTREAM_FLOW_POLICY",
+      "legal_standard": "State Water Board Instream Flow Policy and Minimum Flow Conditions",
+      "caption": "Requires water reservation for instream uses, directly affecting flow conditions.",
+      "info": "The SWRCB's Instream Flow Policy mandates the reservation of water for instream uses and imposes minimum flow conditions on water right permits. This policy directly influences the availability of environmental flows by ensuring that water rights allocations consider ecological needs. It serves as a primary mechanism for protecting instream flows within California's water rights system.",
+      "vocabulary": [
+        {
+          "term": "SWRCB",
+          "definition": "State Water Resources Control Board, responsible for water allocation and quality."
+        },
+        {
+          "term": "Water Rights",
+          "definition": "Legal entitlements to use water from a water source."
+        }
+      ],
+      "sources": [
+        "State Water Resources Control Board, Instream Flow Policy (2001); Water Code §1243"
+      ]
+    },
+    {
+      "legal_standard_id": "BAY_DELTA_PLAN_TRIBUTARY_FLOWS",
+      "legal_standard": "Bay-Delta Water Quality Control Plan — Tributary Flow Objectives",
+      "caption": "Specifies flow objectives for Bay-Delta tributaries, directly affecting migration flows.",
+      "info": "The Bay-Delta Plan includes flow objectives for major tributaries, specifying minimum percentages of unimpaired flow during critical periods. These objectives directly influence the availability of environmental flows by ensuring that sufficient water is available for fish migration and spawning. The implementation of these objectives affects water rights holders and is crucial for maintaining ecological balance in the Bay-Delta system.",
+      "vocabulary": [
+        {
+          "term": "Bay-Delta",
+          "definition": "A critical estuary in California where the Sacramento and San Joaquin Rivers meet."
+        },
+        {
+          "term": "Unimpaired Flow",
+          "definition": "The natural flow of a river without human alterations."
+        }
+      ],
+      "sources": [
+        "State Water Resources Control Board, Bay-Delta Water Quality Control Plan"
+      ]
+    },
+    {
+      "legal_standard_id": "REASONABLE_USE_INSTREAM",
+      "legal_standard": "Reasonable Use Doctrine — Instream Flow Application",
+      "caption": "Limits wasteful diversions, indirectly supporting instream flow conditions.",
+      "info": "The Reasonable Use Doctrine limits water diversions that are wasteful or unreasonable, including those that harm instream flows. By providing a legal basis for challenging harmful diversions, this doctrine indirectly supports the maintenance of environmental flows. It ensures that water use practices do not undermine ecological flow conditions, promoting sustainable water management.",
+      "vocabulary": [
+        {
+          "term": "Reasonable Use Doctrine",
+          "definition": "A principle that water use must be reasonable and beneficial, preventing waste."
+        },
+        {
+          "term": "Diversions",
+          "definition": "The act of redirecting water from its natural course for human use."
+        }
+      ],
+      "sources": [
+        "California Constitution Article X, §2; California Water Code §100"
+      ]
+    }
+  ],
+  "Tiers": {
+    "Tier 1": {
+      "threshold": "Tier 1 Functional Ecosystem: Functional flows to sustain native freshwater species in 90% of years; Must have higher mean daily flows (volume/# days) in spring and winter than summer.",
+      "policies": [
+        {
+          "policy_name": "ESA Flow Requirements",
+          "legal_standard_id": "ESA_FLOW_REQUIREMENTS",
+          "effect_type": "direct",
+          "relationship": "Direct",
+          "note": "Mechanism: ESA mandates flow requirements to protect endangered species, ensuring functional flows in most years."
+        },
+        {
+          "policy_name": "FERC Hydropower Licensing",
+          "legal_standard_id": "FERC_HYDROPOWER_LICENSING",
+          "effect_type": "direct",
+          "relationship": "Direct",
+          "note": "Mechanism: FERC licenses set flow conditions that maintain functional ecosystem flows downstream of hydropower facilities."
+        }
+      ]
+    },
+    "Tier 2": {
+      "threshold": "Partial functional flows in wet season and spring; full functional flows in summer in 75% of years. Must have higher mean daily flows (volume/# days) in spring and winter than summer.",
+      "policies": [
+        {
+          "policy_name": "Bay-Delta Plan Tributary Flows",
+          "legal_standard_id": "BAY_DELTA_PLAN_TRIBUTARY_FLOWS",
+          "effect_type": "direct",
+          "relationship": "Direct",
+          "note": "Mechanism: Flow objectives for tributaries ensure partial functional flows during critical periods."
+        },
+        {
+          "policy_name": "Porter-Cologne Flow Objectives",
+          "legal_standard_id": "PORTER_COLOGNE_FLOW_OBJECTIVES",
+          "effect_type": "indirect",
+          "relationship": "Indirect",
+          "note": "Mechanism: Basin Plans set flow objectives that indirectly support partial functional flows by constraining diversions."
+        }
+      ]
+    },
+    "Tier 3": {
+      "threshold": "Tier 3-Existing Flow Requirements: CalSim minimum flow constraints for Baseline Scenario in 50% of years",
+      "policies": [
+        {
+          "policy_name": "SWRCB Instream Flow Policy",
+          "legal_standard_id": "SWRCB_INSTREAM_FLOW_POLICY",
+          "effect_type": "direct",
+          "relationship": "Direct",
+          "note": "Mechanism: SWRCB policy imposes minimum flow conditions that align with existing flow requirements in many scenarios."
+        },
+        {
+          "policy_name": "Reasonable Use Doctrine",
+          "legal_standard_id": "REASONABLE_USE_INSTREAM",
+          "effect_type": "indirect",
+          "relationship": "Indirect",
+          "note": "Mechanism: Limits on unreasonable diversions indirectly support existing flow requirements by preventing harmful practices."
+        }
+      ]
+    },
+    "Tier 4": {
+      "threshold": "Tier 4 No function: none of the above thresholds met",
+      "policies": [
+        {
+          "policy_name": "Public Trust Doctrine",
+          "legal_standard_id": "PUBLIC_TRUST_DOCTRINE_FLOWS",
+          "effect_type": "indirect",
+          "relationship": "Indirect",
+          "note": "Mechanism: Public Trust Doctrine provides a basis for challenging water allocations that fail to meet any functional flow thresholds."
+        }
+      ]
+    }
+  },
+  "Governing Agencies": [
+    {
+      "name": "State Water Resources Control Board (SWRCB)",
+      "note": "The SWRCB is responsible for allocating water rights and ensuring water quality in California. It plays a key role in implementing instream flow policies and setting minimum flow conditions.",
+      "pertains_to_legal_standards": [
+        "SWRCB_INSTREAM_FLOW_POLICY",
+        "BAY_DELTA_PLAN_TRIBUTARY_FLOWS"
+      ]
+    },
+    {
+      "name": "Federal Energy Regulatory Commission (FERC)",
+      "note": "FERC oversees the licensing of hydropower projects, including setting flow and operational conditions that affect downstream water availability and ecosystem health.",
+      "pertains_to_legal_standards": [
+        "FERC_HYDROPOWER_LICENSING"
+      ]
+    },
+    {
+      "name": "National Marine Fisheries Service (NMFS)",
+      "note": "NMFS is involved in ESA consultations to protect marine and anadromous species, influencing flow requirements for listed species under the ESA.",
+      "pertains_to_legal_standards": [
+        "ESA_FLOW_REQUIREMENTS"
+      ]
+    },
+    {
+      "name": "California Department of Fish and Wildlife (CDFW)",
+      "note": "CDFW collaborates with other agencies to protect fish and wildlife resources, playing a role in setting flow conditions under various legal standards.",
+      "pertains_to_legal_standards": [
+        "PUBLIC_TRUST_DOCTRINE_FLOWS",
+        "ESA_FLOW_REQUIREMENTS"
+      ]
+    }
+  ]
+}

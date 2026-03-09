@@ -1,0 +1,266 @@
+{
+  "meta": {
+    "outcome_domain": "salmon_abundance",
+    "tier_interpretation_note": "These tiers reflect salmon population status relative to recovery targets and historical baselines. Legal standards affect this outcome by shaping the environmental conditions—flows, temperature, Delta salinity, passage—that determine salmon survival at each life stage. Each tier entry identifies a legal standard whose mechanism is classified as either direct (a clear operational or regulatory pathway that affects salmon habitat or survival conditions) or indirect (a conditional, secondary, or system-level influence on population outcomes).",
+    "generated_at": "2026-03-09T19:05:05.881594+00:00",
+    "config_version": "1.0.0"
+  },
+  "Legal Standards": [
+    {
+            "order": 1,
+      "legal_standard_id": "ESA_SALMON_LISTINGS",
+      "legal_standard": "Endangered Species Act — Central Valley Salmon and Steelhead Listings",
+      "caption": "ESA listings impose operational constraints to protect salmon habitat.",
+      "info": "The ESA listings for Central Valley salmon and steelhead require federal agencies to ensure that their actions do not jeopardize the continued existence of these species. This includes Section 7 consultations that can lead to jeopardy findings and the imposition of Reasonable and Prudent Alternatives (RPAs) that directly affect water project operations. These RPAs often include flow and temperature management requirements that are critical for maintaining suitable habitat conditions for salmon survival and reproduction.",
+      "vocabulary": [
+        {
+          "term": "Section 7 Consultation",
+          "definition": "A process under the ESA where federal agencies consult with the U.S. Fish and Wildlife Service or NOAA Fisheries to ensure their actions do not harm listed species."
+        },
+        {
+          "term": "Jeopardy Finding",
+          "definition": "A determination that a federal action is likely to jeopardize the continued existence of a listed species or destroy or adversely modify its critical habitat."
+        },
+        {
+          "term": "Reasonable and Prudent Alternatives (RPAs)",
+          "definition": "Alternative actions identified during a Section 7 consultation that allow a project to proceed without causing jeopardy to a listed species."
+        }
+      ],
+      "sources": [
+        "Endangered Species Act §4, §7, §9",
+        "NMFS recovery plans for Sacramento River winter-run Chinook and Central Valley steelhead"
+      ]
+    },
+    {
+            "order": 2,
+      "legal_standard_id": "CVPIA_FISH_DOUBLING_MANDATE",
+      "legal_standard": "Central Valley Project Improvement Act — Anadromous Fish Doubling Mandate",
+      "caption": "Mandates efforts to double anadromous fish populations, affecting water allocations.",
+      "info": "The CVPIA Fish Doubling Mandate requires the Secretary of the Interior to make all reasonable efforts to double the natural production of anadromous fish in the Central Valley. This includes dedicating 800,000 acre-feet of Central Valley Project (CVP) yield annually to fish and wildlife purposes. The mandate directly influences water allocations and habitat restoration efforts, which are crucial for improving conditions for salmon spawning and rearing.",
+      "vocabulary": [
+        {
+          "term": "Anadromous Fish",
+          "definition": "Fish that migrate from the sea to freshwater to spawn, such as salmon."
+        },
+        {
+          "term": "Central Valley Project (CVP)",
+          "definition": "A federal water management project in California that provides water for agriculture, urban use, and environmental purposes."
+        }
+      ],
+      "sources": [
+        "Public Law 102-575, §3406(b)(1)"
+      ]
+    },
+    {
+      "legal_standard_id": "BIOLOGICAL_OPINIONS_CVP_SWP",
+      "legal_standard": "Biological Opinions for CVP and SWP Operations",
+      "caption": "Biological opinions set flow and temperature constraints to protect salmon.",
+      "info": "Biological opinions issued by NMFS and USFWS for the operations of the Central Valley Project (CVP) and State Water Project (SWP) include binding requirements to manage flows, exports, and temperatures. These requirements are designed to avoid jeopardizing the survival of salmon and other listed species. The opinions are a direct regulatory mechanism that influences water project operations, ensuring that conditions remain favorable for salmon migration and spawning.",
+      "vocabulary": [
+        {
+          "term": "Biological Opinion",
+          "definition": "A document stating the opinion of the U.S. Fish and Wildlife Service or NOAA Fisheries on whether a federal action is likely to jeopardize the continued existence of a listed species."
+        },
+        {
+          "term": "State Water Project (SWP)",
+          "definition": "A state water management project in California that provides water for urban and agricultural use."
+        }
+      ],
+      "sources": [
+        "NMFS Biological Opinion (2019 and prior)",
+        "USFWS Biological Opinion for delta smelt",
+        "Endangered Species Act §7"
+      ]
+    },
+    {
+      "legal_standard_id": "BAY_DELTA_PLAN_SALMON_FLOWS",
+      "legal_standard": "Bay-Delta Water Quality Control Plan — Tributary Flow Objectives for Salmon",
+      "caption": "Flow objectives require reduced diversions to support salmon migration.",
+      "info": "The Bay-Delta Water Quality Control Plan establishes flow objectives for salmon-bearing tributaries to the Delta. These objectives specify percentages of unimpaired flow that must be maintained during critical migration and spawning periods. To meet these flow standards, upstream water rights holders may need to reduce diversions, directly affecting the availability of water for other uses but ensuring adequate conditions for salmon passage and reproduction.",
+      "vocabulary": [
+        {
+          "term": "Unimpaired Flow",
+          "definition": "The natural flow of a river or stream without any diversions or storage."
+        },
+        {
+          "term": "Water Rights",
+          "definition": "Legal entitlements allowing the use of water from a water source, such as a river, stream, or aquifer."
+        }
+      ],
+      "sources": [
+        "State Water Resources Control Board, Bay-Delta Water Quality Control Plan"
+      ]
+    },
+    {
+      "legal_standard_id": "FERC_SALMON_FLOW_CONDITIONS",
+      "legal_standard": "FERC Hydropower Licensing — Salmon Flow and Passage Conditions",
+      "caption": "FERC licenses require flow and passage conditions for salmon migration.",
+      "info": "FERC licenses for hydropower projects in the Central Valley include conditions that require dam operators to provide minimum flows for salmon migration and maintain cold water pools. In some cases, fish passage facilities must be installed to ensure salmon can access upstream spawning habitats. These conditions directly influence the availability and quality of habitat necessary for salmon life stages.",
+      "vocabulary": [
+        {
+          "term": "FERC",
+          "definition": "Federal Energy Regulatory Commission, an agency that regulates the transmission and wholesale sale of electricity and natural gas in interstate commerce and licenses hydropower projects."
+        },
+        {
+          "term": "Cold Water Pool",
+          "definition": "A reservoir of cold water in a dam that can be released to maintain suitable temperatures downstream for fish."
+        }
+      ],
+      "sources": [
+        "Federal Power Act §10(j)",
+        "CWA §401 certification",
+        "FERC license conditions for Central Valley dams"
+      ]
+    },
+    {
+      "legal_standard_id": "CWA_401_TEMPERATURE_STANDARDS",
+      "legal_standard": "Clean Water Act Section 401 Certification — Temperature and Water Quality Standards",
+      "caption": "401 certifications enforce temperature standards to protect salmon.",
+      "info": "Under the Clean Water Act, Section 401 certifications require compliance with state temperature standards that protect salmon-bearing waters. These certifications condition the approval of federal permits and licenses on the management of reservoir operations and diversions to avoid thermal impacts that could impair salmon spawning, egg incubation, and juvenile rearing. This standard directly affects the thermal conditions critical for salmon survival.",
+      "vocabulary": [
+        {
+          "term": "Section 401 Certification",
+          "definition": "A provision of the Clean Water Act that requires state certification for any federal permit or license that may result in a discharge into navigable waters, ensuring compliance with state water quality standards."
+        },
+        {
+          "term": "Thermal Impacts",
+          "definition": "Changes in water temperature that can affect aquatic life, particularly temperature-sensitive species like salmon."
+        }
+      ],
+      "sources": [
+        "Clean Water Act §401",
+        "California temperature standards for salmon-bearing waters"
+      ]
+    },
+    {
+      "legal_standard_id": "PUBLIC_TRUST_DOCTRINE_SALMON",
+      "legal_standard": "Public Trust Doctrine — Salmon and Fishery Protection",
+      "caption": "The Public Trust Doctrine protects salmon by influencing water allocation decisions.",
+      "info": "The Public Trust Doctrine requires the state to consider and protect public trust resources, including fish and wildlife, in water allocation decisions. This doctrine has been used to challenge water diversions that threaten salmon populations and provides a legal basis for reconsidering existing water rights to protect fisheries. It indirectly influences salmon abundance by ensuring that water management decisions account for ecological needs.",
+      "vocabulary": [
+        {
+          "term": "Public Trust Doctrine",
+          "definition": "A legal principle that holds certain natural resources, like navigable waters, are preserved for public use, and that the government must protect and maintain these resources for the public's benefit."
+        },
+        {
+          "term": "Water Diversions",
+          "definition": "The act of redirecting water from its natural course or location for human use."
+        }
+      ],
+      "sources": [
+        "California common law",
+        "National Audubon Society v. Superior Court (1983)"
+      ]
+    }
+  ],
+  "Tiers": {
+    "Tier 1": {
+      "threshold": "Tier 1 is met if there’s at least an 80% chance (>800 out of 1,000 model runs) that the salmon population grows 8 times its starting size, using a rolling 10-year average.",
+      "policies": [
+        {
+          "policy_name": "ESA Listings",
+          "legal_standard_id": "ESA_SALMON_LISTINGS",
+          "effect_type": "direct",
+          "relationship": "Direct",
+          "note": "Mechanism: ESA listings impose direct operational constraints through RPAs that ensure habitat conditions are optimal for significant population growth."
+        },
+        {
+          "policy_name": "CVPIA Fish Doubling",
+          "legal_standard_id": "CVPIA_FISH_DOUBLING_MANDATE",
+          "effect_type": "direct",
+          "relationship": "Direct",
+          "note": "Mechanism: The mandate directly allocates water and resources to enhance salmon habitat, supporting substantial population increases."
+        }
+      ]
+    },
+    "Tier 2": {
+      "threshold": "Tier 2 is met if there’s at least an 80% chance (>800 out of 1,000 model runs) that the salmon population grows 2 to 8 times its starting size, using a rolling 10-year average",
+      "policies": [
+        {
+          "policy_name": "Biological Opinions",
+          "legal_standard_id": "BIOLOGICAL_OPINIONS_CVP_SWP",
+          "effect_type": "direct",
+          "relationship": "Direct",
+          "note": "Mechanism: Real-time flow and temperature constraints from biological opinions directly support moderate population growth by maintaining critical habitat conditions."
+        },
+        {
+          "policy_name": "Bay-Delta Plan",
+          "legal_standard_id": "BAY_DELTA_PLAN_SALMON_FLOWS",
+          "effect_type": "direct",
+          "relationship": "Direct",
+          "note": "Mechanism: Flow objectives reduce diversions, ensuring adequate water for salmon migration and spawning, supporting moderate population growth."
+        }
+      ]
+    },
+    "Tier 3": {
+      "threshold": "Tier 3 is met if there’s at least an 80% chance (>800 out of 1,000 model runs) that the salmon population exceeds its starting size, using a rolling 10-year average.",
+      "policies": [
+        {
+          "policy_name": "FERC Licensing",
+          "legal_standard_id": "FERC_SALMON_FLOW_CONDITIONS",
+          "effect_type": "direct",
+          "relationship": "Direct",
+          "note": "Mechanism: FERC conditions ensure minimum flows and passage facilities, directly supporting population maintenance and slight growth."
+        },
+        {
+          "policy_name": "CWA 401 Standards",
+          "legal_standard_id": "CWA_401_TEMPERATURE_STANDARDS",
+          "effect_type": "direct",
+          "relationship": "Direct",
+          "note": "Mechanism: Temperature standards prevent thermal impacts, maintaining conditions necessary for salmon survival and slight population growth."
+        }
+      ]
+    },
+    "Tier 4": {
+      "threshold": "Tier 4 is assigned if the change in population size does not satisfy Tier 1, 2, or 3.",
+      "policies": [
+        {
+          "policy_name": "Public Trust Doctrine",
+          "legal_standard_id": "PUBLIC_TRUST_DOCTRINE_SALMON",
+          "effect_type": "indirect",
+          "relationship": "Indirect",
+          "note": "Mechanism: The doctrine indirectly influences water management decisions, potentially mitigating adverse impacts on salmon populations."
+        }
+      ]
+    }
+  },
+  "Governing Agencies": [
+    {
+      "name": "National Marine Fisheries Service (NMFS)",
+      "note": "NMFS is responsible for the protection and recovery of marine species, including salmon, under the ESA. It issues biological opinions that set operational constraints on water projects.",
+      "pertains_to_legal_standards": [
+        "ESA_SALMON_LISTINGS",
+        "BIOLOGICAL_OPINIONS_CVP_SWP"
+      ]
+    },
+    {
+      "name": "U.S. Fish and Wildlife Service (USFWS)",
+      "note": "USFWS collaborates with NMFS in issuing biological opinions and oversees the protection of endangered species, including salmon, under the ESA.",
+      "pertains_to_legal_standards": [
+        "BIOLOGICAL_OPINIONS_CVP_SWP"
+      ]
+    },
+    {
+      "name": "State Water Resources Control Board (SWRCB)",
+      "note": "SWRCB sets water quality and flow standards, including those in the Bay-Delta Plan, to protect salmon and other aquatic life in California's waterways.",
+      "pertains_to_legal_standards": [
+        "BAY_DELTA_PLAN_SALMON_FLOWS",
+        "CWA_401_TEMPERATURE_STANDARDS"
+      ]
+    },
+    {
+      "name": "Federal Energy Regulatory Commission (FERC)",
+      "note": "FERC licenses hydropower projects and imposes conditions to protect fish habitats, including flow and passage requirements for salmon.",
+      "pertains_to_legal_standards": [
+        "FERC_SALMON_FLOW_CONDITIONS"
+      ]
+    },
+    {
+      "name": "California Department of Fish and Wildlife (CDFW)",
+      "note": "CDFW manages the state's fish and wildlife resources and collaborates with federal agencies to implement standards that protect salmon populations.",
+      "pertains_to_legal_standards": [
+        "PUBLIC_TRUST_DOCTRINE_SALMON"
+      ]
+    }
+  ]
+}

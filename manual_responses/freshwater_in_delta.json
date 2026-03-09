@@ -1,0 +1,152 @@
+{
+  "Legal Standards": [
+    {
+      "legal_standard_id": "DELTA_REFORM_ACT",
+      "legal_standard": "Delta Reform Act",
+      "caption": "Establishes overarching state policy and governance framework for the Sacramento–San Joaquin Delta, including requirements affecting freshwater Delta exports.",
+      "info": "Establishes overarching state policy and governance framework for the Sacramento–San Joaquin Delta, including requirements affecting freshwater Delta exports.",
+      "vocabulary": [],
+      "sources": []
+    },
+    {
+      "legal_standard_id": "BAY_DELTA_WQCP",
+      "legal_standard": "Bay-Delta Water Quality Control Plan (Bay-Delta Plan)",
+      "caption": "Defines water quality objectives and beneficial uses for the Bay-Delta; serves as a foundational document in the legal hierarchy governing Delta exports.",
+      "info": "Defines water quality objectives and beneficial uses for the Bay-Delta; serves as a foundational document in the legal hierarchy governing Delta exports.",
+      "vocabulary": [],
+      "sources": []
+    },
+    {
+      "legal_standard_id": "PORTER_COLOGNE",
+      "legal_standard": "Porter-Cologne Water Quality Control Act",
+      "caption": "California’s primary water quality law authorizing regulation and enforcement of surface and groundwater quality standards in the Delta.",
+      "info": "California’s primary water quality law authorizing regulation and enforcement of surface and groundwater quality standards in the Delta.",
+      "vocabulary": [],
+      "sources": []
+    },
+    {
+      "legal_standard_id": "CALIFORNIA_WATER_CODE",
+      "legal_standard": "California Water Code",
+      "caption": "Statutory framework governing water rights, allocation, and administration, operating alongside Porter-Cologne and Delta-specific mandates.",
+      "info": "Statutory framework governing water rights, allocation, and administration, operating alongside Porter-Cologne and Delta-specific mandates.",
+      "vocabulary": [],
+      "sources": []
+    },
+    {
+      "legal_standard_id": "FEDERAL_CWA",
+      "legal_standard": "Federal Clean Water Act (CWA)",
+      "caption": "Provides the federal legal basis for water quality standards applicable to Delta waters, with EPA oversight of state-adopted standards.",
+      "info": "Provides the federal legal basis for water quality standards applicable to Delta waters, with EPA oversight of state-adopted standards.",
+      "vocabulary": [],
+      "sources": []
+    },
+    {
+            "order": 1,
+      "legal_standard_id": "ESA",
+      "legal_standard": "Endangered Species Act (ESA)",
+      "caption": "Imposes additional federal constraints on Delta operations to protect listed species, affecting freshwater export conditions.",
+      "info": "Imposes additional federal constraints on Delta operations to protect listed species, affecting freshwater export conditions.",
+      "vocabulary": [],
+      "sources": []
+    },
+    {
+      "legal_standard_id": "TIERED_AG_SALINITY_THRESHOLD",
+      "legal_standard": "Tiered Agricultural Salinity Threshold (Above Legal Standard)",
+      "caption": "A tiered water quality threshold that is more protective than the baseline legal standard for agricultural beneficial uses.",
+      "info": "A tiered water quality threshold that is more protective than the baseline legal standard for agricultural beneficial uses.",
+      "vocabulary": [
+        {
+          "term": "Parameter",
+          "definition": "Electrical Conductivity (EC); averaging period: 14-day average; threshold: <= 450 µS/cm; applicable water years: Most water years; locations: Jersey Point, Emmaton, Rock Slough"
+        },
+        {
+          "term": "Note",
+          "definition": "Additional water quality standards apply for municipal and industrial (M&I) uses."
+        }
+      ],
+      "sources": []
+    }
+  ],
+  "Tiers": {
+    "Tier 1": {
+      "threshold": "Max(EM, JP) below 900 uS/cm for >=75% of months and above 2500 uS/cm for <=5% of months.",
+      "policies": [
+        {
+          "policy_name": "Freshwater for Delta Exports / salinity standards",
+          "relationship": "Met / aligned with",
+          "note": "All scenarios analyzed fall in Tier 1; Delta export standards are maintained even under the most extreme current conditions."
+        },
+        {
+          "policy_name": "Water rights curtailments & seawater intrusion barriers",
+          "relationship": "Considered / possibly implicated",
+          "note": "May be implemented depending on observed conditions, even at Tier 1, because the state's legal threshold is lower than this tier."
+        }
+      ]
+    },
+    "Tier 2": {
+      "threshold": "Max(EM, JP) below 900 uS/cm for >=65% of months, below 1600 uS/cm for >=75% of months, and above 2500 uS/cm for <=12% of months.",
+      "policies": [
+        {
+          "policy_name": "Freshwater for Delta Exports / salinity standards",
+          "relationship": "Triggered / commonly implicated",
+          "note": "Observed salinity at Emmaton and Jersey Point during extremely dry years aligns with this tier. Reflects drought conditions familiar to the state without significantly impacting export quality."
+        },
+        {
+          "policy_name": "Water rights curtailments & seawater intrusion barriers",
+          "relationship": "Likely triggered",
+          "note": "Curtailments and salinity barriers would almost certainly be implemented at this tier."
+        },
+        {
+          "policy_name": "TUCP/O salinity standards relaxation under SWRCB D-1641",
+          "relationship": "Implicated / allowed",
+          "note": "Water Code & SWRCB regulations allow temporary relaxation of salinity standards in these conditions."
+        }
+      ]
+    },
+    "Tier 3": {
+      "threshold": "Max(EM, JP) below 900 uS/cm for >=55% of months, below 1600 uS/cm for >=65% of months, and above 2500 uS/cm for <=20% of months.",
+      "policies": [
+        {
+          "policy_name": "Freshwater for Delta Exports / salinity standards",
+          "relationship": "Implicated / stressed",
+          "note": "Salinity levels exceed those currently experienced; water management could mitigate somewhat but likely cannot meet current standards."
+        },
+        {
+          "policy_name": "Water treatment & supply management",
+          "relationship": "Triggered / strongly implicated",
+          "note": "More water treatment required, further reducing available supply under Tier 3 conditions."
+        },
+        {
+          "policy_name": "TUCP/O salinity standards relaxation under SWRCB D-1641",
+          "relationship": "Triggered / strongly implicated",
+          "note": "Temporary relaxation of salinity standards continues to allow operations under extreme conditions."
+        },
+        {
+          "policy_name": "Water rights curtailments & seawater intrusion barriers",
+          "relationship": "Continued implementation",
+          "note": "Measures from previous tiers remain in place."
+        }
+      ]
+    },
+    "Tier 4": {
+      "threshold": "Max(EM, JP) below 900 uS/cm for <55% of months and/or above 2500 uS/cm for >20% of months.",
+      "policies": [
+        {
+          "policy_name": "Freshwater for Delta Exports / salinity standards",
+          "relationship": "Severely exceeded / extreme emergency",
+          "note": "Critical salinity levels persist for much of the year, representing unprecedented drought and water quality challenges."
+        },
+        {
+          "policy_name": "Water project operations",
+          "relationship": "Strongly restricted / emergency level",
+          "note": "Project water deliveries may cease except for basic food and water security; conditions could persist for several years."
+        },
+        {
+          "policy_name": "Water reserves & emergency planning",
+          "relationship": "Triggered / strongly implicated",
+          "note": "Regions and localities would be required to use reserved water currently being set aside to maintain survival-level supply."
+        }
+      ]
+    }
+  }
+}

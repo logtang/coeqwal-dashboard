@@ -18,7 +18,7 @@
     {
       "tier_number": 2,
       "tier_label": "Tier 2",
-      "threshold": "Tier 2. Modified Functional Flows: Partial functional flows in wet season and spring; full functional flows in summer in 75% of years. Must have higher mean daily flows (volume/# days) in spring and winter than summer."
+      "threshold": "Partial functional flows in wet season and spring; full functional flows in summer in 75% of years. Must have higher mean daily flows (volume/# days) in spring and winter than summer."
     },
     {
       "tier_number": 3,

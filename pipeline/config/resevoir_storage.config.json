@@ -13,22 +13,22 @@
     {
       "tier_number": 1,
       "tier_label": "Tier 1",
-      "threshold": "Reservoir storage is greater than or equal to the top threshold for each reservoir for at least 90% of years (as represented by April values) in the dataset; As of July 2025, this threshold is set at the 50th percentile of recent historical data as available through CDEC"
+      "threshold": "Storage is greater than or equal to the top threshold for each reservoir for at least 90% of years (as represented by April values) in the dataset; As of July 2025, this threshold is set at the 50th percentile of recent historical data as available through CDEC"
     },
     {
       "tier_number": 2,
       "tier_label": "Tier 2",
-      "threshold": "Tier 2 Reservoir storage is greater than or equal to the middle threshold for each reservoir for at least 67% of years (as represented by April values) in the dataset; As of July 2025, this threshold is set at the 33rd percentile of recent historical data as available through CDEC"
+      "threshold": "Storage is greater than or equal to the middle threshold for each reservoir for at least 67% of years (as represented by April values) in the dataset; As of July 2025, this threshold is set at the 33rd percentile of recent historical data as available through CDEC"
     },
     {
       "tier_number": 3,
       "tier_label": "Tier 3",
-      "threshold": "Tier 3 Reservoir storage is greater than or equal to the middle threshold for each reservoir for at least 30% of years (as represented by April values) in the dataset; As of July 2025, this threshold is set at the 33rd percentile of recent historical data as available through CDEC"
+      "threshold": "Storage is greater than or equal to the middle threshold for each reservoir for at least 30% of years (as represented by April values) in the dataset; As of July 2025, this threshold is set at the 33rd percentile of recent historical data as available through CDEC"
     },
     {
       "tier_number": 4,
       "tier_label": "Tier 4",
-      "threshold": "Tier 4 Reservoir storage is not high enough to meet the conditions of Tiers 1-3. Reservoir storage is below the middle threshold (at or below the lower threshold) for more than 70% of years (as represented by April values). As of July 2025, the lower threshold is set as the 20th percentile of recent historical values"
+      "threshold": "Storage is not high enough to meet the conditions of Tiers 1-3. Reservoir storage is below the middle threshold for > 70% of years (as represented by April values). As of July 2025, the lower threshold is set as the 20th percentile of recent historical values"
     }
   ],
 

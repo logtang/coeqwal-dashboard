@@ -1,0 +1,149 @@
+{
+  "Legal Standards": [
+    {
+            "order": 1,
+      "legal_standard_id": "SGMA",
+      "legal_standard": "Sustainable Groundwater Management Act (SGMA)",
+      "caption": "Establishes a basin-based groundwater management framework implemented by local Groundwater Sustainability Agencies (GSAs).",
+      "info": "Establishes a basin-based groundwater management framework implemented by local Groundwater Sustainability Agencies (GSAs).",
+      "vocabulary": [
+        {
+          "term": "Implementing Entities",
+          "definition": "Groundwater Sustainability Agencies (GSAs); management scale: Basin-based (local)"
+        },
+        {
+          "term": "Basin Priority",
+          "definition": "High- and Medium-Priority Basins; coverage: Basins accounting for approximately 98% of statewide groundwater use"
+        }
+      ],
+      "sources": []
+    },
+    {
+            "order": 2,
+      "legal_standard_id": "GROUNDWATER_SUSTAINABILITY_PLANS",
+      "legal_standard": "Groundwater Sustainability Plans (GSPs)",
+      "caption": "Required planning instruments under SGMA for high- and medium-priority groundwater basins.",
+      "info": "Required planning instruments under SGMA for high- and medium-priority groundwater basins.",
+      "vocabulary": [
+        {
+          "term": "Requirement",
+          "definition": "Development and implementation of GSPs; applicability: High- and Medium-Priority Basins"
+        }
+      ],
+      "sources": []
+    },
+    {
+      "legal_standard_id": "LOCAL_PUMPING_LIMITS_CURTAILMENTS",
+      "legal_standard": "Local Pumping Limits and Curtailments (Legal Considerations)",
+      "caption": "Legal doctrines and principles governing locally managed groundwater pumping restrictions within a basin.",
+      "info": "Legal doctrines and principles governing locally managed groundwater pumping restrictions within a basin.",
+      "vocabulary": [
+        {
+          "term": "Principles",
+          "definition": "Constitutional priorities, Priority in time (water rights seniority), Equity among basin rights holders, Physical solutions, Self-help"
+        }
+      ],
+      "sources": []
+    },
+    {
+      "legal_standard_id": "CALIFORNIA_WATER_CODE",
+      "legal_standard": "California Water Code",
+      "caption": "Provides the statutory authority for groundwater regulations, including SGMA and Water Budget Analysis (WBA) requirements, as codified in state law.",
+      "info": "Provides the statutory authority for groundwater regulations, including SGMA and Water Budget Analysis (WBA) requirements, as codified in state law.",
+      "vocabulary": [
+        {
+          "term": "Authority Scope",
+          "definition": "SGMA implementation, Groundwater Sustainability Plans (GSPs), Water Budget Analysis (WBA) requirements"
+        }
+      ],
+      "sources": []
+    }
+  ],
+  "Tiers": {
+    "Tier 1": {
+      "threshold": "Trend stable or increasing (1960-2021) and average total storage > reference scenario.",
+      "policies": [
+        {
+          "policy_name": "State intervention",
+          "relationship": "Not triggered / none",
+          "note": "No state intervention under normal conditions."
+        },
+        {
+          "policy_name": "Temporary groundwater recharge permits",
+          "relationship": "Encouraged / standard practice",
+          "note": "Permits issued for diversions during storm events to enhance groundwater recharge."
+        },
+        {
+          "policy_name": "WSIP groundwater storage project funding",
+          "relationship": "Encouraged / standard practice",
+          "note": "Funding encouraged as contingency for emergency water supply."
+        }
+      ]
+    },
+    "Tier 2": {
+      "threshold": "Trend stable or increasing, but average total storage < reference scenario.",
+      "policies": [
+        {
+          "policy_name": "State intervention",
+          "relationship": "Unlikely but possible",
+          "note": "Triggered if critical or long-term overdraft occurs, GSP fails or is not implemented, or significant surface water depletion occurs."
+        },
+        {
+          "policy_name": "Temporary groundwater recharge permits",
+          "relationship": "Encouraged / standard practice",
+          "note": "Permits continue to be issued as in Tier 1."
+        },
+        {
+          "policy_name": "WSIP groundwater storage project funding",
+          "relationship": "Encouraged / standard practice",
+          "note": "Funding continues as in Tier 1."
+        }
+      ]
+    },
+    "Tier 3": {
+      "threshold": "Trend declining at moderate rate; fitted slope > -0.015 ft/yr.",
+      "policies": [
+        {
+          "policy_name": "State intervention",
+          "relationship": "Same as Tier 2",
+          "note": "Intervention remains unlikely unless overdraft or GSP issues persist."
+        },
+        {
+          "policy_name": "GSA curtailments, pumping limits, and fees",
+          "relationship": "Likely triggered",
+          "note": "Local GSAs implement curtailments, pumping restrictions, and fees to prevent overpumping."
+        },
+        {
+          "policy_name": "Temporary groundwater recharge permits",
+          "relationship": "Encouraged / standard practice",
+          "note": "Permits continue as in previous tiers."
+        },
+        {
+          "policy_name": "WSIP groundwater storage project funding",
+          "relationship": "Encouraged / standard practice",
+          "note": "Funding continues as in previous tiers."
+        }
+      ]
+    },
+    "Tier 4": {
+      "threshold": "Trend declining more severely; slope <= -0.015 ft/yr.",
+      "policies": [
+        {
+          "policy_name": "State intervention",
+          "relationship": "Triggered / required",
+          "note": "Critical overdraft, failed GSP implementation, or significant surface water depletion necessitate state intervention."
+        },
+        {
+          "policy_name": "Temporary groundwater recharge permits",
+          "relationship": "Encouraged / standard practice",
+          "note": "Permits continue as in previous tiers."
+        },
+        {
+          "policy_name": "WSIP groundwater storage project funding",
+          "relationship": "Encouraged / standard practice",
+          "note": "Funding continues as in previous tiers."
+        }
+      ]
+    }
+  }
+}

@@ -161,7 +161,7 @@
           "type": "string",
           "description": "Short label describing the outcome condition for this tier (e.g., 'Revenue declining <5%/year'). Must match the value defined in the config tiers array.",
           "minLength": 3,
-          "maxLength": 200
+          "maxLength": 400
         },
         "policies": {
           "type": "array",

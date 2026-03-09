@@ -1,0 +1,253 @@
+{
+  "meta": {
+    "outcome_domain": "bay_delta_estuary_ecology",
+    "tier_interpretation_note": "These tiers reflect the overall ecological condition of the Bay-Delta estuary. Legal standards affect this outcome by shaping the flow regimes, salinity conditions, water quality, and operational rules that determine habitat suitability for native species. Each tier entry identifies a legal standard whose mechanism is classified as either direct (a clear operational or regulatory pathway that affects estuarine conditions relevant to that tier) or indirect (a conditional, secondary, or system-level influence on those conditions).",
+    "generated_at": "2026-03-09T18:43:22.341189+00:00",
+    "config_version": "1.0.0"
+  },
+  "Legal Standards": [
+    {
+      "legal_standard_id": "BAY_DELTA_WATER_QUALITY_CONTROL_PLAN",
+      "legal_standard": "Bay-Delta Water Quality Control Plan",
+      "caption": "Sets water quality and flow standards for the Delta, impacting ecological conditions.",
+      "info": "The Bay-Delta Water Quality Control Plan establishes water quality objectives and flow standards that directly influence the hydrological and chemical conditions of the estuary. By setting limits on salinity and flow, it ensures that the habitat remains suitable for native species. The plan's amendments and updates reflect ongoing efforts to balance ecological needs with water supply demands.",
+      "vocabulary": [
+        {
+          "term": "salinity",
+          "definition": "The concentration of salt in water, affecting habitat conditions for aquatic species."
+        },
+        {
+          "term": "flow standards",
+          "definition": "Regulations that determine the amount and timing of water flow in rivers and estuaries."
+        }
+      ],
+      "sources": [
+        "State Water Resources Control Board, Bay-Delta Water Quality Control Plan (2018 amendments and prior versions)"
+      ]
+    },
+    {
+      "legal_standard_id": "D1641_WATER_RIGHTS_DECISION",
+      "legal_standard": "State Water Board Decision 1641",
+      "caption": "Implements water quality objectives through conditions on water rights, shaping estuarine conditions.",
+      "info": "Decision 1641 applies the Bay-Delta Plan's water quality objectives by imposing conditions on the water rights of the Central Valley Project (CVP) and State Water Project (SWP). This decision governs project operations, export limits, and salinity standards, directly affecting the estuarine environment by controlling the amount of freshwater inflow and maintaining salinity levels suitable for native species.",
+      "vocabulary": [
+        {
+          "term": "water rights",
+          "definition": "Legal entitlements allowing the use of water from a source for specific purposes."
+        },
+        {
+          "term": "export limits",
+          "definition": "Restrictions on the amount of water that can be diverted from a water body."
+        }
+      ],
+      "sources": [
+        "State Water Resources Control Board Decision 1641 (2000)"
+      ]
+    },
+    {
+      "legal_standard_id": "ESA_DELTA_SPECIES",
+      "legal_standard": "Endangered Species Act — Delta and Estuarine Species Protections",
+      "caption": "Imposes constraints on water operations to protect endangered species, affecting flow and habitat.",
+      "info": "The Endangered Species Act requires consultations and Biological Opinions for species like Delta smelt and salmonids, which impose operational constraints on CVP/SWP pumping. These constraints are designed to ensure sufficient flow and habitat conditions for the survival of these species, directly impacting the ecological health of the estuary.",
+      "vocabulary": [
+        {
+          "term": "Biological Opinions",
+          "definition": "Documents stating the impact of a federal action on endangered species and their habitat."
+        },
+        {
+          "term": "pumping constraints",
+          "definition": "Limitations on water extraction to protect environmental conditions."
+        }
+      ],
+      "sources": [
+        "Endangered Species Act §7; Biological Opinions for CVP/SWP operations (NMFS, USFWS)"
+      ]
+    },
+    {
+      "legal_standard_id": "DELTA_REFORM_ACT",
+      "legal_standard": "Sacramento-San Joaquin Delta Reform Act of 2009",
+      "caption": "Establishes goals for water supply and ecosystem restoration, influencing Delta conditions.",
+      "info": "The Delta Reform Act sets co-equal goals of water supply reliability and ecosystem restoration, creating the Delta Stewardship Council to oversee actions affecting the Delta. This act influences the estuary's ecological conditions by promoting policies that balance water use with habitat preservation, indirectly affecting flow regimes and habitat quality.",
+      "vocabulary": [
+        {
+          "term": "Delta Stewardship Council",
+          "definition": "A state agency responsible for developing and implementing the Delta Plan."
+        },
+        {
+          "term": "co-equal goals",
+          "definition": "Objectives that give equal priority to water supply reliability and ecosystem restoration."
+        }
+      ],
+      "sources": [
+        "California Water Code §85000 et seq."
+      ]
+    },
+    {
+      "legal_standard_id": "CVPIA_FISH_WILDLIFE_RESTORATION",
+      "legal_standard": "Central Valley Project Improvement Act — Fish and Wildlife Restoration",
+      "caption": "Mandates water dedication for fish restoration, affecting estuarine inflows and habitat.",
+      "info": "The CVPIA requires the dedication of a portion of CVP water to fish and wildlife restoration, aiming to double the natural production of anadromous fish. This act directly influences estuarine inflows and habitat conditions by ensuring that sufficient water is allocated to support ecological functions critical for fish populations.",
+      "vocabulary": [
+        {
+          "term": "anadromous fish",
+          "definition": "Fish that migrate from the sea to freshwater to spawn."
+        },
+        {
+          "term": "water dedication",
+          "definition": "Allocation of water resources for specific environmental purposes."
+        }
+      ],
+      "sources": [
+        "Public Law 102-575, Title XXXIV"
+      ]
+    },
+    {
+      "legal_standard_id": "PORTER_COLOGNE_WATER_QUALITY",
+      "legal_standard": "Porter-Cologne Water Quality Control Act",
+      "caption": "Provides a framework for water quality control, protecting estuarine habitats.",
+      "info": "The Porter-Cologne Act establishes a comprehensive framework for water quality control in California, authorizing Regional Water Quality Control Boards to develop Basin Plans. These plans set water quality objectives that protect estuarine and aquatic habitats, indirectly influencing the ecological conditions of the Bay-Delta by maintaining water quality standards.",
+      "vocabulary": [
+        {
+          "term": "Basin Plans",
+          "definition": "Plans developed by Regional Water Boards to manage water quality in specific areas."
+        },
+        {
+          "term": "water quality objectives",
+          "definition": "Standards set to protect beneficial uses of water, including ecological health."
+        }
+      ],
+      "sources": [
+        "California Water Code §13000 et seq."
+      ]
+    },
+    {
+      "legal_standard_id": "PUBLIC_TRUST_DOCTRINE",
+      "legal_standard": "Public Trust Doctrine",
+      "caption": "Requires protection of public trust resources, influencing water allocation for ecology.",
+      "info": "The Public Trust Doctrine mandates that the state protect public trust resources, such as fish and wildlife, in water allocation decisions. This doctrine can lead to the reallocation of water rights to ensure the protection of estuarine ecology, indirectly affecting the flow regimes and habitat conditions necessary for maintaining ecological integrity.",
+      "vocabulary": [
+        {
+          "term": "public trust resources",
+          "definition": "Natural resources held in trust by the state for public use and benefit."
+        },
+        {
+          "term": "water allocation",
+          "definition": "The distribution of water resources among users and uses."
+        }
+      ],
+      "sources": [
+        "California common law; National Audubon Society v. Superior Court (1983)"
+      ]
+    }
+  ],
+  "Tiers": {
+    "Tier 1": {
+      "threshold": "Scenario scores in the top 25% based on yearly evaluation of ecosystem indicators: low SAV, high turbidity, fresh conditions, expanded microhabitats in most years",
+      "policies": [
+        {
+          "policy_name": "Bay-Delta Plan",
+          "legal_standard_id": "BAY_DELTA_WATER_QUALITY_CONTROL_PLAN",
+          "effect_type": "direct",
+          "relationship": "Direct",
+          "note": "Mechanism: Sets flow and salinity standards that ensure fresh conditions and expanded microhabitats."
+        },
+        {
+          "policy_name": "ESA Protections",
+          "legal_standard_id": "ESA_DELTA_SPECIES",
+          "effect_type": "direct",
+          "relationship": "Direct",
+          "note": "Mechanism: Imposes operational constraints to maintain flow and habitat conditions for endangered species."
+        }
+      ]
+    },
+    "Tier 2": {
+      "threshold": "Tier 2 Scenario scores in the top 50% based on yearly evaluation of ecosystem indicators: unchanged SAV, high turbidity, fresh conditions, some microhabitats available in most years",
+      "policies": [
+        {
+          "policy_name": "D1641 Decision",
+          "legal_standard_id": "D1641_WATER_RIGHTS_DECISION",
+          "effect_type": "direct",
+          "relationship": "Direct",
+          "note": "Mechanism: Governs export limits and salinity standards to maintain fresh conditions and some microhabitats."
+        },
+        {
+          "policy_name": "CVPIA Restoration",
+          "legal_standard_id": "CVPIA_FISH_WILDLIFE_RESTORATION",
+          "effect_type": "direct",
+          "relationship": "Direct",
+          "note": "Mechanism: Allocates water for fish restoration, supporting fresh conditions and habitat availability."
+        }
+      ]
+    },
+    "Tier 3": {
+      "threshold": "Tier 3 Scenario scores in the top 75% based on yearly evaluation of ecosystem indicators: unchanged SAV, standard turbidity, moderate salinity, few microhabitats available in most years",
+      "policies": [
+        {
+          "policy_name": "Porter-Cologne Act",
+          "legal_standard_id": "PORTER_COLOGNE_WATER_QUALITY",
+          "effect_type": "indirect",
+          "relationship": "Indirect",
+          "note": "Mechanism: Sets water quality objectives that indirectly maintain moderate salinity and habitat conditions."
+        },
+        {
+          "policy_name": "Delta Reform Act",
+          "legal_standard_id": "DELTA_REFORM_ACT",
+          "effect_type": "indirect",
+          "relationship": "Indirect",
+          "note": "Mechanism: Promotes ecosystem restoration policies that indirectly influence flow and habitat conditions."
+        }
+      ]
+    },
+    "Tier 4": {
+      "threshold": "Tier 4. None of the above thresholds met: unchanged SAV, low turbidity, moderate to high salinity, few microhabitats available in most years",
+      "policies": [
+        {
+          "policy_name": "Public Trust Doctrine",
+          "legal_standard_id": "PUBLIC_TRUST_DOCTRINE",
+          "effect_type": "indirect",
+          "relationship": "Indirect",
+          "note": "Mechanism: Can lead to reallocation of water rights to protect ecological values, indirectly affecting salinity and habitat."
+        }
+      ]
+    }
+  },
+  "Governing Agencies": [
+    {
+      "name": "State Water Resources Control Board (SWRCB)",
+      "note": "The SWRCB is responsible for setting and enforcing water quality standards in California, including those in the Bay-Delta Plan and Decision 1641. It plays a critical role in regulating water rights and ensuring compliance with environmental objectives.",
+      "pertains_to_legal_standards": [
+        "BAY_DELTA_WATER_QUALITY_CONTROL_PLAN",
+        "D1641_WATER_RIGHTS_DECISION"
+      ]
+    },
+    {
+      "name": "National Marine Fisheries Service (NMFS)",
+      "note": "NMFS conducts ESA Section 7 consultations and issues Biological Opinions for species affected by water operations, ensuring that federal actions do not jeopardize endangered species.",
+      "pertains_to_legal_standards": [
+        "ESA_DELTA_SPECIES"
+      ]
+    },
+    {
+      "name": "U.S. Fish and Wildlife Service (USFWS)",
+      "note": "USFWS collaborates with NMFS in issuing Biological Opinions under the ESA, focusing on protecting fish and wildlife in the Delta and estuarine environments.",
+      "pertains_to_legal_standards": [
+        "ESA_DELTA_SPECIES"
+      ]
+    },
+    {
+      "name": "California Department of Water Resources (DWR)",
+      "note": "DWR manages the State Water Project and implements water management strategies that align with legal standards, including the Delta Reform Act and CVPIA.",
+      "pertains_to_legal_standards": [
+        "DELTA_REFORM_ACT",
+        "CVPIA_FISH_WILDLIFE_RESTORATION"
+      ]
+    },
+    {
+      "name": "Regional Water Quality Control Boards",
+      "note": "These boards develop Basin Plans under the Porter-Cologne Act, setting water quality objectives that protect estuarine habitats and influence ecological conditions.",
+      "pertains_to_legal_standards": [
+        "PORTER_COLOGNE_WATER_QUALITY"
+      ]
+    }
+  ]
+}

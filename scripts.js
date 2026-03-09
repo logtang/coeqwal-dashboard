@@ -8,7 +8,7 @@ const metrics = [
     'resevoir_storage',
     'salmon_abundance'
 ];
-const allowedMetric = 'agricultural_productivity';
+const allowedMetric = null;
 
 let currentMetric = null;
 let currentData = null;
@@ -26,9 +26,9 @@ function init() {
 function renderMetricCards() {
     const grid = document.getElementById('metricGrid');
     grid.innerHTML = metrics.map(metric => {
-        const isAllowed = metric === allowedMetric;
+        const isAllowed = !allowedMetric || metric === allowedMetric;
         const disabledClass = isAllowed ? '' : 'disabled';
-        const clickHandler = isAllowed ? `onclick="selectMetric('${metric}')"` : '';
+        const clickHandler = `onclick="selectMetric('${metric}')"`; 
         return `
         <div class="metric-card ${disabledClass}" data-metric="${metric}" ${clickHandler} aria-disabled="${!isAllowed}">
             <div class="metric-name">${formatMetricName(metric)}</div>
@@ -44,7 +44,7 @@ function formatMetricName(metric) {
 
 // Handle metric selection and load data for all panels.
 async function selectMetric(metric) {
-    if (metric !== allowedMetric) {
+    if (allowedMetric && metric !== allowedMetric) {
         return;
     }
     // Update active state

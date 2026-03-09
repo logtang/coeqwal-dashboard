@@ -1,0 +1,210 @@
+{
+  "meta": {
+    "outcome_domain": "delta_freshwater_export",
+    "tier_interpretation_note": "These tiers reflect Delta freshwater export volumes relative to project entitlements and historical averages. Legal standards affect this outcome by shaping operational constraints on CVP and SWP pumping facilities. Each tier entry identifies a legal standard whose mechanism is classified as either direct (a clear operational or regulatory pathway that constrains or enables export volumes) or indirect (a conditional, secondary, or system-level influence on export capacity).",
+    "generated_at": "2026-03-09T18:58:17.003559+00:00",
+    "config_version": "1.0.0"
+  },
+  "Legal Standards": [
+    {
+      "legal_standard_id": "D1641_EXPORT_OPERATIONS",
+      "legal_standard": "State Water Board Decision 1641 — Export Operation Conditions",
+      "caption": "D1641 sets operational conditions on CVP and SWP permits, directly limiting pumping.",
+      "info": "State Water Board Decision 1641 implements water quality objectives by imposing operational conditions on CVP and SWP water right permits. These include export-to-inflow ratios, Old and Middle River flow standards, and salinity requirements. These conditions directly limit the amount of water that can be pumped from the Delta, ensuring that water quality objectives are met and that the ecological health of the Delta is maintained.",
+      "vocabulary": [
+        {
+          "term": "Export-to-inflow ratio",
+          "definition": "A regulatory measure that limits the amount of water that can be exported from the Delta relative to the amount of water flowing into it."
+        },
+        {
+          "term": "Old and Middle River flow standards",
+          "definition": "Flow standards that regulate the direction and volume of water flow in the Old and Middle Rivers to protect fish and water quality."
+        }
+      ],
+      "sources": [
+        "State Water Resources Control Board Decision 1641 (2000)"
+      ]
+    },
+    {
+            "order": 1,
+      "legal_standard_id": "ESA_PUMPING_CONSTRAINTS",
+      "legal_standard": "Endangered Species Act — Pumping and Export Constraints",
+      "caption": "ESA Biological Opinions impose direct constraints on CVP/SWP pumping to protect fish.",
+      "info": "Under the Endangered Species Act, Biological Opinions are issued to protect listed species such as Delta smelt and salmonids. These opinions impose real-time and seasonal constraints on CVP and SWP pumping operations. The constraints are among the most direct operational limits on export volumes, as they require adjustments to pumping schedules and volumes to minimize harm to endangered species.",
+      "vocabulary": [
+        {
+          "term": "Biological Opinion",
+          "definition": "A document stating the opinion of the U.S. Fish and Wildlife Service or NOAA Fisheries on whether a federal action is likely to jeopardize the continued existence of listed species or destroy or adversely modify critical habitat."
+        }
+      ],
+      "sources": [
+        "Endangered Species Act §7; Biological Opinions for CVP/SWP (NMFS, USFWS)"
+      ]
+    },
+    {
+      "legal_standard_id": "BAY_DELTA_PLAN_FLOW_OBJECTIVES",
+      "legal_standard": "Bay-Delta Water Quality Control Plan — Flow and Salinity Objectives",
+      "caption": "The Bay-Delta Plan sets flow and salinity standards that constrain export pumping.",
+      "info": "The Bay-Delta Water Quality Control Plan establishes flow objectives for Delta inflows, outflows, and interior channels, as well as salinity standards. These objectives are designed to maintain water quality throughout the estuary and directly influence the rate of export pumping. By setting these standards, the plan ensures that water quality is protected, which in turn limits the amount of water that can be exported from the Delta.",
+      "vocabulary": [
+        {
+          "term": "Flow objectives",
+          "definition": "Regulatory targets for the volume and timing of water flows to maintain ecological and water quality standards."
+        }
+      ],
+      "sources": [
+        "State Water Resources Control Board, Bay-Delta Water Quality Control Plan"
+      ]
+    },
+    {
+      "legal_standard_id": "DELTA_REFORM_ACT_COEQUAL_GOALS",
+      "legal_standard": "Sacramento-San Joaquin Delta Reform Act — Co-Equal Goals",
+      "caption": "The Delta Reform Act mandates balancing water supply reliability with ecosystem restoration.",
+      "info": "The Sacramento-San Joaquin Delta Reform Act establishes the co-equal goals of water supply reliability and Delta ecosystem restoration. This requires that export operations be managed to advance both goals. The Delta Plan, developed under this act, includes regulatory policies that can impose additional constraints on export facilities to ensure that both water supply and ecosystem health are prioritized.",
+      "vocabulary": [
+        {
+          "term": "Co-equal goals",
+          "definition": "The dual objectives of providing a reliable water supply and protecting, restoring, and enhancing the Delta ecosystem."
+        }
+      ],
+      "sources": [
+        "California Water Code §85000 et seq."
+      ]
+    },
+    {
+      "legal_standard_id": "CVP_SWP_WATER_RIGHT_PERMITS",
+      "legal_standard": "CVP and SWP Water Right Permits",
+      "caption": "These permits establish the legal ceiling on export volumes before constraints.",
+      "info": "The foundational water right permits for the Central Valley Project (CVP) and State Water Project (SWP) establish maximum diversion quantities, points of diversion, and conditions of use. These permits define the legal ceiling on export volumes, setting the baseline for how much water can be diverted from the Delta before any operational constraints are applied. They are critical in determining the potential maximum export capacity.",
+      "vocabulary": [
+        {
+          "term": "Water right permits",
+          "definition": "Legal authorizations that specify the amount of water that can be diverted, the location of diversion, and the purpose of use."
+        }
+      ],
+      "sources": [
+        "State Water Resources Control Board water right permits for CVP and SWP operations"
+      ]
+    },
+    {
+      "legal_standard_id": "CVPIA_INSTREAM_FLOW_REQUIREMENTS",
+      "legal_standard": "Central Valley Project Improvement Act — Instream Flow Requirements",
+      "caption": "CVPIA mandates 800,000 acre-feet of CVP yield for fish and wildlife, reducing export water.",
+      "info": "The Central Valley Project Improvement Act requires the dedication of 800,000 acre-feet of CVP yield annually to fish and wildlife purposes. This directly reduces the amount of water available for export from Delta facilities, as a significant portion of the water that would otherwise be available for export is instead allocated to environmental needs. This requirement ensures that ecological considerations are prioritized in water management decisions.",
+      "vocabulary": [
+        {
+          "term": "Instream flow requirements",
+          "definition": "Legal mandates to maintain certain flow levels in rivers and streams to support fish and wildlife habitats."
+        }
+      ],
+      "sources": [
+        "Public Law 102-575, Title XXXIV"
+      ]
+    }
+  ],
+  "Tiers": {
+    "Tier 1": {
+      "threshold": "Average of both Banks & Jones salinity is below 900 uS/cm for all 12 months per year for 95% of years",
+      "policies": [
+        {
+          "policy_name": "D1641 Export Operations",
+          "legal_standard_id": "D1641_EXPORT_OPERATIONS",
+          "effect_type": "direct",
+          "relationship": "Direct",
+          "note": "Mechanism: D1641 directly limits pumping through salinity and flow standards, ensuring low salinity levels are maintained."
+        },
+        {
+          "policy_name": "ESA Pumping Constraints",
+          "legal_standard_id": "ESA_PUMPING_CONSTRAINTS",
+          "effect_type": "direct",
+          "relationship": "Direct",
+          "note": "Mechanism: ESA constraints protect fish species, directly limiting pumping to maintain low salinity conditions."
+        }
+      ]
+    },
+    "Tier 2": {
+      "threshold": "Average of Banks and Jones salinity is between 900 and 1600 uS/cm for at least 10 months per year for 95% of years",
+      "policies": [
+        {
+          "policy_name": "Bay-Delta Plan Flow Objectives",
+          "legal_standard_id": "BAY_DELTA_PLAN_FLOW_OBJECTIVES",
+          "effect_type": "direct",
+          "relationship": "Direct",
+          "note": "Mechanism: Flow and salinity objectives directly constrain export rates to maintain moderate salinity levels."
+        }
+      ]
+    },
+    "Tier 3": {
+      "threshold": "Average of Banks and Jones salinity is above 1600 uS/cm for 2 or more months in any year, or more than 5% of years at either site",
+      "policies": [
+        {
+          "policy_name": "Delta Reform Act Co-Equal Goals",
+          "legal_standard_id": "DELTA_REFORM_ACT_COEQUAL_GOALS",
+          "effect_type": "indirect",
+          "relationship": "Indirect",
+          "note": "Mechanism: Co-equal goals indirectly influence export operations, balancing water supply and ecosystem needs."
+        }
+      ]
+    },
+    "Tier 4": {
+      "threshold": "Average of Banks and Jones salinity is greater than 2500 uS/cm for 2 or more months in any year",
+      "policies": [
+        {
+          "policy_name": "CVPIA Instream Flow Requirements",
+          "legal_standard_id": "CVPIA_INSTREAM_FLOW_REQUIREMENTS",
+          "effect_type": "direct",
+          "relationship": "Direct",
+          "note": "Mechanism: Instream flow requirements directly reduce export volumes, impacting salinity levels during critical periods."
+        },
+        {
+          "policy_name": "CVP and SWP Water Right Permits",
+          "legal_standard_id": "CVP_SWP_WATER_RIGHT_PERMITS",
+          "effect_type": "indirect",
+          "relationship": "Indirect",
+          "note": "Mechanism: Water right permits set the legal ceiling on exports, indirectly affecting salinity by limiting maximum diversions."
+        }
+      ]
+    }
+  },
+  "Governing Agencies": [
+    {
+      "name": "State Water Resources Control Board (SWRCB)",
+      "note": "The SWRCB is responsible for setting and enforcing water quality standards and water rights permits, directly influencing Delta export operations through regulatory decisions.",
+      "pertains_to_legal_standards": [
+        "D1641_EXPORT_OPERATIONS",
+        "BAY_DELTA_PLAN_FLOW_OBJECTIVES",
+        "CVP_SWP_WATER_RIGHT_PERMITS"
+      ]
+    },
+    {
+      "name": "U.S. Fish and Wildlife Service (USFWS)",
+      "note": "USFWS issues Biological Opinions under the ESA, imposing constraints on water exports to protect endangered species, directly affecting Delta export volumes.",
+      "pertains_to_legal_standards": [
+        "ESA_PUMPING_CONSTRAINTS"
+      ]
+    },
+    {
+      "name": "National Marine Fisheries Service (NMFS)",
+      "note": "NMFS collaborates with USFWS to issue Biological Opinions under the ESA, focusing on the protection of marine and anadromous species, impacting export operations.",
+      "pertains_to_legal_standards": [
+        "ESA_PUMPING_CONSTRAINTS"
+      ]
+    },
+    {
+      "name": "California Department of Water Resources (DWR)",
+      "note": "DWR operates the State Water Project, implementing water management strategies in compliance with legal standards to balance water supply and ecological health.",
+      "pertains_to_legal_standards": [
+        "D1641_EXPORT_OPERATIONS",
+        "DELTA_REFORM_ACT_COEQUAL_GOALS"
+      ]
+    },
+    {
+      "name": "U.S. Bureau of Reclamation (USBR)",
+      "note": "USBR manages the Central Valley Project, ensuring compliance with water rights and environmental regulations, directly affecting Delta export operations.",
+      "pertains_to_legal_standards": [
+        "CVP_SWP_WATER_RIGHT_PERMITS",
+        "CVPIA_INSTREAM_FLOW_REQUIREMENTS"
+      ]
+    }
+  ]
+}

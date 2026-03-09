@@ -1,0 +1,197 @@
+{
+  "meta": {
+    "outcome_domain": "groundwater_storage",
+    "tier_interpretation_note": "These tiers reflect groundwater storage conditions in California basins relative to sustainable yield and historical averages. Legal standards affect this outcome by constraining extraction rates, mandating recharge programs, and establishing sustainability criteria. Each tier entry identifies a legal standard whose mechanism is classified as either direct (a clear operational or regulatory pathway that affects groundwater storage) or indirect (a conditional, secondary, or system-level influence on storage conditions).",
+    "generated_at": "2026-03-09T19:02:54.457777+00:00",
+    "config_version": "1.0.0"
+  },
+  "Legal Standards": [
+    {
+            "order": 1,
+      "legal_standard_id": "SGMA_SUSTAINABILITY_CRITERIA",
+      "legal_standard": "Sustainable Groundwater Management Act — Sustainability Criteria and GSP Requirements",
+      "caption": "SGMA mandates local plans to achieve sustainable groundwater management.",
+      "info": "SGMA requires local Groundwater Sustainability Agencies (GSAs) to develop Groundwater Sustainability Plans (GSPs) that prevent undesirable results such as chronic lowering of groundwater levels and reduction of storage. These plans must outline specific actions to maintain or restore groundwater storage to sustainable levels. The criteria set by SGMA directly influence how groundwater storage is managed by setting thresholds and requiring corrective actions if those thresholds are exceeded.",
+      "vocabulary": [
+        {
+          "term": "Groundwater Sustainability Plan (GSP)",
+          "definition": "A plan developed by local agencies to manage groundwater resources sustainably."
+        },
+        {
+          "term": "Undesirable Results",
+          "definition": "Negative impacts on groundwater basins, such as reduced storage or land subsidence, that SGMA aims to prevent."
+        }
+      ],
+      "sources": [
+        "California Water Code §10720 et seq."
+      ]
+    },
+    {
+      "legal_standard_id": "SGMA_PROBATIONARY_INTERVENTION",
+      "legal_standard": "Sustainable Groundwater Management Act — State Intervention and Probationary Basins",
+      "caption": "State can intervene in basins failing to meet SGMA requirements.",
+      "info": "If local agencies fail to develop adequate GSPs or make progress toward sustainability, the Department of Water Resources (DWR) and the State Water Resources Control Board (SWRCB) can place basins on probationary status. This allows the state to take direct control over groundwater extraction, ensuring that storage levels are managed according to state-defined sustainability criteria. This intervention serves as a direct mechanism to enforce compliance and protect groundwater storage.",
+      "vocabulary": [
+        {
+          "term": "Probationary Status",
+          "definition": "A designation for basins that are not meeting SGMA requirements, allowing state intervention."
+        }
+      ],
+      "sources": [
+        "California Water Code §10735 et seq."
+      ]
+    },
+    {
+            "order": 2,
+      "legal_standard_id": "LOCAL_GSP_EXTRACTION_ALLOCATIONS",
+      "legal_standard": "Local Groundwater Sustainability Plan — Extraction Allocations and Monitoring",
+      "caption": "Local GSPs control groundwater extraction through allocations and monitoring.",
+      "info": "Local GSAs implement SGMA by setting extraction allocations, issuing well permits, and monitoring groundwater use. These actions directly control the amount of groundwater that can be pumped, influencing storage levels. By regulating extraction, local plans aim to maintain or increase groundwater storage, aligning with sustainability goals.",
+      "vocabulary": [
+        {
+          "term": "Extraction Allocations",
+          "definition": "Limits set by local agencies on the amount of groundwater that can be extracted."
+        },
+        {
+          "term": "Monitoring",
+          "definition": "The process of tracking groundwater levels and usage to ensure compliance with GSPs."
+        }
+      ],
+      "sources": [
+        "California Water Code §10727 et seq."
+      ]
+    },
+    {
+      "legal_standard_id": "PORTER_COLOGNE_GROUNDWATER_QUALITY",
+      "legal_standard": "Porter-Cologne Water Quality Control Act — Groundwater Quality Protection",
+      "caption": "Regulates groundwater quality to protect storage usability.",
+      "info": "The Porter-Cologne Act regulates discharges and contamination sources to protect groundwater quality. Poor water quality can reduce the usable storage in a basin, even if physical water levels are maintained. Remediation requirements can also affect extraction patterns, indirectly influencing storage by ensuring that extracted water meets quality standards.",
+      "vocabulary": [
+        {
+          "term": "Water Quality",
+          "definition": "The chemical, physical, and biological characteristics of water, affecting its suitability for use."
+        }
+      ],
+      "sources": [
+        "California Water Code §13000 et seq."
+      ]
+    },
+    {
+      "legal_standard_id": "SWRCB_GROUNDWATER_RIGHTS_ADJUDICATION",
+      "legal_standard": "SWRCB and Court-Administered Groundwater Adjudications",
+      "caption": "Court decrees define extraction rights in adjudicated basins.",
+      "info": "In adjudicated basins, court decrees and watermaster management define extraction rights and basin-wide limits. These legal orders directly constrain total groundwater withdrawal, affecting storage outcomes. By setting clear extraction limits, adjudications ensure that groundwater use does not exceed sustainable levels, thereby protecting storage.",
+      "vocabulary": [
+        {
+          "term": "Adjudicated Basin",
+          "definition": "A groundwater basin where rights and management are determined by court decree."
+        },
+        {
+          "term": "Watermaster",
+          "definition": "An official responsible for administering water rights and managing water resources in an adjudicated basin."
+        }
+      ],
+      "sources": [
+        "California Water Code §2500 et seq."
+      ]
+    },
+    {
+      "legal_standard_id": "MANAGED_AQUIFER_RECHARGE_AUTHORITY",
+      "legal_standard": "Managed Aquifer Recharge — Legal Authorizations and Water Rights",
+      "caption": "Legal framework supports aquifer recharge to restore storage.",
+      "info": "Managed Aquifer Recharge (MAR) involves capturing and storing surface water to replenish groundwater basins. Legal authorizations and water rights for recharge operations are crucial for implementing MAR projects. These programs are a primary mechanism for restoring groundwater storage, as they directly increase the volume of water stored in aquifers.",
+      "vocabulary": [
+        {
+          "term": "Managed Aquifer Recharge (MAR)",
+          "definition": "The process of intentionally recharging groundwater basins with surface water."
+        }
+      ],
+      "sources": [
+        "California Water Code §1242"
+      ]
+    }
+  ],
+  "Tiers": {
+    "Tier 1": {
+      "threshold": "Under Tier 1 conditions, the groundwater trend in a WBA is stable or increasing from 1960-2021 and average total storage is greater than in the reference scenario",
+      "policies": [
+        {
+          "policy_name": "SGMA Sustainability Criteria",
+          "legal_standard_id": "SGMA_SUSTAINABILITY_CRITERIA",
+          "effect_type": "direct",
+          "relationship": "Direct",
+          "note": "Mechanism: SGMA requires GSPs to maintain or increase groundwater storage, ensuring trends are stable or improving."
+        },
+        {
+          "policy_name": "Managed Aquifer Recharge",
+          "legal_standard_id": "MANAGED_AQUIFER_RECHARGE_AUTHORITY",
+          "effect_type": "direct",
+          "relationship": "Direct",
+          "note": "Mechanism: MAR projects directly increase groundwater storage, supporting stable or increasing trends."
+        }
+      ]
+    },
+    "Tier 2": {
+      "threshold": "Under Tier 2 conditions, the groundwater trend in a WBA is stable or increasing but total storage is less than in the reference",
+      "policies": [
+        {
+          "policy_name": "Local GSP Extraction Allocations",
+          "legal_standard_id": "LOCAL_GSP_EXTRACTION_ALLOCATIONS",
+          "effect_type": "direct",
+          "relationship": "Direct",
+          "note": "Mechanism: Local GSPs control extraction to stabilize trends, even if storage is below reference levels."
+        }
+      ]
+    },
+    "Tier 3": {
+      "threshold": "Under Tier 3, the groundwater trend is declining (not stable or increasing as in Tiers 1 or 2) but at a moderate rate (fitted linear trend is less negative than -0.015 ft/yr)",
+      "policies": [
+        {
+          "policy_name": "SGMA Probationary Intervention",
+          "legal_standard_id": "SGMA_PROBATIONARY_INTERVENTION",
+          "effect_type": "indirect",
+          "relationship": "Indirect",
+          "note": "Mechanism: State intervention can moderate declining trends by enforcing stricter management."
+        }
+      ]
+    },
+    "Tier 4": {
+      "threshold": "In Tier 4, groundwater trends in a WBA are declining more severely, at a rate greater than 0.015 ft/year (slope <= -0.015 ft/yr)",
+      "policies": [
+        {
+          "policy_name": "SWRCB Groundwater Rights Adjudication",
+          "legal_standard_id": "SWRCB_GROUNDWATER_RIGHTS_ADJUDICATION",
+          "effect_type": "direct",
+          "relationship": "Direct",
+          "note": "Mechanism: Adjudications set strict extraction limits to address severe declines in storage."
+        }
+      ]
+    }
+  },
+  "Governing Agencies": [
+    {
+      "name": "Department of Water Resources (DWR)",
+      "note": "DWR oversees the implementation of SGMA, providing guidance and support to local agencies in developing GSPs. It also evaluates GSPs and can recommend state intervention if necessary.",
+      "pertains_to_legal_standards": [
+        "SGMA_SUSTAINABILITY_CRITERIA",
+        "SGMA_PROBATIONARY_INTERVENTION"
+      ]
+    },
+    {
+      "name": "State Water Resources Control Board (SWRCB)",
+      "note": "SWRCB has authority over water rights and quality, playing a key role in adjudications and enforcing compliance with SGMA. It can impose state management on non-compliant basins.",
+      "pertains_to_legal_standards": [
+        "SGMA_PROBATIONARY_INTERVENTION",
+        "SWRCB_GROUNDWATER_RIGHTS_ADJUDICATION",
+        "PORTER_COLOGNE_GROUNDWATER_QUALITY"
+      ]
+    },
+    {
+      "name": "Local Groundwater Sustainability Agencies (GSAs)",
+      "note": "Local GSAs are responsible for developing and implementing GSPs under SGMA. They manage groundwater extraction and recharge activities to achieve sustainability.",
+      "pertains_to_legal_standards": [
+        "LOCAL_GSP_EXTRACTION_ALLOCATIONS"
+      ]
+    }
+  ]
+}

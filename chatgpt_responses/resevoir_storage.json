@@ -1,0 +1,223 @@
+{
+  "meta": {
+    "outcome_domain": "reservoir_storage",
+    "tier_interpretation_note": "These tiers reflect reservoir storage conditions across California's major water storage facilities relative to historical averages and capacity. Legal standards affect this outcome by shaping inflow requirements, mandatory releases, and operational constraints at major reservoirs. Each tier entry identifies a legal standard whose mechanism is classified as either direct (a clear operational or regulatory pathway that affects reservoir storage) or indirect (a conditional, secondary, or system-level influence on storage levels).",
+    "generated_at": "2026-03-09T19:11:14.719072+00:00",
+    "config_version": "1.0.0"
+  },
+  "Legal Standards": [
+    {
+            "order": 1,
+      "legal_standard_id": "WATER_RIGHT_PERMITS_RESERVOIR_OPS",
+      "legal_standard": "SWRCB Water Right Permits — Reservoir Storage and Release Conditions",
+      "caption": "Water right permits dictate storage and release conditions for major reservoirs.",
+      "info": "Water right permits issued by the State Water Resources Control Board (SWRCB) establish specific conditions for reservoir operations, including storage capacities, diversion seasons, and conditions of use. These permits often include mandatory bypass flows, minimum pool requirements, and release schedules that directly influence the volume of water stored. By setting these operational parameters, the permits ensure that reservoir operations align with legal and environmental standards, directly affecting storage levels.",
+      "vocabulary": [
+        {
+          "term": "bypass flows",
+          "definition": "Minimum flow requirements that must be released downstream from a reservoir."
+        },
+        {
+          "term": "minimum pool",
+          "definition": "The minimum volume of water that must be maintained in a reservoir."
+        }
+      ],
+      "sources": [
+        "State Water Resources Control Board water right permits for major reservoirs"
+      ]
+    },
+    {
+      "legal_standard_id": "ESA_RESERVOIR_OPERATIONS",
+      "legal_standard": "Endangered Species Act — Reservoir and Dam Operation Constraints",
+      "caption": "ESA constraints protect species by imposing flow and temperature requirements.",
+      "info": "The Endangered Species Act (ESA) requires that reservoir operations comply with Biological Opinions issued by agencies like NMFS and USFWS. These opinions impose flow release requirements, temperature management protocols, and reservoir level restrictions to protect endangered species, such as anadromous fish. These requirements can significantly constrain the flexibility of reservoir storage operations, as they prioritize ecological needs over storage maximization.",
+      "vocabulary": [
+        {
+          "term": "Biological Opinions",
+          "definition": "Documents that provide guidance on how to avoid jeopardizing endangered species."
+        },
+        {
+          "term": "anadromous fish",
+          "definition": "Fish that migrate from the sea to freshwater to spawn."
+        }
+      ],
+      "sources": [
+        "Endangered Species Act §7; Biological Opinions for major federal dams (NMFS, USFWS)"
+      ]
+    },
+    {
+      "legal_standard_id": "FERC_LICENSE_RESERVOIR_CONDITIONS",
+      "legal_standard": "FERC Hydropower License — Reservoir Operation and Flow Conditions",
+      "caption": "FERC licenses impose flow and reservoir level conditions for hydropower.",
+      "info": "FERC licenses for hydropower facilities include conditions that affect reservoir operations, such as mandatory minimum flow releases, ramping rate requirements, and reservoir level conditions. These conditions are designed to balance energy production with environmental protection, affecting how storage is managed throughout the year and during drought periods. By setting these operational constraints, FERC licenses directly influence reservoir storage levels.",
+      "vocabulary": [
+        {
+          "term": "ramping rate",
+          "definition": "The rate at which water flow is increased or decreased."
+        },
+        {
+          "term": "FERC",
+          "definition": "Federal Energy Regulatory Commission, which licenses hydropower projects."
+        }
+      ],
+      "sources": [
+        "Federal Power Act §10(j); FERC license conditions for California hydropower facilities"
+      ]
+    },
+    {
+      "legal_standard_id": "CVPIA_RESERVOIR_OPERATIONS",
+      "legal_standard": "Central Valley Project Improvement Act — Reservoir Management Requirements",
+      "caption": "CVPIA imposes environmental constraints on CVP reservoir operations.",
+      "info": "The Central Valley Project Improvement Act (CVPIA) mandates specific operational requirements for CVP reservoirs, such as Shasta, Folsom, and Trinity. These include maintaining cold water pools, ensuring minimum downstream flow releases, and dedicating water to environmental purposes. These requirements are designed to support fish and wildlife restoration, directly affecting reservoir storage by prioritizing ecological needs over other uses.",
+      "vocabulary": [
+        {
+          "term": "cold water pool",
+          "definition": "A volume of cold water maintained in a reservoir to support downstream ecosystems."
+        },
+        {
+          "term": "CVP",
+          "definition": "Central Valley Project, a federal water management project in California."
+        }
+      ],
+      "sources": [
+        "Public Law 102-575, Title XXXIV"
+      ]
+    },
+    {
+      "legal_standard_id": "DROUGHT_EMERGENCY_RESERVOIR_MANAGEMENT",
+      "legal_standard": "Drought Emergency Regulations — Reservoir Conservation and Curtailment",
+      "caption": "Drought regulations modify reservoir operations to conserve water.",
+      "info": "During declared drought emergencies, California may impose regulations that affect reservoir operations. These can include mandatory conservation targets, restrictions on diversions to reservoirs, and modifications to operational requirements. Such measures are intended to slow the rate of storage decline and manage remaining stored water more effectively, indirectly influencing reservoir storage levels by prioritizing conservation.",
+      "vocabulary": [
+        {
+          "term": "conservation targets",
+          "definition": "Goals set to reduce water usage during drought conditions."
+        },
+        {
+          "term": "diversions",
+          "definition": "The act of redirecting water from its natural course or location."
+        }
+      ],
+      "sources": [
+        "California Water Code; Governor's drought emergency declarations; SWRCB emergency regulations"
+      ]
+    },
+    {
+      "legal_standard_id": "WILD_SCENIC_RIVERS_ACT_CA",
+      "legal_standard": "California Wild and Scenic Rivers Act",
+      "caption": "The Act limits reservoir development on designated wild and scenic rivers.",
+      "info": "The California Wild and Scenic Rivers Act designates certain river segments as wild and scenic, prohibiting the construction of dams and diversions that would alter their free-flowing character. This limits future reservoir development on these rivers and constrains operational changes that could affect protected reaches. While the Act does not directly dictate reservoir storage levels, it indirectly influences storage by preserving natural river conditions.",
+      "vocabulary": [
+        {
+          "term": "wild and scenic",
+          "definition": "A designation that protects rivers from development that would alter their natural state."
+        }
+      ],
+      "sources": [
+        "California Public Resources Code §5093.50 et seq."
+      ]
+    }
+  ],
+  "Tiers": {
+    "Tier 1": {
+      "threshold": "Storage is greater than or equal to the top threshold for each reservoir for at least 90% of years (as represented by April values) in the dataset; As of July 2025, this threshold is set at the 50th percentile of recent historical data as available through CDEC",
+      "policies": [
+        {
+          "policy_name": "SWRCB Water Right Permits",
+          "legal_standard_id": "WATER_RIGHT_PERMITS_RESERVOIR_OPS",
+          "effect_type": "direct",
+          "relationship": "Direct",
+          "note": "Mechanism: Water right permits set specific storage and release conditions that ensure reservoirs maintain high storage levels."
+        },
+        {
+          "policy_name": "FERC Hydropower License",
+          "legal_standard_id": "FERC_LICENSE_RESERVOIR_CONDITIONS",
+          "effect_type": "direct",
+          "relationship": "Direct",
+          "note": "Mechanism: FERC licenses require minimum flow releases and reservoir level conditions that support high storage levels."
+        }
+      ]
+    },
+    "Tier 2": {
+      "threshold": "Storage is greater than or equal to the middle threshold for each reservoir for at least 67% of years (as represented by April values) in the dataset; As of July 2025, this threshold is set at the 33rd percentile of recent historical data as available through CDEC",
+      "policies": [
+        {
+          "policy_name": "ESA Reservoir Operations",
+          "legal_standard_id": "ESA_RESERVOIR_OPERATIONS",
+          "effect_type": "indirect",
+          "relationship": "Indirect",
+          "note": "Mechanism: ESA constraints prioritize ecological needs, indirectly supporting moderate storage levels by balancing environmental and storage requirements."
+        }
+      ]
+    },
+    "Tier 3": {
+      "threshold": "Storage is greater than or equal to the middle threshold for each reservoir for at least 30% of years (as represented by April values) in the dataset; As of July 2025, this threshold is set at the 33rd percentile of recent historical data as available through CDEC",
+      "policies": [
+        {
+          "policy_name": "CVPIA Reservoir Operations",
+          "legal_standard_id": "CVPIA_RESERVOIR_OPERATIONS",
+          "effect_type": "direct",
+          "relationship": "Direct",
+          "note": "Mechanism: CVPIA mandates cold water pool maintenance and flow releases, directly affecting storage levels to support environmental goals."
+        }
+      ]
+    },
+    "Tier 4": {
+      "threshold": "Storage is not high enough to meet the conditions of Tiers 1-3. Reservoir storage is below the middle threshold for > 70% of years (as represented by April values). As of July 2025, the lower threshold is set as the 20th percentile of recent historical values",
+      "policies": [
+        {
+          "policy_name": "Drought Emergency Regulations",
+          "legal_standard_id": "DROUGHT_EMERGENCY_RESERVOIR_MANAGEMENT",
+          "effect_type": "indirect",
+          "relationship": "Indirect",
+          "note": "Mechanism: Drought regulations impose conservation measures that indirectly influence storage by managing water use during low storage periods."
+        },
+        {
+          "policy_name": "California Wild and Scenic Rivers Act",
+          "legal_standard_id": "WILD_SCENIC_RIVERS_ACT_CA",
+          "effect_type": "indirect",
+          "relationship": "Indirect",
+          "note": "Mechanism: The Act limits reservoir development, indirectly affecting storage by preserving natural river conditions."
+        }
+      ]
+    }
+  },
+  "Governing Agencies": [
+    {
+      "name": "State Water Resources Control Board (SWRCB)",
+      "note": "The SWRCB issues water right permits that dictate storage and release conditions for reservoirs, directly affecting reservoir operations and storage levels.",
+      "pertains_to_legal_standards": [
+        "WATER_RIGHT_PERMITS_RESERVOIR_OPS",
+        "DROUGHT_EMERGENCY_RESERVOIR_MANAGEMENT"
+      ]
+    },
+    {
+      "name": "National Marine Fisheries Service (NMFS)",
+      "note": "NMFS issues Biological Opinions under the ESA that impose flow and temperature requirements on reservoir operations to protect endangered species.",
+      "pertains_to_legal_standards": [
+        "ESA_RESERVOIR_OPERATIONS"
+      ]
+    },
+    {
+      "name": "U.S. Fish and Wildlife Service (USFWS)",
+      "note": "USFWS collaborates with NMFS to issue Biological Opinions that guide reservoir operations to protect endangered species under the ESA.",
+      "pertains_to_legal_standards": [
+        "ESA_RESERVOIR_OPERATIONS"
+      ]
+    },
+    {
+      "name": "Federal Energy Regulatory Commission (FERC)",
+      "note": "FERC licenses hydropower projects, setting conditions that affect reservoir operations, including flow releases and reservoir levels.",
+      "pertains_to_legal_standards": [
+        "FERC_LICENSE_RESERVOIR_CONDITIONS"
+      ]
+    },
+    {
+      "name": "U.S. Bureau of Reclamation",
+      "note": "The Bureau manages the Central Valley Project, implementing CVPIA requirements that affect reservoir operations and storage for environmental purposes.",
+      "pertains_to_legal_standards": [
+        "CVPIA_RESERVOIR_OPERATIONS"
+      ]
+    }
+  ]
+}

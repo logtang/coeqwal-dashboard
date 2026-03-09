@@ -1,0 +1,206 @@
+{
+  "meta": {
+    "outcome_domain": "freshwater_in_delta",
+    "tier_interpretation_note": "These tiers reflect the salinity and freshwater conditions within the Delta relative to water quality objectives and beneficial use requirements. Legal standards affect this outcome by shaping upstream inflows, project operational rules, and export constraints that determine how much freshwater moves through the Delta. Each tier entry identifies a legal standard whose mechanism is classified as either direct (a clear operational or regulatory pathway that affects Delta salinity or freshwater conditions) or indirect (a conditional, secondary, or system-level influence on those conditions).",
+    "generated_at": "2026-03-09T19:01:04.320404+00:00",
+    "config_version": "1.0.0"
+  },
+  "Legal Standards": [
+    {
+      "legal_standard_id": "D1641_SALINITY_STANDARDS",
+      "legal_standard": "State Water Board Decision 1641 — Delta Salinity and Water Quality Conditions",
+      "caption": "Imposes salinity and water quality conditions on CVP and SWP operations.",
+      "info": "State Water Board Decision 1641 directly affects the Delta's freshwater conditions by setting specific salinity and water quality standards that the Central Valley Project (CVP) and State Water Project (SWP) must meet. These standards include requirements for the X2 location, which is crucial for maintaining the salinity gradient in the Delta. The decision mandates compliance with water quality objectives at key Delta compliance stations, ensuring that operational rules are followed to maintain freshwater conditions.",
+      "vocabulary": [
+        {
+          "term": "X2 location",
+          "definition": "The location in the Delta where the salinity is 2 parts per thousand, used as a regulatory measure."
+        },
+        {
+          "term": "CVP",
+          "definition": "Central Valley Project, a federal water management project in California."
+        },
+        {
+          "term": "SWP",
+          "definition": "State Water Project, a state water management project in California."
+        }
+      ],
+      "sources": [
+        "State Water Resources Control Board Decision 1641 (2000)"
+      ]
+    },
+    {
+      "legal_standard_id": "BAY_DELTA_PLAN_WATER_QUALITY_OBJECTIVES",
+      "legal_standard": "Bay-Delta Water Quality Control Plan — Delta Water Quality Objectives",
+      "caption": "Establishes water quality objectives for the Delta to protect beneficial uses.",
+      "info": "The Bay-Delta Water Quality Control Plan sets numeric and narrative objectives for water quality at specific compliance points in the Delta. These objectives are designed to protect beneficial uses such as municipal and industrial water supply, agricultural water supply, and fish and wildlife habitat. By establishing these objectives, the plan indirectly influences the freshwater conditions in the Delta by requiring compliance with standards that support these uses.",
+      "vocabulary": [
+        {
+          "term": "Beneficial uses",
+          "definition": "Designated uses of water that are protected by water quality standards, such as drinking water supply and habitat for fish."
+        }
+      ],
+      "sources": [
+        "State Water Resources Control Board, Bay-Delta Water Quality Control Plan"
+      ]
+    },
+    {
+      "legal_standard_id": "DELTA_REFORM_ACT_ECOSYSTEM_GOALS",
+      "legal_standard": "Sacramento-San Joaquin Delta Reform Act — Ecosystem Restoration Goals",
+      "caption": "Establishes ecosystem restoration as a co-equal goal with water supply reliability.",
+      "info": "The Delta Reform Act emphasizes ecosystem restoration as a co-equal goal with water supply reliability, requiring that Delta ecosystem needs, including freshwater conditions, be considered in project operations and water management decisions. This act indirectly affects the Delta's freshwater conditions by promoting policies and projects that support ecosystem health, which in turn influences water management practices.",
+      "vocabulary": [
+        {
+          "term": "Ecosystem restoration",
+          "definition": "The process of assisting the recovery of an ecosystem that has been degraded, damaged, or destroyed."
+        }
+      ],
+      "sources": [
+        "California Water Code §85000 et seq."
+      ]
+    },
+    {
+            "order": 1,
+      "legal_standard_id": "ESA_DELTA_FRESHWATER_HABITAT",
+      "legal_standard": "Endangered Species Act — Delta Freshwater Habitat Requirements",
+      "caption": "Imposes requirements to maintain habitat conditions for listed Delta species.",
+      "info": "Under the Endangered Species Act, Biological Opinions for the CVP and SWP impose operational requirements to maintain habitat conditions for listed Delta species. These requirements include maintaining specific freshwater and salinity standards that constrain project pumping and affect Delta water quality. The act directly influences the Delta's freshwater conditions by ensuring that operations do not harm the habitat of endangered species.",
+      "vocabulary": [
+        {
+          "term": "Biological Opinions",
+          "definition": "Documents stating the opinion of the U.S. Fish and Wildlife Service or NOAA Fisheries on whether a federal action is likely to jeopardize the continued existence of listed species."
+        }
+      ],
+      "sources": [
+        "Endangered Species Act §7; Biological Opinions for CVP/SWP (NMFS, USFWS)"
+      ]
+    },
+    {
+      "legal_standard_id": "PORTER_COLOGNE_DELTA_BENEFICIAL_USES",
+      "legal_standard": "Porter-Cologne Water Quality Control Act — Delta Beneficial Use Protections",
+      "caption": "Designates and protects beneficial uses of Delta waters.",
+      "info": "The Porter-Cologne Water Quality Control Act designates and protects beneficial uses of Delta waters, including municipal and domestic supply and estuarine habitat. Regional Water Quality Control Boards have the authority to impose conditions on discharges and diversions affecting Delta water quality. This act indirectly influences the Delta's freshwater conditions by ensuring that water quality supports designated beneficial uses.",
+      "vocabulary": [
+        {
+          "term": "Estuarine habitat",
+          "definition": "A habitat found where freshwater from rivers meets and mixes with saltwater from the ocean."
+        }
+      ],
+      "sources": [
+        "California Water Code §13000 et seq.; San Francisco Bay Regional Water Quality Control Board Basin Plan"
+      ]
+    },
+    {
+      "legal_standard_id": "SWRCB_UPSTREAM_DIVERSION_CURTAILMENT",
+      "legal_standard": "SWRCB Upstream Diversion Curtailment Authority",
+      "caption": "Authority to curtail upstream diversions during dry periods.",
+      "info": "The SWRCB has the authority to curtail upstream diversions during dry periods when Delta inflows are insufficient to meet water quality objectives. This authority directly affects the volume of freshwater entering the Delta from tributary watersheds, thereby influencing the Delta's salinity and freshwater conditions. By controlling upstream diversions, the SWRCB can ensure that sufficient freshwater reaches the Delta to meet established water quality standards.",
+      "vocabulary": [
+        {
+          "term": "Curtailment",
+          "definition": "The reduction or restriction of water diversions to ensure sufficient flow for downstream needs."
+        }
+      ],
+      "sources": [
+        "California Water Code; SWRCB water rights enforcement authority"
+      ]
+    }
+  ],
+  "Tiers": {
+    "Tier 1": {
+      "threshold": "Maximum of Emmaton and Jersey Point salinity is below 900 uS/cm for 75% of all months and above 2500 uS/cm no more than 5% of all months",
+      "policies": [
+        {
+          "policy_name": "D1641 Salinity Standards",
+          "legal_standard_id": "D1641_SALINITY_STANDARDS",
+          "effect_type": "direct",
+          "relationship": "Direct",
+          "note": "Mechanism: Directly imposes salinity standards that ensure low salinity levels at key compliance points, maintaining optimal freshwater conditions."
+        },
+        {
+          "policy_name": "ESA Delta Freshwater Habitat",
+          "legal_standard_id": "ESA_DELTA_FRESHWATER_HABITAT",
+          "effect_type": "direct",
+          "relationship": "Direct",
+          "note": "Mechanism: Requires specific freshwater conditions to protect endangered species, directly influencing salinity levels."
+        }
+      ]
+    },
+    "Tier 2": {
+      "threshold": "Maximum of Emmaton and Jersey Point salinity is below 900 uS/cm for at least 65% of all months, below 1600 uS/cm for at least 75% of months, and above 2500 uS/cm no more than 12% of all months",
+      "policies": [
+        {
+          "policy_name": "SWRCB Upstream Diversion Curtailment",
+          "legal_standard_id": "SWRCB_UPSTREAM_DIVERSION_CURTAILMENT",
+          "effect_type": "direct",
+          "relationship": "Direct",
+          "note": "Mechanism: Curtails upstream diversions to ensure sufficient freshwater inflows, directly affecting salinity levels."
+        },
+        {
+          "policy_name": "Bay-Delta Plan Water Quality Objectives",
+          "legal_standard_id": "BAY_DELTA_PLAN_WATER_QUALITY_OBJECTIVES",
+          "effect_type": "indirect",
+          "relationship": "Indirect",
+          "note": "Mechanism: Sets water quality objectives that indirectly support maintaining salinity levels within acceptable ranges."
+        }
+      ]
+    },
+    "Tier 3": {
+      "threshold": "Maximum of Emmaton and Jersey Point salinity is below 900 uS/cm for at least 55% of all months, below 1600 uS/cm for at least 65% of months, and above 2500 uS/cm no more than 20% of all months",
+      "policies": [
+        {
+          "policy_name": "Porter-Cologne Delta Beneficial Uses",
+          "legal_standard_id": "PORTER_COLOGNE_DELTA_BENEFICIAL_USES",
+          "effect_type": "indirect",
+          "relationship": "Indirect",
+          "note": "Mechanism: Protects beneficial uses that require maintaining certain water quality standards, indirectly influencing salinity."
+        }
+      ]
+    },
+    "Tier 4": {
+      "threshold": "Maximum of Emmaton and Jersey Point salinity is below 900 uS/cm less than 55% of all months and/or above 2500 uS/cm more than 20% of all months",
+      "policies": [
+        {
+          "policy_name": "Delta Reform Act Ecosystem Goals",
+          "legal_standard_id": "DELTA_REFORM_ACT_ECOSYSTEM_GOALS",
+          "effect_type": "indirect",
+          "relationship": "Indirect",
+          "note": "Mechanism: Promotes ecosystem restoration, which indirectly supports efforts to improve freshwater conditions."
+        }
+      ]
+    }
+  },
+  "Governing Agencies": [
+    {
+      "name": "State Water Resources Control Board (SWRCB)",
+      "note": "The SWRCB is responsible for setting and enforcing water quality standards in California, including those affecting the Delta. It has authority over water rights and can curtail diversions to protect Delta inflows.",
+      "pertains_to_legal_standards": [
+        "D1641_SALINITY_STANDARDS",
+        "BAY_DELTA_PLAN_WATER_QUALITY_OBJECTIVES",
+        "SWRCB_UPSTREAM_DIVERSION_CURTAILMENT"
+      ]
+    },
+    {
+      "name": "California Department of Water Resources (DWR)",
+      "note": "DWR operates the State Water Project and is involved in managing water resources to meet Delta water quality standards. It collaborates with other agencies to ensure compliance with legal requirements.",
+      "pertains_to_legal_standards": [
+        "D1641_SALINITY_STANDARDS",
+        "ESA_DELTA_FRESHWATER_HABITAT"
+      ]
+    },
+    {
+      "name": "U.S. Fish and Wildlife Service (USFWS)",
+      "note": "USFWS is responsible for enforcing the Endangered Species Act, including issuing Biological Opinions that affect Delta water operations to protect listed species.",
+      "pertains_to_legal_standards": [
+        "ESA_DELTA_FRESHWATER_HABITAT"
+      ]
+    },
+    {
+      "name": "National Marine Fisheries Service (NMFS)",
+      "note": "NMFS works alongside USFWS to enforce the Endangered Species Act, focusing on marine and anadromous species affected by Delta water operations.",
+      "pertains_to_legal_standards": [
+        "ESA_DELTA_FRESHWATER_HABITAT"
+      ]
+    }
+  ]
+}
